@@ -1,0 +1,68 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone/CooksAssistant/LoveOfCooking/assets/itemDefinitions.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone/CooksAssistant/LoveOfCooking/i18n/de.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone/CooksAssistant/LoveOfCooking/i18n/default.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone/CooksAssistant/LoveOfCooking/i18n/it.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone/CooksAssistant/LoveOfCooking/i18n/ja.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone/CooksAssistant/LoveOfCooking/i18n/ko.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone/CooksAssistant/LoveOfCooking/i18n/pt.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone/CooksAssistant/LoveOfCooking/i18n/ru.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone/CooksAssistant/LoveOfCooking/i18n/th.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone/CooksAssistant/LoveOfCooking/i18n/tr.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone/CooksAssistant/LoveOfCooking/i18n/zh.json"
+  }
+]

@@ -1,0 +1,534 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "javascript/OR",
+              "name": "OR",
+              "shortDescription": {
+                "text": "Open Redirect"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "\n## Details\nAn open redirect attack takes place when a web application redirects the user to an unauthorized and untrusted site. In general, URL redirection refers to the ability of a website or application to redirect users to another site. This is often a benign and useful feature. For example, if a resource has moved to a new location, URL redirection can transfer the user to that location rather than displaying an error message.\nHowever, this ability can be exploited through social engineering, tricking the user into believing they are accessing one site when, in reality, they are being redirected to a dangerous site, such as a phishing site. Once there, the user may be further tricked into entering credentials or personally identifiable information (PII), believing they are still within the original, trusted domain. Attackers can then use these credentials to gain unauthorized access or leverage the user's PII for sale or ransom.\n\n## Best practices for prevention\n* When developing a site or web app, consider implementing a disclaimer page to remind users that they are leaving a secure site.\n* Adopt a zero-trust approach in which all input is treated with suspicion.\n* Validate all input against deny-lists to ensure it does not contain code to redirect the user. This method is good but inherently incomplete.\n* Be aware of all sources of untrusted input being sent to the server that could be used to redirect the user, such as cookies, URL components, filenames, query results, request headers, and more.\n* In particular, be aware of potential API calls that could send input indirectly to redirect the user.\n* To protect end users, use a firewall to block known malicious sites, train users to recognize basic signs of a phishing attack, and ensure that all network endpoints are patched with the most current updates.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "OR",
+                  "Security",
+                  "SourceNonServer",
+                  "SourceResourceAccess",
+                  "SourceNetworkRequest",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/sdeleuze/spring-kotlin-deepdive/commit/458cddfb1f56ef093493fc0ed607abc213f5867e?diff=split#diff-e27814d8f6c733d49f59d9a9dd91cf0b08a9f5b8b6edc4182cd1ad694c9db1a1L-1",
+                    "lines": [
+                      {
+                        "line": "window.location.href = \"/\" + post.slug;\n",
+                        "lineNumber": 11,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "window.location.href = \"/article/\" + post.slug;\n",
+                        "lineNumber": 11,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/galaxyproject/galaxy/commit/9914130fb4d5bc33b70d9e241c08421dc0acc5c0?diff=split#diff-399936e2c30848185858188ac61c22f716f640e68fa5c63f7c95462f603e38a8L-1",
+                    "lines": [
+                      {
+                        "line": "'Sign out'  : function() {\n",
+                        "lineNumber": 66,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    $.ajax( { url : 'api/users/' + Galaxy.user.id + '/logout', method: 'POST', data: { all: true } } )\n",
+                        "lineNumber": 67,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "     .done( function( response ) {\n",
+                        "lineNumber": 68,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        window.location.href = response.redirect_url || Galaxy.root;\n",
+                        "lineNumber": 69,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    });\n",
+                        "lineNumber": 70,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "}\n",
+                        "lineNumber": 71,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "'Sign out'  : function() { window.location.href = Galaxy.root + 'user/logout'; }\n",
+                        "lineNumber": 66,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/Smile4ever/firefoxaddons/commit/8c9efe39a03580ee19cc1406eb94b7aa737d7ccf?diff=split#diff-e927c30acdbf7d625655ab8a754663c7631e6ca851af3d0aae73c57e5dd78121L-1",
+                    "lines": [
+                      {
+                        "line": "window.location.href = window.location.href + \"/2\";\n",
+                        "lineNumber": 140,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "this.replacelocation(window.location.href + \"/2\", \"techradar.com\");\n",
+                        "lineNumber": 130,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 152,
+                "cwe": [
+                  "CWE-601"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "javascript/OR",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from data from a remote resource flows into replace, where it is used as input for request redirection. This may result in an Open Redirect vulnerability.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as input for request redirection. This may result in an Open Redirect vulnerability.",
+            "arguments": [
+              "[data from a remote resource](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12),(13),(14),(15),(16),(17)",
+              "[replace](18)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".vitepress/theme/components/NotFound.vue",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 47,
+                  "endLine": 47,
+                  "startColumn": 21,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "06c1cb3555048d7c8049bb5d8fa7fcc6910226ed178300ef0bf3c492e07d5b27",
+            "1": "3900f8ff.4773f344.607187b5.a517c54b.ef9f7d82.37d4d51d.cd61fc56.26150c29.6ccd873f.bcf8082c.c9330245.b3706998.b0f6e810.ebfdeaf6.83265159.26150c29"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "endLine": 35,
+                            "startColumn": 27,
+                            "endColumn": 32
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "endLine": 35,
+                            "startColumn": 27,
+                            "endColumn": 32
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "endLine": 35,
+                            "startColumn": 21,
+                            "endColumn": 60
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "endLine": 35,
+                            "startColumn": 9,
+                            "endColumn": 18
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "endLine": 36,
+                            "startColumn": 28,
+                            "endColumn": 37
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "endLine": 36,
+                            "startColumn": 38,
+                            "endColumn": 42
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "endLine": 36,
+                            "startColumn": 28,
+                            "endColumn": 42
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "endLine": 36,
+                            "startColumn": 22,
+                            "endColumn": 44
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "endLine": 36,
+                            "startColumn": 9,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 53,
+                            "endLine": 53,
+                            "startColumn": 12,
+                            "endColumn": 22
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 10,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 53,
+                            "endLine": 53,
+                            "startColumn": 12,
+                            "endColumn": 28
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 11,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 53,
+                            "endLine": 53,
+                            "startColumn": 7,
+                            "endColumn": 28
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 12,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "endLine": 54,
+                            "startColumn": 14,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 13,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "endLine": 54,
+                            "startColumn": 7,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 14,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 41,
+                            "endLine": 41,
+                            "startColumn": 24,
+                            "endColumn": 37
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 15,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 41,
+                            "endLine": 41,
+                            "startColumn": 20,
+                            "endColumn": 23
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 16,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 41,
+                            "endLine": 41,
+                            "startColumn": 7,
+                            "endColumn": 38
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 17,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "endLine": 47,
+                            "startColumn": 29,
+                            "endColumn": 35
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 18,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": ".vitepress/theme/components/NotFound.vue",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "endLine": 47,
+                            "startColumn": 21,
+                            "endColumn": 28
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 600,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "JavaScript",
+            "files": 13,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "TypeScript",
+            "files": 4,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Vue",
+            "files": 12,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": false,
+            "lang": "JavaScript",
+            "files": 1,
+            "type": "FAILED_PARSING"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/mlir-mx/clang/test/Index/compile_commands.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/mlir-mx/clang/test/Index/skip-parsed-bodies/compile_commands.json"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/salt/mlir-mx/clang/test/VFS/Inputs/invalid-yaml.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/salt/mlir-mx/lld/test/MachO/dylib-stub.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/salt/mlir-mx/lld/test/MachO/lc-dyld-exports-trie.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/salt/mlir-mx/llvm/test/DebugInfo/PDB/Inputs/every-type.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/salt/mlir-mx/llvm/test/ObjectYAML/MachO/build_version_command.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/mlir-mx/llvm/test/tools/llvm-cov/Inputs/binary-formats.canonical.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/mlir-mx/llvm/test/tools/llvm-cov/Inputs/showExpansions.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/mlir-mx/llvm/test/tools/llvm-original-di-preservation/Inputs/corrupted.json"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/salt/mlir-mx/llvm/test/tools/obj2yaml/ELF/loongarch-eflags.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/salt/mlir-mx/llvm/test/tools/yaml2obj/invalid-yaml.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/salt/mlir-mx/llvm/test/tools/yaml2obj/ELF/DWARF/debug-line.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/mlir-mx/llvm/utils/vscode/llvm/language-configuration-tablegen.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/mlir-mx/llvm/utils/vscode/llvm/language-configuration.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/mlir-mx/llvm/utils/vscode/llvm/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/mlir-mx/mlir/utils/vscode/.vscode/launch.json"
+  }
+]

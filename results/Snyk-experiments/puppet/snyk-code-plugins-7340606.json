@@ -1,0 +1,1292 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "python/HardcodedNonCryptoSecret/test",
+              "name": "HardcodedNonCryptoSecret/test",
+              "shortDescription": {
+                "text": "Hardcoded Secret"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "help": {
+                "markdown": "## Details\n\nWhen constants are hardcoded into applications, this information could easily be reverse-engineered and become known to attackers. For example, if a breached authentication token is hardcoded in multiple places in the application, it may lead to components of the application remaining vulnerable if not all instances are changed.\nAnother negative effect of hard-coding constants is potential unpredictability in the application's performance if the development team fails to update every single instance of the hardcoded constant throughout the code. For these reasons, hard-coding security-relevant constants is considered bad coding practice and should be remedied if present and avoided in future.\n\n## Best practices for prevention\n- Never hard code security-related constants; use symbolic names or configuration lookup files.\n- As hard coding is often done by coders working alone on a small scale, examine all legacy code components and test carefully when scaling.\n- Adopt a \"future-proof code\" mindset: While use of constants may save a little time now and make development simpler in the short term, it could cost time and money adapting to scale or other unforeseen circumstances (such as new hardware) in the future.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "python",
+                  "HardcodedNonCryptoSecret",
+                  "Security",
+                  "InTest"
+                ],
+                "categories": [
+                  "Security",
+                  "InTest"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/Song-Li/cross_browser/commit/6444442fb5827063c461eccf2c1c8457d26f5786?diff=split#diff-767468ba2e7b08a674604477127158453cc60fd651bac591f73a6245144660a3L-1",
+                    "lines": [
+                      {
+                        "line": "import ConfigParser\n",
+                        "lineNumber": 2,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 3,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "ACCESS_ID = 'U2FsdGVkX1/qMoSUWBeff4jFDihBczJbZNFHc6Kn/tlpEDKiCCp9DGmdSte2CVmB'\n",
+                        "lineNumber": 3,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "SECRET_KEY = 'U2FsdGVkX19KzfE5gaEi5Y5RFyZWOTHz8+IssrQ2Xi1LfK+MFAQFZYzlGxRsyWlCdgL1sB0ZVDHlI4gBqROpZw=='\n",
+                        "lineNumber": 4,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "#encrypited\n",
+                        "lineNumber": 5,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "config = ConfigParser.ConfigParser()\n",
+                        "lineNumber": 4,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "config.read(\"./keys.conf\")\n",
+                        "lineNumber": 5,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "ACCESS_ID = config.get('keys', 'ACCESS_ID')\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "SECRET_KEY = config.get('keys', 'SECRET_KEY')\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/ryepdx/bitcoin-arbitrage-ui/commit/64137481f04a26029835f16dcc0fcc163c42a807?diff=split#diff-568470d013cd12e4f388206520da39ab9a4e4c3c6b95846cbc281abc1ba3c959L-1",
+                    "lines": [
+                      {
+                        "line": "app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'\n",
+                        "lineNumber": 8,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "app.secret_key = config.get()[\"secret_key\"]\n",
+                        "lineNumber": 8,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/mikelambert/dancedeets-monorepo/commit/f8e7b78c5e4de1096afe63969b44ca39ea9ed7ab?diff=split#diff-36050a5a8bb8a188ecf53d7559d7ccaac74eef18c1f8c3e1d5ff5531f68db9ddL-1",
+                    "lines": [
+                      {
+                        "line": "app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'\n",
+                        "lineNumber": 19,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "app.secret_key = keys.get('flask_session_key')\n",
+                        "lineNumber": 21,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 287,
+                "cwe": [
+                  "CWE-547"
+                ]
+              }
+            },
+            {
+              "id": "python/PT",
+              "name": "PT",
+              "shortDescription": {
+                "text": "Path Traversal"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "## Details\n\nA Directory Traversal attack (also known as path traversal) aims to access files and directories that are stored outside the intended folder. By manipulating files with \"dot-dot-slash (../)\" sequences and its variations, or by using absolute file paths, it may be possible to access arbitrary files and directories stored on file system, including application source code, configuration, and other critical system files.\n\nBeing able to access and manipulate an arbitrary path leads to vulnerabilities when a program is being run with privileges that the user providing the path should not have. A website with a path traversal vulnerability would allow users access to sensitive files on the server hosting it. CLI programs may also be vulnerable to path traversal if they are being ran with elevated privileges (such as with the setuid or setgid flags in Unix systems).\n\nDirectory Traversal vulnerabilities can be generally divided into two types:\n\n- **Information Disclosure**: Allows the attacker to gain information about the folder structure or read the contents of sensitive files on the system.\n\n`st` is a module for serving static files on web pages, and contains a [vulnerability of this type](https://snyk.io/vuln/npm:st:20140206). In our example, we will serve files from the `public` route.\n\nIf an attacker requests the following URL from our server, it will in turn leak the sensitive private key of the root user.\n\n```\ncurl http://localhost:8080/public/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/root/.ssh/id_rsa\n```\n**Note** `%2e` is the URL encoded version of `.` (dot).\n\n- **Writing arbitrary files**: Allows the attacker to create or replace existing files. This type of vulnerability is also known as `Zip-Slip`.\n\nOne way to achieve this is by using a malicious `zip` archive that holds path traversal filenames. When each filename in the zip archive gets concatenated to the target extraction folder, without validation, the final path ends up outside of the target folder. If an executable or a configuration file is overwritten with a file containing malicious code, the problem can turn into an arbitrary code execution issue quite easily.\n\nThe following is an example of a `zip` archive with one benign file and one malicious file. Extracting the malicious file will result in traversing out of the target folder, ending up in `/root/.ssh/` overwriting the `authorized_keys` file:\n\n```\n2018-04-15 22:04:29 .....           19           19  good.txt\n2018-04-15 22:04:42 .....           20           20  ../../../../../../root/.ssh/authorized_keys\n```",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "python",
+                  "PT",
+                  "Security",
+                  "SourceNonServer",
+                  "SourceLocalEnv",
+                  "SourceEnvironmentVariable",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/cmusatyalab/opendiamond/commit/398049c187ee644beabab44d6fece82251c1ea56?diff=split#diff-70a9940f7965191dc6ca548a38cd1bde7ec7ceaf10f26ca454cd4223d5d50fa9L-1",
+                    "lines": [
+                      {
+                        "line": "    return os.path.join(DATAROOT, obj_path)\n",
+                        "lineNumber": 122,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    return safe_join(DATAROOT, obj_path)\n",
+                        "lineNumber": 123,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 124,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 125,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "def _get_index_absolute_path(index):\n",
+                        "lineNumber": 126,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    return os.path.join(INDEXDIR, index)\n",
+                        "lineNumber": 126,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 128,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 129,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "@scope_blueprint.route('/obj/<path:obj_path>')\n",
+                        "lineNumber": 130,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "def get_object_src_http(obj_path):\n",
+                        "lineNumber": 131,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    path = _get_obj_absolute_path(obj_path)\n",
+                        "lineNumber": 132,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 133,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    headers = Headers()\n",
+                        "lineNumber": 134,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    # With add_etags=True, conditional=True\n",
+                        "lineNumber": 135,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    # Flask should be smart enough to do 304 Not Modified\n",
+                        "lineNumber": 136,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    response = send_file(path,\n",
+                        "lineNumber": 137,
+                        "lineChange": "none"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/fonttools/fonttools/commit/0b99c8968e04e2e36c6c46ad8bb1a550d25969b4?diff=split#diff-e8b6161353c7ce5b13e62df1da329a85de0ef80ce8f039d283c25bf892b2b600L-1",
+                    "lines": [
+                      {
+                        "line": "\n",
+                        "lineNumber": 16,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "destdir = None\n",
+                        "lineNumber": 17,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "if sys.argv[1:]:\n",
+                        "lineNumber": 18,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tdestdir = os.path.normpath(os.path.join(os.getcwd(), sys.argv[1]))\n",
+                        "lineNumber": 19,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tassert os.path.isdir(destdir), \"destination is not an existing directory\"\n",
+                        "lineNumber": 20,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 21,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "os.chdir(wdir)\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "tar = src + \".tar\"\n",
+                        "lineNumber": 24,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "gz = tar + \".gz\"\n",
+                        "lineNumber": 25,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "tgz = src + \".tgz\"\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 26,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "print \"source:\", src\n",
+                        "lineNumber": 27,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "print \"dest:\", tgz\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 29,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "os.system('tar --exclude=CVS --exclude=%s -cf %s %s' % (scriptname, tar, src))\n",
+                        "lineNumber": 30,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "os.system('gzip -9v %s' % tar)\n",
+                        "lineNumber": 31,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "os.rename(gz, tgz)\n",
+                        "lineNumber": 26,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 32,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "if destdir:\n",
+                        "lineNumber": 33,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tprint \"destination directory:\", destdir\n",
+                        "lineNumber": 34,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tos.system('mv %s %s' % (gz, destdir))\n",
+                        "lineNumber": 35,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 36,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/Guad/fuwa/commit/955baf1c0e8824f08a96e48a350ee3cd0e3c5493?diff=split#diff-568470d013cd12e4f388206520da39ab9a4e4c3c6b95846cbc281abc1ba3c959L-1",
+                    "lines": [
+                      {
+                        "line": "import string, random\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "import string, random, hashlib, os\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "from werkzeug import secure_filename\n",
+                        "lineNumber": 2,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 3,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "#Load config file\n",
+                        "lineNumber": 4,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "config = {}\n",
+                        "lineNumber": 5,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "with open('config.ini', 'r') as file:\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tfor line in file.read().splitlines():\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tline = line.split('==')\n",
+                        "lineNumber": 8,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tconfig[line[0]] = line[1]\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app = flask.Flask(__name__) #Initialize our application\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024 #Set the upload limit to 10MiB\n",
+                        "lineNumber": 12,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 14,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "def genHash(seed): #Generate five letter filenames for our files\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    base = string.ascii_lowercase+string.digits \n",
+                        "lineNumber": 16,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    random.seed(seed)\n",
+                        "lineNumber": 17,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    hash_value = \"\"\n",
+                        "lineNumber": 18,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    for i in range(5):\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        hash_value += random.choice(base)\n",
+                        "lineNumber": 20,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    return hash_value\n",
+                        "lineNumber": 21,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "@app.route('/', methods=['GET', 'POST'])\n",
+                        "lineNumber": 24,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "def index():\n",
+                        "lineNumber": 25,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tif flask.request.method == 'POST':\n",
+                        "lineNumber": 26,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\"\"\"\n",
+                        "lineNumber": 27,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\tFile upload happens here.\n",
+                        "lineNumber": 28,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\tWe get your filename and convert it to our hash with your extension.\n",
+                        "lineNumber": 29,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\tThen we redirect to the file itself.\n",
+                        "lineNumber": 30,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\"\"\"\n",
+                        "lineNumber": 31,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tf = flask.request.files['file']\n",
+                        "lineNumber": 32,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\textension = f.filename.split('.')[-1]\n",
+                        "lineNumber": 24,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\tfilename = genHash(f.filename) + '.' + extension\n",
+                        "lineNumber": 25,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\tf.save('static/files/%s' % filename)\n",
+                        "lineNumber": 26,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\tprint 'Uploaded file \\'%s\\'' % filename #Log what file was uploaded\n",
+                        "lineNumber": 27,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\treturn flask.redirect(flask.url_for('getFile', filename=filename))\n",
+                        "lineNumber": 28,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\t\n",
+                        "lineNumber": 33,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\thasher = hashlib.md5() \t\t\n",
+                        "lineNumber": 34,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tbuf = f.read()\t\t   \t\t\n",
+                        "lineNumber": 35,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tf.seek(0) #Set cursor back to position 0 so we can read it again in the save function.\n",
+                        "lineNumber": 36,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\t\t\t\t\t\t\t# We hash the file to get its filename.\t   \t\t\n",
+                        "lineNumber": 37,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\t\t\t\t\t\t\t# So that we can upload two different images with the same filename,\n",
+                        "lineNumber": 38,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\thasher.update(buf)\t   \t\t# But not two same images with different filenames.\n",
+                        "lineNumber": 39,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tdirname = genHash(hasher.hexdigest())\n",
+                        "lineNumber": 40,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tif not os.path.exists(\"static/files/%s\" % dirname): # Check if the folder already exists\n",
+                        "lineNumber": 41,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\tos.mkdir('static/files/%s' % dirname) #Make it\n",
+                        "lineNumber": 42,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\tf.save('static/files/%s/%s' % (dirname, secure_filename(f.filename)))\n",
+                        "lineNumber": 43,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\tprint 'Uploaded file \\'%s\\'' % secure_filename(f.filename) #Log what file was uploaded\n",
+                        "lineNumber": 44,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\treturn flask.redirect(flask.url_for('getFile', dirname=dirname,filename=secure_filename(f.filename)))\n",
+                        "lineNumber": 45,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\telse:\n",
+                        "lineNumber": 46,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\tflask.flash('File already exists in %s!' % dirname) #Display a message for the user.\n",
+                        "lineNumber": 47,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\treturn flask.redirect(flask.url_for('index'))\n",
+                        "lineNumber": 48,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 180,
+                "cwe": [
+                  "CWE-23"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "python/HardcodedNonCryptoSecret/test",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "monitoring/bentoml-plugins-arize/tests/test_package.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 77,
+                  "endLine": 77,
+                  "startColumn": 9,
+                  "endColumn": 16
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "69301615bcd6702cb3df3c70eca6747318a22e43dff8bd166ee14a70c6ebfea5",
+            "1": "da790b0b.98020cb3.f8a30f39.3a09010b.d1142cd0.ba14daf2.113e093a.1ab74f63.da790b0b.e59887ac.f8a30f39.3a09010b.d1142cd0.ba14daf2.113e093a.1ab74f63"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "monitoring/bentoml-plugins-arize/tests/test_package.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 77,
+                            "endLine": 77,
+                            "startColumn": 9,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "monitoring/bentoml-plugins-arize/tests/test_package.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 77,
+                            "endLine": 77,
+                            "startColumn": 9,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 467,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/HardcodedNonCryptoSecret/test",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "monitoring/bentoml-plugins-arize/tests/test_package.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 93,
+                  "endLine": 93,
+                  "startColumn": 9,
+                  "endColumn": 16
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "c6f110adfaa5e6a20f0f566c93c02cb21cf8d9df1fc79ba506d12367d67704e9",
+            "1": "da790b0b.c8c213cf.91428d86.98569367.83d40125.ba14daf2.113e093a.1ab74f63.da790b0b.c8c213cf.91428d86.98569367.83d40125.ba14daf2.113e093a.1ab74f63"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "monitoring/bentoml-plugins-arize/tests/test_package.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 93,
+                            "endLine": 93,
+                            "startColumn": 9,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "monitoring/bentoml-plugins-arize/tests/test_package.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 93,
+                            "endLine": 93,
+                            "startColumn": 9,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 467,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/HardcodedNonCryptoSecret/test",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "monitoring/bentoml-plugins-arize/tests/test_package.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 105,
+                  "endLine": 105,
+                  "startColumn": 9,
+                  "endColumn": 16
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "3a6e241210532a5deefdc4048cb63a48b36788d184d91116546907cc92f9c7dc",
+            "1": "da790b0b.c8c213cf.91428d86.98569367.83d40125.ba14daf2.113e093a.1ab74f63.da790b0b.c8c213cf.91428d86.98569367.83d40125.ba14daf2.113e093a.1ab74f63"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "monitoring/bentoml-plugins-arize/tests/test_package.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 105,
+                            "endLine": 105,
+                            "startColumn": 9,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "monitoring/bentoml-plugins-arize/tests/test_package.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 105,
+                            "endLine": 105,
+                            "startColumn": 9,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 467,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/HardcodedNonCryptoSecret/test",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "monitoring/bentoml-plugins-arize/tests/test_package.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 116,
+                  "endLine": 116,
+                  "startColumn": 9,
+                  "endColumn": 16
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "4b58b5cb8a83891d6ec48354139a4a76aafb848fa6bd2a8f01af62fc44fac61e",
+            "1": "da790b0b.c8c213cf.91428d86.98569367.83d40125.ba14daf2.113e093a.1ab74f63.da790b0b.c8c213cf.91428d86.98569367.83d40125.ba14daf2.113e093a.1ab74f63"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "monitoring/bentoml-plugins-arize/tests/test_package.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 116,
+                            "endLine": 116,
+                            "startColumn": 9,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "monitoring/bentoml-plugins-arize/tests/test_package.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 116,
+                            "endLine": 116,
+                            "startColumn": 9,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 467,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/PT",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from an environment variable flows into pathlib.Path, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.",
+            "markdown": "Unsanitized input from an environment variable {0} into {1}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.",
+            "arguments": [
+              "[flows](0),(1)",
+              "[pathlib.Path](2)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "tools/gen_python_packages/bootstrap.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 14,
+                  "endLine": 14,
+                  "startColumn": 17,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "b0a0826097cfabab6838796b2aa399d92df48994d0c01d8edc42405f8f606419",
+            "1": "5747d179.07650625.86be4bea.139c59a8.b8b1215c.40ccfd1f.081ac3f4.62690cdd.a6b41d6e.563bf84a.86be4bea.139c59a8.b8b1215c.f76aa0c6.96b9fa58.f46ed94e"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/gen_python_packages/bootstrap.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 22,
+                            "endColumn": 32
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/gen_python_packages/bootstrap.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 22,
+                            "endColumn": 61
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/gen_python_packages/bootstrap.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 17,
+                            "endColumn": 21
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 584,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/PT",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from an environment variable flows into path concatenation, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.",
+            "markdown": "Unsanitized input from an environment variable {0} into {1}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.",
+            "arguments": [
+              "[flows](0),(1),(2),(3)",
+              "[path concatenation](4)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "tools/gen_python_packages/bootstrap.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 52,
+                  "endLine": 52,
+                  "startColumn": 23,
+                  "endColumn": 50
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "d4f070d0fa199c03a68e1e7ec5baf463a23642af1926adc42f4af3e3d121ab99",
+            "1": "dc1321d0.d3fa0bdc.86be4bea.06b7897a.139a1d46.40ccfd1f.75d4ed92.d14165fe.dc1321d0.8d9e002c.86be4bea.06b7897a.b8b1215c.f76aa0c6.96b9fa58.f46ed94e"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/gen_python_packages/bootstrap.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 22,
+                            "endColumn": 32
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/gen_python_packages/bootstrap.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 22,
+                            "endColumn": 61
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/gen_python_packages/bootstrap.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 17,
+                            "endColumn": 21
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/gen_python_packages/bootstrap.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 52,
+                            "endLine": 52,
+                            "startColumn": 23,
+                            "endColumn": 32
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/gen_python_packages/bootstrap.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 52,
+                            "endLine": 52,
+                            "startColumn": 23,
+                            "endColumn": 50
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 584,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "Python",
+            "files": 9,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

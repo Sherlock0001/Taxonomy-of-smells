@@ -1,0 +1,2523 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "cpp/UseAfterClose/test",
+              "name": "UseAfterClose/test",
+              "shortDescription": {
+                "text": "Use of Expired File Descriptor"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nA file descriptor for a particular file or device is released, and then the file descriptor is subsequently reused.\n\nThe code might not write to the original file, since the reused file descriptor might reference a different file or device.\n\n## Best practices for prevention\n* Store a new value in file handlers immediately after `fclose()`\n\n## References\n\n* [CERT MEM01-C](https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=87152148)",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "cpp",
+                  "UseAfterClose",
+                  "Security",
+                  "InTest"
+                ],
+                "categories": [
+                  "Security",
+                  "InTest"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/heisencoder/gnuchess/commit/64eed1a00c0d6dbb5d35d296a8e494be4ba93f78?diff=split#diff-b285c4a15a33159c3c5847c65d8e253a3f752ef66009218f858ad5c331ddfe0dL-1",
+                    "lines": [
+                      {
+                        "line": "fread(&bookpos,sizeof(struct hashtype),runningbookcnt,wfp);\n",
+                        "lineNumber": 90,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "fread(&bookpos,sizeof(struct hashtype),runningbookcnt,rfp);\n",
+                        "lineNumber": 90,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/cosignweblogin/cosign/commit/4d7767056d31c0818ae2a7c935aaf409556fdc85?diff=split#diff-d8ba1a7744c058043dfe00de7f72332e70a29a184ebc4a466abd32a4d6092b6eL-1",
+                    "lines": [
+                      {
+                        "line": "while( fgets( buf, MAXLEN, sf ) != NULL ) {\n",
+                        "lineNumber": 38,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "len = strlen( buf );\n",
+                        "lineNumber": 39,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "if ( buf[ len - 1 ] != '\\n' ) {\n",
+                        "lineNumber": 40,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    (void)fclose( sf );\n",
+                        "lineNumber": 41,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    fprintf( stderr, \"read_a_secant: line too long\");\n",
+                        "lineNumber": 42,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    return( -1 );\n",
+                        "lineNumber": 43,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/LINBIT/drbd-utils/commit/5c2b1605c6af9c1ed082ebe23e38eeb221fd0014?diff=split#diff-1b8206dc4aca183b5f5e8c7cb56032839d298143ea1da4f331190640465e91e1L-1",
+                    "lines": [
+                      {
+                        "line": "\tfclose(stderr);\n",
+                        "lineNumber": 302,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\tfreopen(\"/dev/null\", \"w\", stderr);\n",
+                        "lineNumber": 302,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "if (argv[0])\n",
+                        "lineNumber": 303,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\texecvp(argv[0], argv);\n",
+                        "lineNumber": 304,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "fprintf(stderr, \"Can not exec\\n\");\n",
+                        "lineNumber": 305,
+                        "lineChange": "none"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 20,
+                "cwe": [
+                  "CWE-910"
+                ]
+              }
+            },
+            {
+              "id": "python/PT",
+              "name": "PT",
+              "shortDescription": {
+                "text": "Path Traversal"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "## Details\n\nA Directory Traversal attack (also known as path traversal) aims to access files and directories that are stored outside the intended folder. By manipulating files with \"dot-dot-slash (../)\" sequences and its variations, or by using absolute file paths, it may be possible to access arbitrary files and directories stored on file system, including application source code, configuration, and other critical system files.\n\nBeing able to access and manipulate an arbitrary path leads to vulnerabilities when a program is being run with privileges that the user providing the path should not have. A website with a path traversal vulnerability would allow users access to sensitive files on the server hosting it. CLI programs may also be vulnerable to path traversal if they are being ran with elevated privileges (such as with the setuid or setgid flags in Unix systems).\n\nDirectory Traversal vulnerabilities can be generally divided into two types:\n\n- **Information Disclosure**: Allows the attacker to gain information about the folder structure or read the contents of sensitive files on the system.\n\n`st` is a module for serving static files on web pages, and contains a [vulnerability of this type](https://snyk.io/vuln/npm:st:20140206). In our example, we will serve files from the `public` route.\n\nIf an attacker requests the following URL from our server, it will in turn leak the sensitive private key of the root user.\n\n```\ncurl http://localhost:8080/public/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/root/.ssh/id_rsa\n```\n**Note** `%2e` is the URL encoded version of `.` (dot).\n\n- **Writing arbitrary files**: Allows the attacker to create or replace existing files. This type of vulnerability is also known as `Zip-Slip`.\n\nOne way to achieve this is by using a malicious `zip` archive that holds path traversal filenames. When each filename in the zip archive gets concatenated to the target extraction folder, without validation, the final path ends up outside of the target folder. If an executable or a configuration file is overwritten with a file containing malicious code, the problem can turn into an arbitrary code execution issue quite easily.\n\nThe following is an example of a `zip` archive with one benign file and one malicious file. Extracting the malicious file will result in traversing out of the target folder, ending up in `/root/.ssh/` overwriting the `authorized_keys` file:\n\n```\n2018-04-15 22:04:29 .....           19           19  good.txt\n2018-04-15 22:04:42 .....           20           20  ../../../../../../root/.ssh/authorized_keys\n```",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "python",
+                  "PT",
+                  "Security",
+                  "SourceNonServer",
+                  "SourceLocalEnv",
+                  "SourceCLI",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/cmusatyalab/opendiamond/commit/398049c187ee644beabab44d6fece82251c1ea56?diff=split#diff-70a9940f7965191dc6ca548a38cd1bde7ec7ceaf10f26ca454cd4223d5d50fa9L-1",
+                    "lines": [
+                      {
+                        "line": "    return os.path.join(DATAROOT, obj_path)\n",
+                        "lineNumber": 122,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    return safe_join(DATAROOT, obj_path)\n",
+                        "lineNumber": 123,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 124,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 125,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "def _get_index_absolute_path(index):\n",
+                        "lineNumber": 126,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    return os.path.join(INDEXDIR, index)\n",
+                        "lineNumber": 126,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 128,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 129,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "@scope_blueprint.route('/obj/<path:obj_path>')\n",
+                        "lineNumber": 130,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "def get_object_src_http(obj_path):\n",
+                        "lineNumber": 131,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    path = _get_obj_absolute_path(obj_path)\n",
+                        "lineNumber": 132,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 133,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    headers = Headers()\n",
+                        "lineNumber": 134,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    # With add_etags=True, conditional=True\n",
+                        "lineNumber": 135,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    # Flask should be smart enough to do 304 Not Modified\n",
+                        "lineNumber": 136,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    response = send_file(path,\n",
+                        "lineNumber": 137,
+                        "lineChange": "none"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/fonttools/fonttools/commit/0b99c8968e04e2e36c6c46ad8bb1a550d25969b4?diff=split#diff-e8b6161353c7ce5b13e62df1da329a85de0ef80ce8f039d283c25bf892b2b600L-1",
+                    "lines": [
+                      {
+                        "line": "\n",
+                        "lineNumber": 16,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "destdir = None\n",
+                        "lineNumber": 17,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "if sys.argv[1:]:\n",
+                        "lineNumber": 18,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tdestdir = os.path.normpath(os.path.join(os.getcwd(), sys.argv[1]))\n",
+                        "lineNumber": 19,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tassert os.path.isdir(destdir), \"destination is not an existing directory\"\n",
+                        "lineNumber": 20,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 21,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "os.chdir(wdir)\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "tar = src + \".tar\"\n",
+                        "lineNumber": 24,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "gz = tar + \".gz\"\n",
+                        "lineNumber": 25,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "tgz = src + \".tgz\"\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 26,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "print \"source:\", src\n",
+                        "lineNumber": 27,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "print \"dest:\", tgz\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 29,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "os.system('tar --exclude=CVS --exclude=%s -cf %s %s' % (scriptname, tar, src))\n",
+                        "lineNumber": 30,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "os.system('gzip -9v %s' % tar)\n",
+                        "lineNumber": 31,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "os.rename(gz, tgz)\n",
+                        "lineNumber": 26,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 32,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "if destdir:\n",
+                        "lineNumber": 33,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tprint \"destination directory:\", destdir\n",
+                        "lineNumber": 34,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tos.system('mv %s %s' % (gz, destdir))\n",
+                        "lineNumber": 35,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 36,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/Guad/fuwa/commit/955baf1c0e8824f08a96e48a350ee3cd0e3c5493?diff=split#diff-568470d013cd12e4f388206520da39ab9a4e4c3c6b95846cbc281abc1ba3c959L-1",
+                    "lines": [
+                      {
+                        "line": "import string, random\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "import string, random, hashlib, os\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "from werkzeug import secure_filename\n",
+                        "lineNumber": 2,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 3,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "#Load config file\n",
+                        "lineNumber": 4,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "config = {}\n",
+                        "lineNumber": 5,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "with open('config.ini', 'r') as file:\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tfor line in file.read().splitlines():\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tline = line.split('==')\n",
+                        "lineNumber": 8,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tconfig[line[0]] = line[1]\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app = flask.Flask(__name__) #Initialize our application\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024 #Set the upload limit to 10MiB\n",
+                        "lineNumber": 12,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 14,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "def genHash(seed): #Generate five letter filenames for our files\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    base = string.ascii_lowercase+string.digits \n",
+                        "lineNumber": 16,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    random.seed(seed)\n",
+                        "lineNumber": 17,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    hash_value = \"\"\n",
+                        "lineNumber": 18,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    for i in range(5):\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        hash_value += random.choice(base)\n",
+                        "lineNumber": 20,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    return hash_value\n",
+                        "lineNumber": 21,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "@app.route('/', methods=['GET', 'POST'])\n",
+                        "lineNumber": 24,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "def index():\n",
+                        "lineNumber": 25,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tif flask.request.method == 'POST':\n",
+                        "lineNumber": 26,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\"\"\"\n",
+                        "lineNumber": 27,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\tFile upload happens here.\n",
+                        "lineNumber": 28,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\tWe get your filename and convert it to our hash with your extension.\n",
+                        "lineNumber": 29,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\tThen we redirect to the file itself.\n",
+                        "lineNumber": 30,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\"\"\"\n",
+                        "lineNumber": 31,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tf = flask.request.files['file']\n",
+                        "lineNumber": 32,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\textension = f.filename.split('.')[-1]\n",
+                        "lineNumber": 24,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\tfilename = genHash(f.filename) + '.' + extension\n",
+                        "lineNumber": 25,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\tf.save('static/files/%s' % filename)\n",
+                        "lineNumber": 26,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\tprint 'Uploaded file \\'%s\\'' % filename #Log what file was uploaded\n",
+                        "lineNumber": 27,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\treturn flask.redirect(flask.url_for('getFile', filename=filename))\n",
+                        "lineNumber": 28,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\t\n",
+                        "lineNumber": 33,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\thasher = hashlib.md5() \t\t\n",
+                        "lineNumber": 34,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tbuf = f.read()\t\t   \t\t\n",
+                        "lineNumber": 35,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tf.seek(0) #Set cursor back to position 0 so we can read it again in the save function.\n",
+                        "lineNumber": 36,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\t\t\t\t\t\t\t# We hash the file to get its filename.\t   \t\t\n",
+                        "lineNumber": 37,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\t\t\t\t\t\t\t# So that we can upload two different images with the same filename,\n",
+                        "lineNumber": 38,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\thasher.update(buf)\t   \t\t# But not two same images with different filenames.\n",
+                        "lineNumber": 39,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tdirname = genHash(hasher.hexdigest())\n",
+                        "lineNumber": 40,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tif not os.path.exists(\"static/files/%s\" % dirname): # Check if the folder already exists\n",
+                        "lineNumber": 41,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\tos.mkdir('static/files/%s' % dirname) #Make it\n",
+                        "lineNumber": 42,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\tf.save('static/files/%s/%s' % (dirname, secure_filename(f.filename)))\n",
+                        "lineNumber": 43,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\tprint 'Uploaded file \\'%s\\'' % secure_filename(f.filename) #Log what file was uploaded\n",
+                        "lineNumber": 44,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\treturn flask.redirect(flask.url_for('getFile', dirname=dirname,filename=secure_filename(f.filename)))\n",
+                        "lineNumber": 45,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\telse:\n",
+                        "lineNumber": 46,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\tflask.flash('File already exists in %s!' % dirname) #Display a message for the user.\n",
+                        "lineNumber": 47,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\treturn flask.redirect(flask.url_for('index'))\n",
+                        "lineNumber": 48,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 180,
+                "cwe": [
+                  "CWE-23"
+                ]
+              }
+            },
+            {
+              "id": "python/unquoted~csv~writer",
+              "name": "unquoted~csv~writer",
+              "shortDescription": {
+                "text": "Improper Neutralization of Formula Elements in a CSV File"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nUser-provided data is often saved to traditional databases. This data can be exported to a CSV file, which allows users to read the data using spreadsheet software such as Excel, Numbers, or Calc. This software interprets entries beginning with '=' as formulas, which are then executed by the spreadsheet software. The software's formula language often allows methods to access hyperlinks or the local command line, and frequently allows enough characters to invoke an entire script. Attackers can populate data fields which, when saved to a CSV file, may attempt information exfiltration or other malicious activity when automatically executed by the spreadsheet software.\n\n\n## Best practices for prevention\n* When generating CSV output, ensure that formula-sensitive metacharacters are effectively escaped or removed from all data before storage in the resultant CSV. Risky characters include '=' (equal), '+' (plus), '-' (minus), and '@' (at).\n* If a field starts with a formula character, prepend it with a ' (single apostrophe), which prevents Excel from executing the formula.\n\n\n## References\n\n* [CWE-1236](https://cwe.mitre.org/data/definitions/1236.html)",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "python",
+                  "unquoted~csv~writer",
+                  "Security",
+                  "SourceNonServer",
+                  "SourceLocalEnv",
+                  "SourceCLI",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 0,
+                "cwe": [
+                  "CWE-1236"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "cpp/UseAfterClose/test",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Reading from file std::ofstream which was already closed by close.",
+            "markdown": "{0} {1} which was already closed by {2}.",
+            "arguments": [
+              "[Reading from file](0)",
+              "[std::ofstream](1)",
+              "[close](2)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "public/data_loading/readers/avro_stream_io_test.cc",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 34,
+                  "endLine": 34,
+                  "startColumn": 3,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "28554284854081f124eb93ca96523a3d26c0bab2b57483ca80485153416fedae",
+            "1": "ed27a822.2a39e9b3.66e58c8d.3f7c3cb7.031a268a.61dc9fef.1e451703.a6f1f946.73e5bd6e.1a804e92.66e58c8d.93cc8d4d.73c0e4ba.6a274ab8.30ad82ea.1874076a"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "public/data_loading/readers/avro_stream_io_test.cc",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 34,
+                            "endLine": 34,
+                            "startColumn": 3,
+                            "endColumn": 27
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "public/data_loading/readers/avro_stream_io_test.cc",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "endLine": 86,
+                            "startColumn": 17,
+                            "endColumn": 36
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "public/data_loading/readers/avro_stream_io_test.cc",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 113,
+                            "endLine": 113,
+                            "startColumn": 3,
+                            "endColumn": 22
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 363,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "python/PT",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into os.walk, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3),(4),(5)",
+              "[os.walk](6)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 50,
+                  "endLine": 50,
+                  "startColumn": 30,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "45431553db976e5000117f7c7a44035c786a3ec1392eda037f417a69e5ff0b4b",
+            "1": "cca1b2d5.e3d9b656.2683ade8.139c59a8.1a0abf6d.ba14daf2.081ac3f4.6aac30d8.cca1b2d5.e3d9b656.145fb292.9cd2dfe0.1a0abf6d.48e1de78.f6dc7859.6aac30d8"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 72,
+                            "endLine": 72,
+                            "startColumn": 12,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 72,
+                            "endLine": 72,
+                            "startColumn": 12,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 73,
+                            "endLine": 73,
+                            "startColumn": 33,
+                            "endColumn": 37
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 73,
+                            "endLine": 73,
+                            "startColumn": 33,
+                            "endColumn": 52
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "endLine": 35,
+                            "startColumn": 21,
+                            "endColumn": 40
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 50,
+                            "endLine": 50,
+                            "startColumn": 38,
+                            "endColumn": 52
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 50,
+                            "endLine": 50,
+                            "startColumn": 30,
+                            "endColumn": 37
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 613,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/PT",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into open, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8),(9),(10)",
+              "[open](11)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 55,
+                  "endLine": 55,
+                  "startColumn": 26,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "636e189a9c5ab050a1305e37d0d237b1470f7bb381c3770c7bd7fc5f5b10dea8",
+            "1": "2e8ddaeb.ecc4e7fd.187bf175.139c59a8.f3eda546.ba14daf2.75d4ed92.a4830b9a.2e8ddaeb.9dc2f629.187bf175.139c59a8.2bdc9318.73cfdf26.75d4ed92.6aac30d8"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 72,
+                            "endLine": 72,
+                            "startColumn": 12,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 72,
+                            "endLine": 72,
+                            "startColumn": 12,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 73,
+                            "endLine": 73,
+                            "startColumn": 33,
+                            "endColumn": 37
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 73,
+                            "endLine": 73,
+                            "startColumn": 33,
+                            "endColumn": 52
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "endLine": 35,
+                            "startColumn": 21,
+                            "endColumn": 40
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 50,
+                            "endLine": 50,
+                            "startColumn": 38,
+                            "endColumn": 52
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 50,
+                            "endLine": 50,
+                            "startColumn": 30,
+                            "endColumn": 37
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 50,
+                            "endLine": 50,
+                            "startColumn": 9,
+                            "endColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 53,
+                            "endLine": 53,
+                            "startColumn": 35,
+                            "endColumn": 39
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 53,
+                            "endLine": 53,
+                            "startColumn": 22,
+                            "endColumn": 34
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 10,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 55,
+                            "endLine": 55,
+                            "startColumn": 31,
+                            "endColumn": 33
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 11,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/create_csv_summary.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 55,
+                            "endLine": 55,
+                            "startColumn": 26,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 613,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/PT",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into pathlib.Path, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8),(9)",
+              "[pathlib.Path](10)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "tools/latency_benchmarking/generate_requests.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 73,
+                  "endLine": 73,
+                  "startColumn": 9,
+                  "endColumn": 13
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "a513ee8a40138e05d5903c1c6b9137acd67c6e09cec35f4a2187b50bcbdf0c30",
+            "1": "df48c6a0.c684f5fb.79e62dc9.139c59a8.1d07cee4.ba14daf2.6cb27fbf.ca16043d.df48c6a0.277c621c.2ac1401e.64cdd35c.00f2adc1.f76aa0c6.96b9fa58.e313f006"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 146,
+                            "endLine": 146,
+                            "startColumn": 12,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 146,
+                            "endLine": 146,
+                            "startColumn": 12,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 155,
+                            "endLine": 155,
+                            "startColumn": 48,
+                            "endColumn": 52
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 155,
+                            "endLine": 155,
+                            "startColumn": 48,
+                            "endColumn": 63
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 155,
+                            "endLine": 155,
+                            "startColumn": 35,
+                            "endColumn": 47
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 156,
+                            "endLine": 156,
+                            "startColumn": 55,
+                            "endColumn": 78
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 52,
+                            "endLine": 52,
+                            "startColumn": 5,
+                            "endColumn": 20
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 72,
+                            "endLine": 72,
+                            "startColumn": 37,
+                            "endColumn": 47
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 72,
+                            "endLine": 72,
+                            "startColumn": 24,
+                            "endColumn": 36
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 73,
+                            "endLine": 73,
+                            "startColumn": 14,
+                            "endColumn": 26
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 10,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 73,
+                            "endLine": 73,
+                            "startColumn": 9,
+                            "endColumn": 13
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 613,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/PT",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into pathlib.Path, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11)",
+              "[pathlib.Path](12)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "tools/latency_benchmarking/generate_requests.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 156,
+                  "endLine": 156,
+                  "startColumn": 9,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "01e5810e685d72b4d0688040ed59a9e1283a34c41b90bcd980a191d3a80f5402",
+            "1": "a6b41d6e.7511e2dd.4017a56f.64cdd35c.00f2adc1.f9f41630.a2237efa.f46ed94e.a6b41d6e.dffda8b2.4017a56f.64cdd35c.00f2adc1.f9f41630.a2237efa.e313f006"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 146,
+                            "endLine": 146,
+                            "startColumn": 12,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 146,
+                            "endLine": 146,
+                            "startColumn": 12,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 153,
+                            "endLine": 153,
+                            "startColumn": 36,
+                            "endColumn": 40
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 153,
+                            "endLine": 153,
+                            "startColumn": 36,
+                            "endColumn": 60
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 156,
+                            "endLine": 156,
+                            "startColumn": 29,
+                            "endColumn": 53
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 51,
+                            "endLine": 51,
+                            "startColumn": 5,
+                            "endColumn": 35
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 63,
+                            "endLine": 63,
+                            "startColumn": 14,
+                            "endColumn": 33
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 63,
+                            "endLine": 63,
+                            "startColumn": 9,
+                            "endColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 72,
+                            "endLine": 72,
+                            "startColumn": 52,
+                            "endColumn": 53
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 72,
+                            "endLine": 72,
+                            "startColumn": 49,
+                            "endColumn": 56
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 10,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 72,
+                            "endLine": 72,
+                            "startColumn": 24,
+                            "endColumn": 36
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 11,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 73,
+                            "endLine": 73,
+                            "startColumn": 14,
+                            "endColumn": 26
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 12,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 73,
+                            "endLine": 73,
+                            "startColumn": 9,
+                            "endColumn": 13
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 613,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/PT",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into open, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8),(9),(10)",
+              "[open](11)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "tools/latency_benchmarking/generate_requests.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 74,
+                  "endLine": 74,
+                  "startColumn": 14,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "a96c3fcf4c1a44476ee0d3bdce14260f2838701b3a4da69d50c16771ca4be583",
+            "1": "2e8ddaeb.67df6de4.187bf175.139c59a8.f3eda546.ba14daf2.9bb77c13.a4830b9a.2e8ddaeb.67df6de4.187bf175.139c59a8.4608c58f.ba14daf2.6cb27fbf.a4830b9a"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 146,
+                            "endLine": 146,
+                            "startColumn": 12,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 146,
+                            "endLine": 146,
+                            "startColumn": 12,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 155,
+                            "endLine": 155,
+                            "startColumn": 48,
+                            "endColumn": 52
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 155,
+                            "endLine": 155,
+                            "startColumn": 48,
+                            "endColumn": 63
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 155,
+                            "endLine": 155,
+                            "startColumn": 35,
+                            "endColumn": 47
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 156,
+                            "endLine": 156,
+                            "startColumn": 55,
+                            "endColumn": 78
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 52,
+                            "endLine": 52,
+                            "startColumn": 5,
+                            "endColumn": 20
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 72,
+                            "endLine": 72,
+                            "startColumn": 37,
+                            "endColumn": 47
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 72,
+                            "endLine": 72,
+                            "startColumn": 24,
+                            "endColumn": 36
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 74,
+                            "endLine": 74,
+                            "startColumn": 32,
+                            "endColumn": 44
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 10,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 74,
+                            "endLine": 74,
+                            "startColumn": 19,
+                            "endColumn": 31
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 11,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tools/latency_benchmarking/generate_requests.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 74,
+                            "endLine": 74,
+                            "startColumn": 14,
+                            "endColumn": 18
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 613,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/unquoted~csv~writer",
+          "ruleIndex": 2,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into an unquoted CSV-writer (csv.writer). Use quoting=csv.QUOTE_ALL when the input is flowing from an untrusted source.",
+            "markdown": "Unsanitized input from {0} {1} into an unquoted CSV-writer ({2}). Use quoting=csv.QUOTE_ALL when the input is flowing from an untrusted source.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8)",
+              "[csv.writer](9)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 140,
+                  "endLine": 140,
+                  "startColumn": 18,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "c2a36778bc189304d650381e19539bd15bfae99140a0b76867ca6aa0be3ce069",
+            "1": "66be2f5a.5b46cdac.187bf175.139c59a8.5b46dff9.4f3ebea4.081ac3f4.69b73b47.856c24ee.ed6c069d.35739d7e.106b7ac1.5b46dff9.4f3ebea4.a20665b7.ca2d6ecd"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 267,
+                            "endLine": 267,
+                            "startColumn": 12,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 267,
+                            "endLine": 267,
+                            "startColumn": 12,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 275,
+                            "endLine": 275,
+                            "startColumn": 26,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 275,
+                            "endLine": 275,
+                            "startColumn": 26,
+                            "endColumn": 46
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 129,
+                            "endLine": 129,
+                            "startColumn": 22,
+                            "endColumn": 31
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 139,
+                            "endLine": 139,
+                            "startColumn": 15,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 139,
+                            "endLine": 139,
+                            "startColumn": 10,
+                            "endColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 139,
+                            "endLine": 139,
+                            "startColumn": 29,
+                            "endColumn": 36
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 140,
+                            "endLine": 140,
+                            "startColumn": 29,
+                            "endColumn": 36
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 140,
+                            "endLine": 140,
+                            "startColumn": 18,
+                            "endColumn": 28
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 375,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "python/unquoted~csv~writer",
+          "ruleIndex": 2,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into an unquoted CSV-writer (csv.writer). Use quoting=csv.QUOTE_ALL when the input is flowing from an untrusted source.",
+            "markdown": "Unsanitized input from {0} {1} into an unquoted CSV-writer ({2}). Use quoting=csv.QUOTE_ALL when the input is flowing from an untrusted source.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8)",
+              "[csv.writer](9)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 163,
+                  "endLine": 163,
+                  "startColumn": 18,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "58f7b05e83560ff099f9a717c48cf758d7e94058fff0002db6d6351852027d20",
+            "1": "66be2f5a.5b46cdac.187bf175.139c59a8.5b46dff9.4f3ebea4.081ac3f4.69b73b47.32b02b34.5b05b88b.35739d7e.9fc0e16a.5b46dff9.4f3ebea4.a20665b7.54e38411"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 267,
+                            "endLine": 267,
+                            "startColumn": 12,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 267,
+                            "endLine": 267,
+                            "startColumn": 12,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 277,
+                            "endLine": 277,
+                            "startColumn": 27,
+                            "endColumn": 31
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 277,
+                            "endLine": 277,
+                            "startColumn": 27,
+                            "endColumn": 47
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 151,
+                            "endLine": 151,
+                            "startColumn": 23,
+                            "endColumn": 32
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 162,
+                            "endLine": 162,
+                            "startColumn": 15,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 162,
+                            "endLine": 162,
+                            "startColumn": 10,
+                            "endColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 162,
+                            "endLine": 162,
+                            "startColumn": 29,
+                            "endColumn": 36
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 163,
+                            "endLine": 163,
+                            "startColumn": 29,
+                            "endColumn": 36
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "getting_started/examples/sample_word2vec/data_generator.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 163,
+                            "endLine": 163,
+                            "startColumn": 18,
+                            "endColumn": 28
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 375,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              }
+            ],
+            "isAutofixable": false
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "C++",
+            "files": 403,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Go",
+            "files": 1,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "JavaScript",
+            "files": 14,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Python",
+            "files": 7,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": false,
+            "lang": "C++",
+            "files": 8,
+            "type": "FAILED_PARSING"
+          }
+        ]
+      }
+    }
+  ]
+}

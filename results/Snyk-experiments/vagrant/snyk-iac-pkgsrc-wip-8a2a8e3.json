@@ -1,0 +1,38 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_vagrant/Pkgsrc-Wip/chromium/patches/patch-extensions_common_api___permission__features.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_vagrant/Pkgsrc-Wip/chromium/patches/patch-extensions_common_api_runtime.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_vagrant/Pkgsrc-Wip/firefox-hg/patches/patch-third__party_rust_simd_.cargo-checksum.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_vagrant/Pkgsrc-Wip/jitsi-meet/patches/patch-package-lock.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_vagrant/Pkgsrc-Wip/kibana/patches/patch-package.json"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_vagrant/Pkgsrc-Wip/py-matrix-synapse/files/homeserver.yaml"
+  }
+]

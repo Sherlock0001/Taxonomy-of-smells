@@ -1,0 +1,20 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/mattermost-plugin-playbooks/tests-e2e/cypress/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/mattermost-plugin-playbooks/webapp/.eslintrc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/mattermost-plugin-playbooks/webapp/tsconfig.json"
+  }
+]

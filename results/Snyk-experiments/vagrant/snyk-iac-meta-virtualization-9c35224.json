@@ -1,0 +1,14 @@
+[
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_vagrant/meta-virtualization/recipes-demo/helloworld-flask/helloworld-flask/flask-app-service.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_vagrant/meta-virtualization/recipes-demo/helloworld-flask/helloworld-flask/flask-app.yaml"
+  }
+]

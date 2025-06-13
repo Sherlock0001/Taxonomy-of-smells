@@ -1,0 +1,1017 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "javascript/DOMXSS",
+              "name": "DOMXSS",
+              "shortDescription": {
+                "text": "Cross-site Scripting (XSS)"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "## Details\n\nA cross-site scripting attack occurs when the attacker tricks a legitimate web-based application or site to accept a request as originating from a trusted source.\n\nThis is done by escaping the context of the web application; the web application then delivers that data to its users along with other trusted dynamic content, without validating it. The browser unknowingly executes malicious script on the client side (through client-side languages; usually JavaScript or HTML)  in order to perform actions that are otherwise typically blocked by the browser's Same Origin Policy.\n\nInjecting malicious code is the most prevalent manner by which XSS is exploited; for this reason, escaping characters in order to prevent this manipulation is the top method for securing code against this vulnerability.\n\nEscaping means that the application is coded to mark key characters, and particularly key characters included in user input, to prevent those characters from being interpreted in a dangerous context. For example, in HTML, `<` can be coded as  `&lt`; and `>` can be coded as `&gt`; in order to be interpreted and displayed as themselves in text, while within the code itself, they are used for HTML tags. If malicious content is injected into an application that escapes special characters and that malicious content uses `<` and `>` as HTML tags, those characters are nonetheless not interpreted as HTML tags by the browser if they've been correctly escaped in the application code and in this way the attempted attack is diverted.\n\nThe most prominent use of XSS is to steal cookies (source: OWASP HttpOnly) and hijack user sessions, but XSS exploits have been used to expose sensitive information, enable access to privileged services and functionality and deliver malware.\n\n### Types of attacks\nThere are a few methods by which XSS can be manipulated:\n\n|Type|Origin|Description|\n|--|--|--|\n|**Stored**|Server|The malicious code is inserted in the application (usually as a link) by the attacker. The code is activated every time a user clicks the link.|\n|**Reflected**|Server|The attacker delivers a malicious link externally from the vulnerable web site application to a user. When clicked, malicious code is sent to the vulnerable web site, which reflects the attack back to the user's browser.|\n|**DOM-based**|Client|The attacker forces the user's browser to render a malicious page. The data in the page itself delivers the cross-site scripting data.|\n|**Mutated**| |The attacker injects code that appears safe, but is then rewritten and modified by the browser, while parsing the markup. An example is rebalancing unclosed quotation marks or even adding quotation marks to unquoted parameters.|\n\n### Affected environments\nThe following environments are susceptible to an XSS attack:\n\n* Web servers\n* Application servers\n* Web application environments\n\n## Best practices for prevention\nThis section describes the top best practices designed to specifically protect your code:\n\n* Sanitize data input in an HTTP request before reflecting it back, ensuring all data is validated, filtered or escaped before echoing anything back to the user, such as the values of query parameters during searches.\n* Convert special characters such as `?`, `&`, `/`, `<`, `>` and spaces to their respective HTML or URL encoded equivalents.\n* Give users the option to disable client-side scripts.\n* Redirect invalid requests.\n* Detect simultaneous logins, including those from two separate IP addresses, and invalidate those sessions.\n* Use and enforce a Content Security Policy (source: Wikipedia) to disable any features that might be manipulated for an XSS attack.\n* Read the documentation for any of the libraries referenced in your code to understand which elements allow for embedded HTML.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "DOMXSS",
+                  "Security",
+                  "SourceNonServer",
+                  "SourceResourceAccess",
+                  "SourceNetworkRequest",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/codice/ddf/commit/a8c54db08a09e8104443fd8531c0f8b6cffda1c7?diff=split#diff-e3bb069f9efbc30d0207a7c690710bc5a3b2acac15a5b8425e622a88e63a41cdL-1",
+                    "lines": [
+                      {
+                        "line": "$('#extramessage').html(decodeURIComponent(param[1].split('+').join(' ')));\n",
+                        "lineNumber": 12,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "$('#extramessage').text(decodeURIComponent(param[1].split('+').join(' '))).html();\n",
+                        "lineNumber": 12,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/Drive4ik/simple-tab-groups/commit/d23caa02378845671eb32ee2c43c368f857b47c3?diff=split#diff-efdba41d528998f946ce1103fa57532e3746b2e9b1984cb92c94a2526451aedbL-1",
+                    "lines": [
+                      {
+                        "line": "document.getElementById('title').innerHTML = title || url;\n",
+                        "lineNumber": 6,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "document.getElementById('title').innerText = title || url;\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/mykter/TagTime-desktop/commit/684351457a3299047fa60563785aa1716df00888?diff=split#diff-821c318e2a22a1360159993ee2168341f78e7567d0b1c9996a76f3e0cfb27b26L-1",
+                    "lines": [
+                      {
+                        "line": "document.getElementById(\"time\").innerHTML =\n",
+                        "lineNumber": 4,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    moment(time, 'x').format('HH:mm:ss');\n",
+                        "lineNumber": 5,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "document.getElementById(\"time\").textContent = moment(time, 'x').format('HH:mm:ss');\n",
+                        "lineNumber": 5,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 227,
+                "cwe": [
+                  "CWE-79"
+                ]
+              }
+            },
+            {
+              "id": "python/OR",
+              "name": "OR",
+              "shortDescription": {
+                "text": "Open Redirect"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "\n## Details\nAn open redirect attack takes place when a web application redirects the user to an unauthorized and untrusted site. In general, URL redirection refers to the ability of a website or application to redirect users to another site. This is often a benign and useful feature. For example, if a resource has moved to a new location, URL redirection can transfer the user to that location rather than displaying an error message.\nHowever, this ability can be exploited through social engineering, tricking the user into believing they are accessing one site when, in reality, they are being redirected to a dangerous site, such as a phishing site. Once there, the user may be further tricked into entering credentials or personally identifiable information (PII), believing they are still within the original, trusted domain. Attackers can then use these credentials to gain unauthorized access or leverage the user's PII for sale or ransom.\n\n## Best practices for prevention\n* When developing a site or web app, consider implementing a disclaimer page to remind users that they are leaving a secure site.\n* Adopt a zero-trust approach in which all input is treated with suspicion.\n* Validate all input against deny-lists to ensure it does not contain code to redirect the user. This method is good but inherently incomplete.\n* Be aware of all sources of untrusted input being sent to the server that could be used to redirect the user, such as cookies, URL components, filenames, query results, request headers, and more.\n* In particular, be aware of potential API calls that could send input indirectly to redirect the user.\n* To protect end users, use a firewall to block known malicious sites, train users to recognize basic signs of a phishing attack, and ensure that all network endpoints are patched with the most current updates.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "python",
+                  "OR",
+                  "Security",
+                  "SourceServer",
+                  "SourceHttpHeader",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/luispedro/luispedro_org/commit/6a779004a13227c32f530c66c0f23cd997fc895b?diff=split#diff-0cd0eee8cc4d438e2b69cd1bc20845c92426bc79d785edca052fb13e70352588L-1",
+                    "lines": [
+                      {
+                        "line": "return HttpResponsePermanentRedirect(redirect[0].target)\n",
+                        "lineNumber": 13,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "return HttpResponsePermanentRedirect('/'+redirect[0].target)\n",
+                        "lineNumber": 13,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/pretalx/pretalx/commit/86ab1194a0c93386232184431436bfc63fc53d83?diff=split#diff-65db94d16c1b4042e4fd3cb6c202b8e1431c707db7ed49cb4981846a465266beL-1",
+                    "lines": [
+                      {
+                        "line": "from urllib.parse import parse_qs, urlencode, urlparse\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 2,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from django.conf import settings\n",
+                        "lineNumber": 3,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from django.contrib import messages\n",
+                        "lineNumber": 4,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from django.http import HttpResponseRedirect\n",
+                        "lineNumber": 5,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from django.utils.http import url_has_allowed_host_and_scheme\n",
+                        "lineNumber": 6,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from django.utils.translation import override\n",
+                        "lineNumber": 7,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from django.views.generic import View\n",
+                        "lineNumber": 8,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 9,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from pretalx.common.phrases import phrases\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 12,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "class LocaleSet(View):\n",
+                        "lineNumber": 13,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    def get(self, request, *args, **kwargs):\n",
+                        "lineNumber": 14,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        url = request.GET.get(\"next\", request.headers.get(\"Referer\", \"/\"))\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        url = url if url_has_allowed_host_and_scheme(url, allowed_hosts=None) else \"/\"\n",
+                        "lineNumber": 15,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        resp = HttpResponseRedirect(url)\n",
+                        "lineNumber": 16,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        if url_has_allowed_host_and_scheme(url, allowed_hosts=None):\n",
+                        "lineNumber": 16,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 17,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            parsed = urlparse(url)\n",
+                        "lineNumber": 18,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            url = parsed.path\n",
+                        "lineNumber": 19,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            if parsed.query:\n",
+                        "lineNumber": 20,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                query = parse_qs(parsed.query)\n",
+                        "lineNumber": 21,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                query.pop(\"lang\", None)\n",
+                        "lineNumber": 22,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                query = urlencode(query, doseq=True)\n",
+                        "lineNumber": 23,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                if query:\n",
+                        "lineNumber": 24,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                    url = f\"{url}?{query}\"\n",
+                        "lineNumber": 25,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        else:\n",
+                        "lineNumber": 26,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            url = \"/\"\n",
+                        "lineNumber": 27,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/devxoul/graygram-web/commit/3f3795656c175a6145e490bba75b78b095eb4f84?diff=split#diff-5edca41573c679e401c5578f3f1e187bbab624c1bce76d25b98e61550f28100fL-1",
+                    "lines": [
+                      {
+                        "line": "from flask import current_app\n",
+                        "lineNumber": 4,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "from flask import redirect\n",
+                        "lineNumber": 5,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from StringIO import StringIO\n",
+                        "lineNumber": 6,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from werkzeug.exceptions import NotFound\n",
+                        "lineNumber": 7,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 8,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from graygram import photo_uploader\n",
+                        "lineNumber": 9,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from graygram.s3 import usercontent_bucket\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 12,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "def usercontent_url(*path_components):\n",
+                        "lineNumber": 13,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    base_url = current_app.config['USERCONTENT_BASE_URL']\n",
+                        "lineNumber": 14,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    return '/'.join([base_url] + list(path_components))\n",
+                        "lineNumber": 15,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 16,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 17,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "view = Blueprint('photos', __name__, url_prefix='/photos')\n",
+                        "lineNumber": 18,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 20,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "@view.route('/<photo_id>')\n",
+                        "lineNumber": 21,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "@view.route('/<photo_id>/original')\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "def get_original(photo_id):\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    return redirect(usercontent_bucket.url_for(photo_id + '/original'))\n",
+                        "lineNumber": 18,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    redirect(usercontent_url(photo_id, 'original'))\n",
+                        "lineNumber": 24,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 93,
+                "cwe": [
+                  "CWE-601"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "javascript/DOMXSS",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from data from a remote resource flows into append, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).",
+            "arguments": [
+              "[data from a remote resource](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12),(13),(14),(15),(16),(17),(18),(19)",
+              "[append](20)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "llm_demo/static/index.js",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 83,
+                  "endLine": 83,
+                  "startColumn": 24,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "e1aaa2b28617c625e5a2664c19fb9a7d73c03a7f2efb3c478da08e4f950410f3",
+            "1": "cf7733e4.4773f344.607187b5.d7919eeb.282260e6.8020cfdf.cd61fc56.7a2329a2.4d655318.7d4b7307.97923ac6.424224ec.f5e34a73.8431f2ca.55818220.7a2329a2"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "endLine": 54,
+                            "startColumn": 28,
+                            "endColumn": 33
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "endLine": 54,
+                            "startColumn": 28,
+                            "endColumn": 33
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "endLine": 60,
+                            "startColumn": 22,
+                            "endColumn": 7
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "endLine": 54,
+                            "startColumn": 11,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 62,
+                            "endLine": 62,
+                            "startColumn": 28,
+                            "endColumn": 36
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 62,
+                            "endLine": 62,
+                            "startColumn": 37,
+                            "endColumn": 41
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 62,
+                            "endLine": 62,
+                            "startColumn": 28,
+                            "endColumn": 41
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 62,
+                            "endLine": 62,
+                            "startColumn": 22,
+                            "endColumn": 43
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 62,
+                            "endLine": 62,
+                            "startColumn": 15,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 63,
+                            "endLine": 63,
+                            "startColumn": 16,
+                            "endColumn": 20
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 10,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 53,
+                            "endLine": 68,
+                            "startColumn": 1,
+                            "endColumn": 3
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 11,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 43,
+                            "endLine": 43,
+                            "startColumn": 28,
+                            "endColumn": 39
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 12,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 43,
+                            "endLine": 43,
+                            "startColumn": 22,
+                            "endColumn": 44
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 13,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 43,
+                            "endLine": 43,
+                            "startColumn": 13,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 14,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "endLine": 46,
+                            "startColumn": 19,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 15,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 79,
+                            "endLine": 79,
+                            "startColumn": 20,
+                            "endColumn": 23
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 16,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 82,
+                            "endLine": 82,
+                            "startColumn": 17,
+                            "endColumn": 20
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 17,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 80,
+                            "endLine": 82,
+                            "startColumn": 19,
+                            "endColumn": 35
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 18,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 80,
+                            "endLine": 80,
+                            "startColumn": 9,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 19,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 83,
+                            "endLine": 83,
+                            "startColumn": 31,
+                            "endColumn": 38
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 20,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/static/index.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 83,
+                            "endLine": 83,
+                            "startColumn": 24,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 550,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/OR",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from an HTTP header flows into fastapi.responses.RedirectResponse, where it is used as input for request redirection. This may result in an Open Redirect vulnerability.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as input for request redirection. This may result in an Open Redirect vulnerability.",
+            "arguments": [
+              "[an HTTP header](0)",
+              "[flows](1),(2),(3),(4)",
+              "[fastapi.responses.RedirectResponse](5)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "llm_demo/app.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 95,
+                  "endLine": 95,
+                  "startColumn": 12,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "c188bb93e57b91eb7e0a7f47ee7bb3855c25e60f3556fbbf7000cfacc161882b",
+            "1": "a6b41d6e.993139d5.79e62dc9.8f4e3b88.b749747a.d0f88f05.a2237efa.f46ed94e.e2c119bb.b1ff0823.3f17cba5.ce2d60ee.89a7456e.d0f88f05.22a8b49e.3b62f8f2"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 94,
+                            "endLine": 94,
+                            "startColumn": 18,
+                            "endColumn": 33
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 94,
+                            "endLine": 94,
+                            "startColumn": 18,
+                            "endColumn": 33
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 94,
+                            "endLine": 94,
+                            "startColumn": 18,
+                            "endColumn": 44
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 95,
+                            "endLine": 95,
+                            "startColumn": 33,
+                            "endColumn": 43
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 95,
+                            "endLine": 95,
+                            "startColumn": 29,
+                            "endColumn": 32
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "llm_demo/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 95,
+                            "endLine": 95,
+                            "startColumn": 12,
+                            "endColumn": 28
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 550,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "HTML",
+            "files": 1,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "JavaScript",
+            "files": 1,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Python",
+            "files": 32,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

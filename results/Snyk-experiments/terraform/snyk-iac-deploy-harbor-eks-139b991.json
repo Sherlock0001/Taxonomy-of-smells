@@ -1,0 +1,374 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "tofu/csi.tf",
+    "projectName": "deploy-harbor-eks",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/deploy-harbor-eks/tofu/csi.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/deploy-harbor-eks",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "tofu/efs.tf",
+    "projectName": "deploy-harbor-eks",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/deploy-harbor-eks/tofu/efs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/deploy-harbor-eks",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "tofu/eks.tf",
+    "projectName": "deploy-harbor-eks",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/deploy-harbor-eks/tofu/eks.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/deploy-harbor-eks",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "tofu/harbor.tf",
+    "projectName": "deploy-harbor-eks",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/deploy-harbor-eks/tofu/harbor.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/deploy-harbor-eks",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "tofu/ingress.tf",
+    "projectName": "deploy-harbor-eks",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/deploy-harbor-eks/tofu/ingress.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/deploy-harbor-eks",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "tofu/k8s_resources.tf",
+    "projectName": "deploy-harbor-eks",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/deploy-harbor-eks/tofu/k8s_resources.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/deploy-harbor-eks",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "tofu/pv.tf",
+    "projectName": "deploy-harbor-eks",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/deploy-harbor-eks/tofu/pv.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/deploy-harbor-eks",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "tofu/rds.tf",
+    "projectName": "deploy-harbor-eks",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/deploy-harbor-eks/tofu/rds.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/deploy-harbor-eks",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "tofu/sg.tf",
+    "projectName": "deploy-harbor-eks",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/deploy-harbor-eks/tofu/sg.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/deploy-harbor-eks",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "tofu/tofu.tf",
+    "projectName": "deploy-harbor-eks",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/deploy-harbor-eks/tofu/tofu.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/deploy-harbor-eks",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "tofu/variables.tf",
+    "projectName": "deploy-harbor-eks",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/deploy-harbor-eks/tofu/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/deploy-harbor-eks",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "tofu/vpc.tf",
+    "projectName": "deploy-harbor-eks",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/deploy-harbor-eks/tofu/vpc.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/deploy-harbor-eks",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  }
+]

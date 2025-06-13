@@ -1,0 +1,1172 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/baremetalNode.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/baremetalNode.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/baremetalNode2.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/baremetalNode2.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/fullsite.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/fullsite.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/fullsite_networks.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/fullsite_networks.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/fullsite_nodes.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/fullsite_nodes.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/fullsite_profiles.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/fullsite_profiles.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/hardwareProfile.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/hardwareProfile.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/hostProfile.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/hostProfile.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/hostProfile2.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/hostProfile2.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/hostprof.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/hostprof.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/invalid_baremetalNode.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/invalid_baremetalNode.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/invalid_baremetalNode2.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/invalid_baremetalNode2.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/invalid_hardwareProfile.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/invalid_hardwareProfile.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/invalid_hostProfile.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/invalid_hostProfile.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/invalid_hostProfile2.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/invalid_hostProfile2.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/invalid_network.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/invalid_network.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/invalid_network2.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/invalid_network2.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/invalid_network3.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/invalid_network3.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/invalid_network4.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/invalid_network4.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/invalid_network5.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/invalid_network5.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/invalid_networkLink.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/invalid_networkLink.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/invalid_networkLink2.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/invalid_networkLink2.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/invalid_networkLink3.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/invalid_networkLink3.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/invalid_rack.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/invalid_rack.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/invalid_region.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/invalid_region.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/multidoc.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/multidoc.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/network.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/network.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/network2.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/network2.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/network3.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/network3.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/network4.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/network4.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/network5.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/network5.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/networkLink.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/networkLink.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/networkLink2.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/networkLink2.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/networkLink3.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/networkLink3.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/oob.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/oob.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/rack.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/rack.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/region.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/region.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/singledoc.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/singledoc.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "python/tests/yaml_samples/unknown_kind.yaml",
+    "projectName": "drydock",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/drydock/python/tests/yaml_samples/unknown_kind.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/drydock",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  }
+]

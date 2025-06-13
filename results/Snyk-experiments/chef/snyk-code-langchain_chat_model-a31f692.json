@@ -1,0 +1,5 @@
+{
+  "ok": false,
+  "error": "unable to retrieve settings: Get \"https://api.snyk.io/v1/cli-config/settings/sast?org=\": dial tcp: lookup api.snyk.io on 10.255.255.254:53: read udp 10.255.255.254:53352->10.255.255.254:53: i/o timeout",
+  "path": "/home/mbissine/gitclone/langchain_chat_model"
+}

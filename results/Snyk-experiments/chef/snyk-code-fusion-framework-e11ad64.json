@@ -1,0 +1,1694 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "javascript/NoRateLimitingForExpensiveWebOperation",
+              "name": "NoRateLimitingForExpensiveWebOperation",
+              "shortDescription": {
+                "text": "Allocation of Resources Without Limits or Throttling"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nWithout unlimited resources, software operating in the real world is inherently limited in the resources it may consume; similarly, servers are limited by the number of simultaneous sessions they can handle. Therefore, it is important for developers to design software that considers these real-world physical (or virtual) limitations and limits user sessions accordingly, both in terms of the number of user sessions and in the quantity of resources each user may demand. Software with this weakness does not include such limitations and as a result, individual user sessions may consume too many resources, leading to unintended software behavior including, potentially, denial of service. This can be compared to a single restaurant customer emptying out the entire buffet, leaving no food for other customers--or an entire busload mobbing the buffet all at once, with a similar effect. This may happen inadvertently or as a result of an attack by a malicious user.\n\n## Best practices for prevention\n* Test extensively to obtain baseline values indicating how the software performs in the real world under various conditions (normal and peak); use these values to determine reasonable software limits.\n* Set clear limits for all flexible parameters such as maximum allocable memory, number of processes within a given timeframe, file descriptors, requests per client, number of records per request, etc. This is particularly true for any parameters within user control.\n* Release all resources when no longer in use, including incorporating timeouts for inactive users, processes, and resources.\n* Familiarize Dev, Ops, and IT teams with best practices for recognizing and preventing DoS attacks and out-of-control resource allocation to prevent catastrophic failures.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "NoRateLimitingForExpensiveWebOperation",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/vmware/singleton/commit/cb488fd0cd75e7b1f122784bdaf5ee6a85cd5323?diff=split#diff-dd8084200629fa5980243a6f7566cf5f42710c5ca3bdc612dbcc330c57333577L-1",
+                    "lines": [
+                      {
+                        "line": "// set up rate limiter: maximum of five requests per minute\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "const RateLimit = require('express-rate-limit');\n",
+                        "lineNumber": 8,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "const limiter = RateLimit({\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  windowMs: 1 * 60 * 1000, // 1 minute\n",
+                        "lineNumber": 10,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  max: 5\n",
+                        "lineNumber": 11,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "});\n",
+                        "lineNumber": 12,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 13,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "const app = express();\n",
+                        "lineNumber": 14,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "const port = process.env.PORT || 3000;\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 16,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.use(express.static(__dirname));\n",
+                        "lineNumber": 10,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "// apply rate limiter to all requests\n",
+                        "lineNumber": 17,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "app.use(limiter);\n",
+                        "lineNumber": 18,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 19,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "app.use ('/dist',express.static(__dirname + '/dist/'));\n",
+                        "lineNumber": 20,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 21,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "app.use ('/assets',express.static(__dirname + '/assets/'));\n",
+                        "lineNumber": 22,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 23,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "app.use ('/src/translations',express.static(__dirname + '/src/translations'));\n",
+                        "lineNumber": 24,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 25,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.get('/', (req, res) => {\n",
+                        "lineNumber": 26,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  res.send(`Welcome to the static localizer. Navigate to /example`);\n",
+                        "lineNumber": 27,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "});\n",
+                        "lineNumber": 28,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 29,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.get('/example', (req, res) => {\n",
+                        "lineNumber": 30,
+                        "lineChange": "none"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/natsukagami/themis-web-interface/commit/e1ef34f8b95e7eefab54c204b78fbdee70169a6d?diff=split#diff-cd0e12b228a7dea99a7346adf68cfc7a6a2c321846cc8a90fc6cd92cf8066d5eL-1",
+                    "lines": [
+                      {
+                        "line": "router.post('/', (req, res, next) => {\n",
+                        "lineNumber": 8,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "const rateLimiter = require('../controls/rate-limiter')({\n",
+                        "lineNumber": 8,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t// Allow 3 submits, then slows down\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tfreeRetries: 30,\n",
+                        "lineNumber": 10,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tminWait: 2 * 60 * 60,\n",
+                        "lineNumber": 11,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tmaxWait: 2 * 60 * 60,\n",
+                        "lineNumber": 12,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tlifetime: 60 * 60\n",
+                        "lineNumber": 13,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "});\n",
+                        "lineNumber": 14,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 15,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "router.post('/', rateLimiter.prevent, (req, res, next) => {\n",
+                        "lineNumber": 16,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/Waifu-pics/waifu-api/commit/da0d3b4ee8dd4e2ab0a789dfd04cb304a537368e?diff=split#diff-0eddd48e85f4f98a238d49bfe0b4cf514b1430322bcdc196b1a97786e0ec30c8L-1",
+                    "lines": [
+                      {
+                        "line": "const rateLimit = require(\"express-rate-limit\")\n",
+                        "lineNumber": 4,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 5,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "module.exports = ({ db, app, config, s3 }) => {\n",
+                        "lineNumber": 6,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    // Checking if user is Admin to prevent rate limit middleware\n",
+                        "lineNumber": 8,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    const chkAdmin = async (req, res, next) => {\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        const { token } = req.headers\n",
+                        "lineNumber": 10,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        const Admins = db.collection('admins')\n",
+                        "lineNumber": 11,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        req.chkAdmin = Boolean(req.headers.token && typeof token === \"string\" && Boolean(await Admins.findOne({token})))\n",
+                        "lineNumber": 12,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        \n",
+                        "lineNumber": 13,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        next()\n",
+                        "lineNumber": 14,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    }\n",
+                        "lineNumber": 15,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 16,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    // Rate limit middleware\n",
+                        "lineNumber": 17,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    const limiter = rateLimit({\n",
+                        "lineNumber": 18,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        windowMs: 10 * 60 * 1000, // 10 minutes\n",
+                        "lineNumber": 19,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        max: 15,\n",
+                        "lineNumber": 20,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        message: \"You can only upload 15 files per 10 minutes!\",\n",
+                        "lineNumber": 21,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        statusCode: 400,\n",
+                        "lineNumber": 22,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        skip: function (req) {\n",
+                        "lineNumber": 23,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            return req.chkAdmin\n",
+                        "lineNumber": 24,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        }\n",
+                        "lineNumber": 25,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    })\n",
+                        "lineNumber": 26,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 27,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    // Do shit to upload\n",
+                        "lineNumber": 28,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    app.use(\"/api/upload\", chkAdmin, limiter)\n",
+                        "lineNumber": 29,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 30,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    app.use(fileUpload({\n",
+                        "lineNumber": 31,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        limits: { fileSize: config.maxUploadSize * 1024 * 1024 },\n",
+                        "lineNumber": 32,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        abortOnLimit: true,\n",
+                        "lineNumber": 33,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        createParentPath: true\n",
+                        "lineNumber": 34,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    }))\n",
+                        "lineNumber": 35,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 36,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    app.post('/api/upload', async (req, res) => {\n",
+                        "lineNumber": 37,
+                        "lineChange": "none"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 37,
+                "cwe": [
+                  "CWE-770"
+                ]
+              }
+            },
+            {
+              "id": "javascript/PT",
+              "name": "PT",
+              "shortDescription": {
+                "text": "Path Traversal"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "help": {
+                "markdown": "## Details\n\nA Directory Traversal attack (also known as path traversal) aims to access files and directories that are stored outside the intended folder. By manipulating files with \"dot-dot-slash (../)\" sequences and its variations, or by using absolute file paths, it may be possible to access arbitrary files and directories stored on file system, including application source code, configuration, and other critical system files.\n\nBeing able to access and manipulate an arbitrary path leads to vulnerabilities when a program is being run with privileges that the user providing the path should not have. A website with a path traversal vulnerability would allow users access to sensitive files on the server hosting it. CLI programs may also be vulnerable to path traversal if they are being ran with elevated privileges (such as with the setuid or setgid flags in Unix systems).\n\nDirectory Traversal vulnerabilities can be generally divided into two types:\n\n- **Information Disclosure**: Allows the attacker to gain information about the folder structure or read the contents of sensitive files on the system.\n\n`st` is a module for serving static files on web pages, and contains a [vulnerability of this type](https://snyk.io/vuln/npm:st:20140206). In our example, we will serve files from the `public` route.\n\nIf an attacker requests the following URL from our server, it will in turn leak the sensitive private key of the root user.\n\n```\ncurl http://localhost:8080/public/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/root/.ssh/id_rsa\n```\n**Note** `%2e` is the URL encoded version of `.` (dot).\n\n- **Writing arbitrary files**: Allows the attacker to create or replace existing files. This type of vulnerability is also known as `Zip-Slip`.\n\nOne way to achieve this is by using a malicious `zip` archive that holds path traversal filenames. When each filename in the zip archive gets concatenated to the target extraction folder, without validation, the final path ends up outside of the target folder. If an executable or a configuration file is overwritten with a file containing malicious code, the problem can turn into an arbitrary code execution issue quite easily.\n\nThe following is an example of a `zip` archive with one benign file and one malicious file. Extracting the malicious file will result in traversing out of the target folder, ending up in `/root/.ssh/` overwriting the `authorized_keys` file:\n\n```\n2018-04-15 22:04:29 .....           19           19  good.txt\n2018-04-15 22:04:42 .....           20           20  ../../../../../../root/.ssh/authorized_keys\n```",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "PT",
+                  "Security",
+                  "SourceServer",
+                  "SourceRequestUrl",
+                  "<unknown>",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/iamfrntdv/adm-dev-kit/commit/8edeb067e703a642cb7ac7c88fb95fce8dd9c248?diff=split#diff-52baeef6a12dda5ae6078825eeb32958966ba6cbdd56792899f6273fecd26eabL-1",
+                    "lines": [
+                      {
+                        "line": "const img = fs.readFileSync(filePath);\n",
+                        "lineNumber": 7,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "res.end(img);\n",
+                        "lineNumber": 8,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "res.sendFile(filePath, {root: './'});\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/telekom/telements/commit/a9df3dc7d2274f59fa92a62cd0ea932af9ff703b?diff=split#diff-7266650a75fc58e629b4039a6109605b7e6b29d02f97a87ea33cdcfa3b514a95L-1",
+                    "lines": [
+                      {
+                        "line": "const sanitize = require(\"sanitize-filename\");\n",
+                        "lineNumber": 13,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 14,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "const PORT = 5005;\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "const app = express();\n",
+                        "lineNumber": 16,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 17,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.engine(\n",
+                        "lineNumber": 18,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  'hbs',\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  handlebars({\n",
+                        "lineNumber": 20,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    defaultLayout: 'main',\n",
+                        "lineNumber": 21,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    extname: '.hbs',\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  })\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": ");\n",
+                        "lineNumber": 24,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 25,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.set('view engine', 'hbs');\n",
+                        "lineNumber": 26,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.use(express.static('public'));\n",
+                        "lineNumber": 27,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 28,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.get('/', (req, res) => {\n",
+                        "lineNumber": 29,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  res.render('index');\n",
+                        "lineNumber": 30,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "});\n",
+                        "lineNumber": 31,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 32,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.get('/:component', (req, res) => {\n",
+                        "lineNumber": 33,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  try {\n",
+                        "lineNumber": 34,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    res.render(req.params.component, {\n",
+                        "lineNumber": 34,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "      title: req.params.component.replace(/^./, c => c.toUpperCase()),\n",
+                        "lineNumber": 35,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    res.render(sanitize(req.params.component), {\n",
+                        "lineNumber": 35,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "      title: sanitize(req.params.component)\n",
+                        "lineNumber": 36,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        .replace(/-/g, ' ')\n",
+                        "lineNumber": 37,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        .replace(/\\b\\w/g, (c) => c.toUpperCase()),\n",
+                        "lineNumber": 38,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    });\n",
+                        "lineNumber": 39,
+                        "lineChange": "none"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/substack/shipboard/commit/e2722480410eea3f3d7b51730dcdea49df649cd2?diff=split#diff-e727e4bdf3657fd1d798edcd6b099d6e092f8573cba266154583a746bba0f346L-1",
+                    "lines": [
+                      {
+                        "line": "    if (has(pages, req.url)) {\n",
+                        "lineNumber": 14,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    var p = req.url.split(/[#?]/)[0];\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    if (p === '/') {\n",
+                        "lineNumber": 10,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        html('layout.html').pipe(hyperstream({\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "            '#content': html(pages[req.url])\n",
+                        "lineNumber": 16,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "            '[page=create]': html('create.html'),\n",
+                        "lineNumber": 12,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            '[page=view]': html('view.html'),\n",
+                        "lineNumber": 13,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            '[page=edit]': html('edit.html')\n",
+                        "lineNumber": 14,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        })).pipe(res);\n",
+                        "lineNumber": 17,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    }\n",
+                        "lineNumber": 18,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    else st(req, res);\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "};\n",
+                        "lineNumber": 20,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 21,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "function html (file) {\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    return fs.createReadStream(path.join(__dirname, 'html', file));\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 204,
+                "cwe": [
+                  "CWE-23"
+                ]
+              }
+            },
+            {
+              "id": "javascript/XSS",
+              "name": "XSS",
+              "shortDescription": {
+                "text": "Cross-site Scripting (XSS)"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "help": {
+                "markdown": "## Details\n\nA cross-site scripting attack occurs when the attacker tricks a legitimate web-based application or site to accept a request as originating from a trusted source.\n\nThis is done by escaping the context of the web application; the web application then delivers that data to its users along with other trusted dynamic content, without validating it. The browser unknowingly executes malicious script on the client side (through client-side languages; usually JavaScript or HTML)  in order to perform actions that are otherwise typically blocked by the browser's Same Origin Policy.\n\nInjecting malicious code is the most prevalent manner by which XSS is exploited; for this reason, escaping characters in order to prevent this manipulation is the top method for securing code against this vulnerability.\n\nEscaping means that the application is coded to mark key characters, and particularly key characters included in user input, to prevent those characters from being interpreted in a dangerous context. For example, in HTML, `<` can be coded as  `&lt`; and `>` can be coded as `&gt`; in order to be interpreted and displayed as themselves in text, while within the code itself, they are used for HTML tags. If malicious content is injected into an application that escapes special characters and that malicious content uses `<` and `>` as HTML tags, those characters are nonetheless not interpreted as HTML tags by the browser if they've been correctly escaped in the application code and in this way the attempted attack is diverted.\n\nThe most prominent use of XSS is to steal cookies (source: OWASP HttpOnly) and hijack user sessions, but XSS exploits have been used to expose sensitive information, enable access to privileged services and functionality and deliver malware.\n\n### Types of attacks\nThere are a few methods by which XSS can be manipulated:\n\n|Type|Origin|Description|\n|--|--|--|\n|**Stored**|Server|The malicious code is inserted in the application (usually as a link) by the attacker. The code is activated every time a user clicks the link.|\n|**Reflected**|Server|The attacker delivers a malicious link externally from the vulnerable web site application to a user. When clicked, malicious code is sent to the vulnerable web site, which reflects the attack back to the user's browser.|\n|**DOM-based**|Client|The attacker forces the user's browser to render a malicious page. The data in the page itself delivers the cross-site scripting data.|\n|**Mutated**| |The attacker injects code that appears safe, but is then rewritten and modified by the browser, while parsing the markup. An example is rebalancing unclosed quotation marks or even adding quotation marks to unquoted parameters.|\n\n### Affected environments\nThe following environments are susceptible to an XSS attack:\n\n* Web servers\n* Application servers\n* Web application environments\n\n## Best practices for prevention\nThis section describes the top best practices designed to specifically protect your code:\n\n* Sanitize data input in an HTTP request before reflecting it back, ensuring all data is validated, filtered or escaped before echoing anything back to the user, such as the values of query parameters during searches.\n* Convert special characters such as `?`, `&`, `/`, `<`, `>` and spaces to their respective HTML or URL encoded equivalents.\n* Give users the option to disable client-side scripts.\n* Redirect invalid requests.\n* Detect simultaneous logins, including those from two separate IP addresses, and invalidate those sessions.\n* Use and enforce a Content Security Policy (source: Wikipedia) to disable any features that might be manipulated for an XSS attack.\n* Read the documentation for any of the libraries referenced in your code to understand which elements allow for embedded HTML.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "XSS",
+                  "Security",
+                  "SourceServer",
+                  "SourceRequestUrl",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/nategood/httpful/commit/56bece201beeae6d80ed23a1195f7ab685dfde0c?diff=split#diff-27153a4cc821a38fb1466ae1c19c9f48fdc8b5028f971c1f88fd3d36af3081d2L-1",
+                    "lines": [
+                      {
+                        "line": "\n",
+                        "lineNumber": 6,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    res.writeHead(200);\n",
+                        "lineNumber": 7,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    res.writeHead(200, {\"Content-Type\":\"application/json\"});\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    req.on('data', function(data){\n",
+                        "lineNumber": 8,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        echo += data;\n",
+                        "lineNumber": 9,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    });\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    req.on('end', function(){\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tres.write(\n",
+                        "lineNumber": 12,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\tJSON.stringify({\n",
+                        "lineNumber": 13,
+                        "lineChange": "none"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/mjackson/unpkg/commit/db53a296aafebe18b854a0da2d4e09fb39e2aca8?diff=split#diff-efedef52a9612fa34544d4ad8a68232d242c481eaa0de73b416064cf5c5c4cb6L-1",
+                    "lines": [
+                      {
+                        "line": "    return res.status(403).send(`Invalid URL: ${req.url}`)\n",
+                        "lineNumber": 21,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    return res.status(403).type('text').send(`Invalid URL: ${req.url}`)\n",
+                        "lineNumber": 21,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  // Do not allow unrecognized query parameters because\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  // some people use them to bust the cache.\n",
+                        "lineNumber": 24,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  if (!queryIsValid(url.query))\n",
+                        "lineNumber": 25,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    return res.status(403).send(`Invalid query: ${JSON.stringify(url.query)}`)\n",
+                        "lineNumber": 26,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    return res.status(403).type('text').send(`Invalid query: ${JSON.stringify(url.query)}`)\n",
+                        "lineNumber": 26,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/angular-cms/angular-cms/commit/49e3845bf11f21e5f63997ed4c522cfa923c89a7?diff=split#diff-2458b7a314e52c34fd950457c17939524367c06572e8c78acfce08e6a6293e68L-1",
+                    "lines": [
+                      {
+                        "line": "res.send(result);\n",
+                        "lineNumber": 20,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "res.status(httpStatus.OK).json(result);\n",
+                        "lineNumber": 21,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 339,
+                "cwe": [
+                  "CWE-79"
+                ]
+              }
+            },
+            {
+              "id": "javascript/HardcodedNonCryptoSecret",
+              "name": "HardcodedNonCryptoSecret",
+              "shortDescription": {
+                "text": "Hardcoded Secret"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "help": {
+                "markdown": "## Details\n\nWhen constants are hardcoded into applications, this information could easily be reverse-engineered and become known to attackers. For example, if a breached authentication token is hardcoded in multiple places in the application, it may lead to components of the application remaining vulnerable if not all instances are changed.\nAnother negative effect of hard-coding constants is potential unpredictability in the application's performance if the development team fails to update every single instance of the hardcoded constant throughout the code. For these reasons, hard-coding security-relevant constants is considered bad coding practice and should be remedied if present and avoided in future.\n\n## Best practices for prevention\n- Never hard code security-related constants; use symbolic names or configuration lookup files.\n- As hard coding is often done by coders working alone on a small scale, examine all legacy code components and test carefully when scaling.\n- Adopt a \"future-proof code\" mindset: While use of constants may save a little time now and make development simpler in the short term, it could cost time and money adapting to scale or other unforeseen circumstances (such as new hardware) in the future.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "HardcodedNonCryptoSecret",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/markstock7/FileManager/commit/50572778825dea6b6fdb34c9ae950d9915743e4c?diff=split#diff-408990876524f4737b49693cedc52fd267e31f665d0a7f71792dcb986d6a8268L-1",
+                    "lines": [
+                      {
+                        "line": "accessKeyId: 'pT3KujnBPxc0ey7G',\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "secretAccessKey: 'CcHjh2y7tIFljxgUT4U8sQLctkMBHu',\n",
+                        "lineNumber": 2,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "accessKeyId: '',\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "secretAccessKey: '',\n",
+                        "lineNumber": 2,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/leohmoraes/rocketseat-02/commit/69e888ed7c779a0fbb0d0c08a219afa11b3913bd?diff=split#diff-04122576a4101a4ed68c79faa4f4605c44d8fd93252cff9e64ba66ab9c561e86L-1",
+                    "lines": [
+                      {
+                        "line": "secret: '9dffij39asf23nsfnsvsdsa',\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "secret: process.env.APP_SECRET,\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/rodrigotamura/go-stack-2019/commit/26e020dfc2272fe76c82c28d86f492c3c84a94c5?diff=split#diff-92f76c0bccc1f970244da3b50449f200d4787cf60a87be14ff4f250d0ba1a590L-1",
+                    "lines": [
+                      {
+                        "line": "secret: '632ca4dfc8b2269e6fdf03ab5a55d2ec',\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "secret: process.env.APP_SECRET,\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 100,
+                "cwe": [
+                  "CWE-547"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "javascript/NoRateLimitingForExpensiveWebOperation",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.",
+            "markdown": "Expensive operation ({0}) is performed by {1} which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.",
+            "arguments": [
+              "[a file system operation](0)",
+              "[an endpoint handler](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 51,
+                  "endLine": 83,
+                  "startColumn": 36,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "dd5c5b7a246dc1a817f4850aa597a4eb428d19cd826394f6bf234e86545ac3f3",
+            "1": "e0fda459.4773f344.44eded10.c559ebce.fd1fa73f.8020cfdf.83265159.3cee0341.aff2746e.b6e32c83.44eded10.5e127924.8afa58a5.5fce695c.83265159.89d75565"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 71,
+                            "endLine": 71,
+                            "startColumn": 37,
+                            "endColumn": 49
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 51,
+                            "endLine": 83,
+                            "startColumn": 36,
+                            "endColumn": 14
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 590,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/NoRateLimitingForExpensiveWebOperation",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.",
+            "markdown": "Expensive operation ({0}) is performed by {1} which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.",
+            "arguments": [
+              "[a file system operation](0)",
+              "[an endpoint handler](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 86,
+                  "endLine": 118,
+                  "startColumn": 36,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "dc151448a19b25ec3d8277d83efa4c8dd549a7a629120c91e2b7af7d5072ff26",
+            "1": "c8627281.4773f344.44eded10.c559ebce.fd1fa73f.8431f2ca.83265159.09d49edf.06e3d9ec.b6e32c83.44eded10.c559ebce.8afa58a5.8431f2ca.83265159.4b6faca4"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 97,
+                            "endLine": 97,
+                            "startColumn": 37,
+                            "endColumn": 49
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "endLine": 118,
+                            "startColumn": 36,
+                            "endColumn": 14
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 590,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/PT",
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "Unsanitized input from the request URL flows into node:fs.readFileSync, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "arguments": [
+              "[the request URL](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8)",
+              "[node:fs.readFileSync](9)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 71,
+                  "endLine": 71,
+                  "startColumn": 37,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "fcec9df5c054ecf6faf50ba88b16a19871bba57220ca6b49dc68d521cd9a96fb",
+            "1": "e0fda459.4773f344.8b18f948.5e127924.ef9f7d82.8020cfdf.ea4b1c47.3357ef26.227ff053.b6e32c83.8b18f948.5e127924.b6be8b13.fe6fd6c3.83265159.3357ef26"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 52,
+                            "endLine": 52,
+                            "startColumn": 39,
+                            "endColumn": 42
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 52,
+                            "endLine": 52,
+                            "startColumn": 39,
+                            "endColumn": 42
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 52,
+                            "endLine": 52,
+                            "startColumn": 35,
+                            "endColumn": 42
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 52,
+                            "endLine": 52,
+                            "startColumn": 35,
+                            "endColumn": 43
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 52,
+                            "endLine": 52,
+                            "startColumn": 44,
+                            "endColumn": 49
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "endLine": 54,
+                            "startColumn": 46,
+                            "endColumn": 53
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "endLine": 54,
+                            "startColumn": 35,
+                            "endColumn": 39
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "endLine": 54,
+                            "startColumn": 23,
+                            "endColumn": 32
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 71,
+                            "endLine": 71,
+                            "startColumn": 50,
+                            "endColumn": 59
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 71,
+                            "endLine": 71,
+                            "startColumn": 37,
+                            "endColumn": 49
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 820,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/XSS",
+          "ruleIndex": 2,
+          "level": "error",
+          "message": {
+            "text": "Unsanitized input from the request URL flows into end, where it is used to render an HTML page returned to the user. This may result in a Cross-Site Scripting attack (XSS).",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used to render an HTML page returned to the user. This may result in a Cross-Site Scripting attack (XSS).",
+            "arguments": [
+              "[the request URL](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8)",
+              "[end](9)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 114,
+                  "endLine": 114,
+                  "startColumn": 25,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "bd1246dde431101ae9d356c8da545863a74135f541990b79d88488d4e7f35ab1",
+            "1": "bc441d81.4773f344.c9330245.d7919eeb.ef9f7d82.756a1932.cd61fc56.d087f7d7.bc441d81.277c621c.c9330245.c559ebce.79a7d027.8431f2ca.83265159.967edab7"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 100,
+                            "endLine": 100,
+                            "startColumn": 29,
+                            "endColumn": 32
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 100,
+                            "endLine": 100,
+                            "startColumn": 29,
+                            "endColumn": 32
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 100,
+                            "endLine": 100,
+                            "startColumn": 25,
+                            "endColumn": 32
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 100,
+                            "endLine": 100,
+                            "startColumn": 25,
+                            "endColumn": 33
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 99,
+                            "endLine": 99,
+                            "startColumn": 47,
+                            "endColumn": 65
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 99,
+                            "endLine": 99,
+                            "startColumn": 40,
+                            "endColumn": 65
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 99,
+                            "endLine": 103,
+                            "startColumn": 34,
+                            "endColumn": 22
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 99,
+                            "endLine": 99,
+                            "startColumn": 27,
+                            "endColumn": 31
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 114,
+                            "endLine": 114,
+                            "startColumn": 29,
+                            "endColumn": 33
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "packages/cli/src/lib/plugins/external-public/external-public-plugin.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 114,
+                            "endLine": 114,
+                            "startColumn": 25,
+                            "endColumn": 28
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 820,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cookbooks/app-react-assets/app.manifest.config.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 5,
+                  "endLine": 5,
+                  "startColumn": 9,
+                  "endColumn": 15
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "3c872d54ce17adf1fcc940ad69b1b42338a17637916c75d07db1380da0d0e1ee",
+            "1": "12567ef6.3f481afb.211331a8.e052b9a9.79a7d027.fcf3002d.ce4a9d89.ed9875cf.12567ef6.3f481afb.211331a8.e052b9a9.79a7d027.fcf3002d.cd61fc56.ed9875cf"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "cookbooks/app-react-assets/app.manifest.config.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "endLine": 5,
+                            "startColumn": 17,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "cookbooks/app-react-assets/app.manifest.config.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "endLine": 5,
+                            "startColumn": 9,
+                            "endColumn": 15
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 770,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "JavaScript",
+            "files": 5,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "HTML",
+            "files": 2,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "TypeScript",
+            "files": 697,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Vue",
+            "files": 2,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

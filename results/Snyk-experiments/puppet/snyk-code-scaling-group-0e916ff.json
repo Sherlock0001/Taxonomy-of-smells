@@ -1,0 +1,1613 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "go/InsecureHash",
+              "name": "InsecureHash",
+              "shortDescription": {
+                "text": "Use of Password Hash With Insufficient Computational Effort"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nSensitive information should never be stored in plain text, since this makes it very easy for unauthorized users, whether malicious insiders or outside attackers, to access. Hashing methods are used to make stored passwords and other sensitive data unreadable to users. For example, when a password is defined for the first time, it is hashed and then stored. The next time that user attempts to log on, the password they enter is hashed following the same procedure and compared with the stored value. In this way, the original password never needs to be stored in the system.\n\nHashing is a one-way scheme, meaning a hashed password cannot be reverse engineered. However, if an outdated or custom programmed hashing scheme is used, it becomes simple for an attacker with powerful modern computing power to gain access to the hashes used. This opens up access to all stored password information, leading to breached security. Therefore, it is essential for developers to understand modern, secure password hashing techniques.\n\n## Best practices for prevention\n* Use strong standard algorithms for hashing rather than simpler but outdated methods or DIY hashing schemes, which may have inherent weaknesses.\n* Use modular design for all code dealing with hashing so it can be swapped out as security standards change over time.\n* Use salting in combination with hashing (While this places more demands on resources, it is an essential step for tighter security.).\n* Implement zero-trust architecture to ensure that access to password data is granted only for legitimate business purposes.\n* Increase developer awareness of current standards in data security and cryptography.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "go",
+                  "InsecureHash",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/imgproxy/imgproxy/commit/7f567216dd3993d2276092a47aa3ef3b7fe1dd10?diff=split#diff-d12d4526fdfb5d07e4694a3fcfa8953d98905d9284f9fde8e566d909abfece15L-1",
+                    "lines": [
+                      {
+                        "line": "\t\"crypto/sha1\"\n",
+                        "lineNumber": 3,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\"crypto/sha256\"\n",
+                        "lineNumber": 3,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\"encoding/binary\"\n",
+                        "lineNumber": 4,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\"fmt\"\n",
+                        "lineNumber": 5,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": ")\n",
+                        "lineNumber": 6,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 7,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "var notModifiedErr = newError(304, \"Not modified\", \"Not modified\")\n",
+                        "lineNumber": 8,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 9,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "func calcETag(b []byte, po *processingOptions) string {\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tfootprint := sha1.Sum(b)\n",
+                        "lineNumber": 11,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\tfootprint := sha256.Sum256(b)\n",
+                        "lineNumber": 11,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/IBM-Cloud/terraform-provider-ibm/commit/4d78aad2a0dcf1577dd692e6cefc0c1202bb7caa?diff=split#diff-d05dab1226100e6e24c5919f029fcc25d856def25f18840cbcc2561e696ab7e1L-1",
+                    "lines": [
+                      {
+                        "line": "hash := sha1.Sum([]byte(v.(string)))\n",
+                        "lineNumber": 96,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "hash := sha256.Sum256([]byte(v.(string)))\n",
+                        "lineNumber": 96,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/evepraisal/go-evepraisal/commit/dffc03b9a06a74993862a7467b2e53eefa15fa18?diff=split#diff-264c61f47fbac9fd1969bbdd2e2237b278f283f16eb28991298d26a190aa04b7L-1",
+                    "lines": [
+                      {
+                        "line": "\t\"crypto/md5\"\n",
+                        "lineNumber": 3,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\"crypto/sha512\"\n",
+                        "lineNumber": 3,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\"encoding/hex\"\n",
+                        "lineNumber": 4,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\"strings\"\n",
+                        "lineNumber": 5,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": ")\n",
+                        "lineNumber": 6,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 7,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "// GenerateStaticEtags generates etags for all of the static files and sets it on the context object\n",
+                        "lineNumber": 8,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "func (ctx *Context) GenerateStaticEtags() {\n",
+                        "lineNumber": 9,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tetags := make(map[string]string)\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tfor _, name := range AssetNames() {\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tif !strings.HasPrefix(name, \"static/\") {\n",
+                        "lineNumber": 12,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\tcontinue\n",
+                        "lineNumber": 13,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t}\n",
+                        "lineNumber": 14,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tdata, _ := Asset(name)\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 16,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\thasher := md5.New()\n",
+                        "lineNumber": 17,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\thasher := sha512.New()\n",
+                        "lineNumber": 17,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 85,
+                "cwe": [
+                  "CWE-916"
+                ]
+              }
+            },
+            {
+              "id": "go/NoHardcodedCredentials",
+              "name": "NoHardcodedCredentials",
+              "shortDescription": {
+                "text": "Use of Hardcoded Credentials"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nDevelopers may use hardcoded credentials for convenience when coding in order to simplify their workflow. While they are responsible for removing these before production, occasionally this task may fall through the cracks. This also becomes a maintenance challenge when credentials are re-used across multiple applications.\n\nOnce attackers gain access, they may take advantage of privilege level to remove or alter data, take down a site or app, or hold any of the above for ransom. The risk across multiple similar projects is even greater. If code containing the credentials is reused across multiple projects, they will all be compromised.\n\n## Best practices for prevention\n* Plan software architecture such that keys and passwords are always stored outside the code, wherever possible.\n* Plan encryption into software architecture for all credential information and ensure proper handling of keys, credentials, and passwords.\n* Prompt for a secure password on first login rather than hard-code a default password.\n* If a hardcoded password or credential must be used, limit its use, for example, to system console users rather than via the network.\n* Use strong hashes for inbound password authentication, ideally with randomly assigned salts to increase the difficulty level in case of brute-force attack.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "go",
+                  "NoHardcodedCredentials",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/fjukstad/kvik/commit/254d8dd1c34e017b1aac1493286a3f3b773ff40c?diff=split#diff-6a37a2c5ea8c5a951b2830b342cc07312e7cfa6eb69afdecc4b5bfce636f28e0L-1",
+                    "lines": [
+                      {
+                        "line": "//addr := \"192.168.99.100:8004\"\n",
+                        "lineNumber": 12,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "addr := \"public.opencpu.org\"\n",
+                        "lineNumber": 13,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "username := \"user\"\n",
+                        "lineNumber": 14,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "password := \"password\"\n",
+                        "lineNumber": 15,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "addr := \"localhost:8181\"\n",
+                        "lineNumber": 13,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "//addr := \"public.opencpu.org\"\n",
+                        "lineNumber": 14,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "username := \"\"\n",
+                        "lineNumber": 15,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "password := \"\"\n",
+                        "lineNumber": 16,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/k0kubun/sqldef/commit/5ac0feda25dfa3b4a3e2201c017425beec13a02d?diff=split#diff-ed17e21a49a7d3b117a41187ac6d384ef656de942120f74001fa9b057fde5688L-1",
+                    "lines": [
+                      {
+                        "line": "user := \"postgres\"\n",
+                        "lineNumber": 8,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "password := \"\"\n",
+                        "lineNumber": 9,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "host := \"127.0.0.1:5432\"\n",
+                        "lineNumber": 10,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "user := config.User\n",
+                        "lineNumber": 8,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "password := config.Password\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "host := fmt.Sprintf(\"%s:%d\", config.Host, config.Port)\n",
+                        "lineNumber": 10,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/alfred-zhong/wserver/commit/bc7d33643368e16d9801ab88f7ba2dfdc49467af?diff=split#diff-005f9a0396b938d96245e8fc04dcd633d0716b5610fd4d90c09af361625fb74dL-1",
+                    "lines": [
+                      {
+                        "line": "userID := \"476B40DD-DFE9-4CDE-AD4F-F0A53FE18FA5\"\n",
+                        "lineNumber": 18,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "userID := uuid.New().String()\n",
+                        "lineNumber": 19,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 71,
+                "cwe": [
+                  "CWE-798"
+                ]
+              }
+            },
+            {
+              "id": "go/PT",
+              "name": "PT",
+              "shortDescription": {
+                "text": "Path Traversal"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "help": {
+                "markdown": "## Details\n\nA Directory Traversal attack (also known as path traversal) aims to access files and directories that are stored outside the intended folder. By manipulating files with \"dot-dot-slash (../)\" sequences and its variations, or by using absolute file paths, it may be possible to access arbitrary files and directories stored on file system, including application source code, configuration, and other critical system files.\n\nBeing able to access and manipulate an arbitrary path leads to vulnerabilities when a program is being run with privileges that the user providing the path should not have. A website with a path traversal vulnerability would allow users access to sensitive files on the server hosting it. CLI programs may also be vulnerable to path traversal if they are being ran with elevated privileges (such as with the setuid or setgid flags in Unix systems).\n\nDirectory Traversal vulnerabilities can be generally divided into two types:\n\n- **Information Disclosure**: Allows the attacker to gain information about the folder structure or read the contents of sensitive files on the system.\n\n`st` is a module for serving static files on web pages, and contains a [vulnerability of this type](https://snyk.io/vuln/npm:st:20140206). In our example, we will serve files from the `public` route.\n\nIf an attacker requests the following URL from our server, it will in turn leak the sensitive private key of the root user.\n\n```\ncurl http://localhost:8080/public/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/root/.ssh/id_rsa\n```\n**Note** `%2e` is the URL encoded version of `.` (dot).\n\n- **Writing arbitrary files**: Allows the attacker to create or replace existing files. This type of vulnerability is also known as `Zip-Slip`.\n\nOne way to achieve this is by using a malicious `zip` archive that holds path traversal filenames. When each filename in the zip archive gets concatenated to the target extraction folder, without validation, the final path ends up outside of the target folder. If an executable or a configuration file is overwritten with a file containing malicious code, the problem can turn into an arbitrary code execution issue quite easily.\n\nThe following is an example of a `zip` archive with one benign file and one malicious file. Extracting the malicious file will result in traversing out of the target folder, ending up in `/root/.ssh/` overwriting the `authorized_keys` file:\n\n```\n2018-04-15 22:04:29 .....           19           19  good.txt\n2018-04-15 22:04:42 .....           20           20  ../../../../../../root/.ssh/authorized_keys\n```",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "go",
+                  "PT",
+                  "Security",
+                  "SourceServer",
+                  "SourceRequestUrl",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/uadmin/uadmin/commit/c0dfdd6a6dd0d3f3906dc1b001a154aa690b729c?diff=split#diff-36cbbf58d3f192b92e5424da449fbab3eb283ea0ee7a1b210615b6a1e096ef44L-1",
+                    "lines": [
+                      {
+                        "line": "file, err := os.Open(\"./media/\" + r.URL.Path)\n",
+                        "lineNumber": 17,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "file, err := os.Open(\"./media/\" + path.Clean(r.URL.Path))\n",
+                        "lineNumber": 18,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/MohawkTSDB/mohawk/commit/e4a68407d6e1f9a3ccfa1f0a320c04d693afe2a6?diff=split#diff-ffb4b68b82d9234bcba450c7ca14d76b3ea0eed74198d1811d802889c58252e5L-1",
+                    "lines": [
+                      {
+                        "line": "\t// Check for \"..\" in the url path,\n",
+                        "lineNumber": 42,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t// if we find \"..\" in the path we will not serve static files\n",
+                        "lineNumber": 43,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tif strings.Contains(path, \"..\") {\n",
+                        "lineNumber": 44,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\ts.next.ServeHTTP(w, r)\n",
+                        "lineNumber": 45,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\treturn\n",
+                        "lineNumber": 46,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t}\n",
+                        "lineNumber": 47,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 48,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t// Add index.html to path if it ends with /\n",
+                        "lineNumber": 49,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tif path[len(path)-1:] == \"/\" {\n",
+                        "lineNumber": 50,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tpath = path + \"index.html\"\n",
+                        "lineNumber": 51,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t}\n",
+                        "lineNumber": 52,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 53,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t// Add /index.html to path if a directory\n",
+                        "lineNumber": 54,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tif fi, err := os.Stat(path); err == nil && fi.IsDir() {\n",
+                        "lineNumber": 55,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tpath = path + \"/index.html\"\n",
+                        "lineNumber": 56,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t}\n",
+                        "lineNumber": 57,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 58,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t// If file exist serve it\n",
+                        "lineNumber": 59,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tif file, err := ioutil.ReadFile(path); err == nil {\n",
+                        "lineNumber": 60,
+                        "lineChange": "none"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/hybridgroup/gocv/commit/56b2d918ff49aa835767b6dea2516f184549161c?diff=split#diff-56ad2b2d382898787e7d2fbc2e25b66ebdcc2015e370934fc0882530c07f5719L-1",
+                    "lines": [
+                      {
+                        "line": "file, err := os.Open(path)\n",
+                        "lineNumber": 132,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "file, err := os.Open(filepath.Clean(path))\n",
+                        "lineNumber": 133,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 58,
+                "cwe": [
+                  "CWE-23"
+                ]
+              }
+            },
+            {
+              "id": "go/Ssti",
+              "name": "Ssti",
+              "shortDescription": {
+                "text": "Improper Neutralization of Directives in Statically Saved Code"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nAn attacker exploits this weakness by indirectly controlling the contents of an executable server-side file (such as `.php` or `.aspx`) to trick the server into accessing sensitive data, providing authentication, or even executing shell commands. This weakness is sometimes also known as **Server-Side Template Injection (SSTI)**, since templates are one of the most common types of resources that suffer from this weakness.\nThese types of attacks differ from cross-site scripting (XSS) attacks, which take place on the client side and are generally more easily detected. However, code that is vulnerable to XSS attacks may also be vulnerable to SSTI attacks, since they arise through similar design flaws. And similar to XSS and other injection-type attacks, SSTI attacks are relatively preventable through proactive planning and design during development.\n\n## Best practices for prevention\n* Take a preventative, zero-trust approach and implement safer methods of processing user-controllable input on pages issuing directives to the server.\n* Never pass incoming data directly to the server. Instead, sanitize and validate all incoming data from the client side, ideally checking it against an allowlist of valid actions and destinations (instead of just parsing for banned characters).\n* Select template engines that use sandboxing or allowlists to defend against the possibility of SSTI. However, keep in mind that these may have intrinsic weaknesses.\n* Test applications using lists of publicly available template expression test strings and problematic payloads for your PHP template engine.\n* Given the fallibility of parsing approaches and sandboxing, consider implementing complementary protection methods, such as kernel hardening and read-only filesystems.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "go",
+                  "Ssti",
+                  "Security",
+                  "SourceNonServer",
+                  "SourceLocalEnv",
+                  "SourceCLI",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 0,
+                "cwe": [
+                  "CWE-96"
+                ]
+              }
+            },
+            {
+              "id": "go/TooPermissiveTrustManager",
+              "name": "TooPermissiveTrustManager",
+              "shortDescription": {
+                "text": "Improper Certificate Validation"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nCommunication through encrypted TLS/SSL protocols can only take place when the server bears a valid certificate associating that server with a valid public-key identity issued by a third-party authority. If certificate validation is cursory or incomplete, this creates a weakness whereby an attacker can spoof one or more certificate details (e.g., expiration date), gaining unauthorized access to confidential data and privileged actions.\n\n## Best practices for prevention\n* Verify all aspects of any certificate provided, particularly chain of trust (issuing authority), host identity, and expiration.\n* Limit the validity period for certificates.\n* Avoid using self-signed certificates, certificate pinning, and wildcard certificates, as these all add levels of convenience but can also lead to loss of control over site/app security.\n* Disable older and insecure protocols (for example, SSL 2.0/3.0, MD5, and 3DES).\n* Ensure that all team members are familiar with current best practices and approaches, such as current TLS protocols.\n* Implement automated and manual testing using current tools and techniques designed to reveal this and related SSL weaknesses (for example, web application scanners).",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "go",
+                  "TooPermissiveTrustManager",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/AmadeusITGroup/kubervisor/commit/aaf3d1a6a90c6ba9d56fd44648734938d0970470?diff=split#diff-48a8d555a42b35d5bf1e8ae57f3f0d6c634b9b3d9060fd1935afa55f5dbd58c9L-1",
+                    "lines": [
+                      {
+                        "line": "transport.TLSClientConfig = &tls.Config{InsecureSkipVerify: true}\n",
+                        "lineNumber": 29,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "transport.TLSClientConfig = &tls.Config{InsecureSkipVerify: false}\n",
+                        "lineNumber": 29,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/AbGuthrie/goquery/commit/0d5d3b2a65a571a0926591fe7674c133d0a06d14?diff=split#diff-8ffdbfea91b4887eb067076025ce572fc41c5f4de26ed4579f37938ee55116ecL-1",
+                    "lines": [
+                      {
+                        "line": "TLSClientConfig: &tls.Config{InsecureSkipVerify: true},\n",
+                        "lineNumber": 35,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "TLSClientConfig: &tls.Config{\n",
+                        "lineNumber": 36,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tInsecureSkipVerify: config.GetConfig().DebugEnabled,\n",
+                        "lineNumber": 37,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "},\n",
+                        "lineNumber": 38,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/fsouza/go-dockerclient/commit/27840d3e50fc3505446b6195c3b1370003829cc0?diff=split#diff-4b667feae66c9d46b21b9ecc19e8958cf4472d162ce0a47ac3e8386af8bbd8cfL-1",
+                    "lines": [
+                      {
+                        "line": "InsecureSkipVerify: true,\n",
+                        "lineNumber": 187,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "InsecureSkipVerify: false,\n",
+                        "lineNumber": 193,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 58,
+                "cwe": [
+                  "CWE-295"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "go/InsecureHash",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "The MD5 hash (used in crypto.md5.New) is insecure. Consider changing it to a secure hash algorithm",
+            "markdown": "The MD5 hash (used in {0}) is insecure. Consider changing it to a secure hash algorithm",
+            "arguments": [
+              "[crypto.md5.New](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "vendor/github.com/google/uuid/hash.go",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 44,
+                  "endLine": 44,
+                  "startColumn": 17,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "20e2577c8c8fda32e29a3cc142608ed1ad6a82c4b9ba473a28584912ecc6ea89",
+            "1": "20d5557e.48506fc8.45df3e14.772d51ed.556f02b4.67ab4541.860c51ff.678b0e20.20d5557e.48506fc8.45df3e14.772d51ed.556f02b4.67ab4541.860c51ff.678b0e20"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/google/uuid/hash.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 44,
+                            "endLine": 44,
+                            "startColumn": 17,
+                            "endColumn": 24
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 445,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "go/InsecureHash",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "The SHA1 hash (used in crypto.sha1.New) is insecure. Consider changing it to a secure hash algorithm",
+            "markdown": "The SHA1 hash (used in {0}) is insecure. Consider changing it to a secure hash algorithm",
+            "arguments": [
+              "[crypto.sha1.New](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "vendor/github.com/google/uuid/hash.go",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 52,
+                  "endLine": 52,
+                  "startColumn": 17,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "5b485f1581b9dd60cda3a117d78ab34bccbb4c62047eb40c12c219817b4e3310",
+            "1": "20d5557e.48506fc8.45df3e14.89f13fa7.556f02b4.67ab4541.860c51ff.678b0e20.20d5557e.48506fc8.45df3e14.89f13fa7.556f02b4.67ab4541.860c51ff.678b0e20"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/google/uuid/hash.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 52,
+                            "endLine": 52,
+                            "startColumn": 17,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 445,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "go/InsecureHash",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "The MD5 hash (used in crypto.md5.Sum) is insecure. Consider changing it to a secure hash algorithm",
+            "markdown": "The MD5 hash (used in {0}) is insecure. Consider changing it to a secure hash algorithm",
+            "arguments": [
+              "[crypto.md5.Sum](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "vendor/knative.dev/pkg/kmeta/names.go",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 48,
+                  "endLine": 48,
+                  "startColumn": 9,
+                  "endColumn": 16
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "98fb0e5436ae5e2e961e23f1d7233551126c1cac015048f3040379fbdf5071ad",
+            "1": "685bf8ba.73eb5804.45df3e14.e22980a8.f1d9f854.67ab4541.0c728423.3e33c505.685bf8ba.73eb5804.45df3e14.e22980a8.f1d9f854.67ab4541.0c728423.3e33c505"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/knative.dev/pkg/kmeta/names.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 48,
+                            "endLine": 48,
+                            "startColumn": 9,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 445,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "go/InsecureHash",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "The MD5 hash (used in crypto.md5.Sum) is insecure. Consider changing it to a secure hash algorithm",
+            "markdown": "The MD5 hash (used in {0}) is insecure. Consider changing it to a secure hash algorithm",
+            "arguments": [
+              "[crypto.md5.Sum](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "vendor/knative.dev/pkg/kmeta/names.go",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 63,
+                  "endLine": 63,
+                  "startColumn": 54,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "b2c79fda56c6a99fa530038c274fc48b8fbb8ea4ea68aa45ba8f77c052a336ca",
+            "1": "234147fa.ce19c857.45df3e14.aeb1ae8e.e0367e33.67ab4541.0c728423.1bff12d3.234147fa.ce19c857.45df3e14.aeb1ae8e.e0367e33.67ab4541.0c728423.1bff12d3"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/knative.dev/pkg/kmeta/names.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 63,
+                            "endLine": 63,
+                            "startColumn": 54,
+                            "endColumn": 61
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 445,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "go/NoHardcodedCredentials",
+          "ruleIndex": 1,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in userName.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[userName](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "vendor/k8s.io/klog/v2/klog_file.go",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 48,
+                  "endLine": 48,
+                  "startColumn": 2,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "25a1b67e1921024a8bc825fbc491ebbf84cf954cb021d51f7040ab9b42fcda35",
+            "1": "5c121d52.0d9b46dd.3602530c.79502f34.d4a84630.63a86890.fb9e89bc.1bff12d3.5c121d52.89ffa169.3602530c.79502f34.d4a84630.73f682b3.2563f0c1.1bff12d3"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/k8s.io/klog/v2/klog_file.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 48,
+                            "endLine": 48,
+                            "startColumn": 17,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/k8s.io/klog/v2/klog_file.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 48,
+                            "endLine": 48,
+                            "startColumn": 2,
+                            "endColumn": 10
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 362,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "go/PT",
+          "ruleIndex": 2,
+          "level": "error",
+          "message": {
+            "text": "Unsanitized input from the request URL flows into os.OpenFile, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to open arbitrary files.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to open arbitrary files.",
+            "arguments": [
+              "[the request URL](0)",
+              "[flows](1)",
+              "[os.OpenFile](2)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "vendor/go.uber.org/zap/sink.go",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 139,
+                  "endLine": 139,
+                  "startColumn": 9,
+                  "endColumn": 20
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "739ebcd78a935e5d64943205544cce1455cb5f390a4756b9b4da65f2a05538de",
+            "1": "b5d65c13.c8cae435.45df3e14.b1e0a0f9.7c4a878b.e4d7b7ac.aa359f29.4cb51de1.1f0bd5c5.940077cb.9fa62a61.e22980a8.56ffa9d2.e4d7b7ac.aa359f29.678b0e20"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/go.uber.org/zap/sink.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 139,
+                            "endLine": 139,
+                            "startColumn": 21,
+                            "endColumn": 27
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/go.uber.org/zap/sink.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 139,
+                            "endLine": 139,
+                            "startColumn": 21,
+                            "endColumn": 27
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/go.uber.org/zap/sink.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 139,
+                            "endLine": 139,
+                            "startColumn": 9,
+                            "endColumn": 20
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 762,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "go/Ssti",
+          "ruleIndex": 3,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a CLI argument flows into text.template.New, where it is used to construct a template that gets rendered. This may result in a Server-Side Template Injection vulnerability.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used to construct a template that gets rendered. This may result in a Server-Side Template Injection vulnerability.",
+            "arguments": [
+              "[a CLI argument](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12),(13)",
+              "[text.template.New](14)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "vendor/github.com/spf13/cobra/command.go",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 864,
+                  "endLine": 864,
+                  "startColumn": 11,
+                  "endColumn": 15
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "b91b6b49648cca0a5437c100b2581f015aca005ec90e2d920be4980db0a31c5a",
+            "1": "c26c7103.c55d47e1.45df3e14.e22980a8.cb1a2b14.67ab4541.75ef94ea.1bff12d3.c26c7103.c55d47e1.738307e1.9692a5c1.23ef7662.75c1163d.75ef94ea.1bff12d3"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/spf13/cobra/command.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 1005,
+                            "endLine": 1005,
+                            "startColumn": 10,
+                            "endColumn": 17
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/spf13/cobra/command.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 1005,
+                            "endLine": 1005,
+                            "startColumn": 10,
+                            "endColumn": 17
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/spf13/cobra/command.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 1005,
+                            "endLine": 1005,
+                            "startColumn": 10,
+                            "endColumn": 21
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/spf13/cobra/command.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 1005,
+                            "endLine": 1005,
+                            "startColumn": 3,
+                            "endColumn": 21
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/spf13/cobra/command.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 1015,
+                            "endLine": 1015,
+                            "startColumn": 28,
+                            "endColumn": 32
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/spf13/cobra/command.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 677,
+                            "endLine": 677,
+                            "startColumn": 24,
+                            "endColumn": 28
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/spf13/cobra/command.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 694,
+                            "endLine": 694,
+                            "startColumn": 34,
+                            "endColumn": 38
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/spf13/cobra/command.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 694,
+                            "endLine": 694,
+                            "startColumn": 21,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/spf13/cobra/command.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 694,
+                            "endLine": 694,
+                            "startColumn": 2,
+                            "endColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/spf13/cobra/command.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 587,
+                            "endLine": 587,
+                            "startColumn": 5,
+                            "endColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 10,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/spf13/cobra/command.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 587,
+                            "endLine": 587,
+                            "startColumn": 5,
+                            "endColumn": 22
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 11,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/spf13/cobra/command.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 864,
+                            "endLine": 864,
+                            "startColumn": 33,
+                            "endColumn": 50
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 12,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/spf13/cobra/cobra.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 175,
+                            "endLine": 175,
+                            "startColumn": 24,
+                            "endColumn": 28
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 13,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/spf13/cobra/cobra.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 178,
+                            "endLine": 178,
+                            "startColumn": 24,
+                            "endColumn": 28
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 14,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/github.com/spf13/cobra/cobra.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 176,
+                            "endLine": 176,
+                            "startColumn": 7,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 312,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "go/TooPermissiveTrustManager",
+          "ruleIndex": 4,
+          "level": "warning",
+          "message": {
+            "text": "TrustManager might be too permissive: The client will accept any certificate and any host name in that certificate, making it susceptible to man-in-the-middle attacks.",
+            "markdown": "TrustManager might be too permissive: The client will accept any certificate and any host name in that certificate, making it susceptible to man-in-the-middle attacks.",
+            "arguments": []
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "vendor/k8s.io/client-go/util/cert/server_inspection.go",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 33,
+                  "endLine": 33,
+                  "startColumn": 3,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "7b91ec0a2649e86e911022159054a145b9b0ad221bc78b160aeb44111a0a7602",
+            "1": "424eddda.9bf9da8e.8d277033.bfac11f0.6ee851a6.6c8feca2.b5e396cd.1f55c1aa.424eddda.9bf9da8e.8d277033.e22980a8.a0280c3b.67ab4541.b5e396cd.1f55c1aa"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/k8s.io/client-go/util/cert/server_inspection.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 33,
+                            "endLine": 33,
+                            "startColumn": 3,
+                            "endColumn": 27
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 573,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "go/TooPermissiveTrustManager",
+          "ruleIndex": 4,
+          "level": "warning",
+          "message": {
+            "text": "TrustManager might be too permissive: The client will accept any certificate and any host name in that certificate, making it susceptible to man-in-the-middle attacks.",
+            "markdown": "TrustManager might be too permissive: The client will accept any certificate and any host name in that certificate, making it susceptible to man-in-the-middle attacks.",
+            "arguments": []
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "vendor/k8s.io/client-go/util/cert/server_inspection.go",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 67,
+                  "endLine": 67,
+                  "startColumn": 3,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "9bd18e7d2abcb778cf4e8d705104b0f2faec2629ba008950f3358072e41b31bc",
+            "1": "424eddda.9bf9da8e.8d277033.1c2a3430.c9c1f9d4.6c8feca2.f563e0a5.1f55c1aa.424eddda.9bf9da8e.8d277033.e22980a8.a0280c3b.67ab4541.8ee950b3.1f55c1aa"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "vendor/k8s.io/client-go/util/cert/server_inspection.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 67,
+                            "endLine": 67,
+                            "startColumn": 3,
+                            "endColumn": 27
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 573,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "Go",
+            "files": 4001,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": false,
+            "lang": "C",
+            "files": 1,
+            "type": "FAILED_PARSING"
+          }
+        ]
+      }
+    }
+  ]
+}

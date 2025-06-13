@@ -1,0 +1,482 @@
+[
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/country_flavor_text_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_ai_strategies_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_anniversary_formations_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_countries_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_cultures_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_diplomatic_plays.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_diplomatic_plays_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_afghanistan_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_amazonie_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_aragon_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_atlantia_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_basuto_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_batavia_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_beornia_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_bohemia_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_burgundy_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_caladero_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_china_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_cossack_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_cuba_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_danubian_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_dua_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_dzungar_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_genoa_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_gran_colombia_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_granada_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_illyria_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_inca_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_india_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_indochina_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_indonesia_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_italy_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_japan_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_kipchak_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_korea_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_lotharingia_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_lusitania_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_manifest_destiny_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_morocco_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_novgorod_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_nuweflander_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_oceania_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_ottomans_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_persia_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_plantagenia_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_poland_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_provence_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_qingqiu_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_rheinish_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_russia_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_salvador_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_shun_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_spain_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_tawantinsuyu_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_tawantisuyu_reconquest_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_venice_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_vryland_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavor_zhourao_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_flavour_april_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_government_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_hub_names_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_interest_groups_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_laws_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/dvg_names_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/balkans/dvg_hungary_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/germany/dvg_austria_events_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/germany/dvg_bavaria_events_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/germany/dvg_bavaria_journals_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/germany/dvg_bohemia_events_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/replace/common_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/replace/content_1_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/replace/content_4_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/replace/countries_replaced_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/replace/cultures_replaced_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/replace/decisions_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/replace/events_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/replace/hub_names_replaced_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/replace/states_replaced_names_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/replace/vv_events_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/VV-Divergences/localization/english/replace/vv_journal_entries_l_english.yml"
+  }
+]

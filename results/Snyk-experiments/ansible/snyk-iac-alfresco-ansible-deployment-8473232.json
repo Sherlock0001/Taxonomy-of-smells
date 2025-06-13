@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "isPrivate": true,
+    "isLicensesEnabled": false,
+    "ignoreSettings": {
+      "adminOnly": false,
+      "reasonRequired": false,
+      "disregardFilesystemIgnores": false
+    },
+    "org": "mbissine2022",
+    "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+    "policy": ""
+  },
+  "filesystemPolicy": false,
+  "vulnerabilities": [],
+  "dependencyCount": 0,
+  "licensesPolicy": null,
+  "ignoreSettings": null,
+  "targetFile": "scripts/lambda_cleanup/template.yaml",
+  "projectName": "alfresco-ansible-deployment",
+  "org": "mbissine2022",
+  "policy": "",
+  "isPrivate": true,
+  "targetFilePath": "/home/mbissine/snyk_ansible/alfresco-ansible-deployment/scripts/lambda_cleanup/template.yaml",
+  "packageManager": "cloudformationconfig",
+  "path": "/home/mbissine/snyk_ansible/alfresco-ansible-deployment",
+  "projectType": "cloudformationconfig",
+  "ok": true,
+  "infrastructureAsCodeIssues": []
+}

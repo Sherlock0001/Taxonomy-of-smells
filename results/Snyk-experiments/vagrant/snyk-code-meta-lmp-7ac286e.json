@@ -1,0 +1,779 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "python/CodeInjection",
+              "name": "CodeInjection",
+              "shortDescription": {
+                "text": "Code Injection"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "## Details\n\nA secure code injection attack occurs when the attacker exploits an existing input processing vulnerability, passing special characters and code directly to a web-based application or site. The code is then executed, potentially granting the user system access to export sensitive data, to install malware, or even to move laterally and to exploit other systems in the trusted internal network environment. While code injection attacks can take place in several ways, the common factor is allowing the user to submit executable code to the application. The most common forms of code injection are SQL injection (server side) and cross-site scripting (XSS) (client side).\n\n## Best practices for prevention\n- Never trust user input. Assume any input may transmit harmful values.\n- Apply least privilege principle (for example, limit users to read only wherever possible).\n- Avoid passing raw user input directly to functions; use parameterized queries to extract data first.\n- Sanitize user input strings of special characters such as ?, &, /, <, >, and quotation marks.\n- Use whitelisting of known good values.\n- Validate user input against expected response types.\n- Escape shell commands with functions such as shlex for Python, or escapeshellarg for PHP.\n- Remember that code injection can take place on multiple fronts: GET and POST requests, but also cookies and HTTP headers.\n- Ensure up-to-date patching across all systems to remediate known vulnerabilities so these cannot be exploited by code injection.\n- Educate all team members on safe data handling procedures to prevent attacks.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "python",
+                  "CodeInjection",
+                  "Security",
+                  "SourceNonServer",
+                  "SourceLocalEnv",
+                  "SourceCLI",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/spectralDNS/shenfun/commit/16475f2baf898134032dbdd155dd0a563312eff0?diff=split#diff-fb6da554a7c1e9794c48fc606ab31338fabdcc929700fc2e15d28570af157e58L-1",
+                    "lines": [
+                      {
+                        "line": "assert isinstance(eval(sys.argv[-2]), int)\n",
+                        "lineNumber": 23,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "assert isinstance(int(sys.argv[-2]), int)\n",
+                        "lineNumber": 23,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/nextml/NEXT/commit/b0b770405772329dac83ddfdd870ffbbd6a33c4a?diff=split#diff-98933f824249bbc1f6ec89f094e9077caeb5921ae009aa42feb4d2b8d90f7ccfL-1",
+                    "lines": [
+                      {
+                        "line": "        true_values ={1, '1', 'True', 'true'}\n",
+                        "lineNumber": 87,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        zip_true = False\n",
+                        "lineNumber": 88,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        if request.args.get('zip'):\n",
+                        "lineNumber": 88,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "            try:\n",
+                        "lineNumber": 89,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "                zip_true = eval(request.args.get('zip'))\n",
+                        "lineNumber": 90,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "            except:\n",
+                        "lineNumber": 91,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "                pass\n",
+                        "lineNumber": 92,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 93,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        if 'zip' in request.args.keys():\n",
+                        "lineNumber": 89,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            zip_true = True if request.args.get('zip') in true_values else False\n",
+                        "lineNumber": 90,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        csv = False\n",
+                        "lineNumber": 91,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        if 'csv' in request.args.keys():\n",
+                        "lineNumber": 92,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            csv = True if request.args.get('csv') in true_values else False\n",
+                        "lineNumber": 93,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/naftaliharris/tauthon/commit/4ce126b887212da704b2fe4cf7a22322b48d45bd?diff=split#diff-b989b2f4ba160af991a115642288da4f6cc1bc6e98ead4bf36cf2b8cc235a41fL-1",
+                    "lines": [
+                      {
+                        "line": "\tyear = eval(sys.argv[1])\n",
+                        "lineNumber": 16,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    year = int(sys.argv[1])\n",
+                        "lineNumber": 16,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "else:\n",
+                        "lineNumber": 17,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tyear = input('In which year were you born? ')\n",
+                        "lineNumber": 18,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "if year in range(100):\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tprint 'I\\'ll assume that by', year,\n",
+                        "lineNumber": 20,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    year = year + 1900\n",
+                        "lineNumber": 21,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    print 'you mean', year, 'and not the early Christian era'\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "elif year not in range(1850, 2000):\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tprint 'It\\'s hard to believe you were born in', year\n",
+                        "lineNumber": 24,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    return\n",
+                        "lineNumber": 25,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "#\n",
+                        "lineNumber": 26,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "if sys.argv[2:]:\n",
+                        "lineNumber": 27,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tmonth = eval(sys.argv[2])\n",
+                        "lineNumber": 28,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    month = int(sys.argv[2])\n",
+                        "lineNumber": 28,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "else:\n",
+                        "lineNumber": 29,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tmonth = input('And in which month? (1-12) ')\n",
+                        "lineNumber": 30,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "if month not in range(1, 13):\n",
+                        "lineNumber": 31,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    print 'There is no month numbered', month\n",
+                        "lineNumber": 32,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    return\n",
+                        "lineNumber": 33,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "#\n",
+                        "lineNumber": 34,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "if sys.argv[3:]:\n",
+                        "lineNumber": 35,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tday = eval(sys.argv[3])\n",
+                        "lineNumber": 36,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    day = int(sys.argv[3])\n",
+                        "lineNumber": 36,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 69,
+                "cwe": [
+                  "CWE-94"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "python/CodeInjection",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into eval, where it is executed as Python code. This may result in a Code Injection vulnerability.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is executed as Python code. This may result in a Code Injection vulnerability.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3),(4)",
+              "[eval](5)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 36,
+                  "endLine": 36,
+                  "startColumn": 26,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "ec58376846c4308771be15ef973ca7ff62ecaf581c10ad5ab557316eb0ecd5e2",
+            "1": "5eef81ba.e3d9b656.531bdceb.139c59a8.265acb4e.ba14daf2.081ac3f4.10875e84.5eef81ba.c9c3ca86.a8c59056.9cd2dfe0.265acb4e.a5d7f69f.22a8b49e.742d9b21"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 4,
+                            "endColumn": 8
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 4,
+                            "endColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "endLine": 36,
+                            "startColumn": 31,
+                            "endColumn": 41
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "endLine": 36,
+                            "startColumn": 26,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 650,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/CodeInjection",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into eval, where it is executed as Python code. This may result in a Code Injection vulnerability.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is executed as Python code. This may result in a Code Injection vulnerability.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3),(4)",
+              "[eval](5)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 41,
+                  "endLine": 41,
+                  "startColumn": 24,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "5f58555cf87b897dc6d9f3bd799bcf3a7d4aee9beef68d950353b194dd846ecb",
+            "1": "5eef81ba.e3d9b656.531bdceb.139c59a8.265acb4e.ba14daf2.a2237efa.f46ed94e.5eef81ba.c9c3ca86.94f94181.139c59a8.265acb4e.ba14daf2.1aae307e.f46ed94e"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 4,
+                            "endColumn": 8
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 4,
+                            "endColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 41,
+                            "endLine": 41,
+                            "startColumn": 29,
+                            "endColumn": 39
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 41,
+                            "endLine": 41,
+                            "startColumn": 24,
+                            "endColumn": 28
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 650,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/CodeInjection",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into eval, where it is executed as Python code. This may result in a Code Injection vulnerability.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is executed as Python code. This may result in a Code Injection vulnerability.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3),(4)",
+              "[eval](5)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 43,
+                  "endLine": 43,
+                  "startColumn": 25,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "3a62a6c543b11a848ac9994e6115890f8a016b5cba404f6aef4954e2f9dd38d5",
+            "1": "5eef81ba.e3d9b656.531bdceb.139c59a8.265acb4e.ba14daf2.081ac3f4.8356f9c3.5eef81ba.c9c3ca86.a8c59056.139c59a8.265acb4e.a5d7f69f.1aae307e.b7d480de"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 4,
+                            "endColumn": 8
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 4,
+                            "endColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 43,
+                            "endLine": 43,
+                            "startColumn": 30,
+                            "endColumn": 40
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "meta-lmp-bsp/dynamic-layers/xilinx-tools/recipes-utils/fru-print/files/fru-print.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 43,
+                            "endLine": 43,
+                            "startColumn": 25,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 650,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "C",
+            "files": 2,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Python",
+            "files": 2,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": false,
+            "lang": ".config",
+            "files": 24,
+            "type": "FAILED_PARSING"
+          }
+        ]
+      }
+    }
+  ]
+}

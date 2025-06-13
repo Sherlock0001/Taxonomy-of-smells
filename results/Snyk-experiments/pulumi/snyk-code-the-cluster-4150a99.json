@@ -1,0 +1,822 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "csharp/NoHardcodedCredentials",
+              "name": "NoHardcodedCredentials",
+              "shortDescription": {
+                "text": "Use of Hardcoded Credentials"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nDevelopers may use hardcoded credentials for convenience when coding in order to simplify their workflow. While they are responsible for removing these before production, occasionally this task may fall through the cracks. This also becomes a maintenance challenge when credentials are re-used across multiple applications.\n\nOnce attackers gain access, they may take advantage of privilege level to remove or alter data, take down a site or app, or hold any of the above for ransom. The risk across multiple similar projects is even greater. If code containing the credentials is reused across multiple projects, they will all be compromised.\n\n## Best practices for prevention\n* Plan software architecture such that keys and passwords are always stored outside the code, wherever possible.\n* Plan encryption into software architecture for all credential information and ensure proper handling of keys, credentials, and passwords.\n* Prompt for a secure password on first login rather than hard-code a default password.\n* If a hardcoded password or credential must be used, limit its use, for example, to system console users rather than via the network.\n* Use strong hashes for inbound password authentication, ideally with randomly assigned salts to increase the difficulty level in case of brute-force attack.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "csharp",
+                  "NoHardcodedCredentials",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/ducmeit1/cqrswithmediatr/commit/0ff34c9bb48fa6d78480bc1aaac5191dc9b0ad89?diff=split#diff-e8fe1aa8b56ef98985ac0b67457136088a81661516ece9e8bf50c53652e10a48L-1",
+                    "lines": [
+                      {
+                        "line": "            return Create();\n",
+                        "lineNumber": 14,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "            return Create(Directory.GetCurrentDirectory(),\n",
+                        "lineNumber": 14,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                Environment.GetEnvironmentVariable(\"ASPNETCORE_ENVIRONMENT\"));\n",
+                        "lineNumber": 15,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        }\n",
+                        "lineNumber": 16,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 17,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        protected abstract TContext CreateNewInstance(DbContextOptions<TContext> options);\n",
+                        "lineNumber": 18,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        private TContext Create()\n",
+                        "lineNumber": 19,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        private TContext Create(string basePath, string env)\n",
+                        "lineNumber": 20,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        {\n",
+                        "lineNumber": 21,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "            return Create(\"Data Source=localhost;Initial Catalog=CustomerDB;User Id=sa;Password=Demo123456@;\");\n",
+                        "lineNumber": 21,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "            var builder = new ConfigurationBuilder()\n",
+                        "lineNumber": 22,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                .SetBasePath(basePath)\n",
+                        "lineNumber": 23,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                .AddJsonFile(\"appsettings.json\", false, true)\n",
+                        "lineNumber": 24,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                .AddJsonFile($\"appsettings.{env}.json\", true)\n",
+                        "lineNumber": 25,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                .AddEnvironmentVariables();\n",
+                        "lineNumber": 26,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 27,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            var config = builder.Build();\n",
+                        "lineNumber": 28,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 29,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            var connectionString = config.GetConnectionString(\"DefaultConnection\");\n",
+                        "lineNumber": 30,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 31,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            if (string.IsNullOrWhiteSpace(connectionString))\n",
+                        "lineNumber": 32,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                throw new InvalidOperationException(\"Could not found a connection string named 'DefaultConnection'\");\n",
+                        "lineNumber": 33,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 34,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            return Create(connectionString);\n",
+                        "lineNumber": 35,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/phongnguyend/EntityFrameworkCore.SqlServer.SimpleBulks/commit/5e1fd9a3fec72d1c5be5ef755ab85e4a7995fdad?diff=split#diff-ee1d7028115222ab8ec5180870b721958c715ab7697f52198ddfa41b1fae126eL-1",
+                    "lines": [
+                      {
+                        "line": "optionsBuilder.UseSqlServer(\"Server=.;Database=SimpleBulks;User Id=sa;Password=sqladmin123!@#;MultipleActiveResultSets=true\");\n",
+                        "lineNumber": 12,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "optionsBuilder.UseSqlServer(_connectionString);\n",
+                        "lineNumber": 19,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/daxnet/apworks-core/commit/e4b3878f13ba608f61ff2683d9beb28d93a7a311?diff=split#diff-b100b4e4198f2f5a04a8b80cef17e326cc6de0452f4801147878ee2c1669d89fL-1",
+                    "lines": [
+                      {
+                        "line": "        public const string ConnectionString = \"Server=localhost;Database=SQLServerEventStoreTest;User Id=sa;Password=G1veMeP@ss\";\n",
+                        "lineNumber": 11,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        public const string ConnectionStringWithoutDatabase = \"Server=localhost;User Id=sa;Password=G1veMeP@ss\";\n",
+                        "lineNumber": 12,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        public static readonly string ConnectionString = $@\"Server=localhost\\sqlexpress;Database={EventStoreDatabaseName};Integrated Security=SSPI;\";\n",
+                        "lineNumber": 14,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        public const string ConnectionStringWithoutDatabase = @\"Server=localhost\\sqlexpress;Integrated Security=SSPI;\";\n",
+                        "lineNumber": 15,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 16,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        private static readonly string MDF_FileName = Path.Combine(Path.GetTempPath(), EventStoreDatabaseName + \".mdf\");\n",
+                        "lineNumber": 17,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        private static readonly string LDF_FileName = Path.Combine(Path.GetTempPath(), EventStoreDatabaseName + \".ldf\");\n",
+                        "lineNumber": 18,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 42,
+                "cwe": [
+                  "CWE-798"
+                ]
+              }
+            },
+            {
+              "id": "javascript/HardcodedNonCryptoSecret",
+              "name": "HardcodedNonCryptoSecret",
+              "shortDescription": {
+                "text": "Hardcoded Secret"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "help": {
+                "markdown": "## Details\n\nWhen constants are hardcoded into applications, this information could easily be reverse-engineered and become known to attackers. For example, if a breached authentication token is hardcoded in multiple places in the application, it may lead to components of the application remaining vulnerable if not all instances are changed.\nAnother negative effect of hard-coding constants is potential unpredictability in the application's performance if the development team fails to update every single instance of the hardcoded constant throughout the code. For these reasons, hard-coding security-relevant constants is considered bad coding practice and should be remedied if present and avoided in future.\n\n## Best practices for prevention\n- Never hard code security-related constants; use symbolic names or configuration lookup files.\n- As hard coding is often done by coders working alone on a small scale, examine all legacy code components and test carefully when scaling.\n- Adopt a \"future-proof code\" mindset: While use of constants may save a little time now and make development simpler in the short term, it could cost time and money adapting to scale or other unforeseen circumstances (such as new hardware) in the future.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "HardcodedNonCryptoSecret",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/markstock7/FileManager/commit/50572778825dea6b6fdb34c9ae950d9915743e4c?diff=split#diff-408990876524f4737b49693cedc52fd267e31f665d0a7f71792dcb986d6a8268L-1",
+                    "lines": [
+                      {
+                        "line": "accessKeyId: 'pT3KujnBPxc0ey7G',\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "secretAccessKey: 'CcHjh2y7tIFljxgUT4U8sQLctkMBHu',\n",
+                        "lineNumber": 2,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "accessKeyId: '',\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "secretAccessKey: '',\n",
+                        "lineNumber": 2,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/leohmoraes/rocketseat-02/commit/69e888ed7c779a0fbb0d0c08a219afa11b3913bd?diff=split#diff-04122576a4101a4ed68c79faa4f4605c44d8fd93252cff9e64ba66ab9c561e86L-1",
+                    "lines": [
+                      {
+                        "line": "secret: '9dffij39asf23nsfnsvsdsa',\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "secret: process.env.APP_SECRET,\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/rodrigotamura/go-stack-2019/commit/26e020dfc2272fe76c82c28d86f492c3c84a94c5?diff=split#diff-92f76c0bccc1f970244da3b50449f200d4787cf60a87be14ff4f250d0ba1a590L-1",
+                    "lines": [
+                      {
+                        "line": "secret: '632ca4dfc8b2269e6fdf03ab5a55d2ec',\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "secret: process.env.APP_SECRET,\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 100,
+                "cwe": [
+                  "CWE-547"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "csharp/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in secret key variable declaration.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[secret key variable declaration](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "lib/crds/dotnet/Networking/V1Alpha1/Inputs/ClusterTunnelSpecCloudflareArgs.cs",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 74,
+                  "endLine": 74,
+                  "startColumn": 13,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "864d91f47545731100efacaea9069260fed03a5950e8484e40906b99adce402a",
+            "1": "512b1b72.69639c37.1d318ef7.87af2bce.e2d9d017.0be34caa.ce0185b2.17437c41.512b1b72.69639c37.1d318ef7.87af2bce.e2d9d017.0be34caa.ce0185b2.17437c41"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "lib/crds/dotnet/Networking/V1Alpha1/Inputs/ClusterTunnelSpecCloudflareArgs.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 74,
+                            "endLine": 74,
+                            "startColumn": 34,
+                            "endColumn": 54
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "lib/crds/dotnet/Networking/V1Alpha1/Inputs/ClusterTunnelSpecCloudflareArgs.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 74,
+                            "endLine": 74,
+                            "startColumn": 13,
+                            "endColumn": 31
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 480,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "csharp/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in secret key variable declaration.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[secret key variable declaration](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "lib/crds/dotnet/Networking/V1Alpha1/Inputs/ClusterTunnelSpecCloudflareArgs.cs",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 77,
+                  "endLine": 77,
+                  "startColumn": 13,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "b95d03ca7acd507c8b9b68cddcf7f97cc6af791a8c2395ade23dac6d00c8f45e",
+            "1": "512b1b72.69639c37.56ca2d6e.87af2bce.e2d9d017.32eaf465.ce0185b2.93031d32.512b1b72.69639c37.56ca2d6e.87af2bce.e2d9d017.32eaf465.ce0185b2.93031d32"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "lib/crds/dotnet/Networking/V1Alpha1/Inputs/ClusterTunnelSpecCloudflareArgs.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 77,
+                            "endLine": 77,
+                            "startColumn": 51,
+                            "endColumn": 88
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "lib/crds/dotnet/Networking/V1Alpha1/Inputs/ClusterTunnelSpecCloudflareArgs.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 77,
+                            "endLine": 77,
+                            "startColumn": 13,
+                            "endColumn": 48
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 480,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "csharp/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in secret key variable declaration.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[secret key variable declaration](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "lib/crds/dotnet/Networking/V1Alpha1/Inputs/TunnelSpecCloudflareArgs.cs",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 74,
+                  "endLine": 74,
+                  "startColumn": 13,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "33b52ed19c6ed8145cadfa7007c1052870d2e89e60be5ad0253f6cf90572e902",
+            "1": "512b1b72.f4cb4448.1d318ef7.87af2bce.e2d9d017.6c289009.ce0185b2.17437c41.512b1b72.f4cb4448.1d318ef7.87af2bce.e2d9d017.6c289009.ce0185b2.17437c41"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "lib/crds/dotnet/Networking/V1Alpha1/Inputs/TunnelSpecCloudflareArgs.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 74,
+                            "endLine": 74,
+                            "startColumn": 34,
+                            "endColumn": 54
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "lib/crds/dotnet/Networking/V1Alpha1/Inputs/TunnelSpecCloudflareArgs.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 74,
+                            "endLine": 74,
+                            "startColumn": 13,
+                            "endColumn": 31
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 480,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "csharp/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in secret key variable declaration.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[secret key variable declaration](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "lib/crds/dotnet/Networking/V1Alpha1/Inputs/TunnelSpecCloudflareArgs.cs",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 77,
+                  "endLine": 77,
+                  "startColumn": 13,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "0496d1009ec42713199b9af37b734c5a4dcf04a8f14794fdcb799c6135cdcba8",
+            "1": "512b1b72.69639c37.56ca2d6e.87af2bce.e2d9d017.32eaf465.ce0185b2.93031d32.512b1b72.69639c37.56ca2d6e.87af2bce.e2d9d017.32eaf465.ce0185b2.93031d32"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "lib/crds/dotnet/Networking/V1Alpha1/Inputs/TunnelSpecCloudflareArgs.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 77,
+                            "endLine": 77,
+                            "startColumn": 51,
+                            "endColumn": 88
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "lib/crds/dotnet/Networking/V1Alpha1/Inputs/TunnelSpecCloudflareArgs.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 77,
+                            "endLine": 77,
+                            "startColumn": 13,
+                            "endColumn": 48
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 480,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "apps/keycloak/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 230,
+                  "endLine": 230,
+                  "startColumn": 9,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "70ba120fba629f54bc23f2ab9248271836e52a61d66e00e2fef24e85602118f5",
+            "1": "12567ef6.11f0904c.4d0c4123.e052b9a9.79a7d027.7dff7bf7.ce4a9d89.7631dca4.e051717c.11f0904c.e532aae8.e052b9a9.79a7d027.7dff7bf7.0856d7d3.3cdf761b"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/keycloak/index.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 230,
+                            "endLine": 230,
+                            "startColumn": 36,
+                            "endColumn": 48
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/keycloak/index.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 230,
+                            "endLine": 230,
+                            "startColumn": 9,
+                            "endColumn": 34
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 770,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "C#",
+            "files": 8632,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "JavaScript",
+            "files": 4,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Python",
+            "files": 4,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "TypeScript",
+            "files": 411,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

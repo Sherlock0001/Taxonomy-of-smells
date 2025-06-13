@@ -1,0 +1,44 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zulip__zulip/.eslintrc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zulip__zulip/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zulip__zulip/.vscode/extensions.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zulip__zulip/web/shared/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zulip__zulip/zerver/tests/fixtures/mattermost_fixtures/export.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zulip__zulip/zerver/tests/fixtures/mattermost_fixtures/direct_channel/export.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zulip__zulip/zerver/webhooks/librato/fixtures/bad.json"
+  }
+]

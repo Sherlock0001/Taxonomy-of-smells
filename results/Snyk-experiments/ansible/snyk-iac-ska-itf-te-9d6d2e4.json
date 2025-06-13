@@ -1,0 +1,50 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/ska-itf-te/.devcontainer/devcontainer.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/ska-itf-te/charts/file-browser/secrets/example.json"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/snyk_ansible/ska-itf-te/charts/file-browser/templates/configmap.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/snyk_ansible/ska-itf-te/charts/file-browser/templates/deployment.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/snyk_ansible/ska-itf-te/charts/file-browser/templates/ingress.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/snyk_ansible/ska-itf-te/charts/file-browser/templates/service.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/snyk_ansible/ska-itf-te/charts/sky-sim-ctl/templates/_simulators.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/snyk_ansible/ska-itf-te/charts/sky-sim-ctl/templates/deviceservers.yaml"
+  }
+]

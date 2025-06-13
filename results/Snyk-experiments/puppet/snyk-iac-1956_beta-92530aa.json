@@ -1,0 +1,1346 @@
+[
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/braz_por/replace/r56_startup_l_braz_por.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/ADR_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/ADU_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/AFA_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/AFG_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/ALB_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/ALG_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/AOI_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/ARG_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/ARM_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/AST_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/AUS_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/AXM_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/BAY_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/BEL_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/BHR_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/BHU_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/BOS_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/BRA_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/BRI_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/BRM_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/BUK_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/BUL_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/CAM_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/CAN_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/CFM_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/CHL_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/COG_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/COL_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/COR_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/CRI_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/CRO_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/CUB_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/CZE_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/DEN_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/DNZ_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/ECU_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/EFR_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/EGY_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/EIS_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/ENG_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/EST_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/ETH_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/FIJ_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/FIN_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/FRA_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/FRI_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/GER_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/GRE_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/GRL_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/GUA_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/HOL_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/HON_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/HUN_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/HYD_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/ICE_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/INS_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/IRE_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/IRQ_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/ISR_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/ITA_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/JAP_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/JOR_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/JUNO_decisions_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/JUNO_focus_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/KAZ_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/KMT_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/KOR_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/LAT_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/LIB_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/LIE_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/LIT_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/LMR_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/LUX_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/MAL_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/MAN_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/MEN_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/MEX_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/MLI_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/MLK_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/MNC_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/MOL_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/MON_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/MOR_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/MPL_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/MUL_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/MYU_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/NEP_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/NFL_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/NGA_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/NIC_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/NOR_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/NRU_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/NZL_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/OMA_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/PAK_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/PAL_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/PAN_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/PAR_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/PEM_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/PER_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/PHI_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/POL_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/PPA_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/PRC_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/PRU_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/PUE_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/QBC_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/R56_news_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/RAJ_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/ROM_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/RUT_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/SAF_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/SAN_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/SAU_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/SCO_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/SER_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/SGP_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/SIK_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/SLO_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/SLV_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/SMI_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/SOV_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/SPR_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/SWE_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/SWI_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/SWK_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/SZK_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/Siam2_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/TAN_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/TIB_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/TML_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/TNG_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/TUN_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/TUR_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/UKR_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/UMC_GEN_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/URG_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/USA_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/UZB_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/VEN_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/VIN_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/VNZ_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/WLS_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/YUG_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/aat_focus_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/achievements_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/bba_decisions_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/bba_events_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/bba_focus_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/bftb_events_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/bftb_ideas_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/coldwar_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/countries_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/dod_events_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/dod_focus_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/equipment_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/events_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/focus_filter_tag_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/focus_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/game_rules_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/lar_events_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/lar_focus_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/loading_tips_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/mtg_events_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/mtg_focus_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/nsb_decisions_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/nsb_events_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/nsb_ideas_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/plane_designer_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/r56_SOV_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/r56_bundeslaender.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/r56_chinese_gui_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/r56_companies_traits_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/r56_countries_cosmetic_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/r56_countries_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/r56_lootbox_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/r56_operations_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/r56_special_projects_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/r56_spying_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/r56_stand_alone_flavor_ideas_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/r56_tooltips_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/r56_traits_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/r56w_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/research_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/ribbions_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/state_names_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/wtt_decisions_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/wtt_events_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/wtt_focus_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/parties_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56_adjacency_rules_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56_bookmarks_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56_country_boosts_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56_decisions_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56_events_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56_focus_filter_tag_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56_formables_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56_game_rules_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56_modifiers_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56_parties_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56_prospecting_decisions_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56_renaming_decisions_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56_special_forces_doctrine_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56_startup_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56_triggers_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56e_equip_aircraft_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56e_equip_artillery_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56e_equip_infantry_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56e_equip_motor_mech_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56e_equip_naval_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56e_equip_tank_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56e_equipment_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56e_land_doctrine_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56e_technology_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56e_unit_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/r56i_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/stats_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/english/replace/victory_points_l_english.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/french/replace/r56_startup_l_french.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/german/replace/r56_startup_l_german.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/polish/replace/r56_startup_l_polish.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/russian/replace/r56_startup_l_russian.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/1956_beta/localisation/spanish/r56_startup_l_spanish.yml"
+  }
+]

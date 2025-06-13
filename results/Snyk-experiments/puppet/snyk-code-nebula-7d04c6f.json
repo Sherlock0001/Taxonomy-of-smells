@@ -1,0 +1,1262 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "ruby/HardcodedCredential",
+              "name": "HardcodedCredential",
+              "shortDescription": {
+                "text": "Use of Hardcoded Credentials"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nDevelopers may use hardcoded credentials for convenience when coding in order to simplify their workflow. While they are responsible for removing these before production, occasionally this task may fall through the cracks. This also becomes a maintenance challenge when credentials are re-used across multiple applications.\n\nOnce attackers gain access, they may take advantage of privilege level to remove or alter data, take down a site or app, or hold any of the above for ransom. The risk across multiple similar projects is even greater. If code containing the credentials is reused across multiple projects, they will all be compromised.\n\n## Best practices for prevention\n* Plan software architecture such that keys and passwords are always stored outside the code, wherever possible.\n* Plan encryption into software architecture for all credential information and ensure proper handling of keys, credentials, and passwords.\n* Prompt for a secure password on first login rather than hard-code a default password.\n* If a hardcoded password or credential must be used, limit its use, for example, to system console users rather than via the network.\n* Use strong hashes for inbound password authentication, ideally with randomly assigned salts to increase the difficulty level in case of brute-force attack.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "ruby",
+                  "HardcodedCredential",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 0,
+                "cwe": [
+                  "CWE-798",
+                  "CWE-259"
+                ]
+              }
+            },
+            {
+              "id": "ruby/HardcodedPassword",
+              "name": "HardcodedPassword",
+              "shortDescription": {
+                "text": "Use of Hardcoded Passwords"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nDevelopers may use hardcoded passwords during development to streamline setup or simplify authentication while testing. Although these passwords are intended to be removed before deployment, they are sometimes inadvertently left in the code. This introduces serious security risks, especially if the password grants elevated privileges or is reused across multiple systems.\n\nAn attacker who discovers a hardcoded password can potentially gain unauthorized access, escalate privileges, exfiltrate sensitive data, or disrupt service availability. If the password is reused across different environments or applications, the compromise can spread quickly and broadly.\n\n## Best practices for prevention\n* Plan software architecture such that keys and passwords are always stored outside the code, wherever possible.\n* Plan encryption into software architecture for all credential information and ensure proper handling of keys, credentials, and passwords.\n* Prompt for a secure password on first login rather than hard-code a default password.\n* If a hardcoded password or credential must be used, limit its use, for example, to system console users rather than via the network.\n* Use strong hashes for inbound password authentication, ideally with randomly assigned salts to increase the difficulty level in case of brute-force attack.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "ruby",
+                  "HardcodedPassword",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/mnutt/octo.cat/commit/e1827788627cfe08b80fbe7fc7412047e4c27bcf?diff=split#diff-6ca0601d8a8ae0e917f92947b7342346054078c985b15d2eddde59f551b2a91eL-1",
+                    "lines": [
+                      {
+                        "line": "$redis = Redis.new(:host => \"bass.redistogo.com\", :port => 9014, :password => \"16d1b8359b3beb6ff4faf029f4e60929\")\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "$redis = Redis.new(:host => \"bass.redistogo.com\", :port => 9014, :password => ENV['REDIS_PW'])\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/chicks/sugarcrm/commit/aca806c61110608082a426408da4568d3190e882?diff=split#diff-c80b930c75386e46447f64c40e6844ae4c793fe0c4c1efef890ca758adc13a84L-1",
+                    "lines": [
+                      {
+                        "line": "# Replace these with your test instance\n",
+                        "lineNumber": 9,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "URL   = \"http://127.0.0.1/sugarcrm\"\n",
+                        "lineNumber": 10,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "USER  = \"admin\"\n",
+                        "lineNumber": 11,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "PASS  = 'letmein' \n",
+                        "lineNumber": 12,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "SugarCRM::Environment.load_config(File.join(File.dirname(__FILE__),'config.yaml'))\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/gocardless/gocardless-pro-ruby/commit/6c6cf75020e952d1595d32d95108ae9d45271027?diff=split#diff-a9f7154523a377d713418c494c988a549ee51ca1187ee44c282b2c69d1cdf9aeL-1",
+                    "lines": [
+                      {
+                        "line": "user: \"AK0000133BVTZP\",\n",
+                        "lineNumber": 3,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "password: \"I4WaBGT8FQTDmUbmIl51-FLw3OqhyeHj2x89rOV7\",\n",
+                        "lineNumber": 4,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "user: ENV[\"GOCARDLESS_KEY\"],\n",
+                        "lineNumber": 3,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "password: ENV[\"GOCARDLESS_TOKEN\"],\n",
+                        "lineNumber": 4,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 18,
+                "cwe": [
+                  "CWE-798",
+                  "CWE-259"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "ruby/HardcodedCredential",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in with.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[with](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "spec/classes/profile/hathitrust/cron/catalog_spec.rb",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 24,
+                  "endLine": 24,
+                  "startColumn": 19,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "8ad23c839099312a61044ef1645fb689f28986aeaae15d13b0285c96921ddac7",
+            "1": "8b006f46.98296aec.690c8394.f6f5bbe0.9b157b56.bc1d84e6.95698803.66a8326c.8b006f46.98296aec.690c8394.865d2ba5.4ab0e55d.bc1d84e6.95698803.215dce8f"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/profile/hathitrust/cron/catalog_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 24,
+                            "endLine": 24,
+                            "startColumn": 25,
+                            "endColumn": 33
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/profile/hathitrust/cron/catalog_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 22,
+                            "endLine": 23,
+                            "startColumn": 26,
+                            "endColumn": 18
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 292,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "ruby/HardcodedCredential",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in with.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[with](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "spec/classes/profile/hathitrust/cron/catalog_spec.rb",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 41,
+                  "endLine": 41,
+                  "startColumn": 19,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "b060633fbf543115e46a1b136cf35665ed895e41e129fddf1aed456c4bf39c42",
+            "1": "8b006f46.98296aec.690c8394.bab24181.9b157b56.bc1d84e6.95698803.66a8326c.8b006f46.98296aec.690c8394.865d2ba5.4ab0e55d.bc1d84e6.95698803.215dce8f"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/profile/hathitrust/cron/catalog_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 41,
+                            "endLine": 41,
+                            "startColumn": 25,
+                            "endColumn": 35
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/profile/hathitrust/cron/catalog_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 39,
+                            "endLine": 40,
+                            "startColumn": 26,
+                            "endColumn": 18
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 292,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "ruby/HardcodedCredential",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in with.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[with](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "spec/classes/profile/hathitrust/cron/mdp_misc_spec.rb",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 25,
+                  "endLine": 25,
+                  "startColumn": 19,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "5dd04a3dba400819d8f8ce94407e6e3cba0c1475dad3cc820b28a9bfb60519db",
+            "1": "8b006f46.98296aec.690c8394.f6f5bbe0.9b157b56.bc1d84e6.95698803.66a8326c.8b006f46.98296aec.690c8394.865d2ba5.4ab0e55d.bc1d84e6.95698803.215dce8f"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/profile/hathitrust/cron/mdp_misc_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 25,
+                            "endColumn": 33
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/profile/hathitrust/cron/mdp_misc_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 22,
+                            "endLine": 23,
+                            "startColumn": 26,
+                            "endColumn": 18
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 292,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "ruby/HardcodedCredential",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in with.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[with](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "spec/classes/profile/hathitrust/cron/mdp_misc_spec.rb",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 51,
+                  "endLine": 51,
+                  "startColumn": 19,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "5f9c3809ac4368a6ae5a44ba8903b9eba42e81ffd0caea9583b98f0eb8f34a58",
+            "1": "8b006f46.98296aec.690c8394.bab24181.9b157b56.bc1d84e6.95698803.66a8326c.8b006f46.98296aec.690c8394.865d2ba5.4ab0e55d.bc1d84e6.95698803.215dce8f"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/profile/hathitrust/cron/mdp_misc_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 51,
+                            "endLine": 51,
+                            "startColumn": 25,
+                            "endColumn": 35
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/profile/hathitrust/cron/mdp_misc_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 49,
+                            "endLine": 50,
+                            "startColumn": 26,
+                            "endColumn": 18
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 292,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "ruby/HardcodedCredential",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in with.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[with](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "spec/classes/role/htvm_global_primary_webhost_spec.rb",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 22,
+                  "endLine": 22,
+                  "startColumn": 17,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "05183dc40f706914d41a9d21f2b9d2c232ef47ec447e25595b720c9ab0874322",
+            "1": "8b006f46.70dc6282.690c8394.bab24181.9b157b56.bc1d84e6.95698803.66a8326c.8b006f46.70dc6282.690c8394.865d2ba5.4ab0e55d.bc1d84e6.95698803.215dce8f"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/role/htvm_global_primary_webhost_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 22,
+                            "endLine": 22,
+                            "startColumn": 23,
+                            "endColumn": 31
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/role/htvm_global_primary_webhost_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 21,
+                            "endLine": 22,
+                            "startColumn": 24,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 242,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "ruby/HardcodedCredential",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in None.let.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[None.let](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "spec/classes/profile/hathitrust/cron/catalog_spec.rb",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 33,
+                  "endLine": 33,
+                  "startColumn": 13,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "6b4807185dc67c2bd81d55b226e3faea5a14d8a5b92c6aee85d99e31a3538f44",
+            "1": "8b006f46.98296aec.690c8394.5f552db0.370a268d.bc1d84e6.6d9804d2.66a8326c.8b006f46.9c16b3d1.2a263861.865d2ba5.52d362e3.bc1d84e6.6d9804d2.215dce8f"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/profile/hathitrust/cron/catalog_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 33,
+                            "endLine": 33,
+                            "startColumn": 19,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/profile/hathitrust/cron/catalog_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 30,
+                            "endLine": 30,
+                            "startColumn": 9,
+                            "endColumn": 12
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 292,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "ruby/HardcodedCredential",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in None.let.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[None.let](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "spec/classes/profile/hathitrust/cron/mdp_misc_spec.rb",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 40,
+                  "endLine": 40,
+                  "startColumn": 13,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "deeb5d9441ef54e97d31acec5798fbdae352c59a0d653ec0e6d310aab9a69cbe",
+            "1": "8b006f46.98296aec.690c8394.5f552db0.370a268d.bc1d84e6.6d9804d2.66a8326c.8b006f46.9c16b3d1.2a263861.865d2ba5.52d362e3.bc1d84e6.6d9804d2.c2898d04"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/profile/hathitrust/cron/mdp_misc_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 40,
+                            "endLine": 40,
+                            "startColumn": 19,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/profile/hathitrust/cron/mdp_misc_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 37,
+                            "endLine": 37,
+                            "startColumn": 9,
+                            "endColumn": 12
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 292,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "ruby/HardcodedCredential",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in None.let.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[None.let](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "spec/classes/profile/www_lib/cron_spec.rb",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 16,
+                  "endLine": 16,
+                  "startColumn": 26,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "43485fb737c7ef79381df99e23ff2f4b325c9b7df3eabe689b35c385fe288ea1",
+            "1": "8b006f46.98296aec.690c8394.a5c9600d.370a268d.bc1d84e6.6d9804d2.66a8326c.8b006f46.9c16b3d1.690c8394.865d2ba5.52d362e3.bc1d84e6.6d9804d2.215dce8f"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/profile/www_lib/cron_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 16,
+                            "endLine": 16,
+                            "startColumn": 32,
+                            "endColumn": 45
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/profile/www_lib/cron_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 16,
+                            "endLine": 16,
+                            "startColumn": 9,
+                            "endColumn": 12
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 242,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "ruby/HardcodedCredential",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in None.let.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[None.let](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "spec/defines/cifs_mount_spec.rb",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 19,
+                  "endLine": 19,
+                  "startColumn": 11,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "c9e4684f35680036b43c06e5f3e6b4419066d6f61709259eacb196a5f8f261f9",
+            "1": "8b006f46.98296aec.690c8394.5f552db0.370a268d.bc1d84e6.6d9804d2.66a8326c.8b006f46.9c16b3d1.eaf37bfe.865d2ba5.7252e8fd.bc1d84e6.6d9804d2.215dce8f"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/defines/cifs_mount_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 19,
+                            "endLine": 19,
+                            "startColumn": 17,
+                            "endColumn": 36
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/defines/cifs_mount_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 7,
+                            "endColumn": 10
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 292,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "ruby/HardcodedCredential",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in merge.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[merge](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "spec/defines/cifs_mount_spec.rb",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 72,
+                  "endLine": 72,
+                  "startColumn": 25,
+                  "endColumn": 50
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "b7c25f2c556647b78b8169e57ff6538b2b8292a99c5f85b83aa898394f90b94a",
+            "1": "4cf75053.98296aec.690c8394.5f552db0.d8b385c8.3e7c69cc.6d9804d2.66a8326c.4cf75053.9c16b3d1.690c8394.865d2ba5.72e98231.3e7c69cc.6d9804d2.5f086699"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/defines/cifs_mount_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 72,
+                            "endLine": 72,
+                            "startColumn": 31,
+                            "endColumn": 50
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/defines/cifs_mount_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 72,
+                            "endLine": 72,
+                            "startColumn": 11,
+                            "endColumn": 24
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 292,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "ruby/HardcodedCredential",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in merge.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[merge](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "spec/defines/cifs_mount_spec.rb",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 81,
+                  "endLine": 81,
+                  "startColumn": 25,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "53698bc3b452fab3a417c2df593794f09e48f63c2c030b7d25e9d4975688ef74",
+            "1": "4cf75053.98296aec.690c8394.5f552db0.5ce3417e.3e7c69cc.6d9804d2.66a8326c.4cf75053.9c16b3d1.690c8394.865d2ba5.72e98231.3e7c69cc.6d9804d2.215dce8f"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/defines/cifs_mount_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 81,
+                            "endLine": 81,
+                            "startColumn": 31,
+                            "endColumn": 52
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/defines/cifs_mount_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 81,
+                            "endLine": 81,
+                            "startColumn": 11,
+                            "endColumn": 24
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 292,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "ruby/HardcodedPassword",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Do not hardcode passwords in code. Found hardcoded password used in None.let.",
+            "markdown": "Do not hardcode passwords in code. Found {0} password used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[None.let](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "spec/classes/profile/mysql_spec.rb",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 12,
+                  "endLine": 12,
+                  "startColumn": 24,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "63c394c1057266d83ab907add6fb7de49fba541394a2fec296b7286cce334d8c",
+            "1": "8b006f46.5bea8960.690c8394.5513e3c0.2823c8fc.bc1d84e6.65ea4d20.66a8326c.8b006f46.9c16b3d1.690c8394.5513e3c0.52d362e3.bc1d84e6.65ea4d20.215dce8f"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/profile/mysql_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 34,
+                            "endColumn": 49
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/profile/mysql_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 7,
+                            "endColumn": 10
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 509,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "HTML+ERB",
+            "files": 152,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Ruby",
+            "files": 182,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

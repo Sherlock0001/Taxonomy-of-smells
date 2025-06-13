@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "isPrivate": true,
+    "isLicensesEnabled": false,
+    "ignoreSettings": {
+      "adminOnly": false,
+      "reasonRequired": false,
+      "disregardFilesystemIgnores": false,
+      "autoApproveIgnores": false
+    },
+    "org": "mbisss2025",
+    "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+    "policy": ""
+  },
+  "filesystemPolicy": false,
+  "vulnerabilities": [],
+  "dependencyCount": 0,
+  "licensesPolicy": null,
+  "ignoreSettings": null,
+  "targetFile": "modules/toolforge/files/k8s/toolforge-tool-roles.yaml",
+  "projectName": "operations-puppet",
+  "org": "mbisss2025",
+  "policy": "",
+  "isPrivate": true,
+  "targetFilePath": "/home/mbissine/gitclone_puppet/operations-puppet/modules/toolforge/files/k8s/toolforge-tool-roles.yaml",
+  "packageManager": "k8sconfig",
+  "path": "/home/mbissine/gitclone_puppet/operations-puppet",
+  "projectType": "k8sconfig",
+  "ok": true,
+  "infrastructureAsCodeIssues": []
+}

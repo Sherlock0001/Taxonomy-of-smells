@@ -1,0 +1,343 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "python/HardcodedNonCryptoSecret",
+              "name": "HardcodedNonCryptoSecret",
+              "shortDescription": {
+                "text": "Hardcoded Secret"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "help": {
+                "markdown": "## Details\n\nWhen constants are hardcoded into applications, this information could easily be reverse-engineered and become known to attackers. For example, if a breached authentication token is hardcoded in multiple places in the application, it may lead to components of the application remaining vulnerable if not all instances are changed.\nAnother negative effect of hard-coding constants is potential unpredictability in the application's performance if the development team fails to update every single instance of the hardcoded constant throughout the code. For these reasons, hard-coding security-relevant constants is considered bad coding practice and should be remedied if present and avoided in future.\n\n## Best practices for prevention\n- Never hard code security-related constants; use symbolic names or configuration lookup files.\n- As hard coding is often done by coders working alone on a small scale, examine all legacy code components and test carefully when scaling.\n- Adopt a \"future-proof code\" mindset: While use of constants may save a little time now and make development simpler in the short term, it could cost time and money adapting to scale or other unforeseen circumstances (such as new hardware) in the future.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "python",
+                  "HardcodedNonCryptoSecret",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/Song-Li/cross_browser/commit/6444442fb5827063c461eccf2c1c8457d26f5786?diff=split#diff-767468ba2e7b08a674604477127158453cc60fd651bac591f73a6245144660a3L-1",
+                    "lines": [
+                      {
+                        "line": "import ConfigParser\n",
+                        "lineNumber": 2,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 3,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "ACCESS_ID = 'U2FsdGVkX1/qMoSUWBeff4jFDihBczJbZNFHc6Kn/tlpEDKiCCp9DGmdSte2CVmB'\n",
+                        "lineNumber": 3,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "SECRET_KEY = 'U2FsdGVkX19KzfE5gaEi5Y5RFyZWOTHz8+IssrQ2Xi1LfK+MFAQFZYzlGxRsyWlCdgL1sB0ZVDHlI4gBqROpZw=='\n",
+                        "lineNumber": 4,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "#encrypited\n",
+                        "lineNumber": 5,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "config = ConfigParser.ConfigParser()\n",
+                        "lineNumber": 4,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "config.read(\"./keys.conf\")\n",
+                        "lineNumber": 5,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "ACCESS_ID = config.get('keys', 'ACCESS_ID')\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "SECRET_KEY = config.get('keys', 'SECRET_KEY')\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/ryepdx/bitcoin-arbitrage-ui/commit/64137481f04a26029835f16dcc0fcc163c42a807?diff=split#diff-568470d013cd12e4f388206520da39ab9a4e4c3c6b95846cbc281abc1ba3c959L-1",
+                    "lines": [
+                      {
+                        "line": "app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'\n",
+                        "lineNumber": 8,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "app.secret_key = config.get()[\"secret_key\"]\n",
+                        "lineNumber": 8,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/mikelambert/dancedeets-monorepo/commit/f8e7b78c5e4de1096afe63969b44ca39ea9ed7ab?diff=split#diff-36050a5a8bb8a188ecf53d7559d7ccaac74eef18c1f8c3e1d5ff5531f68db9ddL-1",
+                    "lines": [
+                      {
+                        "line": "app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'\n",
+                        "lineNumber": 19,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "app.secret_key = keys.get('flask_session_key')\n",
+                        "lineNumber": 21,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 287,
+                "cwe": [
+                  "CWE-547"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "python/HardcodedNonCryptoSecret",
+          "ruleIndex": 0,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "lib/toil/demos/wordcount/wordfreq_demo.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 13,
+                  "endLine": 13,
+                  "startColumn": 21,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "27e011ab7461363542dbffa326182764ba917e3d0bef9d6685cec022cf47a903",
+            "1": "7047657e.86580245.79e62dc9.98569367.111dafe2.ba14daf2.6aab38d8.742d9b21.7047657e.86580245.79e62dc9.98569367.111dafe2.ba14daf2.6aab38d8.742d9b21"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "lib/toil/demos/wordcount/wordfreq_demo.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 13,
+                            "endLine": 13,
+                            "startColumn": 21,
+                            "endColumn": 31
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "lib/toil/demos/wordcount/wordfreq_demo.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 13,
+                            "endLine": 13,
+                            "startColumn": 21,
+                            "endColumn": 31
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 900,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/HardcodedNonCryptoSecret",
+          "ruleIndex": 0,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "lib/toil/demos/wordcount/wordfreq_demo.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 14,
+                  "endLine": 14,
+                  "startColumn": 21,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "3ac45cb8da47bc52922a68f3a5476e6049b47f516ff95fbf7a98ea5d82de72ed",
+            "1": "7047657e.70f86232.79e62dc9.25737e6c.111dafe2.ba14daf2.a28843e0.69dc60f8.7047657e.70f86232.79e62dc9.25737e6c.111dafe2.ba14daf2.a28843e0.69dc60f8"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "lib/toil/demos/wordcount/wordfreq_demo.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 21,
+                            "endColumn": 31
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "lib/toil/demos/wordcount/wordfreq_demo.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 21,
+                            "endColumn": 31
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 900,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "JavaScript",
+            "files": 7,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Python",
+            "files": 6,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "XML",
+            "files": 2,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

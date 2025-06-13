@@ -1,0 +1,1138 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/backend.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/backend.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/main.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/providers.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/providers.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/variables.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/environments/dev/main.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/environments/dev/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/environments/prod/main.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/environments/prod/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/modules/app/main.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/modules/app/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-161",
+        "title": "App Service identity missing",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "App Service (Web Apps)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-161",
+        "isGeneratedByCustomRule": false,
+        "issue": "App Service identity missing",
+        "impact": "Authentication and authorization will not be possible via Microsoft Identity platform",
+        "resolve": "Set `identity` attribute",
+        "remediation": {
+          "terraform": "Set `identity` attribute",
+          "arm": "Set `identity` attribute"
+        },
+        "lineNumber": 11,
+        "iacDescription": {
+          "issue": "App Service identity missing",
+          "impact": "Authentication and authorization will not be possible via Microsoft Identity platform",
+          "resolve": "Set `identity` attribute"
+        },
+        "publicId": "SNYK-CC-TF-161",
+        "msg": "resource.azurerm_app_service[backend_app].identity",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/app-service/overview-authentication-authorization",
+          "https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app"
+        ],
+        "path": [
+          "resource",
+          "azurerm_app_service[backend_app]",
+          "identity"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AZURE-533",
+        "title": "App Service allows FTP deployments",
+        "severity": "high",
+        "isIgnored": false,
+        "subType": "App Service (Web Apps)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-533",
+        "isGeneratedByCustomRule": false,
+        "issue": "App Service allows FTP deployments",
+        "impact": "FTP is a plain-text protocol that is vulnerable to manipulation and eavesdropping",
+        "resolve": "Set `ftps_state` to `FtpsOnly` or `Disabled`",
+        "remediation": {
+          "terraform": "Set `ftps_state` to `FtpsOnly` or `Disabled`",
+          "arm": "Set `ftpsState` to `FtpsOnly` or `Disabled` if not needed"
+        },
+        "lineNumber": 22,
+        "iacDescription": {
+          "issue": "App Service allows FTP deployments",
+          "impact": "FTP is a plain-text protocol that is vulnerable to manipulation and eavesdropping",
+          "resolve": "Set `ftps_state` to `FtpsOnly` or `Disabled`"
+        },
+        "publicId": "SNYK-CC-AZURE-533",
+        "msg": "resource.azurerm_app_service[backend_app].site_config.ftps_state",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#ftps_state",
+          "https://docs.microsoft.com/en-us/azure/app-service/deploy-ftp?tabs=portal#enforce-ftps"
+        ],
+        "path": [
+          "resource",
+          "azurerm_app_service[backend_app]",
+          "site_config",
+          "ftps_state"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-144",
+        "title": "Azure App Service allows HTTP traffic",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "App Service (Web Apps)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-144",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure App Service allows HTTP traffic",
+        "impact": "The HTTP content could be intercepted and manipulated in transit",
+        "resolve": "Set `https_only` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `https_only` attribute to `true`",
+          "arm": "Set `properties.httpsOnly` attribute to `true`"
+        },
+        "lineNumber": 27,
+        "iacDescription": {
+          "issue": "Azure App Service allows HTTP traffic",
+          "impact": "The HTTP content could be intercepted and manipulated in transit",
+          "resolve": "Set `https_only` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-144",
+        "msg": "resource.azurerm_app_service[frontend_app].https_only",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/app-service/security-recommendations"
+        ],
+        "path": [
+          "resource",
+          "azurerm_app_service[frontend_app]",
+          "https_only"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-162",
+        "title": "App Service mutual TLS disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "App Service (Web Apps)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-162",
+        "isGeneratedByCustomRule": false,
+        "issue": "App Service mutual TLS disabled",
+        "impact": "Clients without authorized certificate may be allowed to connect to the application",
+        "resolve": "Set `client_cert_enabled` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `client_cert_enabled` attribute to `true`",
+          "arm": "Set `properties.clientCertEnabled` attribute to `true`"
+        },
+        "lineNumber": 11,
+        "iacDescription": {
+          "issue": "App Service mutual TLS disabled",
+          "impact": "Clients without authorized certificate may be allowed to connect to the application",
+          "resolve": "Set `client_cert_enabled` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-162",
+        "msg": "resource.azurerm_app_service[backend_app].client_cert_enabled",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/app-service/app-service-web-configure-tls-mutual-auth"
+        ],
+        "path": [
+          "resource",
+          "azurerm_app_service[backend_app]",
+          "client_cert_enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-161",
+        "title": "App Service identity missing",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "App Service (Web Apps)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-161",
+        "isGeneratedByCustomRule": false,
+        "issue": "App Service identity missing",
+        "impact": "Authentication and authorization will not be possible via Microsoft Identity platform",
+        "resolve": "Set `identity` attribute",
+        "remediation": {
+          "terraform": "Set `identity` attribute",
+          "arm": "Set `identity` attribute"
+        },
+        "lineNumber": 27,
+        "iacDescription": {
+          "issue": "App Service identity missing",
+          "impact": "Authentication and authorization will not be possible via Microsoft Identity platform",
+          "resolve": "Set `identity` attribute"
+        },
+        "publicId": "SNYK-CC-TF-161",
+        "msg": "resource.azurerm_app_service[frontend_app].identity",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/app-service/overview-authentication-authorization",
+          "https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app"
+        ],
+        "path": [
+          "resource",
+          "azurerm_app_service[frontend_app]",
+          "identity"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-160",
+        "title": "App Service authentication disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "App Service (Web Apps)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-160",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure App Service authentication is not enabled",
+        "impact": "Service may be accessible without authorization",
+        "resolve": "Set `auth_settings.enabled` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `auth_settings.enabled` attribute to `true`",
+          "arm": "Set `properties.enabled` attribute to `true` in config resource"
+        },
+        "lineNumber": 11,
+        "iacDescription": {
+          "issue": "Azure App Service authentication is not enabled",
+          "impact": "Service may be accessible without authorization",
+          "resolve": "Set `auth_settings.enabled` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-160",
+        "msg": "resource.azurerm_app_service[backend_app].auth_settings",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/app-service/overview-authentication-authorization"
+        ],
+        "path": [
+          "resource",
+          "azurerm_app_service[backend_app]",
+          "auth_settings"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AZURE-533",
+        "title": "App Service allows FTP deployments",
+        "severity": "high",
+        "isIgnored": false,
+        "subType": "App Service (Web Apps)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-533",
+        "isGeneratedByCustomRule": false,
+        "issue": "App Service allows FTP deployments",
+        "impact": "FTP is a plain-text protocol that is vulnerable to manipulation and eavesdropping",
+        "resolve": "Set `ftps_state` to `FtpsOnly` or `Disabled`",
+        "remediation": {
+          "terraform": "Set `ftps_state` to `FtpsOnly` or `Disabled`",
+          "arm": "Set `ftpsState` to `FtpsOnly` or `Disabled` if not needed"
+        },
+        "lineNumber": 33,
+        "iacDescription": {
+          "issue": "App Service allows FTP deployments",
+          "impact": "FTP is a plain-text protocol that is vulnerable to manipulation and eavesdropping",
+          "resolve": "Set `ftps_state` to `FtpsOnly` or `Disabled`"
+        },
+        "publicId": "SNYK-CC-AZURE-533",
+        "msg": "resource.azurerm_app_service[frontend_app].site_config.ftps_state",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#ftps_state",
+          "https://docs.microsoft.com/en-us/azure/app-service/deploy-ftp?tabs=portal#enforce-ftps"
+        ],
+        "path": [
+          "resource",
+          "azurerm_app_service[frontend_app]",
+          "site_config",
+          "ftps_state"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-160",
+        "title": "App Service authentication disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "App Service (Web Apps)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-160",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure App Service authentication is not enabled",
+        "impact": "Service may be accessible without authorization",
+        "resolve": "Set `auth_settings.enabled` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `auth_settings.enabled` attribute to `true`",
+          "arm": "Set `properties.enabled` attribute to `true` in config resource"
+        },
+        "lineNumber": 27,
+        "iacDescription": {
+          "issue": "Azure App Service authentication is not enabled",
+          "impact": "Service may be accessible without authorization",
+          "resolve": "Set `auth_settings.enabled` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-160",
+        "msg": "resource.azurerm_app_service[frontend_app].auth_settings",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/app-service/overview-authentication-authorization"
+        ],
+        "path": [
+          "resource",
+          "azurerm_app_service[frontend_app]",
+          "auth_settings"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-162",
+        "title": "App Service mutual TLS disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "App Service (Web Apps)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-162",
+        "isGeneratedByCustomRule": false,
+        "issue": "App Service mutual TLS disabled",
+        "impact": "Clients without authorized certificate may be allowed to connect to the application",
+        "resolve": "Set `client_cert_enabled` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `client_cert_enabled` attribute to `true`",
+          "arm": "Set `properties.clientCertEnabled` attribute to `true`"
+        },
+        "lineNumber": 27,
+        "iacDescription": {
+          "issue": "App Service mutual TLS disabled",
+          "impact": "Clients without authorized certificate may be allowed to connect to the application",
+          "resolve": "Set `client_cert_enabled` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-162",
+        "msg": "resource.azurerm_app_service[frontend_app].client_cert_enabled",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/app-service/app-service-web-configure-tls-mutual-auth"
+        ],
+        "path": [
+          "resource",
+          "azurerm_app_service[frontend_app]",
+          "client_cert_enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-163",
+        "title": "App Service HTTP/2 disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "App Service (Web Apps)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-163",
+        "isGeneratedByCustomRule": false,
+        "issue": "HTTP/2 is not enabled on the App Service",
+        "impact": "No security impact. Provides performance improvement.",
+        "resolve": "Set `site_config.http2_enabled` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `site_config.http2_enabled` attribute to `true`",
+          "arm": "Set `properties.siteConfig.http20Enabled` attribute to `true`"
+        },
+        "lineNumber": 22,
+        "iacDescription": {
+          "issue": "HTTP/2 is not enabled on the App Service",
+          "impact": "No security impact. Provides performance improvement.",
+          "resolve": "Set `site_config.http2_enabled` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-163",
+        "msg": "resource.azurerm_app_service[backend_app].site_config.http2_enabled",
+        "references": [
+          "https://azure.microsoft.com/en-gb/blog/announcing-http-2-support-in-azure-app-service/"
+        ],
+        "path": [
+          "resource",
+          "azurerm_app_service[backend_app]",
+          "site_config",
+          "http2_enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-163",
+        "title": "App Service HTTP/2 disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "App Service (Web Apps)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-163",
+        "isGeneratedByCustomRule": false,
+        "issue": "HTTP/2 is not enabled on the App Service",
+        "impact": "No security impact. Provides performance improvement.",
+        "resolve": "Set `site_config.http2_enabled` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `site_config.http2_enabled` attribute to `true`",
+          "arm": "Set `properties.siteConfig.http20Enabled` attribute to `true`"
+        },
+        "lineNumber": 33,
+        "iacDescription": {
+          "issue": "HTTP/2 is not enabled on the App Service",
+          "impact": "No security impact. Provides performance improvement.",
+          "resolve": "Set `site_config.http2_enabled` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-163",
+        "msg": "resource.azurerm_app_service[frontend_app].site_config.http2_enabled",
+        "references": [
+          "https://azure.microsoft.com/en-gb/blog/announcing-http-2-support-in-azure-app-service/"
+        ],
+        "path": [
+          "resource",
+          "azurerm_app_service[frontend_app]",
+          "site_config",
+          "http2_enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-144",
+        "title": "Azure App Service allows HTTP traffic",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "App Service (Web Apps)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-144",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure App Service allows HTTP traffic",
+        "impact": "The HTTP content could be intercepted and manipulated in transit",
+        "resolve": "Set `https_only` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `https_only` attribute to `true`",
+          "arm": "Set `properties.httpsOnly` attribute to `true`"
+        },
+        "lineNumber": 11,
+        "iacDescription": {
+          "issue": "Azure App Service allows HTTP traffic",
+          "impact": "The HTTP content could be intercepted and manipulated in transit",
+          "resolve": "Set `https_only` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-144",
+        "msg": "resource.azurerm_app_service[backend_app].https_only",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/app-service/security-recommendations"
+        ],
+        "path": [
+          "resource",
+          "azurerm_app_service[backend_app]",
+          "https_only"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AZURE-618",
+        "title": "Use two or more App Service Plan instances",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "App Service (Web Apps)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-618",
+        "isGeneratedByCustomRule": false,
+        "issue": "Use two or more App Service Plan instances",
+        "impact": "A single App Service Plan instance increases the risk of application unavailability",
+        "resolve": "Set `sku.capacity` to `2` or more",
+        "remediation": {
+          "terraform": "Set `sku.capacity` to `2` or more",
+          "arm": "Set `sku.capacity` to `2` or more"
+        },
+        "lineNumber": 5,
+        "iacDescription": {
+          "issue": "Use two or more App Service Plan instances",
+          "impact": "A single App Service Plan instance increases the risk of application unavailability",
+          "resolve": "Set `sku.capacity` to `2` or more"
+        },
+        "publicId": "SNYK-CC-AZURE-618",
+        "msg": "resource.azurerm_app_service_plan[app_service_plan].sku.capacity",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans",
+          "https://docs.microsoft.com/en-us/azure/templates/microsoft.web/serverfarms?tabs=json"
+        ],
+        "path": [
+          "resource",
+          "azurerm_app_service_plan[app_service_plan]",
+          "sku",
+          "capacity"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/modules/app/outputs.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/modules/app/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/modules/app/variables.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/modules/app/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/modules/database/main.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/modules/database/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AZURE-630",
+        "title": "PostgreSQL connections not TLS enforced",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Database",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-630",
+        "isGeneratedByCustomRule": false,
+        "issue": "PostgreSQL connections not TLS enforced",
+        "impact": "Unencrypted connections are vulnerable to information disclosure or manipulation",
+        "resolve": "Set `ssl_enforcement_enabled` to `true`",
+        "remediation": {
+          "terraform": "Set `ssl_enforcement_enabled` to `true`",
+          "arm": "Set `sslEnforcement` to `Enabled`"
+        },
+        "lineNumber": 1,
+        "iacDescription": {
+          "issue": "PostgreSQL connections not TLS enforced",
+          "impact": "Unencrypted connections are vulnerable to information disclosure or manipulation",
+          "resolve": "Set `ssl_enforcement_enabled` to `true`"
+        },
+        "publicId": "SNYK-CC-AZURE-630",
+        "msg": "resource.azurerm_postgresql_server[db_server]",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/postgresql/concepts-ssl-connection-security",
+          "https://docs.microsoft.com/en-us/azure/templates/microsoft.dbforpostgresql/servers?tabs=json",
+          "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_database"
+        ],
+        "path": [
+          "resource",
+          "azurerm_postgresql_server[db_server]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AZURE-629",
+        "title": "PostgreSQL server minimum TLS version 1.2",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Database",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-629",
+        "isGeneratedByCustomRule": false,
+        "issue": "PostgreSQL server minimum TLS version 1.2",
+        "impact": "An outdated TLS version might lead to data leakage or manipulation",
+        "resolve": "Set `ssl_minimal_tls_version_enforced` to `TLS1_2`",
+        "remediation": {
+          "terraform": "Set `ssl_minimal_tls_version_enforced` to `TLS1_2`",
+          "arm": "Set `minimalTlsVersion` to `TLS1_2`"
+        },
+        "lineNumber": 1,
+        "iacDescription": {
+          "issue": "PostgreSQL server minimum TLS version 1.2",
+          "impact": "An outdated TLS version might lead to data leakage or manipulation",
+          "resolve": "Set `ssl_minimal_tls_version_enforced` to `TLS1_2`"
+        },
+        "publicId": "SNYK-CC-AZURE-629",
+        "msg": "resource.azurerm_postgresql_server[db_server]",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/postgresql/concepts-ssl-connection-security",
+          "https://docs.microsoft.com/en-us/azure/templates/microsoft.dbforpostgresql/servers?tabs=json",
+          "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_server"
+        ],
+        "path": [
+          "resource",
+          "azurerm_postgresql_server[db_server]"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/modules/database/outputs.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/modules/database/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/modules/database/variables.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/modules/database/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/modules/network/nsg.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/modules/network/nsg.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-33",
+        "title": "Azure Network Security Group allows public access",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Network",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-33",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure Network Security Group allows public access",
+        "impact": "Public access to all resources behind the network security group",
+        "resolve": "Set `source_address_prefix` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+        "remediation": {
+          "terraform": "Set `source_address_prefix` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+          "arm": "Set `properties.sourceAddressPrefix` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 2,
+        "iacDescription": {
+          "issue": "Azure Network Security Group allows public access",
+          "impact": "Public access to all resources behind the network security group",
+          "resolve": "Set `source_address_prefix` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-33",
+        "msg": "resource.azurerm_network_security_group[app_nsg].security_rule[0].source_address_prefix",
+        "references": [],
+        "path": [
+          "resource",
+          "azurerm_network_security_group[app_nsg]",
+          "security_rule[0]",
+          "source_address_prefix"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-33",
+        "title": "Azure Network Security Group allows public access",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Network",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-33",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure Network Security Group allows public access",
+        "impact": "Public access to all resources behind the network security group",
+        "resolve": "Set `source_address_prefix` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+        "remediation": {
+          "terraform": "Set `source_address_prefix` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+          "arm": "Set `properties.sourceAddressPrefix` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 2,
+        "iacDescription": {
+          "issue": "Azure Network Security Group allows public access",
+          "impact": "Public access to all resources behind the network security group",
+          "resolve": "Set `source_address_prefix` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-33",
+        "msg": "resource.azurerm_network_security_group[app_nsg].security_rule[1].source_address_prefix",
+        "references": [],
+        "path": [
+          "resource",
+          "azurerm_network_security_group[app_nsg]",
+          "security_rule[1]",
+          "source_address_prefix"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/modules/network/outputs.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/modules/network/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/modules/network/subnets.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/modules/network/subnets.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/modules/network/variables.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/modules/network/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infra_env_dashboard/infra-automation/modules/network/vnet.tf",
+    "projectName": "IDP-Integrated-Developer-Platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform/infra_env_dashboard/infra-automation/modules/network/vnet.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/IDP-Integrated-Developer-Platform",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AZURE-516",
+        "title": "Virtual Network DDoS protection plan disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Network",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-516",
+        "isGeneratedByCustomRule": false,
+        "issue": "Virtual Network DDoS protection plan disabled",
+        "impact": "Services deployed in the network will not benefit from advanced DDoS protection features such as attack alerting and analytics",
+        "resolve": "Set `ddos_protection_plan.enable` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `ddos_protection_plan.enable` attribute to `true`",
+          "arm": "Set `properties.enableDdosProtection` to `true`"
+        },
+        "lineNumber": 1,
+        "iacDescription": {
+          "issue": "Virtual Network DDoS protection plan disabled",
+          "impact": "Services deployed in the network will not benefit from advanced DDoS protection features such as attack alerting and analytics",
+          "resolve": "Set `ddos_protection_plan.enable` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-AZURE-516",
+        "msg": "resource.azurerm_virtual_network[vnet].ddos_protection_plan",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network#ddos_protection_plan",
+          "https://docs.microsoft.com/en-us/azure/ddos-protection/ddos-protection-overview"
+        ],
+        "path": [
+          "resource",
+          "azurerm_virtual_network[vnet]",
+          "ddos_protection_plan"
+        ],
+        "compliance": []
+      }
+    ]
+  }
+]

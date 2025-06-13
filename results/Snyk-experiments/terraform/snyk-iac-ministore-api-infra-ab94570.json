@@ -1,0 +1,831 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "codebuild.tf",
+    "projectName": "ministore-api-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ministore-api-infra/codebuild.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ministore-api-infra",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-45",
+        "title": "S3 server access logging is disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-45",
+        "isGeneratedByCustomRule": false,
+        "issue": "The s3 access logs will not be collected",
+        "impact": "There will be no audit trail of access to s3 objects",
+        "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.LoggingConfiguration` attribute",
+          "terraform": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "lineNumber": 2,
+        "iacDescription": {
+          "issue": "The s3 access logs will not be collected",
+          "impact": "There will be no audit trail of access to s3 objects",
+          "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "publicId": "SNYK-CC-TF-45",
+        "msg": "input.resource.aws_s3_bucket[ministore_api_codebuild_artifact_bucket].logging",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html"
+        ],
+        "path": [
+          "input",
+          "resource",
+          "aws_s3_bucket[ministore_api_codebuild_artifact_bucket]",
+          "logging"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-124",
+        "title": "S3 bucket versioning disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-124",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket versioning is disabled",
+        "impact": "Changes or deletion of objects will not be reversible",
+        "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.VersioningConfiguration.Status` attribute to `Enabled`",
+          "terraform": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "lineNumber": 2,
+        "iacDescription": {
+          "issue": "S3 bucket versioning is disabled",
+          "impact": "Changes or deletion of objects will not be reversible",
+          "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "publicId": "SNYK-CC-TF-124",
+        "msg": "resource.aws_s3_bucket[ministore_api_codebuild_artifact_bucket].versioning.enabled",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[ministore_api_codebuild_artifact_bucket]",
+          "versioning",
+          "enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-127",
+        "title": "S3 bucket MFA delete control disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-127",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket will not enforce MFA login on delete requests",
+        "impact": "Object could be deleted without stronger MFA authorization",
+        "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file",
+        "remediation": {
+          "terraform": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "lineNumber": 2,
+        "iacDescription": {
+          "issue": "S3 bucket will not enforce MFA login on delete requests",
+          "impact": "Object could be deleted without stronger MFA authorization",
+          "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "publicId": "SNYK-CC-TF-127",
+        "msg": "resource.aws_s3_bucket[ministore_api_codebuild_artifact_bucket].versioning.mfa_delete",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMFADelete.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[ministore_api_codebuild_artifact_bucket]",
+          "versioning",
+          "mfa_delete"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "ec2.tf",
+    "projectName": "ministore-api-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ministore-api-infra/ec2.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ministore-api-infra",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-130",
+        "title": "EC2 instance accepts IMDSv1",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "EC2",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-130",
+        "isGeneratedByCustomRule": false,
+        "issue": "Instance Metadata Service v2 is not enforced",
+        "impact": "Metadata service may be vulnerable to reverse proxy/open firewall misconfigurations and server side request forgery attacks",
+        "resolve": "Set `metadata_options.http_tokens` attribute to `required`",
+        "remediation": {
+          "cloudformation": "Set `MetadataOptions.HttpTokens` attribute to `required` in `AWS::EC2::LaunchTemplate`",
+          "terraform": "Set `metadata_options.http_tokens` attribute to `required`"
+        },
+        "lineNumber": 2,
+        "iacDescription": {
+          "issue": "Instance Metadata Service v2 is not enforced",
+          "impact": "Metadata service may be vulnerable to reverse proxy/open firewall misconfigurations and server side request forgery attacks",
+          "resolve": "Set `metadata_options.http_tokens` attribute to `required`"
+        },
+        "publicId": "SNYK-CC-TF-130",
+        "msg": "resource.aws_instance[ministore-api].metadata_options",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html",
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html",
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-retrieval.html",
+          "https://aws.amazon.com/blogs/security/defense-in-depth-open-firewalls-reverse-proxies-ssrf-vulnerabilities-ec2-instance-metadata-service/"
+        ],
+        "path": [
+          "resource",
+          "aws_instance[ministore-api]",
+          "metadata_options"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-53",
+        "title": "Non-Encrypted root block device",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "EC2",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-53",
+        "isGeneratedByCustomRule": false,
+        "issue": "The root block device for ec2 instance is not encrypted",
+        "impact": "That should someone gain unauthorized access to the data they would be able to read the contents.",
+        "resolve": "Set `root_block_device.encrypted` attribute to `true`",
+        "remediation": {
+          "cloudformation": "Set `BlockDeviceMappings.Encrypted` attribute of root device to `true`",
+          "terraform": "Set `root_block_device.encrypted` attribute to `true`"
+        },
+        "lineNumber": 2,
+        "iacDescription": {
+          "issue": "The root block device for ec2 instance is not encrypted",
+          "impact": "That should someone gain unauthorized access to the data they would be able to read the contents.",
+          "resolve": "Set `root_block_device.encrypted` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-53",
+        "msg": "resource.aws_instance[ministore-api].root_block_device.encrypted",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html",
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html",
+          "https://aws.amazon.com/premiumsupport/knowledge-center/cloudformation-root-volume-property/",
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html"
+        ],
+        "path": [
+          "resource",
+          "aws_instance[ministore-api]",
+          "root_block_device",
+          "encrypted"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AWS-426",
+        "title": "EC2 API termination protection is not enabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "EC2",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-426",
+        "isGeneratedByCustomRule": false,
+        "issue": "To prevent instance from being accidentally terminated using Amazon EC2, you can enable termination protection for the instance",
+        "impact": "Without this setting enabled the instances can be terminated by accident. This setting should only be used for instances with high availability requirements. Enabling this may prevent IaC workflows from updating the instance, for example terraform will not be able to terminate the instance to update instance type",
+        "resolve": "Set `disable_api_termination` attribute  with value `true`",
+        "remediation": {
+          "cloudformation": "Set `DisableApiTermination` attribute with value `true`",
+          "terraform": "Set `disable_api_termination` attribute  with value `true`"
+        },
+        "lineNumber": 2,
+        "iacDescription": {
+          "issue": "To prevent instance from being accidentally terminated using Amazon EC2, you can enable termination protection for the instance",
+          "impact": "Without this setting enabled the instances can be terminated by accident. This setting should only be used for instances with high availability requirements. Enabling this may prevent IaC workflows from updating the instance, for example terraform will not be able to terminate the instance to update instance type",
+          "resolve": "Set `disable_api_termination` attribute  with value `true`"
+        },
+        "publicId": "SNYK-CC-AWS-426",
+        "msg": "resource.aws_instance[ministore-api].disable_api_termination",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination"
+        ],
+        "path": [
+          "resource",
+          "aws_instance[ministore-api]",
+          "disable_api_termination"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "network.tf",
+    "projectName": "ministore-api-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ministore-api-infra/network.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ministore-api-infra",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AWS-427",
+        "title": "Public IPs are automatically mapped to instances",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-427",
+        "isGeneratedByCustomRule": false,
+        "issue": "Instances launched in this subnet will automatically have public IP assigned",
+        "impact": "Instances will be potentially accessible over public internet, which may lead to unauthorized access",
+        "resolve": "Set `map_public_ip_on_launch` attribute  with value `false`",
+        "remediation": {
+          "cloudformation": "Set `Properties.MapPublicIpOnLaunch` attribute with value `false`",
+          "terraform": "Set `map_public_ip_on_launch` attribute  with value `false`"
+        },
+        "lineNumber": 27,
+        "iacDescription": {
+          "issue": "Instances launched in this subnet will automatically have public IP assigned",
+          "impact": "Instances will be potentially accessible over public internet, which may lead to unauthorized access",
+          "resolve": "Set `map_public_ip_on_launch` attribute  with value `false`"
+        },
+        "publicId": "SNYK-CC-AWS-427",
+        "msg": "resource.aws_subnet[ministore-subnet-2].map_public_ip_on_launch",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html"
+        ],
+        "path": [
+          "resource",
+          "aws_subnet[ministore-subnet-2]",
+          "map_public_ip_on_launch"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AWS-427",
+        "title": "Public IPs are automatically mapped to instances",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-427",
+        "isGeneratedByCustomRule": false,
+        "issue": "Instances launched in this subnet will automatically have public IP assigned",
+        "impact": "Instances will be potentially accessible over public internet, which may lead to unauthorized access",
+        "resolve": "Set `map_public_ip_on_launch` attribute  with value `false`",
+        "remediation": {
+          "cloudformation": "Set `Properties.MapPublicIpOnLaunch` attribute with value `false`",
+          "terraform": "Set `map_public_ip_on_launch` attribute  with value `false`"
+        },
+        "lineNumber": 16,
+        "iacDescription": {
+          "issue": "Instances launched in this subnet will automatically have public IP assigned",
+          "impact": "Instances will be potentially accessible over public internet, which may lead to unauthorized access",
+          "resolve": "Set `map_public_ip_on_launch` attribute  with value `false`"
+        },
+        "publicId": "SNYK-CC-AWS-427",
+        "msg": "resource.aws_subnet[ministore-subnet-1].map_public_ip_on_launch",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html"
+        ],
+        "path": [
+          "resource",
+          "aws_subnet[ministore-subnet-1]",
+          "map_public_ip_on_launch"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "providers.tf",
+    "projectName": "ministore-api-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ministore-api-infra/providers.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ministore-api-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "rds.tf",
+    "projectName": "ministore-api-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ministore-api-infra/rds.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ministore-api-infra",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AWS-414",
+        "title": "RDS IAM authentication is disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "RDS",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-414",
+        "isGeneratedByCustomRule": false,
+        "issue": "IAM database authentication is disabled, authentication tokens are not used to connect to DB instance",
+        "impact": "Users will connect to DB instance with password, which are less secure than temporary tokens which expire",
+        "resolve": "Set `iam_database_authentication_enabled` to `true`.",
+        "remediation": {
+          "cloudformation": "Set `Properties.EnableIAMDatabaseAuthentication` to `true`.",
+          "terraform": "Set `iam_database_authentication_enabled` to `true`."
+        },
+        "lineNumber": 27,
+        "iacDescription": {
+          "issue": "IAM database authentication is disabled, authentication tokens are not used to connect to DB instance",
+          "impact": "Users will connect to DB instance with password, which are less secure than temporary tokens which expire",
+          "resolve": "Set `iam_database_authentication_enabled` to `true`."
+        },
+        "publicId": "SNYK-CC-AWS-414",
+        "msg": "resource.aws_db_instance[ministore-db].iam_database_authentication_enabled",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"
+        ],
+        "path": [
+          "resource",
+          "aws_db_instance[ministore-db]",
+          "iam_database_authentication_enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-201",
+        "title": "Non-encrypted RDS instance at rest",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "RDS",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-201",
+        "isGeneratedByCustomRule": false,
+        "issue": "The DB instance storage is not encrypted by default",
+        "impact": "Should someone gain unauthorized access to the data they would be able to read the contents.",
+        "resolve": "Set `storage_encrypted` attribute to true",
+        "remediation": {
+          "cloudformation": "Set `Properties.StorageEncrypted` attribute to `true`",
+          "terraform": "Set `storage_encrypted` attribute to true"
+        },
+        "lineNumber": 27,
+        "iacDescription": {
+          "issue": "The DB instance storage is not encrypted by default",
+          "impact": "Should someone gain unauthorized access to the data they would be able to read the contents.",
+          "resolve": "Set `storage_encrypted` attribute to true"
+        },
+        "publicId": "SNYK-CC-TF-201",
+        "msg": "resource.aws_db_instance[ministore-db].storage_encrypted",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance#storage_encrypted"
+        ],
+        "path": [
+          "resource",
+          "aws_db_instance[ministore-db]",
+          "storage_encrypted"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AWS-408",
+        "title": "RDS automatic backup is disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "type": "terraform",
+        "subType": "RDS",
+        "policyEngineType": "opa",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-408",
+        "isGeneratedByCustomRule": false,
+        "issue": "Automatic backup of AWS Relational Database is disabled",
+        "impact": "No automatic backups will occur, availability risk if disaster occurs and manual backups have not been set",
+        "resolve": "Set `resource.backup_retention_period` to `1` or more",
+        "remediation": {
+          "cloudformation": "Set `Properties.BackupRetentionPeriod` to `1` or more",
+          "terraform": "Set `resource.backup_retention_period` to `1` or more"
+        },
+        "lineNumber": 27,
+        "iacDescription": {
+          "issue": "Automatic backup of AWS Relational Database is disabled",
+          "impact": "No automatic backups will occur, availability risk if disaster occurs and manual backups have not been set",
+          "resolve": "Set `resource.backup_retention_period` to `1` or more"
+        },
+        "publicId": "SNYK-CC-AWS-408",
+        "msg": "resource.aws_db_instance[ministore-db].backup_retention_period",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html"
+        ],
+        "path": [
+          "resource",
+          "aws_db_instance[ministore-db]",
+          "backup_retention_period"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "security_groups.tf",
+    "projectName": "ministore-api-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ministore-api-infra/security_groups.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ministore-api-infra",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-1",
+        "title": "Security Group allows open ingress",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-1",
+        "isGeneratedByCustomRule": false,
+        "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+        "impact": "That potentially everyone can access your resource",
+        "resolve": "Set `cidr_block` attribute with a more restrictive IP, for example `192.16.0.0/24`",
+        "remediation": {
+          "cloudformation": "Set `Properties.SecurityGroupIngress.CidrIp` attribute with a more restrictive IP, for example `192.16.0.0/24`",
+          "terraform": "Set `cidr_block` attribute with a more restrictive IP, for example `192.16.0.0/24`"
+        },
+        "lineNumber": 2,
+        "iacDescription": {
+          "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+          "impact": "That potentially everyone can access your resource",
+          "resolve": "Set `cidr_block` attribute with a more restrictive IP, for example `192.16.0.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-1",
+        "msg": "input.resource.aws_security_group[ministore-ec2].ingress[0]",
+        "references": [
+          "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        ],
+        "path": [
+          "input",
+          "resource",
+          "aws_security_group[ministore-ec2]",
+          "ingress[0]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-56",
+        "title": "Security group description is missing",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-56",
+        "isGeneratedByCustomRule": false,
+        "issue": "The description field is missing in the security group",
+        "impact": "Increases the security management overhead",
+        "resolve": "Set `description` attribute to meaningful statement",
+        "remediation": {
+          "terraform": "Set `description` attribute to meaningful statement"
+        },
+        "lineNumber": 27,
+        "iacDescription": {
+          "issue": "The description field is missing in the security group",
+          "impact": "Increases the security management overhead",
+          "resolve": "Set `description` attribute to meaningful statement"
+        },
+        "publicId": "SNYK-CC-TF-56",
+        "msg": "resource.aws_security_group[ministore-db].description",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html"
+        ],
+        "path": [
+          "resource",
+          "aws_security_group[ministore-db]",
+          "description"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-73",
+        "title": "AWS Security Group allows open egress",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-73",
+        "isGeneratedByCustomRule": false,
+        "issue": "The inline security group rule allows open egress",
+        "impact": "Open egress can be used to exfiltrate data to unauthorized destinations, and enable access to potentially malicious resources",
+        "resolve": "Set `egress.cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`",
+        "remediation": {
+          "cloudformation": "Set `Properties.SecurityGroupEgress.CidrIp` attribute to specific ranges e.g. `192.168.1.0/24`",
+          "terraform": "Set `egress.cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 19,
+        "iacDescription": {
+          "issue": "The inline security group rule allows open egress",
+          "impact": "Open egress can be used to exfiltrate data to unauthorized destinations, and enable access to potentially malicious resources",
+          "resolve": "Set `egress.cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-73",
+        "msg": "resource.aws_security_group[ministore-ec2].egress",
+        "references": [
+          "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html",
+          "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-best-practices.html"
+        ],
+        "path": [
+          "resource",
+          "aws_security_group[ministore-ec2]",
+          "egress"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-73",
+        "title": "AWS Security Group allows open egress",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-73",
+        "isGeneratedByCustomRule": false,
+        "issue": "The inline security group rule allows open egress",
+        "impact": "Open egress can be used to exfiltrate data to unauthorized destinations, and enable access to potentially malicious resources",
+        "resolve": "Set `egress.cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`",
+        "remediation": {
+          "cloudformation": "Set `Properties.SecurityGroupEgress.CidrIp` attribute to specific ranges e.g. `192.168.1.0/24`",
+          "terraform": "Set `egress.cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 37,
+        "iacDescription": {
+          "issue": "The inline security group rule allows open egress",
+          "impact": "Open egress can be used to exfiltrate data to unauthorized destinations, and enable access to potentially malicious resources",
+          "resolve": "Set `egress.cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-73",
+        "msg": "resource.aws_security_group[ministore-db].egress",
+        "references": [
+          "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html",
+          "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-best-practices.html"
+        ],
+        "path": [
+          "resource",
+          "aws_security_group[ministore-db]",
+          "egress"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-1",
+        "title": "Security Group allows open ingress",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-1",
+        "isGeneratedByCustomRule": false,
+        "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+        "impact": "That potentially everyone can access your resource",
+        "resolve": "Set `cidr_block` attribute with a more restrictive IP, for example `192.16.0.0/24`",
+        "remediation": {
+          "cloudformation": "Set `Properties.SecurityGroupIngress.CidrIp` attribute with a more restrictive IP, for example `192.16.0.0/24`",
+          "terraform": "Set `cidr_block` attribute with a more restrictive IP, for example `192.16.0.0/24`"
+        },
+        "lineNumber": 2,
+        "iacDescription": {
+          "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+          "impact": "That potentially everyone can access your resource",
+          "resolve": "Set `cidr_block` attribute with a more restrictive IP, for example `192.16.0.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-1",
+        "msg": "input.resource.aws_security_group[ministore-ec2].ingress[1]",
+        "references": [
+          "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        ],
+        "path": [
+          "input",
+          "resource",
+          "aws_security_group[ministore-ec2]",
+          "ingress[1]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-56",
+        "title": "Security group description is missing",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-56",
+        "isGeneratedByCustomRule": false,
+        "issue": "The description field is missing in the security group",
+        "impact": "Increases the security management overhead",
+        "resolve": "Set `description` attribute to meaningful statement",
+        "remediation": {
+          "terraform": "Set `description` attribute to meaningful statement"
+        },
+        "lineNumber": 2,
+        "iacDescription": {
+          "issue": "The description field is missing in the security group",
+          "impact": "Increases the security management overhead",
+          "resolve": "Set `description` attribute to meaningful statement"
+        },
+        "publicId": "SNYK-CC-TF-56",
+        "msg": "resource.aws_security_group[ministore-ec2].description",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html"
+        ],
+        "path": [
+          "resource",
+          "aws_security_group[ministore-ec2]",
+          "description"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "ssh_key.tf",
+    "projectName": "ministore-api-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ministore-api-infra/ssh_key.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ministore-api-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "variables.tf",
+    "projectName": "ministore-api-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ministore-api-infra/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ministore-api-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  }
+]

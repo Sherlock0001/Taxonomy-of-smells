@@ -1,0 +1,6 @@
+{
+  "ok": false,
+  "code": 1022,
+  "error": "Failed to parse YAML file",
+  "path": "/home/mbissine/snyk_ansible/glab-sast-rules/rules/lgpl-cc/ruby/file/rule-CheckRenderLocalFileInclude.yml"
+}

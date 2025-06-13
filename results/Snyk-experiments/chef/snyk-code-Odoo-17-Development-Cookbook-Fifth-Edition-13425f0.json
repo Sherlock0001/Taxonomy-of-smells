@@ -1,0 +1,1383 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "python/NoHardcodedCredentials",
+              "name": "NoHardcodedCredentials",
+              "shortDescription": {
+                "text": "Use of Hardcoded Credentials"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nDevelopers may use hardcoded credentials for convenience when coding in order to simplify their workflow. While they are responsible for removing these before production, occasionally this task may fall through the cracks. This also becomes a maintenance challenge when credentials are re-used across multiple applications.\n\nOnce attackers gain access, they may take advantage of privilege level to remove or alter data, take down a site or app, or hold any of the above for ransom. The risk across multiple similar projects is even greater. If code containing the credentials is reused across multiple projects, they will all be compromised.\n\n## Best practices for prevention\n* Plan software architecture such that keys and passwords are always stored outside the code, wherever possible.\n* Plan encryption into software architecture for all credential information and ensure proper handling of keys, credentials, and passwords.\n* Prompt for a secure password on first login rather than hard-code a default password.\n* If a hardcoded password or credential must be used, limit its use, for example, to system console users rather than via the network.\n* Use strong hashes for inbound password authentication, ideally with randomly assigned salts to increase the difficulty level in case of brute-force attack.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "python",
+                  "NoHardcodedCredentials",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/joatuapp/joatu-django/commit/04bf074fb48b264645f5f0b52bb6592113bb73f9?diff=split#diff-9653b8c2ce917a6134298b00c8b3f7d4b7c4dc473a752303f37a870392742127L-1",
+                    "lines": [
+                      {
+                        "line": "from django.conf import settings\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 8,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "def coordinates_calculation(number, street, postal_code, city, country=''):\n",
+                        "lineNumber": 9,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    api_key = 'AIzaSyDM17QITeync0gIHsGgyqG_IxLH-7JSHo0'\n",
+                        "lineNumber": 8,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    api_key = settings.GOOGLE_API_KEY\n",
+                        "lineNumber": 10,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/leandro-gomez/youtube-api/commit/3f11cd7a2225163742a64ac1bf0e47d147cf13e4?diff=split#diff-fc29c0b673f3c43fb6fa7980bfbbcf134d866e535e90d8431c4e9ac105dc332aL-1",
+                    "lines": [
+                      {
+                        "line": "import os\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 2,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "API_KEY = 'AIzaSyDP74ePWyfwuHfGVnZHcM4HW4hil-4VxsU'\n",
+                        "lineNumber": 2,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "API_KEY = os.environ['YOUTUBE_API_KEY']\n",
+                        "lineNumber": 3,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/SkygearIO/chat/commit/70aafe017de3539355e3c79a504446b652dbf31f?diff=split#diff-c117fbf003ff6c8803d300cb7df397945352c8868f8a54f2ddc9e4d4c261371fL-1",
+                    "lines": [
+                      {
+                        "line": "import os\n",
+                        "lineNumber": 0,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "import datetime\n",
+                        "lineNumber": 1,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "import uuid\n",
+                        "lineNumber": 2,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 3,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "import jsonpickle\n",
+                        "lineNumber": 4,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "import skygear\n",
+                        "lineNumber": 5,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from skygear.container import SkygearContainer\n",
+                        "lineNumber": 6,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from skygear.utils.context import current_user_id\n",
+                        "lineNumber": 7,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from skygear.utils import db\n",
+                        "lineNumber": 8,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from skygear import pubsub\n",
+                        "lineNumber": 9,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from psycopg2.extensions import AsIs\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 12,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "container = SkygearContainer()\n",
+                        "lineNumber": 13,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "container.api_key = \"my_skygear_key\"\n",
+                        "lineNumber": 13,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "container.app_name = \"my_skygear_app\"\n",
+                        "lineNumber": 14,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "container.api_key = os.getenv('API_KEY', \"my_skygear_key\")\n",
+                        "lineNumber": 14,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "container.app_name = os.getenv('APP_NAME', \"my_skygear_app\")\n",
+                        "lineNumber": 15,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 63,
+                "cwe": [
+                  "CWE-798"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "python/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in here.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in here.",
+            "arguments": [
+              "[hardcoded](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Chapter20/01_xmlrpc_authentication/odoo_authenticate.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 5,
+                  "endLine": 5,
+                  "startColumn": 1,
+                  "endColumn": 9
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "61cfd2ae43e16a1896e31a09e5d66f09573063daaa0fdc77817b22634aeffdd6",
+            "1": "fc005a12.ab5d79e8.79e62dc9.73cd7f67.da3d4b02.ba14daf2.081ac3f4.742d9b21.fc005a12.ab5d79e8.79e62dc9.73cd7f67.da3d4b02.ba14daf2.081ac3f4.742d9b21"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "Chapter20/01_xmlrpc_authentication/odoo_authenticate.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "endLine": 5,
+                            "startColumn": 12,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "python/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in here.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in here.",
+            "arguments": [
+              "[hardcoded](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Chapter20/02_xmlrpc_fetch_data/rooms_data.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 6,
+                  "endLine": 6,
+                  "startColumn": 1,
+                  "endColumn": 9
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "4d1e1d15482dc56398cdaa27d6c6ba6a1452c2a0b519d874643b283e4607a6f3",
+            "1": "fc005a12.ab5d79e8.79e62dc9.73cd7f67.da3d4b02.ba14daf2.081ac3f4.742d9b21.fc005a12.ab5d79e8.79e62dc9.73cd7f67.da3d4b02.ba14daf2.081ac3f4.742d9b21"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "Chapter20/02_xmlrpc_fetch_data/rooms_data.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 6,
+                            "endLine": 6,
+                            "startColumn": 12,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "python/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in here.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in here.",
+            "arguments": [
+              "[hardcoded](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Chapter20/02_xmlrpc_fetch_data/rooms_data2.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 6,
+                  "endLine": 6,
+                  "startColumn": 1,
+                  "endColumn": 9
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "811446f8785640786e37c47a253a068f04d30242f9979ee0e8b46b23a769d13b",
+            "1": "fc005a12.ab5d79e8.79e62dc9.73cd7f67.da3d4b02.ba14daf2.081ac3f4.742d9b21.fc005a12.ab5d79e8.79e62dc9.73cd7f67.da3d4b02.ba14daf2.081ac3f4.742d9b21"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "Chapter20/02_xmlrpc_fetch_data/rooms_data2.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 6,
+                            "endLine": 6,
+                            "startColumn": 12,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "python/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in here.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in here.",
+            "arguments": [
+              "[hardcoded](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Chapter20/03_xmlrp_create_update_delete/rooms_access_rights.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 5,
+                  "endLine": 5,
+                  "startColumn": 1,
+                  "endColumn": 9
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "0fa64806b1f5f06969ebc49e958accc77c3cb696c0bcfd227fd49da1cb03cdae",
+            "1": "fc005a12.ab5d79e8.79e62dc9.73cd7f67.da3d4b02.ba14daf2.081ac3f4.742d9b21.fc005a12.ab5d79e8.79e62dc9.73cd7f67.da3d4b02.ba14daf2.081ac3f4.742d9b21"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "Chapter20/03_xmlrp_create_update_delete/rooms_access_rights.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "endLine": 5,
+                            "startColumn": 12,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "python/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in here.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in here.",
+            "arguments": [
+              "[hardcoded](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Chapter20/03_xmlrp_create_update_delete/rooms_operation.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 5,
+                  "endLine": 5,
+                  "startColumn": 1,
+                  "endColumn": 9
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "d4e950f829ca5f9d22d665ec5cc6b4576d9d5ec401abd0e196b66815f1904ff4",
+            "1": "fc005a12.ab5d79e8.79e62dc9.73cd7f67.da3d4b02.ba14daf2.081ac3f4.742d9b21.fc005a12.ab5d79e8.79e62dc9.73cd7f67.da3d4b02.ba14daf2.081ac3f4.742d9b21"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "Chapter20/03_xmlrp_create_update_delete/rooms_operation.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "endLine": 5,
+                            "startColumn": 12,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "python/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in here.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in here.",
+            "arguments": [
+              "[hardcoded](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Chapter20/04_xmlrpc_call_methods/rooms_method.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 5,
+                  "endLine": 5,
+                  "startColumn": 1,
+                  "endColumn": 9
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "8fc9c48201c93423b038c8517cc67297eee79d22c65ea5b3ee3a4c9daac7c164",
+            "1": "fc005a12.ab5d79e8.79e62dc9.73cd7f67.da3d4b02.ba14daf2.081ac3f4.742d9b21.fc005a12.ab5d79e8.79e62dc9.73cd7f67.da3d4b02.ba14daf2.081ac3f4.742d9b21"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "Chapter20/04_xmlrpc_call_methods/rooms_method.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "endLine": 5,
+                            "startColumn": 12,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "python/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in here.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in here.",
+            "arguments": [
+              "[hardcoded](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Chapter20/05_jsonrpc_authentication/jsonrpc_authentication.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 7,
+                  "endLine": 7,
+                  "startColumn": 1,
+                  "endColumn": 9
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "dd5297fde15dc6e9102ff484df24c62bebc2f85625fdac06cf1cd4c1d9e3760e",
+            "1": "fc005a12.ab5d79e8.79e62dc9.73cd7f67.5192d5be.ba14daf2.081ac3f4.742d9b21.fc005a12.ab5d79e8.79e62dc9.73cd7f67.5192d5be.ba14daf2.081ac3f4.742d9b21"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "Chapter20/05_jsonrpc_authentication/jsonrpc_authentication.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 7,
+                            "endLine": 7,
+                            "startColumn": 12,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "python/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in here.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in here.",
+            "arguments": [
+              "[hardcoded](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Chapter20/05_jsonrpc_authentication/jsonrpc_version_info.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 8,
+                  "endLine": 8,
+                  "startColumn": 1,
+                  "endColumn": 9
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "8874879453b10e9b6d088ab78aca0327c4d3d1fd892144af0ba12a1551e80f93",
+            "1": "fc005a12.8d6debe4.79e62dc9.73cd7f67.e69c153d.a1632d4f.25ca586c.742d9b21.fc005a12.8d6debe4.79e62dc9.73cd7f67.e69c153d.a1632d4f.25ca586c.742d9b21"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "Chapter20/05_jsonrpc_authentication/jsonrpc_version_info.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 8,
+                            "endLine": 8,
+                            "startColumn": 12,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "python/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in here.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in here.",
+            "arguments": [
+              "[hardcoded](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Chapter20/06_jsonrpc_fetch_data/json_fetch_data.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 8,
+                  "endLine": 8,
+                  "startColumn": 1,
+                  "endColumn": 9
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "04a93ceec939bdc7f868338dd2f9674923f875c196f829cb00e4772f352b09f3",
+            "1": "fc005a12.ab5d79e8.79e62dc9.73cd7f67.5192d5be.ba14daf2.081ac3f4.742d9b21.fc005a12.ab5d79e8.79e62dc9.73cd7f67.5192d5be.ba14daf2.081ac3f4.742d9b21"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "Chapter20/06_jsonrpc_fetch_data/json_fetch_data.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 8,
+                            "endLine": 8,
+                            "startColumn": 12,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "python/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in here.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in here.",
+            "arguments": [
+              "[hardcoded](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Chapter20/06_jsonrpc_fetch_data/json_fetch_data2.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 8,
+                  "endLine": 8,
+                  "startColumn": 1,
+                  "endColumn": 9
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "b2d1fb6b3cd705caaa271359136f16b2ae3539f6dcfccf50880b9e0fc088408b",
+            "1": "fc005a12.ab5d79e8.79e62dc9.73cd7f67.5192d5be.ba14daf2.081ac3f4.742d9b21.fc005a12.ab5d79e8.79e62dc9.73cd7f67.5192d5be.ba14daf2.081ac3f4.742d9b21"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "Chapter20/06_jsonrpc_fetch_data/json_fetch_data2.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 8,
+                            "endLine": 8,
+                            "startColumn": 12,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "python/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in here.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in here.",
+            "arguments": [
+              "[hardcoded](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Chapter20/07_jsonrpc_create_update_delete/jsonrpc_access_rights.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 8,
+                  "endLine": 8,
+                  "startColumn": 1,
+                  "endColumn": 9
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "630a8422d65d9ce69b6a6963b03620b991502e339406963099825899c6270a69",
+            "1": "fc005a12.ab5d79e8.79e62dc9.73cd7f67.5192d5be.ba14daf2.081ac3f4.742d9b21.fc005a12.ab5d79e8.79e62dc9.73cd7f67.5192d5be.ba14daf2.081ac3f4.742d9b21"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "Chapter20/07_jsonrpc_create_update_delete/jsonrpc_access_rights.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 8,
+                            "endLine": 8,
+                            "startColumn": 12,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "python/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in here.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in here.",
+            "arguments": [
+              "[hardcoded](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Chapter20/07_jsonrpc_create_update_delete/jsonrpc_operation.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 8,
+                  "endLine": 8,
+                  "startColumn": 1,
+                  "endColumn": 9
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "20ea427ea642db399962aad8052b2546bba474e79f79f1138f73512db943eb98",
+            "1": "fc005a12.ab5d79e8.79e62dc9.73cd7f67.5192d5be.ba14daf2.081ac3f4.742d9b21.fc005a12.ab5d79e8.79e62dc9.73cd7f67.5192d5be.ba14daf2.081ac3f4.742d9b21"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "Chapter20/07_jsonrpc_create_update_delete/jsonrpc_operation.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 8,
+                            "endLine": 8,
+                            "startColumn": 12,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "python/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in here.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in here.",
+            "arguments": [
+              "[hardcoded](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Chapter20/08_jsonrpc_call_method/jsonrpc_method.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 8,
+                  "endLine": 8,
+                  "startColumn": 1,
+                  "endColumn": 9
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "0da7eca5fd4f64890ef524f1f746afa62ed8ef24e9773c8b0606542f2c22c2f1",
+            "1": "fc005a12.ab5d79e8.79e62dc9.73cd7f67.5192d5be.ba14daf2.081ac3f4.742d9b21.fc005a12.ab5d79e8.79e62dc9.73cd7f67.5192d5be.ba14daf2.081ac3f4.742d9b21"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "Chapter20/08_jsonrpc_call_method/jsonrpc_method.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 8,
+                            "endLine": 8,
+                            "startColumn": 12,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "python/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in here.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in here.",
+            "arguments": [
+              "[hardcoded](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Chapter20/09_odoorpc_library/odoorpc_hostel.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 4,
+                  "endLine": 4,
+                  "startColumn": 1,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "eebe0d76c86cb7ebcfd17018f234d8a2c0630872ff0957cab97432fff5e91136",
+            "1": "c778a8d5.8d6debe4.532c4417.44a69e74.22fdbdc3.ba14daf2.081ac3f4.b73632dc.c778a8d5.8d6debe4.532c4417.44a69e74.22fdbdc3.ba14daf2.081ac3f4.b73632dc"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "Chapter20/09_odoorpc_library/odoorpc_hostel.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 4,
+                            "endLine": 4,
+                            "startColumn": 13,
+                            "endColumn": 20
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "python/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in here.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in here.",
+            "arguments": [
+              "[hardcoded](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Chapter20/09_odoorpc_library/odoorpc_hostel_execute.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 4,
+                  "endLine": 4,
+                  "startColumn": 1,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "0f91e6e91c6e4f606489545bce796d5d0d26ce85f7fcd7962b536ba283262bf0",
+            "1": "c778a8d5.8d6debe4.532c4417.44a69e74.22fdbdc3.ba14daf2.081ac3f4.b73632dc.c778a8d5.8d6debe4.532c4417.44a69e74.22fdbdc3.ba14daf2.081ac3f4.b73632dc"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "Chapter20/09_odoorpc_library/odoorpc_hostel_execute.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 4,
+                            "endLine": 4,
+                            "startColumn": 13,
+                            "endColumn": 20
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "JavaScript",
+            "files": 48,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Python",
+            "files": 943,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "XML",
+            "files": 716,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

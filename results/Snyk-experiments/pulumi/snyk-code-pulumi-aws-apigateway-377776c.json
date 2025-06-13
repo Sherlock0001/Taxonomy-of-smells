@@ -1,0 +1,252 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "javascript/InsecureHash",
+              "name": "InsecureHash",
+              "shortDescription": {
+                "text": "Use of Password Hash With Insufficient Computational Effort"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nSensitive information should never be stored in plain text, since this makes it very easy for unauthorized users, whether malicious insiders or outside attackers, to access. Hashing methods are used to make stored passwords and other sensitive data unreadable to users. For example, when a password is defined for the first time, it is hashed and then stored. The next time that user attempts to log on, the password they enter is hashed following the same procedure and compared with the stored value. In this way, the original password never needs to be stored in the system.\n\nHashing is a one-way scheme, meaning a hashed password cannot be reverse engineered. However, if an outdated or custom programmed hashing scheme is used, it becomes simple for an attacker with powerful modern computing power to gain access to the hashes used. This opens up access to all stored password information, leading to breached security. Therefore, it is essential for developers to understand modern, secure password hashing techniques.\n\n## Best practices for prevention\n* Use strong standard algorithms for hashing rather than simpler but outdated methods or DIY hashing schemes, which may have inherent weaknesses.\n* Use modular design for all code dealing with hashing so it can be swapped out as security standards change over time.\n* Use salting in combination with hashing (While this places more demands on resources, it is an essential step for tighter security.).\n* Implement zero-trust architecture to ensure that access to password data is granted only for legitimate business purposes.\n* Increase developer awareness of current standards in data security and cryptography.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "InsecureHash",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/mafintosh/hyperlog/commit/d93cc65e485d740face1dacffa66dbcf03bcc7c3?diff=split#diff-b29a862e995b5e16d1763a35604cec4f13f3ca08bb9318d8f7ccfa24b757f7e0L-1",
+                    "lines": [
+                      {
+                        "line": "return crypto.createHash('sha1')\n",
+                        "lineNumber": 3,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "return crypto.createHash('sha256')\n",
+                        "lineNumber": 3,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/raphael-group/magi/commit/1e1ed6435a97858e38d0cab962d7e248710f60e1?diff=split#diff-a4bd8e7c606b00ad2f2d6eeb95ba96714ece5c8b1266c2b503f3531b12d46257L-1",
+                    "lines": [
+                      {
+                        "line": "hasher = crypto.createHash('md5').update(url),\n",
+                        "lineNumber": 7,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "hasher = crypto.createHash('RIPEMD-64').update(url),\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/steilerDev/homebridge-openhab2-complete/commit/6e92ef40f991cc372b701390945e0e5bbeb71016?diff=split#diff-34bbd467b1ab0e3497ce244b09d2bfbc4ab192303dd90b13603baf6711b522dfL-1",
+                    "lines": [
+                      {
+                        "line": "function generate(name) {\n",
+                        "lineNumber": 4,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    const sha1sum = crypto.createHash('sha1');\n",
+                        "lineNumber": 5,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    sha1sum.update(name);\n",
+                        "lineNumber": 6,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "function generate(name, type) {\n",
+                        "lineNumber": 4,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    const hash = crypto.createHash('sha512');\n",
+                        "lineNumber": 5,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    hash.update(name);\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    hash.update(type);\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 134,
+                "cwe": [
+                  "CWE-916"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "javascript/InsecureHash",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "crypto.createHash hash (used in crypto.createHash) is insecure. Consider changing it to a secure hashing algorithm.",
+            "markdown": "{0} hash (used in {1}) is insecure. Consider changing it to a secure hashing algorithm.",
+            "arguments": [
+              "[crypto.createHash](0)",
+              "[crypto.createHash](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "provider/cmd/pulumi-resource-aws-apigateway/apigateway/utils.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 45,
+                  "endLine": 45,
+                  "startColumn": 33,
+                  "endColumn": 50
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "69b69719df918bc68ec691015b0806ad1217b4f52220cc25974fdd2de71033eb",
+            "1": "37bc1bfe.ef45cec4.191eaf2b.d7919eeb.ef9f7d82.82ca542b.cd61fc56.71520ffe.9ff0579e.706318d0.191eaf2b.d7919eeb.ef9f7d82.5fce695c.cd61fc56.71520ffe"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "provider/cmd/pulumi-resource-aws-apigateway/apigateway/utils.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 45,
+                            "endLine": 45,
+                            "startColumn": 33,
+                            "endColumn": 50
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "provider/cmd/pulumi-resource-aws-apigateway/apigateway/utils.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 45,
+                            "endLine": 45,
+                            "startColumn": 33,
+                            "endColumn": 50
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "C#",
+            "files": 9,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Go",
+            "files": 16,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "HTML",
+            "files": 1,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Java",
+            "files": 16,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Python",
+            "files": 12,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "TypeScript",
+            "files": 35,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

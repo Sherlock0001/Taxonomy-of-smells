@@ -1,0 +1,1722 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "python/PT",
+              "name": "PT",
+              "shortDescription": {
+                "text": "Path Traversal"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "## Details\n\nA Directory Traversal attack (also known as path traversal) aims to access files and directories that are stored outside the intended folder. By manipulating files with \"dot-dot-slash (../)\" sequences and its variations, or by using absolute file paths, it may be possible to access arbitrary files and directories stored on file system, including application source code, configuration, and other critical system files.\n\nBeing able to access and manipulate an arbitrary path leads to vulnerabilities when a program is being run with privileges that the user providing the path should not have. A website with a path traversal vulnerability would allow users access to sensitive files on the server hosting it. CLI programs may also be vulnerable to path traversal if they are being ran with elevated privileges (such as with the setuid or setgid flags in Unix systems).\n\nDirectory Traversal vulnerabilities can be generally divided into two types:\n\n- **Information Disclosure**: Allows the attacker to gain information about the folder structure or read the contents of sensitive files on the system.\n\n`st` is a module for serving static files on web pages, and contains a [vulnerability of this type](https://snyk.io/vuln/npm:st:20140206). In our example, we will serve files from the `public` route.\n\nIf an attacker requests the following URL from our server, it will in turn leak the sensitive private key of the root user.\n\n```\ncurl http://localhost:8080/public/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/root/.ssh/id_rsa\n```\n**Note** `%2e` is the URL encoded version of `.` (dot).\n\n- **Writing arbitrary files**: Allows the attacker to create or replace existing files. This type of vulnerability is also known as `Zip-Slip`.\n\nOne way to achieve this is by using a malicious `zip` archive that holds path traversal filenames. When each filename in the zip archive gets concatenated to the target extraction folder, without validation, the final path ends up outside of the target folder. If an executable or a configuration file is overwritten with a file containing malicious code, the problem can turn into an arbitrary code execution issue quite easily.\n\nThe following is an example of a `zip` archive with one benign file and one malicious file. Extracting the malicious file will result in traversing out of the target folder, ending up in `/root/.ssh/` overwriting the `authorized_keys` file:\n\n```\n2018-04-15 22:04:29 .....           19           19  good.txt\n2018-04-15 22:04:42 .....           20           20  ../../../../../../root/.ssh/authorized_keys\n```",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "python",
+                  "PT",
+                  "Security",
+                  "SourceNonServer",
+                  "SourceLocalEnv",
+                  "SourceCLI",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/cmusatyalab/opendiamond/commit/398049c187ee644beabab44d6fece82251c1ea56?diff=split#diff-70a9940f7965191dc6ca548a38cd1bde7ec7ceaf10f26ca454cd4223d5d50fa9L-1",
+                    "lines": [
+                      {
+                        "line": "    return os.path.join(DATAROOT, obj_path)\n",
+                        "lineNumber": 122,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    return safe_join(DATAROOT, obj_path)\n",
+                        "lineNumber": 123,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 124,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 125,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "def _get_index_absolute_path(index):\n",
+                        "lineNumber": 126,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    return os.path.join(INDEXDIR, index)\n",
+                        "lineNumber": 126,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 128,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 129,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "@scope_blueprint.route('/obj/<path:obj_path>')\n",
+                        "lineNumber": 130,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "def get_object_src_http(obj_path):\n",
+                        "lineNumber": 131,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    path = _get_obj_absolute_path(obj_path)\n",
+                        "lineNumber": 132,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 133,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    headers = Headers()\n",
+                        "lineNumber": 134,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    # With add_etags=True, conditional=True\n",
+                        "lineNumber": 135,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    # Flask should be smart enough to do 304 Not Modified\n",
+                        "lineNumber": 136,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    response = send_file(path,\n",
+                        "lineNumber": 137,
+                        "lineChange": "none"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/fonttools/fonttools/commit/0b99c8968e04e2e36c6c46ad8bb1a550d25969b4?diff=split#diff-e8b6161353c7ce5b13e62df1da329a85de0ef80ce8f039d283c25bf892b2b600L-1",
+                    "lines": [
+                      {
+                        "line": "\n",
+                        "lineNumber": 16,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "destdir = None\n",
+                        "lineNumber": 17,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "if sys.argv[1:]:\n",
+                        "lineNumber": 18,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tdestdir = os.path.normpath(os.path.join(os.getcwd(), sys.argv[1]))\n",
+                        "lineNumber": 19,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tassert os.path.isdir(destdir), \"destination is not an existing directory\"\n",
+                        "lineNumber": 20,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 21,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "os.chdir(wdir)\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "tar = src + \".tar\"\n",
+                        "lineNumber": 24,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "gz = tar + \".gz\"\n",
+                        "lineNumber": 25,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "tgz = src + \".tgz\"\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 26,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "print \"source:\", src\n",
+                        "lineNumber": 27,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "print \"dest:\", tgz\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 29,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "os.system('tar --exclude=CVS --exclude=%s -cf %s %s' % (scriptname, tar, src))\n",
+                        "lineNumber": 30,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "os.system('gzip -9v %s' % tar)\n",
+                        "lineNumber": 31,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "os.rename(gz, tgz)\n",
+                        "lineNumber": 26,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 32,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "if destdir:\n",
+                        "lineNumber": 33,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tprint \"destination directory:\", destdir\n",
+                        "lineNumber": 34,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tos.system('mv %s %s' % (gz, destdir))\n",
+                        "lineNumber": 35,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 36,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/Guad/fuwa/commit/955baf1c0e8824f08a96e48a350ee3cd0e3c5493?diff=split#diff-568470d013cd12e4f388206520da39ab9a4e4c3c6b95846cbc281abc1ba3c959L-1",
+                    "lines": [
+                      {
+                        "line": "import string, random\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "import string, random, hashlib, os\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "from werkzeug import secure_filename\n",
+                        "lineNumber": 2,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 3,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "#Load config file\n",
+                        "lineNumber": 4,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "config = {}\n",
+                        "lineNumber": 5,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "with open('config.ini', 'r') as file:\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tfor line in file.read().splitlines():\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tline = line.split('==')\n",
+                        "lineNumber": 8,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tconfig[line[0]] = line[1]\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app = flask.Flask(__name__) #Initialize our application\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024 #Set the upload limit to 10MiB\n",
+                        "lineNumber": 12,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 14,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "def genHash(seed): #Generate five letter filenames for our files\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    base = string.ascii_lowercase+string.digits \n",
+                        "lineNumber": 16,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    random.seed(seed)\n",
+                        "lineNumber": 17,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    hash_value = \"\"\n",
+                        "lineNumber": 18,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    for i in range(5):\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        hash_value += random.choice(base)\n",
+                        "lineNumber": 20,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    return hash_value\n",
+                        "lineNumber": 21,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "@app.route('/', methods=['GET', 'POST'])\n",
+                        "lineNumber": 24,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "def index():\n",
+                        "lineNumber": 25,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tif flask.request.method == 'POST':\n",
+                        "lineNumber": 26,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\"\"\"\n",
+                        "lineNumber": 27,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\tFile upload happens here.\n",
+                        "lineNumber": 28,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\tWe get your filename and convert it to our hash with your extension.\n",
+                        "lineNumber": 29,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\tThen we redirect to the file itself.\n",
+                        "lineNumber": 30,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\"\"\"\n",
+                        "lineNumber": 31,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tf = flask.request.files['file']\n",
+                        "lineNumber": 32,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\textension = f.filename.split('.')[-1]\n",
+                        "lineNumber": 24,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\tfilename = genHash(f.filename) + '.' + extension\n",
+                        "lineNumber": 25,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\tf.save('static/files/%s' % filename)\n",
+                        "lineNumber": 26,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\tprint 'Uploaded file \\'%s\\'' % filename #Log what file was uploaded\n",
+                        "lineNumber": 27,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\treturn flask.redirect(flask.url_for('getFile', filename=filename))\n",
+                        "lineNumber": 28,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\t\n",
+                        "lineNumber": 33,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\thasher = hashlib.md5() \t\t\n",
+                        "lineNumber": 34,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tbuf = f.read()\t\t   \t\t\n",
+                        "lineNumber": 35,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tf.seek(0) #Set cursor back to position 0 so we can read it again in the save function.\n",
+                        "lineNumber": 36,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\t\t\t\t\t\t\t# We hash the file to get its filename.\t   \t\t\n",
+                        "lineNumber": 37,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\t\t\t\t\t\t\t# So that we can upload two different images with the same filename,\n",
+                        "lineNumber": 38,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\thasher.update(buf)\t   \t\t# But not two same images with different filenames.\n",
+                        "lineNumber": 39,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tdirname = genHash(hasher.hexdigest())\n",
+                        "lineNumber": 40,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\tif not os.path.exists(\"static/files/%s\" % dirname): # Check if the folder already exists\n",
+                        "lineNumber": 41,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\tos.mkdir('static/files/%s' % dirname) #Make it\n",
+                        "lineNumber": 42,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\tf.save('static/files/%s/%s' % (dirname, secure_filename(f.filename)))\n",
+                        "lineNumber": 43,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\tprint 'Uploaded file \\'%s\\'' % secure_filename(f.filename) #Log what file was uploaded\n",
+                        "lineNumber": 44,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\treturn flask.redirect(flask.url_for('getFile', dirname=dirname,filename=secure_filename(f.filename)))\n",
+                        "lineNumber": 45,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\telse:\n",
+                        "lineNumber": 46,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\tflask.flash('File already exists in %s!' % dirname) #Display a message for the user.\n",
+                        "lineNumber": 47,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\treturn flask.redirect(flask.url_for('index'))\n",
+                        "lineNumber": 48,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 180,
+                "cwe": [
+                  "CWE-23"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "python/PT",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into open, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3),(4),(5)",
+              "[open](6)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "localisationadder.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 42,
+                  "endLine": 42,
+                  "startColumn": 14,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "9aeef86fa3e559a2c2e47e2de4e108e7d815454808ce4d7fc5e761b45e26300d",
+            "1": "2e8ddaeb.71f6e51e.187bf175.087fd28f.f3eda546.ba14daf2.081ac3f4.a4830b9a.3ab5af84.71f6e51e.34aa4ad7.4ac7f9f3.0bddba9c.1f8c0f79.160d0ec0.6aac30d8"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "endLine": 128,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "endLine": 128,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 130,
+                            "endLine": 130,
+                            "startColumn": 24,
+                            "endColumn": 28
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 130,
+                            "endLine": 130,
+                            "startColumn": 24,
+                            "endColumn": 34
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 39,
+                            "endLine": 39,
+                            "startColumn": 14,
+                            "endColumn": 18
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 42,
+                            "endLine": 42,
+                            "startColumn": 19,
+                            "endColumn": 23
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 42,
+                            "endLine": 42,
+                            "startColumn": 14,
+                            "endColumn": 18
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 650,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/PT",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into open, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3),(4),(5)",
+              "[open](6)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "localisationadder.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 46,
+                  "endLine": 46,
+                  "startColumn": 18,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "7aafd6db4a1bb35260aad3abab9265852585a80792ed8a621a653bd8d0f84542",
+            "1": "2e8ddaeb.9dc2f629.187bf175.4a95692a.f3eda546.ba14daf2.081ac3f4.a4830b9a.3ab5af84.71f6e51e.187bf175.087fd28f.182d481f.ba14daf2.081ac3f4.a4830b9a"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "endLine": 128,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "endLine": 128,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 130,
+                            "endLine": 130,
+                            "startColumn": 24,
+                            "endColumn": 28
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 130,
+                            "endLine": 130,
+                            "startColumn": 24,
+                            "endColumn": 34
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 39,
+                            "endLine": 39,
+                            "startColumn": 14,
+                            "endColumn": 18
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "endLine": 46,
+                            "startColumn": 23,
+                            "endColumn": 27
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "endLine": 46,
+                            "startColumn": 18,
+                            "endColumn": 22
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 650,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/PT",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into open, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3),(4),(5)",
+              "[open](6)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "localisationadder.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 50,
+                  "endLine": 50,
+                  "startColumn": 22,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "e84d8eaf8d0a3f23b9f5c092389c8406ab5dd8b589b1223c7d34251470d32012",
+            "1": "2e8ddaeb.9dc2f629.187bf175.4a95692a.f3eda546.ba14daf2.081ac3f4.a4830b9a.3ab5af84.9dc2f629.187bf175.139c59a8.182d481f.ba14daf2.081ac3f4.a4830b9a"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "endLine": 128,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "endLine": 128,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 130,
+                            "endLine": 130,
+                            "startColumn": 24,
+                            "endColumn": 28
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 130,
+                            "endLine": 130,
+                            "startColumn": 24,
+                            "endColumn": 34
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 39,
+                            "endLine": 39,
+                            "startColumn": 14,
+                            "endColumn": 18
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 50,
+                            "endLine": 50,
+                            "startColumn": 27,
+                            "endColumn": 31
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 50,
+                            "endLine": 50,
+                            "startColumn": 22,
+                            "endColumn": 26
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 650,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/PT",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into open, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3)",
+              "[open](4)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "localisationadder.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 135,
+                  "endLine": 135,
+                  "startColumn": 10,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "cad21ac3e427b8bd9f9193524ccc0cee99feb99f03e6e8eb32dae600622451ce",
+            "1": "2e8ddaeb.e3d9b656.187bf175.139c59a8.f3eda546.ba14daf2.081ac3f4.a4830b9a.3ab5af84.9dc2f629.34aa4ad7.9cd2dfe0.f3eda546.55153533.f6dc7859.6aac30d8"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "endLine": 128,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "endLine": 128,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 135,
+                            "endLine": 135,
+                            "startColumn": 15,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 135,
+                            "endLine": 135,
+                            "startColumn": 15,
+                            "endColumn": 26
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 135,
+                            "endLine": 135,
+                            "startColumn": 10,
+                            "endColumn": 14
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 650,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/PT",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into open, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3),(4)",
+              "[open](5)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "localisationadder.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 139,
+                  "endLine": 139,
+                  "startColumn": 14,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "0d9d17e66942625ec1f479e9a68b47b35e509095a94425bef86c3070349f860f",
+            "1": "2e8ddaeb.e3d9b656.187bf175.139c59a8.f3eda546.ba14daf2.081ac3f4.a4830b9a.3ab5af84.856e3039.187bf175.139c59a8.182d481f.ba14daf2.ad0c69d8.a4830b9a"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "endLine": 128,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "endLine": 128,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 135,
+                            "endLine": 135,
+                            "startColumn": 15,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 135,
+                            "endLine": 135,
+                            "startColumn": 15,
+                            "endColumn": 26
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 139,
+                            "endLine": 139,
+                            "startColumn": 19,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 139,
+                            "endLine": 139,
+                            "startColumn": 14,
+                            "endColumn": 18
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 650,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/PT",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into open, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3),(4)",
+              "[open](5)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "localisationadder.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 143,
+                  "endLine": 143,
+                  "startColumn": 18,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "bdf8b6a09d99cc161640798cf1d712d2357141976a7e13bfd58ec18051da79eb",
+            "1": "2e8ddaeb.e3d9b656.187bf175.139c59a8.f3eda546.ba14daf2.081ac3f4.a4830b9a.3ab5af84.856e3039.187bf175.139c59a8.182d481f.ba14daf2.ad0c69d8.a4830b9a"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "endLine": 128,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "endLine": 128,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 135,
+                            "endLine": 135,
+                            "startColumn": 15,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 135,
+                            "endLine": 135,
+                            "startColumn": 15,
+                            "endColumn": 26
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 143,
+                            "endLine": 143,
+                            "startColumn": 23,
+                            "endColumn": 34
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 143,
+                            "endLine": 143,
+                            "startColumn": 18,
+                            "endColumn": 22
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 650,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "python/PT",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a command line argument flows into open, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files.",
+            "arguments": [
+              "[a command line argument](0)",
+              "[flows](1),(2),(3),(4)",
+              "[open](5)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "localisationadder.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 166,
+                  "endLine": 166,
+                  "startColumn": 10,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "452476350626fcb811cc6f1207f3434435c023080fa2cdf7333d45a52127ec3e",
+            "1": "2e8ddaeb.e3d9b656.187bf175.139c59a8.f3eda546.ba14daf2.081ac3f4.a4830b9a.29f70f0d.e3d9b656.5fe980be.30b2e013.f3eda546.f6eef252.b77f01a3.a4830b9a"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "endLine": 128,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 128,
+                            "endLine": 128,
+                            "startColumn": 8,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 135,
+                            "endLine": 135,
+                            "startColumn": 15,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 135,
+                            "endLine": 135,
+                            "startColumn": 15,
+                            "endColumn": 26
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 166,
+                            "endLine": 166,
+                            "startColumn": 15,
+                            "endColumn": 26
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "localisationadder.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 166,
+                            "endLine": 166,
+                            "startColumn": 10,
+                            "endColumn": 14
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 650,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "Python",
+            "files": 2,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/Account_Filtered.json",
+    "projectName": "content",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/content/Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/Account_Filtered.json",
+    "packageManager": "cloudformationconfig",
+    "path": "/home/mbissine/snyk_ansible/content",
+    "projectType": "cloudformationconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/Accounts.json",
+    "projectName": "content",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/content/Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/Accounts.json",
+    "packageManager": "cloudformationconfig",
+    "path": "/home/mbissine/snyk_ansible/content",
+    "projectType": "cloudformationconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/Alerts.json",
+    "projectName": "content",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/content/Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/Alerts.json",
+    "packageManager": "cloudformationconfig",
+    "path": "/home/mbissine/snyk_ansible/content",
+    "projectType": "cloudformationconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/Entitlements.json",
+    "projectName": "content",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/content/Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/Entitlements.json",
+    "packageManager": "cloudformationconfig",
+    "path": "/home/mbissine/snyk_ansible/content",
+    "projectType": "cloudformationconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/LaunchedWorkflows.json",
+    "projectName": "content",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/content/Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/LaunchedWorkflows.json",
+    "packageManager": "cloudformationconfig",
+    "path": "/home/mbissine/snyk_ansible/content",
+    "projectType": "cloudformationconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/NoResources.json",
+    "projectName": "content",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/content/Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/NoResources.json",
+    "packageManager": "cloudformationconfig",
+    "path": "/home/mbissine/snyk_ansible/content",
+    "projectType": "cloudformationconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/PolicyViolations.json",
+    "projectName": "content",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/content/Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/PolicyViolations.json",
+    "packageManager": "cloudformationconfig",
+    "path": "/home/mbissine/snyk_ansible/content",
+    "projectType": "cloudformationconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/ResourceTypes.json",
+    "projectName": "content",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/content/Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/ResourceTypes.json",
+    "packageManager": "cloudformationconfig",
+    "path": "/home/mbissine/snyk_ansible/content",
+    "projectType": "cloudformationconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/Roles.json",
+    "projectName": "content",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/content/Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/Roles.json",
+    "packageManager": "cloudformationconfig",
+    "path": "/home/mbissine/snyk_ansible/content",
+    "projectType": "cloudformationconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/Schemas.json",
+    "projectName": "content",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/content/Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/Schemas.json",
+    "packageManager": "cloudformationconfig",
+    "path": "/home/mbissine/snyk_ansible/content",
+    "projectType": "cloudformationconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/TaskResults.json",
+    "projectName": "content",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/content/Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/TaskResults.json",
+    "packageManager": "cloudformationconfig",
+    "path": "/home/mbissine/snyk_ansible/content",
+    "projectType": "cloudformationconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/User_Filtered.json",
+    "projectName": "content",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/content/Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/User_Filtered.json",
+    "packageManager": "cloudformationconfig",
+    "path": "/home/mbissine/snyk_ansible/content",
+    "projectType": "cloudformationconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/Users.json",
+    "projectName": "content",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/content/Packs/SailPointIdentityIQ/Integrations/SailPointIdentityIQ/test_data/Users.json",
+    "packageManager": "cloudformationconfig",
+    "path": "/home/mbissine/snyk_ansible/content",
+    "projectType": "cloudformationconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  }
+]

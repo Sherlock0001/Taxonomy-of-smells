@@ -1,0 +1,337 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "csharp/NoHardcodedCredentials",
+              "name": "NoHardcodedCredentials",
+              "shortDescription": {
+                "text": "Use of Hardcoded Credentials"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nDevelopers may use hardcoded credentials for convenience when coding in order to simplify their workflow. While they are responsible for removing these before production, occasionally this task may fall through the cracks. This also becomes a maintenance challenge when credentials are re-used across multiple applications.\n\nOnce attackers gain access, they may take advantage of privilege level to remove or alter data, take down a site or app, or hold any of the above for ransom. The risk across multiple similar projects is even greater. If code containing the credentials is reused across multiple projects, they will all be compromised.\n\n## Best practices for prevention\n* Plan software architecture such that keys and passwords are always stored outside the code, wherever possible.\n* Plan encryption into software architecture for all credential information and ensure proper handling of keys, credentials, and passwords.\n* Prompt for a secure password on first login rather than hard-code a default password.\n* If a hardcoded password or credential must be used, limit its use, for example, to system console users rather than via the network.\n* Use strong hashes for inbound password authentication, ideally with randomly assigned salts to increase the difficulty level in case of brute-force attack.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "csharp",
+                  "NoHardcodedCredentials",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/ducmeit1/cqrswithmediatr/commit/0ff34c9bb48fa6d78480bc1aaac5191dc9b0ad89?diff=split#diff-e8fe1aa8b56ef98985ac0b67457136088a81661516ece9e8bf50c53652e10a48L-1",
+                    "lines": [
+                      {
+                        "line": "            return Create();\n",
+                        "lineNumber": 14,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "            return Create(Directory.GetCurrentDirectory(),\n",
+                        "lineNumber": 14,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                Environment.GetEnvironmentVariable(\"ASPNETCORE_ENVIRONMENT\"));\n",
+                        "lineNumber": 15,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        }\n",
+                        "lineNumber": 16,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 17,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        protected abstract TContext CreateNewInstance(DbContextOptions<TContext> options);\n",
+                        "lineNumber": 18,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        private TContext Create()\n",
+                        "lineNumber": 19,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        private TContext Create(string basePath, string env)\n",
+                        "lineNumber": 20,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        {\n",
+                        "lineNumber": 21,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "            return Create(\"Data Source=localhost;Initial Catalog=CustomerDB;User Id=sa;Password=Demo123456@;\");\n",
+                        "lineNumber": 21,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "            var builder = new ConfigurationBuilder()\n",
+                        "lineNumber": 22,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                .SetBasePath(basePath)\n",
+                        "lineNumber": 23,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                .AddJsonFile(\"appsettings.json\", false, true)\n",
+                        "lineNumber": 24,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                .AddJsonFile($\"appsettings.{env}.json\", true)\n",
+                        "lineNumber": 25,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                .AddEnvironmentVariables();\n",
+                        "lineNumber": 26,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 27,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            var config = builder.Build();\n",
+                        "lineNumber": 28,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 29,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            var connectionString = config.GetConnectionString(\"DefaultConnection\");\n",
+                        "lineNumber": 30,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 31,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            if (string.IsNullOrWhiteSpace(connectionString))\n",
+                        "lineNumber": 32,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                throw new InvalidOperationException(\"Could not found a connection string named 'DefaultConnection'\");\n",
+                        "lineNumber": 33,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 34,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            return Create(connectionString);\n",
+                        "lineNumber": 35,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/phongnguyend/EntityFrameworkCore.SqlServer.SimpleBulks/commit/5e1fd9a3fec72d1c5be5ef755ab85e4a7995fdad?diff=split#diff-ee1d7028115222ab8ec5180870b721958c715ab7697f52198ddfa41b1fae126eL-1",
+                    "lines": [
+                      {
+                        "line": "optionsBuilder.UseSqlServer(\"Server=.;Database=SimpleBulks;User Id=sa;Password=sqladmin123!@#;MultipleActiveResultSets=true\");\n",
+                        "lineNumber": 12,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "optionsBuilder.UseSqlServer(_connectionString);\n",
+                        "lineNumber": 19,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/daxnet/apworks-core/commit/e4b3878f13ba608f61ff2683d9beb28d93a7a311?diff=split#diff-b100b4e4198f2f5a04a8b80cef17e326cc6de0452f4801147878ee2c1669d89fL-1",
+                    "lines": [
+                      {
+                        "line": "        public const string ConnectionString = \"Server=localhost;Database=SQLServerEventStoreTest;User Id=sa;Password=G1veMeP@ss\";\n",
+                        "lineNumber": 11,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        public const string ConnectionStringWithoutDatabase = \"Server=localhost;User Id=sa;Password=G1veMeP@ss\";\n",
+                        "lineNumber": 12,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        public static readonly string ConnectionString = $@\"Server=localhost\\sqlexpress;Database={EventStoreDatabaseName};Integrated Security=SSPI;\";\n",
+                        "lineNumber": 14,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        public const string ConnectionStringWithoutDatabase = @\"Server=localhost\\sqlexpress;Integrated Security=SSPI;\";\n",
+                        "lineNumber": 15,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 16,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        private static readonly string MDF_FileName = Path.Combine(Path.GetTempPath(), EventStoreDatabaseName + \".mdf\");\n",
+                        "lineNumber": 17,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        private static readonly string LDF_FileName = Path.Combine(Path.GetTempPath(), EventStoreDatabaseName + \".ldf\");\n",
+                        "lineNumber": 18,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 42,
+                "cwe": [
+                  "CWE-798"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "csharp/NoHardcodedCredentials",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in secret key variable declaration.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[secret key variable declaration](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "LoveOfCooking/Objects/CookingTool.cs",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 82,
+                  "endLine": 89,
+                  "startColumn": 11,
+                  "endColumn": 5
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "e65d89c478628928de3564b25344ff470902093b0c72744e7ed81a6acec96a7d",
+            "1": "0eda2063.39b8d118.68418e3d.f5757239.e811e785.caefa017.ce0185b2.24b1e0e2.0eda2063.39b8d118.68418e3d.f5757239.e811e785.caefa017.ce0185b2.24b1e0e2"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "LoveOfCooking/Objects/CookingTool.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 84,
+                            "endLine": 84,
+                            "startColumn": 10,
+                            "endColumn": 52
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "LoveOfCooking/Objects/CookingTool.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 82,
+                            "endLine": 89,
+                            "startColumn": 11,
+                            "endColumn": 5
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "C#",
+            "files": 31,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

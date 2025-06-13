@@ -1,0 +1,4149 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "java/PT",
+              "name": "PT",
+              "shortDescription": {
+                "text": "Path Traversal"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "## Details\n\nA Directory Traversal attack (also known as path traversal) aims to access files and directories that are stored outside the intended folder. By manipulating files with \"dot-dot-slash (../)\" sequences and its variations, or by using absolute file paths, it may be possible to access arbitrary files and directories stored on file system, including application source code, configuration, and other critical system files.\n\nBeing able to access and manipulate an arbitrary path leads to vulnerabilities when a program is being run with privileges that the user providing the path should not have. A website with a path traversal vulnerability would allow users access to sensitive files on the server hosting it. CLI programs may also be vulnerable to path traversal if they are being ran with elevated privileges (such as with the setuid or setgid flags in Unix systems).\n\nDirectory Traversal vulnerabilities can be generally divided into two types:\n\n- **Information Disclosure**: Allows the attacker to gain information about the folder structure or read the contents of sensitive files on the system.\n\n`st` is a module for serving static files on web pages, and contains a [vulnerability of this type](https://snyk.io/vuln/npm:st:20140206). In our example, we will serve files from the `public` route.\n\nIf an attacker requests the following URL from our server, it will in turn leak the sensitive private key of the root user.\n\n```\ncurl http://localhost:8080/public/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/root/.ssh/id_rsa\n```\n**Note** `%2e` is the URL encoded version of `.` (dot).\n\n- **Writing arbitrary files**: Allows the attacker to create or replace existing files. This type of vulnerability is also known as `Zip-Slip`.\n\nOne way to achieve this is by using a malicious `zip` archive that holds path traversal filenames. When each filename in the zip archive gets concatenated to the target extraction folder, without validation, the final path ends up outside of the target folder. If an executable or a configuration file is overwritten with a file containing malicious code, the problem can turn into an arbitrary code execution issue quite easily.\n\nThe following is an example of a `zip` archive with one benign file and one malicious file. Extracting the malicious file will result in traversing out of the target folder, ending up in `/root/.ssh/` overwriting the `authorized_keys` file:\n\n```\n2018-04-15 22:04:29 .....           19           19  good.txt\n2018-04-15 22:04:42 .....           20           20  ../../../../../../root/.ssh/authorized_keys\n```",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "java",
+                  "PT",
+                  "Security",
+                  "SourceNonServer",
+                  "SourceResourceAccess",
+                  "SourceDatabase",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/igniterealtime/Spark/commit/1a41205f5bc095c1e1cb2bd3a06d930ebdbfe376?diff=split#diff-e6cdbf4191c877a05be8c6795c7581a31c24ac5b979438da1d9414e9f812db6cL-1",
+                    "lines": [
+                      {
+                        "line": "if (!entryFile.toPath().normalize().startsWith(dir.toPath().normalize())) {\n",
+                        "lineNumber": 541,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    throw new RuntimeException(\"Bad zip entry\");\n",
+                        "lineNumber": 542,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "}\n",
+                        "lineNumber": 543,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t\t\t\t// Ignore any manifest.mf entries.\n",
+                        "lineNumber": 544,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\t\tif (entry.getName().toLowerCase().endsWith(\"manifest.mf\")) {\n",
+                        "lineNumber": 545,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\t\t\tcontinue;\n",
+                        "lineNumber": 546,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\t\t}\n",
+                        "lineNumber": 547,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 548,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\t\tif (entry.isDirectory() && rootDirectory == null) {\n",
+                        "lineNumber": 549,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\t\t\trootDirectory = entryFile;\n",
+                        "lineNumber": 550,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\t\t}\n",
+                        "lineNumber": 551,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 552,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\t\tif (!entry.isDirectory()) {\n",
+                        "lineNumber": 553,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\t\t\tentryFile.getParentFile().mkdirs();\n",
+                        "lineNumber": 554,
+                        "lineChange": "none"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/eugenp/tutorials/commit/917c64307ac18bd638ff65e500e7398efb2fdf36?diff=split#diff-3bfb9fca9702c728deff6acb4b6d954f30a7bf0f31fd8f5a3085210b0957af8cL-1",
+                    "lines": [
+                      {
+                        "line": "    final String fileZip = \"src/main/resources/compressed.zip\";\n",
+                        "lineNumber": 11,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    final String fileZip = \"src/main/resources/unzipTest/compressed.zip\";\n",
+                        "lineNumber": 11,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    final File destDir = new File(\"src/main/resources/unzipTest\");\n",
+                        "lineNumber": 12,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    final byte[] buffer = new byte[1024];\n",
+                        "lineNumber": 13,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    final ZipInputStream zis = new ZipInputStream(new FileInputStream(fileZip));\n",
+                        "lineNumber": 14,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    ZipEntry zipEntry = zis.getNextEntry();\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    while (zipEntry != null) {\n",
+                        "lineNumber": 16,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        final String fileName = zipEntry.getName();\n",
+                        "lineNumber": 16,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        final File newFile = new File(\"src/main/resources/unzipTest/\" + fileName);\n",
+                        "lineNumber": 17,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        final File newFile = newFile(destDir, zipEntry);\n",
+                        "lineNumber": 17,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        final FileOutputStream fos = new FileOutputStream(newFile);\n",
+                        "lineNumber": 18,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        int len;\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        while ((len = zis.read(buffer)) > 0) {\n",
+                        "lineNumber": 20,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "            fos.write(buffer, 0, len);\n",
+                        "lineNumber": 21,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        }\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        fos.close();\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        zipEntry = zis.getNextEntry();\n",
+                        "lineNumber": 24,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    }\n",
+                        "lineNumber": 25,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    zis.closeEntry();\n",
+                        "lineNumber": 26,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    zis.close();\n",
+                        "lineNumber": 27,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "}\n",
+                        "lineNumber": 28,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 29,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "/**\n",
+                        "lineNumber": 30,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": " * @see https://snyk.io/research/zip-slip-vulnerability\n",
+                        "lineNumber": 31,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": " */\n",
+                        "lineNumber": 32,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "public static File newFile(File destinationDir, ZipEntry zipEntry) throws IOException {\n",
+                        "lineNumber": 33,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    File destFile = new File(destinationDir, zipEntry.getName());\n",
+                        "lineNumber": 34,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    \n",
+                        "lineNumber": 35,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    String destDirPath = destinationDir.getCanonicalPath();\n",
+                        "lineNumber": 36,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    String destFilePath = destFile.getCanonicalPath();\n",
+                        "lineNumber": 37,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    \n",
+                        "lineNumber": 38,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    if (!destFilePath.startsWith(destDirPath + File.separator)) {\n",
+                        "lineNumber": 39,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        throw new IOException(\"Entry is outside of the target dir: \" + zipEntry.getName());\n",
+                        "lineNumber": 40,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    }\n",
+                        "lineNumber": 41,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    \n",
+                        "lineNumber": 42,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    return destFile;\n",
+                        "lineNumber": 43,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "}\n",
+                        "lineNumber": 44,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/kythe/kythe/commit/bc872ff20b1ab7f6cf8d6387599d1b3c359586eb?diff=split#diff-7b25efcb95c3cf280fd491c017ceefc58b99309118991921b23c7b50d7e0a75fL-1",
+                    "lines": [
+                      {
+                        "line": "// Zip Slip fix courtesy of snyk.io/research/zip-slip-vulnerability.\n",
+                        "lineNumber": 165,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "String canonicalDirPath = targetDirectory.getCanonicalPath() + File.separator;\n",
+                        "lineNumber": 166,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "while (entries.hasMoreElements()) {\n",
+                        "lineNumber": 167,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  final ZipEntry entry = entries.nextElement();\n",
+                        "lineNumber": 168,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  File targetFile = new File(targetDirectory, entry.getName());\n",
+                        "lineNumber": 169,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  String canonicalFilePath = targetFile.getCanonicalPath();\n",
+                        "lineNumber": 170,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  if (!canonicalFilePath.startsWith(canonicalDirPath)) {\n",
+                        "lineNumber": 171,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    throw new IllegalArgumentException(\n",
+                        "lineNumber": 172,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        \"Zip archive trying to write file outside of target dir: \" + canonicalFilePath);\n",
+                        "lineNumber": 173,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  }\n",
+                        "lineNumber": 174,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  if (entry.isDirectory()) {\n",
+                        "lineNumber": 175,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    if (!targetFile.isDirectory() && !targetFile.mkdirs()) {\n",
+                        "lineNumber": 176,
+                        "lineChange": "none"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 51,
+                "cwe": [
+                  "CWE-23"
+                ]
+              }
+            },
+            {
+              "id": "javascript/Sqli",
+              "name": "Sqli",
+              "shortDescription": {
+                "text": "SQL Injection"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "## Details\n\nIn an SQL injection attack, the user can submit an SQL query directly to the database, gaining access without providing appropriate credentials. Attackers can then view, export, modify, and delete confidential information; change passwords and other authentication information; and possibly gain access to other systems within the network. This is one of the most commonly exploited categories of vulnerability, but can largely be avoided through good coding practices.\n\n## Best practices for prevention\n* Avoid passing user-entered parameters directly to the SQL server.\n* Avoid using string concatenation to build SQL queries from user-entered parameters.\n* When coding, define SQL code first, then pass in parameters. Use prepared statements with parameterized queries. Examples include `SqlCommand()` in .NET and `bindParam()` in PHP.\n* Use strong typing for all parameters so unexpected user data will be rejected.\n* Where direct user input cannot be avoided for performance reasons, validate input against a very strict allowlist of permitted characters, avoiding special characters such as `? & / < > ; - ' \" \\` and spaces. Use a vendor-supplied escaping routine if possible.\n* Develop your application in an environment and/or using libraries that provide protection against SQL injection.\n* Harden your entire environment around a least-privilege model, ideally with isolated accounts with privileges only for particular tasks.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "Sqli",
+                  "Security",
+                  "SourceNonServer",
+                  "SourceResourceAccess",
+                  "SourceDatabase",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/andrei-tatar/HAP.js/commit/e188be46fe58a1d7f72332371b2d3b1be46b36ce?diff=split#diff-a71d0c3aa1001deb7f0c91f3dc4365d3d4714661b4e09deffdbce2e3fb606f0dL-1",
+                    "lines": [
+                      {
+                        "line": "            var tableName = \"Temp\" + req.body.id;\n",
+                        "lineNumber": 7,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "            var time = Math.round(Date.now()/1000);\n",
+                        "lineNumber": 8,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "            var value = req.body.temperature;\n",
+                        "lineNumber": 9,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 10,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "            db.serialize(function() {\n",
+                        "lineNumber": 11,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "                db.run(\"begin transaction\");\n",
+                        "lineNumber": 12,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "                db.run(\"create table if not exists \" + tableName + \" (time INTEGER, value REAL)\");\n",
+                        "lineNumber": 13,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "                db.run(\"insert into \" + tableName + \" values (?, ?)\", [time, value]);\n",
+                        "lineNumber": 14,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "                db.run(\"commit\");\n",
+                        "lineNumber": 15,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "            });\n",
+                        "lineNumber": 16,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 17,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "            var device = node.device(req.body.id);\n",
+                        "lineNumber": 3,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            if (device) {\n",
+                        "lineNumber": 4,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                if (!device.init_temperature) {\n",
+                        "lineNumber": 5,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                    device.init_temperature = true;\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                    util.createProperty(device, 'temperature', req.body.temperature);\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                }\n",
+                        "lineNumber": 8,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                else\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "                    device.temperature = req.body.temperature;\n",
+                        "lineNumber": 10,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            }\n",
+                        "lineNumber": 11,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/votinginfoproject/Metis/commit/a23a825a5240c28b308e51d5deced8c079483b4f?diff=split#diff-8a2ec056bc0d1ea7f81af8911eb5ed800ceb6e06ef7200bcb240e850660cc698L-1",
+                    "lines": [
+                      {
+                        "line": "var query = client.query(\"SELECT * FROM results WHERE id=\" + req.query.id);\n",
+                        "lineNumber": 6,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "var query = client.query(\"SELECT * FROM results WHERE id=$1\", [req.query.id]);\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/ZeroWangZY/track-manager/commit/28b85bf6f67cfd03d6af40f35df3e9a7b21bfcd4?diff=split#diff-4271b7f8a97f7103b3b137c344e4cfe49d6bb92646f2fd31bfdba91220b45f3aL-1",
+                    "lines": [
+                      {
+                        "line": "            connection.query('call gethotpoints(\\''+param.starttime+'\\',\\''+param.endtime+'\\')', function(err, result) {\n",
+                        "lineNumber": 127,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "          //  connection.query('call gethotpoints(\\''+param.starttime+'\\',\\''+param.endtime+'\\')', function(err, result) {\n",
+                        "lineNumber": 127,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "            connection.query('select Longtitude,Latitude from minitrack where Taxiid<10', function(err, result) {\n",
+                        "lineNumber": 128,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 129,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 105,
+                "cwe": [
+                  "CWE-89"
+                ]
+              }
+            },
+            {
+              "id": "javascript/CodeInjection",
+              "name": "CodeInjection",
+              "shortDescription": {
+                "text": "Code Injection"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "## Details\n\nA secure code injection attack occurs when the attacker exploits an existing input processing vulnerability, passing special characters and code directly to a web-based application or site. The code is then executed, potentially granting the user system access to export sensitive data, to install malware, or even to move laterally and to exploit other systems in the trusted internal network environment. While code injection attacks can take place in several ways, the common factor is allowing the user to submit executable code to the application. The most common forms of code injection are SQL injection (server side) and cross-site scripting (XSS) (client side).\n\n## Best practices for prevention\n- Never trust user input. Assume any input may transmit harmful values.\n- Apply least privilege principle (for example, limit users to read only wherever possible).\n- Avoid passing raw user input directly to functions; use parameterized queries to extract data first.\n- Sanitize user input strings of special characters such as ?, &, /, <, >, and quotation marks.\n- Use whitelisting of known good values.\n- Validate user input against expected response types.\n- Escape shell commands with functions such as shlex for Python, or escapeshellarg for PHP.\n- Remember that code injection can take place on multiple fronts: GET and POST requests, but also cookies and HTTP headers.\n- Ensure up-to-date patching across all systems to remediate known vulnerabilities so these cannot be exploited by code injection.\n- Educate all team members on safe data handling procedures to prevent attacks.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "CodeInjection",
+                  "Security",
+                  "SourceNonServer",
+                  "SourceResourceAccess",
+                  "SourceFile",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/lvn/botstrap/commit/aafeaca53e8d89eb950d8e9c3af8874dc90686ec?diff=split#diff-e727e4bdf3657fd1d798edcd6b099d6e092f8573cba266154583a746bba0f346L-1",
+                    "lines": [
+                      {
+                        "line": "var config = require(configFile);\n",
+                        "lineNumber": 17,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "var config = JSON.parse(fs.readFileSync(configFile));\n",
+                        "lineNumber": 17,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/noppa/ng-hot-reload/commit/5de61299a0a7aa602fe015ac9f2ff3af3f798348?diff=split#diff-8f9d1530fa118465c523a517c5f4cac4ec173f17b820514034dc39e588415f63L-1",
+                    "lines": [
+                      {
+                        "line": "var update = event.data;\r\n",
+                        "lineNumber": 4,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "new Function(update)();\r\n",
+                        "lineNumber": 5,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "var data = event.data ? JSON.parse(event.data) : {};\r\n",
+                        "lineNumber": 4,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "console.log('msg', data);\r\n",
+                        "lineNumber": 5,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "if (data.message === 'reload') {\r\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    var script = document.createElement('script');\r\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    var query = '?t=' + Date.now();\r\n",
+                        "lineNumber": 8,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    script.src = 'http://localhost:' + options.port + '/' + data.src + query;\r\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    document.body.appendChild(script);\r\n",
+                        "lineNumber": 10,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "}\r\n",
+                        "lineNumber": 11,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/hizzgdev/jsmind/commit/8063742e591d7765a6c96a29b91af1ac4adeeba8?diff=split#diff-053107ea442600706ba811ac9afc51a58f7b9c86fa9f374b46c5c3c29a58287aL-1",
+                    "lines": [
+                      {
+                        "line": "var data = eval('('+xhr.responseText+')');\n",
+                        "lineNumber": 876,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "var data = jm.util.json.string2json(xhr.responseText);\n",
+                        "lineNumber": 876,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "if(data != null){\n",
+                        "lineNumber": 877,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    callback(data);\n",
+                        "lineNumber": 878,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "}else{\n",
+                        "lineNumber": 879,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    callback(xhr.responseText);\n",
+                        "lineNumber": 880,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "}\n",
+                        "lineNumber": 881,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 149,
+                "cwe": [
+                  "CWE-94"
+                ]
+              }
+            },
+            {
+              "id": "javascript/HardcodedNonCryptoSecret",
+              "name": "HardcodedNonCryptoSecret",
+              "shortDescription": {
+                "text": "Hardcoded Secret"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "help": {
+                "markdown": "## Details\n\nWhen constants are hardcoded into applications, this information could easily be reverse-engineered and become known to attackers. For example, if a breached authentication token is hardcoded in multiple places in the application, it may lead to components of the application remaining vulnerable if not all instances are changed.\nAnother negative effect of hard-coding constants is potential unpredictability in the application's performance if the development team fails to update every single instance of the hardcoded constant throughout the code. For these reasons, hard-coding security-relevant constants is considered bad coding practice and should be remedied if present and avoided in future.\n\n## Best practices for prevention\n- Never hard code security-related constants; use symbolic names or configuration lookup files.\n- As hard coding is often done by coders working alone on a small scale, examine all legacy code components and test carefully when scaling.\n- Adopt a \"future-proof code\" mindset: While use of constants may save a little time now and make development simpler in the short term, it could cost time and money adapting to scale or other unforeseen circumstances (such as new hardware) in the future.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "HardcodedNonCryptoSecret",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/markstock7/FileManager/commit/50572778825dea6b6fdb34c9ae950d9915743e4c?diff=split#diff-408990876524f4737b49693cedc52fd267e31f665d0a7f71792dcb986d6a8268L-1",
+                    "lines": [
+                      {
+                        "line": "accessKeyId: 'pT3KujnBPxc0ey7G',\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "secretAccessKey: 'CcHjh2y7tIFljxgUT4U8sQLctkMBHu',\n",
+                        "lineNumber": 2,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "accessKeyId: '',\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "secretAccessKey: '',\n",
+                        "lineNumber": 2,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/leohmoraes/rocketseat-02/commit/69e888ed7c779a0fbb0d0c08a219afa11b3913bd?diff=split#diff-04122576a4101a4ed68c79faa4f4605c44d8fd93252cff9e64ba66ab9c561e86L-1",
+                    "lines": [
+                      {
+                        "line": "secret: '9dffij39asf23nsfnsvsdsa',\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "secret: process.env.APP_SECRET,\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/rodrigotamura/go-stack-2019/commit/26e020dfc2272fe76c82c28d86f492c3c84a94c5?diff=split#diff-92f76c0bccc1f970244da3b50449f200d4787cf60a87be14ff4f250d0ba1a590L-1",
+                    "lines": [
+                      {
+                        "line": "secret: '632ca4dfc8b2269e6fdf03ab5a55d2ec',\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "secret: process.env.APP_SECRET,\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 100,
+                "cwe": [
+                  "CWE-547"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "java/PT",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a database flows into exists, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to bypass the logic of the application in the conditional expression.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to bypass the logic of the application in the {3}.",
+            "arguments": [
+              "[a database](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8)",
+              "[exists](9)",
+              "[conditional expression](10)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 281,
+                  "endLine": 281,
+                  "startColumn": 12,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "d4b7860d3cea16f3d5e9e81dfdf21c4fcebd65697a2aee439790be1d67021760",
+            "1": "19689298.c8c8034f.33fa5dbe.9998adc9.dd06b926.7fda7c5e.6d63f75a.54d46e25.19689298.452ab0d9.629f3a5c.01551ad7.c41fd899.7fda7c5e.52414d6b.54d46e25"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 254,
+                            "endLine": 254,
+                            "startColumn": 25,
+                            "endColumn": 41
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 254,
+                            "endLine": 254,
+                            "startColumn": 25,
+                            "endColumn": 41
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 254,
+                            "endLine": 254,
+                            "startColumn": 14,
+                            "endColumn": 55
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 255,
+                            "endLine": 255,
+                            "startColumn": 23,
+                            "endColumn": 31
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 255,
+                            "endLine": 255,
+                            "startColumn": 18,
+                            "endColumn": 22
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 255,
+                            "endLine": 255,
+                            "startColumn": 7,
+                            "endColumn": 32
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 263,
+                            "endLine": 263,
+                            "startColumn": 12,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 280,
+                            "endLine": 280,
+                            "startColumn": 12,
+                            "endColumn": 52
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 281,
+                            "endLine": 281,
+                            "startColumn": 12,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 281,
+                            "endLine": 281,
+                            "startColumn": 12,
+                            "endColumn": 23
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 10,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 281,
+                            "endLine": 283,
+                            "startColumn": 7,
+                            "endColumn": 8
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 559,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "java/PT",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a database flows into exists, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to bypass the logic of the application in the conditional expression.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to bypass the logic of the application in the {3}.",
+            "arguments": [
+              "[a database](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8)",
+              "[exists](9)",
+              "[conditional expression](10)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 327,
+                  "endLine": 327,
+                  "startColumn": 11,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "01c5734377f25e1f5f245129d31926dce0783fee2f05b2ffed5bb6202252f74d",
+            "1": "19689298.c8c8034f.33fa5dbe.f9bdd8eb.75248ddf.7fda7c5e.6d63f75a.54d46e25.19689298.d6a1ebef.629f3a5c.01551ad7.0acd59f9.7fda7c5e.52414d6b.54d46e25"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 254,
+                            "endLine": 254,
+                            "startColumn": 25,
+                            "endColumn": 41
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 254,
+                            "endLine": 254,
+                            "startColumn": 25,
+                            "endColumn": 41
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 254,
+                            "endLine": 254,
+                            "startColumn": 14,
+                            "endColumn": 55
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 255,
+                            "endLine": 255,
+                            "startColumn": 23,
+                            "endColumn": 31
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 255,
+                            "endLine": 255,
+                            "startColumn": 18,
+                            "endColumn": 22
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 255,
+                            "endLine": 255,
+                            "startColumn": 7,
+                            "endColumn": 32
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 263,
+                            "endLine": 263,
+                            "startColumn": 12,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 326,
+                            "endLine": 326,
+                            "startColumn": 12,
+                            "endColumn": 47
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 327,
+                            "endLine": 327,
+                            "startColumn": 11,
+                            "endColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 327,
+                            "endLine": 327,
+                            "startColumn": 11,
+                            "endColumn": 22
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 10,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/native-package/android/src/main/java/com/streamchatreactnative/StreamChatReactNative.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 327,
+                            "endLine": 330,
+                            "startColumn": 7,
+                            "endColumn": 8
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 559,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/Sqli",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a database flows into execute, where it is used in an SQL query. This may result in an SQL Injection vulnerability.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used in an SQL query. This may result in an SQL Injection vulnerability.",
+            "arguments": [
+              "[a database](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12),(13),(14),(15),(16),(17),(18),(19),(20),(21),(22),(23),(24),(25),(26),(27),(28),(29),(30),(31),(32),(33),(34),(35),(36),(37),(38)",
+              "[execute](39)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "package/src/store/apis/getChannelMessages.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 28,
+                  "endLine": 28,
+                  "startColumn": 30,
+                  "endColumn": 56
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "d4100dccc57201bff5b3864e5be030bfa2efeda341b5879f414d7b09bcbe929b",
+            "1": "e0fda459.4773f344.c9330245.d7919eeb.8d22f254.c8517b91.ea4b1c47.4c6879fe.75d56c78.d9e5a3d2.c9330245.c559ebce.fd1fa73f.d7f542fc.0334236c.6723ddeb"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/SqliteClient.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 112,
+                            "endLine": 112,
+                            "startColumn": 38,
+                            "endColumn": 45
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/SqliteClient.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 112,
+                            "endLine": 112,
+                            "startColumn": 38,
+                            "endColumn": 45
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/SqliteClient.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 112,
+                            "endLine": 112,
+                            "startColumn": 30,
+                            "endColumn": 45
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/SqliteClient.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 112,
+                            "endLine": 112,
+                            "startColumn": 24,
+                            "endColumn": 60
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/SqliteClient.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 112,
+                            "endLine": 112,
+                            "startColumn": 13,
+                            "endColumn": 21
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/SqliteClient.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 112,
+                            "endLine": 112,
+                            "startColumn": 15,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectMessagesForChannels.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 20,
+                            "endLine": 20,
+                            "startColumn": 37,
+                            "endColumn": 47
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectMessagesForChannels.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 20,
+                            "endLine": 20,
+                            "startColumn": 24,
+                            "endColumn": 47
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectMessagesForChannels.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 20,
+                            "endLine": 44,
+                            "startColumn": 18,
+                            "endColumn": 4
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectMessagesForChannels.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "endLine": 46,
+                            "startColumn": 22,
+                            "endColumn": 23
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 10,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectMessagesForChannels.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "endLine": 46,
+                            "startColumn": 39,
+                            "endColumn": 40
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 11,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectMessagesForChannels.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "endLine": 46,
+                            "startColumn": 41,
+                            "endColumn": 46
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 12,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectMessagesForChannels.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "endLine": 46,
+                            "startColumn": 39,
+                            "endColumn": 46
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 13,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectMessagesForChannels.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "endLine": 46,
+                            "startColumn": 33,
+                            "endColumn": 38
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 14,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectMessagesForChannels.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "endLine": 46,
+                            "startColumn": 28,
+                            "endColumn": 38
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 15,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectMessagesForChannels.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "endLine": 46,
+                            "startColumn": 21,
+                            "endColumn": 47
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 16,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectMessagesForChannels.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "endLine": 46,
+                            "startColumn": 17,
+                            "endColumn": 20
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 17,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/getChannelMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 24,
+                            "endLine": 24,
+                            "startColumn": 29,
+                            "endColumn": 54
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 18,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/getChannelMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 24,
+                            "endLine": 24,
+                            "startColumn": 23,
+                            "endColumn": 66
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 19,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/getChannelMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 39,
+                            "endColumn": 45
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 20,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/getChannelMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 41,
+                            "endColumn": 43
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 21,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/getChannelMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 50,
+                            "endColumn": 52
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 22,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/getChannelMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 38,
+                            "endColumn": 52
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 23,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/getChannelMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 34,
+                            "endColumn": 37
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 24,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/getChannelMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 9,
+                            "endColumn": 19
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 25,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/getChannelMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "endLine": 28,
+                            "startColumn": 57,
+                            "endColumn": 67
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 26,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectReactionsForMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 10,
+                            "endLine": 10,
+                            "startColumn": 3,
+                            "endColumn": 23
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 27,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectReactionsForMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 31,
+                            "endColumn": 41
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 28,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectReactionsForMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 42,
+                            "endColumn": 48
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 29,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectReactionsForMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 31,
+                            "endColumn": 48
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 30,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectReactionsForMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 25,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 31,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectReactionsForMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 50,
+                            "endColumn": 54
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 32,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectReactionsForMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 25,
+                            "endColumn": 54
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 33,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectReactionsForMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 60,
+                            "endColumn": 64
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 34,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectReactionsForMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 9,
+                            "endColumn": 22
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 35,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectReactionsForMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "endLine": 36,
+                            "startColumn": 29,
+                            "endColumn": 42
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 36,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/apis/queries/selectReactionsForMessages.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 36,
+                            "startColumn": 5,
+                            "endColumn": 45
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 37,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/SqliteClient.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 107,
+                            "endLine": 107,
+                            "startColumn": 30,
+                            "endColumn": 43
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 38,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/SqliteClient.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 112,
+                            "endLine": 112,
+                            "startColumn": 46,
+                            "endColumn": 51
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 39,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/store/SqliteClient.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 112,
+                            "endLine": 112,
+                            "startColumn": 38,
+                            "endColumn": 45
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 505,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "javascript/CodeInjection",
+          "ruleIndex": 2,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a local file flows into require, where it is executed as JavaScript code. This may result in a Code Injection vulnerability.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is executed as JavaScript code. This may result in a Code Injection vulnerability.",
+            "arguments": [
+              "[a local file](0)",
+              "[flows](1),(2),(3),(4)",
+              "[require](5)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "package/bin/validate-translations.js",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 17,
+                  "endLine": 17,
+                  "startColumn": 18,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "eeb9779a4b2d27b8a534c4981124409152d0fd02d8672b65d8fb636eb5715f6e",
+            "1": "3df95e84.4773f344.a97a4b9e.d7919eeb.f7b6c27c.8020cfdf.ea4b1c47.55f16f4c.d6159efb.4773f344.a97a4b9e.dc733355.acf24367.5fce695c.83265159.d5de5421"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/bin/validate-translations.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 9,
+                            "endLine": 9,
+                            "startColumn": 42,
+                            "endColumn": 47
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/bin/validate-translations.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 9,
+                            "endLine": 9,
+                            "startColumn": 42,
+                            "endColumn": 47
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/bin/validate-translations.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 27,
+                            "endColumn": 31
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/bin/validate-translations.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 17,
+                            "endLine": 17,
+                            "startColumn": 54,
+                            "endColumn": 58
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/bin/validate-translations.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 17,
+                            "endLine": 17,
+                            "startColumn": 26,
+                            "endColumn": 58
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/bin/validate-translations.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 17,
+                            "endLine": 17,
+                            "startColumn": 18,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 505,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/ExpoMessaging/constants.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1,
+                  "endLine": 1,
+                  "startColumn": 14,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "d9b330f5098d527674e35b145b0769f19cf476bcf745ebe4b645541280ffe24a",
+            "1": "c4204708.883ce888.8b18f948.d7919eeb.4a6c8669.f7edcf51.ea4b1c47.998bc693.ae77ea27.883ce888.8b18f948.c559ebce.4a6c8669.5fce695c.ea4b1c47.89d75565"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/ExpoMessaging/constants.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 1,
+                            "endLine": 1,
+                            "startColumn": 31,
+                            "endColumn": 45
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/ExpoMessaging/constants.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 1,
+                            "endLine": 1,
+                            "startColumn": 14,
+                            "endColumn": 28
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/ExpoMessaging/constants.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 3,
+                  "endLine": 3,
+                  "startColumn": 3,
+                  "endColumn": 109
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "7a9cca23aa9cad382d4d59b8c9d2148b0d3bcc89417b8e79c6068a0f5fdd4eec",
+            "1": "c23e0920.883ce888.8b18f948.d7919eeb.79227595.f7edcf51.a152106f.85d9b49f.c23e0920.883ce888.8b18f948.d7919eeb.79227595.f7edcf51.a152106f.85d9b49f"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/ExpoMessaging/constants.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 3,
+                            "endLine": 3,
+                            "startColumn": 3,
+                            "endColumn": 109
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/ExpoMessaging/constants.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 3,
+                            "endLine": 3,
+                            "startColumn": 3,
+                            "endColumn": 109
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/SampleApp/src/ChatUsers.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 5,
+                  "endLine": 5,
+                  "startColumn": 5,
+                  "endColumn": 118
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "f6855a651e6a71646728b6121db900ddf91b7f5ba2d3b8b8c391b5626e738ac7",
+            "1": "f7309a0d.3f481afb.5c8866fa.1ac38dd5.79a7d027.f7edcf51.0e488f9b.b24a2db9.f7309a0d.3f481afb.5c8866fa.1ac38dd5.79a7d027.f7edcf51.0e488f9b.b24a2db9"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "endLine": 5,
+                            "startColumn": 5,
+                            "endColumn": 118
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "endLine": 5,
+                            "startColumn": 5,
+                            "endColumn": 118
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/SampleApp/src/ChatUsers.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 7,
+                  "endLine": 7,
+                  "startColumn": 5,
+                  "endColumn": 118
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "035adbd9bea50111a0cedf9678ba420032d9f5b2ae604d56f9b2b3fd37168833",
+            "1": "eb27ab09.3f481afb.d5f7524d.1ac38dd5.79a7d027.f7edcf51.ce4a9d89.1cbe69bc.eb27ab09.3f481afb.d5f7524d.1ac38dd5.79a7d027.f7edcf51.ce4a9d89.1cbe69bc"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 7,
+                            "endLine": 7,
+                            "startColumn": 5,
+                            "endColumn": 118
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 7,
+                            "endLine": 7,
+                            "startColumn": 5,
+                            "endColumn": 118
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/SampleApp/src/ChatUsers.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 9,
+                  "endLine": 9,
+                  "startColumn": 5,
+                  "endColumn": 118
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "baa198ee2aa5ac53f0f82bbb4c21a072ce00fc41dd7b3949b2db19b83047f61b",
+            "1": "eb27ab09.3f481afb.01dbd9da.1ac38dd5.79a7d027.f7edcf51.ce4a9d89.f2600c99.eb27ab09.3f481afb.01dbd9da.1ac38dd5.79a7d027.f7edcf51.ce4a9d89.f2600c99"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 9,
+                            "endLine": 9,
+                            "startColumn": 5,
+                            "endColumn": 118
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 9,
+                            "endLine": 9,
+                            "startColumn": 5,
+                            "endColumn": 118
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/SampleApp/src/ChatUsers.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 11,
+                  "endLine": 11,
+                  "startColumn": 5,
+                  "endColumn": 116
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "49c19cc2b20bec236aabc15c2af8aa9142bdfb2b898438be7283c5e913ead21f",
+            "1": "eb27ab09.3f481afb.a5ebc41d.1ac38dd5.79a7d027.f7edcf51.ce4a9d89.1e9ef079.eb27ab09.3f481afb.a5ebc41d.1ac38dd5.79a7d027.f7edcf51.ce4a9d89.1e9ef079"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 11,
+                            "endLine": 11,
+                            "startColumn": 5,
+                            "endColumn": 116
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 11,
+                            "endLine": 11,
+                            "startColumn": 5,
+                            "endColumn": 116
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/SampleApp/src/ChatUsers.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 12,
+                  "endLine": 12,
+                  "startColumn": 9,
+                  "endColumn": 116
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "28669d177953d04430c406c17ab2aec60d7ff486a87d14b629ff016c82dc3622",
+            "1": "eb27ab09.3f481afb.9c4ae6bd.1ac38dd5.79a7d027.f7edcf51.7c3c1d42.27a20a33.eb27ab09.3f481afb.9c4ae6bd.1ac38dd5.79a7d027.f7edcf51.7c3c1d42.27a20a33"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 9,
+                            "endColumn": 116
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "endLine": 12,
+                            "startColumn": 9,
+                            "endColumn": 116
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/SampleApp/src/ChatUsers.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 14,
+                  "endLine": 14,
+                  "startColumn": 5,
+                  "endColumn": 116
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "9f2e9a1700ef3cd111366884d88736fbebc79eb54bd0e2b76a86c63fc01d5669",
+            "1": "eb27ab09.3f481afb.5c8866fa.1ac38dd5.79a7d027.c833a3ec.b28ac36d.3ba94e84.eb27ab09.3f481afb.5c8866fa.1ac38dd5.79a7d027.c833a3ec.b28ac36d.3ba94e84"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 5,
+                            "endColumn": 116
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "endLine": 14,
+                            "startColumn": 5,
+                            "endColumn": 116
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/SampleApp/src/ChatUsers.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 16,
+                  "endLine": 16,
+                  "startColumn": 5,
+                  "endColumn": 116
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "4a7c75aae7c736c95bbfafc6464ffae9a8b7f01852d5070db79e2d502616752b",
+            "1": "eb27ab09.3f481afb.507e739b.1ac38dd5.79a7d027.f7edcf51.dc41f327.eb825c17.eb27ab09.3f481afb.507e739b.1ac38dd5.79a7d027.f7edcf51.dc41f327.eb825c17"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 16,
+                            "endLine": 16,
+                            "startColumn": 5,
+                            "endColumn": 116
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 16,
+                            "endLine": 16,
+                            "startColumn": 5,
+                            "endColumn": 116
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/SampleApp/src/ChatUsers.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 18,
+                  "endLine": 18,
+                  "startColumn": 5,
+                  "endColumn": 116
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "5af5c4a4d95290d863494cad5ad9a1f29d66b0f1986423ce7112d009f2707ad0",
+            "1": "eb27ab09.8a387a22.ea7f65d7.1ac38dd5.79a7d027.6acdd9a6.ce4a9d89.ab5a101a.eb27ab09.8a387a22.ea7f65d7.1ac38dd5.79a7d027.6acdd9a6.ce4a9d89.ab5a101a"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 18,
+                            "endLine": 18,
+                            "startColumn": 5,
+                            "endColumn": 116
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 18,
+                            "endLine": 18,
+                            "startColumn": 5,
+                            "endColumn": 116
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/SampleApp/src/ChatUsers.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 20,
+                  "endLine": 20,
+                  "startColumn": 5,
+                  "endColumn": 116
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "c1b8a81041fdaa3d1b782375b6b4ca5fc53802fad85cad1b523bdff31a9ac04c",
+            "1": "0b3dc276.3f481afb.38466c3f.1ac38dd5.79a7d027.11155bba.27b2e0d6.fa36acf1.0b3dc276.3f481afb.38466c3f.1ac38dd5.79a7d027.11155bba.27b2e0d6.fa36acf1"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 20,
+                            "endLine": 20,
+                            "startColumn": 5,
+                            "endColumn": 116
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 20,
+                            "endLine": 20,
+                            "startColumn": 5,
+                            "endColumn": 116
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/SampleApp/src/ChatUsers.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 21,
+                  "endLine": 21,
+                  "startColumn": 8,
+                  "endColumn": 114
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "54038c7b1d7fc9dbe64f40c7e78436687f559302a0ad42fb6c695dfd36b9b868",
+            "1": "eb27ab09.3f481afb.25d6e2bb.dfd44217.79a7d027.f7edcf51.ce4a9d89.172bba1a.eb27ab09.3f481afb.25d6e2bb.dfd44217.79a7d027.f7edcf51.ce4a9d89.172bba1a"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 21,
+                            "endLine": 21,
+                            "startColumn": 8,
+                            "endColumn": 114
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 21,
+                            "endLine": 21,
+                            "startColumn": 8,
+                            "endColumn": 114
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/SampleApp/src/ChatUsers.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 23,
+                  "endLine": 23,
+                  "startColumn": 5,
+                  "endColumn": 115
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "0dccb689f1aec5980c3d20b4f9acfb21ca6574cdbbdb060b9004d73e939fcad7",
+            "1": "eb27ab09.df923df3.5c8866fa.aeb45ea1.79a7d027.f7edcf51.ce4a9d89.ffed8a69.eb27ab09.df923df3.5c8866fa.aeb45ea1.79a7d027.f7edcf51.ce4a9d89.ffed8a69"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 23,
+                            "endLine": 23,
+                            "startColumn": 5,
+                            "endColumn": 115
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 23,
+                            "endLine": 23,
+                            "startColumn": 5,
+                            "endColumn": 115
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/SampleApp/src/ChatUsers.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 25,
+                  "endLine": 25,
+                  "startColumn": 5,
+                  "endColumn": 114
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "ae1d78ae600a1478b23b741bc40cc0367997f504ae0ddc3372fdd7011315c34a",
+            "1": "c8edb91f.3f481afb.3111a0ce.1ac38dd5.79a7d027.f7edcf51.ce4a9d89.e6323ea9.c8edb91f.3f481afb.3111a0ce.1ac38dd5.79a7d027.f7edcf51.ce4a9d89.e6323ea9"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 5,
+                            "endColumn": 114
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 5,
+                            "endColumn": 114
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/SampleApp/src/ChatUsers.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 27,
+                  "endLine": 27,
+                  "startColumn": 5,
+                  "endColumn": 118
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "fd0ea3a9fd755ad08a2b9934c3d5ab7bb8d500e5b8a204745958a0bc300f1351",
+            "1": "eb27ab09.3f481afb.5c8866fa.1ac38dd5.79a7d027.f7edcf51.b206c582.be9bb487.eb27ab09.3f481afb.5c8866fa.1ac38dd5.79a7d027.f7edcf51.b206c582.be9bb487"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 27,
+                            "endLine": 27,
+                            "startColumn": 5,
+                            "endColumn": 118
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/ChatUsers.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 27,
+                            "endLine": 27,
+                            "startColumn": 5,
+                            "endColumn": 118
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/SampleApp/src/hooks/useChatClient.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 145,
+                  "endLine": 145,
+                  "startColumn": 11,
+                  "endColumn": 17
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "cf6d9bd8285b7320a0669ca37f516c092c7361b540fab06b7ec71d1d0d546a5b",
+            "1": "2dd32b8b.93dc32e3.0b023081.d7919eeb.79a7d027.8020cfdf.261fc002.f88a252f.2dd32b8b.93dc32e3.ba31912d.5df0aa77.3058f02a.87eff305.83265159.f1fd3bdb"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/hooks/useChatClient.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 145,
+                            "endLine": 145,
+                            "startColumn": 19,
+                            "endColumn": 33
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/SampleApp/src/hooks/useChatClient.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 145,
+                            "endLine": 145,
+                            "startColumn": 11,
+                            "endColumn": 17
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 834,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/TypeScriptMessaging/App.tsx",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 43,
+                  "endLine": 43,
+                  "startColumn": 7,
+                  "endColumn": 13
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "bab337d852a8d6ec962e4a0deec3155794f09cb12a9c004bfc3cf12cd12bf208",
+            "1": "ae77ea27.3f481afb.8b18f948.d7919eeb.79a7d027.5fce695c.ea4b1c47.89d75565.9ff0579e.3f481afb.72aa1700.d7919eeb.79a7d027.5fce695c.ea4b1c47.89d75565"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/TypeScriptMessaging/App.tsx",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 43,
+                            "endLine": 43,
+                            "startColumn": 16,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/TypeScriptMessaging/App.tsx",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 43,
+                            "endLine": 43,
+                            "startColumn": 7,
+                            "endColumn": 13
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/TypeScriptMessaging/App.tsx",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 45,
+                  "endLine": 45,
+                  "startColumn": 3,
+                  "endColumn": 109
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "417fb48325939f10628db4e6fb3660fafbdd8c3a6f4ba50d41d733c579aa0f46",
+            "1": "c23e0920.3f481afb.8b18f948.d7919eeb.75520a41.5fce695c.e8c90727.89d75565.c23e0920.3f481afb.8b18f948.d7919eeb.75520a41.5fce695c.e8c90727.89d75565"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/TypeScriptMessaging/App.tsx",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 45,
+                            "endLine": 45,
+                            "startColumn": 3,
+                            "endColumn": 109
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/TypeScriptMessaging/App.tsx",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 45,
+                            "endLine": 45,
+                            "startColumn": 3,
+                            "endColumn": 109
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/TypeScriptMessaging/App.tsx",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 210,
+                  "endLine": 210,
+                  "startColumn": 5,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "aa98b6a8c00f0134bf32ffa4ac82de819aa1f3831afc19842161465a91d49f74",
+            "1": "e7fd436d.4773f344.ab81582a.d7919eeb.79a7d027.f7edcf51.80eb7e1f.e0f43150.839b1d0f.4773f344.59a2b8c1.d7919eeb.79a7d027.5fce695c.eb165338.89d75565"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/TypeScriptMessaging/App.tsx",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 43,
+                            "endLine": 43,
+                            "startColumn": 16,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/TypeScriptMessaging/App.tsx",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 210,
+                            "endLine": 210,
+                            "startColumn": 5,
+                            "endColumn": 11
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 884,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "package/src/components/docs/data.js",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 10,
+                  "endLine": 10,
+                  "startColumn": 3,
+                  "endColumn": 133
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "33b6dd05103acb3b054ce2ab69f80d3464771a93c17b33a860b5c575bdbe9060",
+            "1": "ae77ea27.4773f344.607187b5.e052b9a9.79a7d027.5fce695c.261fc002.2b48321b.ae77ea27.4773f344.607187b5.e052b9a9.79a7d027.5fce695c.261fc002.2b48321b"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/components/docs/data.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 10,
+                            "endLine": 10,
+                            "startColumn": 3,
+                            "endColumn": 133
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "package/src/components/docs/data.js",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 10,
+                            "endLine": 10,
+                            "startColumn": 3,
+                            "endColumn": 133
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 834,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "C++",
+            "files": 4,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Java",
+            "files": 6,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "JavaScript",
+            "files": 122,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Kotlin",
+            "files": 4,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Python",
+            "files": 1,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Swift",
+            "files": 2,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "TypeScript",
+            "files": 703,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "XML",
+            "files": 14,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,970 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/apim/init.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/apim/init.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/apim/local.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/apim/local.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/apim/main.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/apim/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/appgateway/data_azurerm.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/appgateway/data_azurerm.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/appgateway/init.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/appgateway/init.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/appgateway/main.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/appgateway/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/backendappgateway/dns.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/backendappgateway/dns.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/backendappgateway/init.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/backendappgateway/init.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/backendappgateway/main.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/backendappgateway/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/frontdoor/data_azurerm.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/frontdoor/data_azurerm.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/frontdoor/init.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/frontdoor/init.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/frontdoor/main.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/frontdoor/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/frontdoor/rg.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/frontdoor/rg.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/shutter/init.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/shutter/init.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/shutter/local.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/shutter/local.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/shutter/module_shutter.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/shutter/module_shutter.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/trafficmanager/data_azurerm.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/trafficmanager/data_azurerm.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/trafficmanager/init.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/trafficmanager/init.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "components/trafficmanager/main.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/components/trafficmanager/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "environments/variable.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/environments/variable.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "modules/shutter_page/cdn_endpoints.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/modules/shutter_page/cdn_endpoints.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AZURE-509",
+        "title": "CDN Endpoint https not enforced",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "CDN",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-509",
+        "isGeneratedByCustomRule": false,
+        "issue": "CDN Endpoint https not enforced",
+        "impact": "The content could be intercepted and manipulated in transit",
+        "resolve": "Set `is_http_allowed` to `false`",
+        "remediation": {
+          "terraform": "Set `is_http_allowed` to `false`",
+          "arm": "Set `properties.isHttpAllowed` to `false`"
+        },
+        "lineNumber": 8,
+        "iacDescription": {
+          "issue": "CDN Endpoint https not enforced",
+          "impact": "The content could be intercepted and manipulated in transit",
+          "resolve": "Set `is_http_allowed` to `false`"
+        },
+        "publicId": "SNYK-CC-AZURE-509",
+        "msg": "resource.azurerm_cdn_endpoint[shutter_endpoint].is_http_allowed",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cdn_endpoint#is_http_allowed",
+          "https://docs.microsoft.com/en-us/azure/cdn/cdn-custom-ssl?tabs=option-1-default-enable-https-with-a-cdn-managed-certificate"
+        ],
+        "path": [
+          "resource",
+          "azurerm_cdn_endpoint[shutter_endpoint]",
+          "is_http_allowed"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "modules/shutter_page/cdn_kv_access.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/modules/shutter_page/cdn_kv_access.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "modules/shutter_page/cdn_profiles.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/modules/shutter_page/cdn_profiles.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "modules/shutter_page/custom_domains.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/modules/shutter_page/custom_domains.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "modules/shutter_page/data.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/modules/shutter_page/data.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "modules/shutter_page/enable_https.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/modules/shutter_page/enable_https.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "modules/shutter_page/storage_account.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/modules/shutter_page/storage_account.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-149",
+        "title": "Storage Account does not enforce latest TLS",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-149",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure Storage Account does not enforce latest TLS version",
+        "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+        "resolve": "Set `min_tls_version` attribute to `TLS1_2`",
+        "remediation": {
+          "terraform": "Set `min_tls_version` attribute to `TLS1_2`",
+          "arm": "Set `properties.minimumTlsVersion`  attribute to `TLS1_2`"
+        },
+        "lineNumber": 2,
+        "iacDescription": {
+          "issue": "Azure Storage Account does not enforce latest TLS version",
+          "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+          "resolve": "Set `min_tls_version` attribute to `TLS1_2`"
+        },
+        "publicId": "SNYK-CC-TF-149",
+        "msg": "resource.azurerm_storage_account[shutter_store].min_tls_version",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/storage/common/transport-layer-security-configure-minimum-version?tabs=portal"
+        ],
+        "path": [
+          "resource",
+          "azurerm_storage_account[shutter_store]",
+          "min_tls_version"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "modules/shutter_page/variable.tf",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/modules/shutter_page/variable.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "modules/shutter_page/templates/custom_domain.json",
+    "projectName": "sds-azure-platform",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sds-azure-platform/modules/shutter_page/templates/custom_domain.json",
+    "packageManager": "armconfig",
+    "path": "/home/mbissine/gitclone_terraform/sds-azure-platform",
+    "projectType": "armconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  }
+]

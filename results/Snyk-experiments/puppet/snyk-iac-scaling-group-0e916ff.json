@@ -1,0 +1,824 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "example-addressable-service.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/example-addressable-service.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "example-simple-deployment.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/example-simple-deployment.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "config/100-namespace.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/config/100-namespace.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "config/200-clusterrole.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/config/200-clusterrole.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-K8S-44",
+        "title": "Role or ClusterRole with too wide permissions",
+        "severity": "high",
+        "isIgnored": false,
+        "subType": "ClusterRole",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-44",
+        "isGeneratedByCustomRule": false,
+        "issue": "The role uses wildcards, which grant the role permissions to the whole cluster",
+        "impact": "The use of wildcard rights grants is likely to provide excessive rights to the Kubernetes API. For a ClusterRole this would be considered high severity.",
+        "resolve": "Set only the necessary permissions required",
+        "remediation": {
+          "kubernetes": "Set only the necessary permissions required",
+          "terraform": "Remove any wildcards [*] from `rule.verbs` and `rule.resources`"
+        },
+        "lineNumber": 73,
+        "iacDescription": {
+          "issue": "The role uses wildcards, which grant the role permissions to the whole cluster",
+          "impact": "The use of wildcard rights grants is likely to provide excessive rights to the Kubernetes API. For a ClusterRole this would be considered high severity.",
+          "resolve": "Set only the necessary permissions required"
+        },
+        "publicId": "SNYK-CC-K8S-44",
+        "msg": "rules[7].resources",
+        "references": [
+          "https://kubernetes.io/docs/reference/access-authn-authz/rbac/"
+        ],
+        "path": [
+          "[DocId: 1]",
+          "rules[7]",
+          "resources"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-47",
+        "title": "Role or ClusterRole with dangerous permissions",
+        "severity": "high",
+        "isIgnored": false,
+        "subType": "ClusterRole",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-47",
+        "isGeneratedByCustomRule": false,
+        "issue": "A role was found using a dangerous permissions",
+        "impact": "Using this role grants dangerous permissions. For a ClusterRole this would be considered high severity.",
+        "resolve": "Consider removing these permissions",
+        "remediation": {
+          "kubernetes": "Consider removing these permissions",
+          "terraform": "Consider removing these permissions"
+        },
+        "lineNumber": 104,
+        "iacDescription": {
+          "issue": "A role was found using a dangerous permissions",
+          "impact": "Using this role grants dangerous permissions. For a ClusterRole this would be considered high severity.",
+          "resolve": "Consider removing these permissions"
+        },
+        "publicId": "SNYK-CC-K8S-47",
+        "msg": "rules[1].resources",
+        "references": [
+          "https://kubernetes.io/docs/reference/access-authn-authz/rbac/"
+        ],
+        "path": [
+          "[DocId: 2]",
+          "rules[1]",
+          "resources"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "config/200-role.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/config/200-role.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-K8S-47",
+        "title": "Role or ClusterRole with dangerous permissions",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Role",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-47",
+        "isGeneratedByCustomRule": false,
+        "issue": "A role was found using a dangerous permissions",
+        "impact": "Using this role grants dangerous permissions. For a ClusterRole this would be considered high severity.",
+        "resolve": "Consider removing these permissions",
+        "remediation": {
+          "kubernetes": "Consider removing these permissions",
+          "terraform": "Consider removing these permissions"
+        },
+        "lineNumber": 25,
+        "iacDescription": {
+          "issue": "A role was found using a dangerous permissions",
+          "impact": "Using this role grants dangerous permissions. For a ClusterRole this would be considered high severity.",
+          "resolve": "Consider removing these permissions"
+        },
+        "publicId": "SNYK-CC-K8S-47",
+        "msg": "rules[0].resources",
+        "references": [
+          "https://kubernetes.io/docs/reference/access-authn-authz/rbac/"
+        ],
+        "path": [
+          "[DocId: 0]",
+          "rules[0]",
+          "resources"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "config/200-serviceaccount.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/config/200-serviceaccount.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "config/201-clusterrolebinding.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/config/201-clusterrolebinding.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "config/201-rolebinding.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/config/201-rolebinding.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "config/300-addressableservice.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/config/300-addressableservice.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "config/300-simpledeployment.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/config/300-simpledeployment.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "config/400-webhook-service.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/config/400-webhook-service.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "config/500-webhook-configuration.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/config/500-webhook-configuration.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "config/config-leader-election.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/config/config-leader-election.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "config/config-logging.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/config/config-logging.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "config/config-observability.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/config/config-observability.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "config/controller.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/config/controller.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-K8S-41",
+        "title": "Container is running without liveness probe",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-41",
+        "isGeneratedByCustomRule": false,
+        "issue": "Liveness probe is not defined",
+        "impact": "Kubernetes will not be able to detect if application is able to service requests, and will not restart unhealthy pods",
+        "resolve": "Add `livenessProbe` attribute",
+        "remediation": {
+          "kubernetes": "Add `livenessProbe` attribute",
+          "terraform": "Add `liveness_probe` attribute"
+        },
+        "lineNumber": 46,
+        "iacDescription": {
+          "issue": "Liveness probe is not defined",
+          "impact": "Kubernetes will not be able to detect if application is able to service requests, and will not restart unhealthy pods",
+          "resolve": "Add `livenessProbe` attribute"
+        },
+        "publicId": "SNYK-CC-K8S-41",
+        "msg": "spec.template.spec.containers[controller].livenessProbe",
+        "references": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/",
+          "https://cloud.google.com/blog/products/gcp/kubernetes-best-practices-setting-up-health-checks-with-readiness-and-liveness-probes"
+        ],
+        "path": [
+          "[DocId: 0]",
+          "spec",
+          "template",
+          "spec",
+          "containers[controller]",
+          "livenessProbe"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-42",
+        "title": "Container could be running with outdated image",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-42",
+        "isGeneratedByCustomRule": false,
+        "issue": "The image policy does not prevent image reuse",
+        "impact": "The container may run with outdated or unauthorized image",
+        "resolve": "Set `imagePullPolicy` attribute to `Always`",
+        "remediation": {
+          "kubernetes": "Set `imagePullPolicy` attribute to `Always`",
+          "terraform": "Set `image_pull_policy` attribute to `Always"
+        },
+        "lineNumber": 46,
+        "iacDescription": {
+          "issue": "The image policy does not prevent image reuse",
+          "impact": "The container may run with outdated or unauthorized image",
+          "resolve": "Set `imagePullPolicy` attribute to `Always`"
+        },
+        "publicId": "SNYK-CC-K8S-42",
+        "msg": "spec.template.spec.containers[controller].imagePullPolicy",
+        "references": [
+          "https://kubernetes.io/docs/concepts/containers/images/",
+          "https://kubernetes.io/docs/concepts/configuration/overview/#container-images"
+        ],
+        "path": [
+          "[DocId: 0]",
+          "spec",
+          "template",
+          "spec",
+          "containers[controller]",
+          "imagePullPolicy"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-11",
+        "title": "Container's or Pod's  UID could clash with host's UID",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-11",
+        "isGeneratedByCustomRule": false,
+        "issue": "`runAsUser` value is set to low UID",
+        "impact": "UID of the container processes could clash with host's UIDs and lead to unintentional authorization bypass",
+        "resolve": "Set `securityContext.runAsUser` value to greater or equal than 10'000. SecurityContext can be set on both `pod` and `container` level. If both are set, then the container level takes precedence",
+        "remediation": {
+          "kubernetes": "Set `securityContext.runAsUser` value to greater or equal than 10'000. SecurityContext can be set on both `pod` and `container` level. If both are set, then the container level takes precedence",
+          "terraform": "Set `security_context.run_as_user` value to greater or equal than 10'000"
+        },
+        "lineNumber": 72,
+        "iacDescription": {
+          "issue": "`runAsUser` value is set to low UID",
+          "impact": "UID of the container processes could clash with host's UIDs and lead to unintentional authorization bypass",
+          "resolve": "Set `securityContext.runAsUser` value to greater or equal than 10'000. SecurityContext can be set on both `pod` and `container` level. If both are set, then the container level takes precedence"
+        },
+        "publicId": "SNYK-CC-K8S-11",
+        "msg": "input.spec.template.spec.containers[controller].securityContext.runAsUser",
+        "references": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod",
+          "https://kubernetes.io/blog/2016/08/security-best-practices-kubernetes-deployment/"
+        ],
+        "path": [
+          "[DocId: 0]",
+          "input",
+          "spec",
+          "template",
+          "spec",
+          "containers[controller]",
+          "securityContext",
+          "runAsUser"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "config/webhook.yaml",
+    "projectName": "scaling-group",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/scaling-group/config/webhook.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/scaling-group",
+    "projectType": "k8sconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-K8S-11",
+        "title": "Container's or Pod's  UID could clash with host's UID",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-11",
+        "isGeneratedByCustomRule": false,
+        "issue": "`runAsUser` value is set to low UID",
+        "impact": "UID of the container processes could clash with host's UIDs and lead to unintentional authorization bypass",
+        "resolve": "Set `securityContext.runAsUser` value to greater or equal than 10'000. SecurityContext can be set on both `pod` and `container` level. If both are set, then the container level takes precedence",
+        "remediation": {
+          "kubernetes": "Set `securityContext.runAsUser` value to greater or equal than 10'000. SecurityContext can be set on both `pod` and `container` level. If both are set, then the container level takes precedence",
+          "terraform": "Set `security_context.run_as_user` value to greater or equal than 10'000"
+        },
+        "lineNumber": 71,
+        "iacDescription": {
+          "issue": "`runAsUser` value is set to low UID",
+          "impact": "UID of the container processes could clash with host's UIDs and lead to unintentional authorization bypass",
+          "resolve": "Set `securityContext.runAsUser` value to greater or equal than 10'000. SecurityContext can be set on both `pod` and `container` level. If both are set, then the container level takes precedence"
+        },
+        "publicId": "SNYK-CC-K8S-11",
+        "msg": "input.spec.template.spec.containers[webhook].securityContext.runAsUser",
+        "references": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod",
+          "https://kubernetes.io/blog/2016/08/security-best-practices-kubernetes-deployment/"
+        ],
+        "path": [
+          "[DocId: 0]",
+          "input",
+          "spec",
+          "template",
+          "spec",
+          "containers[webhook]",
+          "securityContext",
+          "runAsUser"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-42",
+        "title": "Container could be running with outdated image",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-42",
+        "isGeneratedByCustomRule": false,
+        "issue": "The image policy does not prevent image reuse",
+        "impact": "The container may run with outdated or unauthorized image",
+        "resolve": "Set `imagePullPolicy` attribute to `Always`",
+        "remediation": {
+          "kubernetes": "Set `imagePullPolicy` attribute to `Always`",
+          "terraform": "Set `image_pull_policy` attribute to `Always"
+        },
+        "lineNumber": 48,
+        "iacDescription": {
+          "issue": "The image policy does not prevent image reuse",
+          "impact": "The container may run with outdated or unauthorized image",
+          "resolve": "Set `imagePullPolicy` attribute to `Always`"
+        },
+        "publicId": "SNYK-CC-K8S-42",
+        "msg": "spec.template.spec.containers[webhook].imagePullPolicy",
+        "references": [
+          "https://kubernetes.io/docs/concepts/containers/images/",
+          "https://kubernetes.io/docs/concepts/configuration/overview/#container-images"
+        ],
+        "path": [
+          "[DocId: 0]",
+          "spec",
+          "template",
+          "spec",
+          "containers[webhook]",
+          "imagePullPolicy"
+        ],
+        "compliance": []
+      }
+    ]
+  }
+]

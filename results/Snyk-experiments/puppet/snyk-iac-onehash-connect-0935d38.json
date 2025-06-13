@@ -1,0 +1,44 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/onehash-connect/.eslintrc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/onehash-connect/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/onehash-connect/.vscode/extensions.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/onehash-connect/web/shared/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/onehash-connect/zerver/tests/fixtures/mattermost_fixtures/export.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/onehash-connect/zerver/tests/fixtures/mattermost_fixtures/direct_channel/export.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/onehash-connect/zerver/webhooks/librato/fixtures/bad.json"
+  }
+]

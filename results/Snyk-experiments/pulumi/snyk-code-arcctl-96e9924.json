@@ -1,0 +1,313 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "javascript/InsufficientPostmessageValidation",
+              "name": "InsufficientPostmessageValidation",
+              "shortDescription": {
+                "text": "Insufficient postMessage Validation"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "help": {
+                "markdown": "\n## Details\n\npostMessage is a feature to perform cross-origin communication between JavaScript Window objects. This can be done by:\n\n* The sender using the `targetWindow.postMessage(message, targetOrigin)` to send a message to the `targetWindow` but only if the origin in that window matches `targetOrigin` (or if targetOrigin is set to the special value `*`);\n\n* The receiver listening for the message event in the window object.\n\nHowever, if no validation is done by the receiver, this could allow any window to send arbitrary data to the handler. This vulnerability could be leveraged by an attacker to disclose sensitive data to a malicious origin, or perform actions on a vicitim's behalf.\n\nExample:\n\n```\n\nwindow.addEventListener(\"message\", (event) => {\n    // DANGEROUS: No validation of origin\n    doStuff(event.data);\n});\n\n```\n\n## Best practices for prevention\n* Adopt a zero-trust model in which all input is considered potentially suspect.\n* Specify the targetOrigin instead of designating a wildcard `*`.\n\nExample:\n\n```\nwindow.addEventListener(\"message\", (event) => {\n    if (event.origin !== \"http://example.org\") // SAFE: origin checked\n        return;\n\n    console.log(event.data)\n});\n```\n\n## References\n\n* [Introduction to postMessage() Vulnerabilities](https://blog.yeswehack.com/yeswerhackers/introduction-postmessage-vulnerabilities/)",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "InsufficientPostmessageValidation",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/sghall/bundle-inspector-webpack-plugin/commit/1897c82280ad6b4957c646ca775ea9780cef8de6?diff=split#diff-495bc0c184ce2971c7055c2837f64789a05b97aa3a259d7d8e4acf91976e9066L-1",
+                    "lines": [
+                      {
+                        "line": "  ws = new WebSocket(`ws://localhost`);\n",
+                        "lineNumber": 11,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "} catch (err) {\n",
+                        "lineNumber": 12,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "  console.warn(\"Chunky Monkey could not connect :(\");\n",
+                        "lineNumber": 13,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "}\n",
+                        "lineNumber": 14,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "  const ws = new WebSocket(`ws://${window.location.host}`);\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "window.addEventListener(\n",
+                        "lineNumber": 16,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "  \"load\",\n",
+                        "lineNumber": 17,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "  () => {\n",
+                        "lineNumber": 18,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    if (ws) {\n",
+                        "lineNumber": 19,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "      ws.addEventListener(\"message\", event => {\n",
+                        "lineNumber": 20,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        console.log(JSON.parse(event.data));\n",
+                        "lineNumber": 21,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "  ws.addEventListener(\"message\", ({ data }) => {\n",
+                        "lineNumber": 8,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    window.location = `${window.location.pathname}?file=${data}`;\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  });\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/XinFinOrg/BlockDegree/commit/80b281064fd0b9378a7f1e37d5d6bdbd2789c296?diff=split#diff-e392879f830a5cb8915ca15e7cca2054faa1b09c20d8159bbe97688c35779b30L-1",
+                    "lines": [
+                      {
+                        "line": "function(event) {\n",
+                        "lineNumber": 287,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  // if (event.origin == \"https://www.blockdegree.org\") {\n",
+                        "lineNumber": 284,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "  console.log(\"Originating event: \", event.origin);\n",
+                        "lineNumber": 288,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  if (event.origin == \"https://www.blockdegree.org\") {\n",
+                        "lineNumber": 289,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    $.notify(\"Loggin linked!\", { type: \"success\" });\n",
+                        "lineNumber": 290,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    checkAuth();\n",
+                        "lineNumber": 291,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  // }\n",
+                        "lineNumber": 286,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "  }\n",
+                        "lineNumber": 292,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/Citrinate/gleamSolver/commit/08dae3b52f30c2a49d2f58f8581ac4b18fec8e19?diff=split#diff-d170bfe01446349d03ead3ba55629faf74526262639fc23e09d30141bfedba5eL-1",
+                    "lines": [
+                      {
+                        "line": "window.addEventListener(\"message\", function(event) {\n",
+                        "lineNumber": 116,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tif(event.source == parent) {\n",
+                        "lineNumber": 117,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\tif(event.source == parent && event.origin == \"https://gleam.io\") {\n",
+                        "lineNumber": 117,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 47,
+                "cwe": [
+                  "CWE-20"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "javascript/InsufficientPostmessageValidation",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "The origin of the received message is not checked. This means any site (even malicious) can send message to this window. If you don't expect this, consider checking the origin of sender.",
+            "markdown": "The origin of the received message is not checked. This means any site (even malicious) can send message to this window. If you don't expect this, consider checking the origin of sender.",
+            "arguments": []
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/datacenter-modules/client.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 27,
+                  "endLine": 27,
+                  "startColumn": 48,
+                  "endColumn": 53
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "a4caeeb0652207605ff119d1f5147108e3f23b320aebe57c7cca0c84d22b25ca",
+            "1": "3df95e84.4773f344.607187b5.c559ebce.d9bf5fbd.f681b7b7.83265159.dd1bc17e.cee1e251.4773f344.607187b5.c559ebce.d9bf5fbd.8431f2ca.83265159.1db0a836"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/datacenter-modules/client.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 27,
+                            "endLine": 27,
+                            "startColumn": 48,
+                            "endColumn": 53
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "C#",
+            "files": 1,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Go",
+            "files": 1,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Java",
+            "files": 1,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "JavaScript",
+            "files": 1,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Python",
+            "files": 2,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "TypeScript",
+            "files": 196,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "XML",
+            "files": 1,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

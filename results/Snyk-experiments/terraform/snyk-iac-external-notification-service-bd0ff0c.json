@@ -1,0 +1,1161 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/azure.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/azure.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/main.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/migration.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/migration.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/outputs.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/resource-group.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/resource-group.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/variables.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/APIM/azure.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/APIM/azure.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/APIM/main.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/APIM/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/APIM/variables.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/APIM/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/APIM/Modules/ExternalNotificationService/main.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/APIM/Modules/ExternalNotificationService/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/APIM/Modules/ExternalNotificationService/variables.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/APIM/Modules/ExternalNotificationService/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/AppInsights/main.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/AppInsights/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/AppInsights/outputs.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/AppInsights/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/AppInsights/variables.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/AppInsights/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/AzureDashboard/main.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/AzureDashboard/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/AzureDashboard/variables.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/AzureDashboard/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/EventGridDomain/main.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/EventGridDomain/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AZURE-552",
+        "title": "Ensure Diagnostic Setting captures appropriate categories",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Monitor",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-552",
+        "isGeneratedByCustomRule": false,
+        "issue": "Ensure Diagnostic Setting captures appropriate categories",
+        "impact": "Not capturing the diagnostic setting categories for appropriate management activities leads to missing important alerts",
+        "resolve": "Set log blocks for the categories `Administrative`,`Alert`,`Policy`,`Security` with `enabled` set to `true` for each",
+        "remediation": {
+          "terraform": "Set log blocks for the categories `Administrative`,`Alert`,`Policy`,`Security` with `enabled` set to `true` for each"
+        },
+        "lineNumber": 16,
+        "iacDescription": {
+          "issue": "Ensure Diagnostic Setting captures appropriate categories",
+          "impact": "Not capturing the diagnostic setting categories for appropriate management activities leads to missing important alerts",
+          "resolve": "Set log blocks for the categories `Administrative`,`Alert`,`Policy`,`Security` with `enabled` set to `true` for each"
+        },
+        "publicId": "SNYK-CC-AZURE-552",
+        "msg": "resource.azurerm_monitor_diagnostic_setting[egdiagnosticsetting].log",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/monitor_diagnostic_setting#category",
+          "https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/resource-manager-diagnostic-settings "
+        ],
+        "path": [
+          "resource",
+          "azurerm_monitor_diagnostic_setting[egdiagnosticsetting]",
+          "log"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/EventGridDomain/outputs.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/EventGridDomain/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/EventGridDomain/variable.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/EventGridDomain/variable.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/EventGridDomainPrivateEndpoint/main.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/EventGridDomainPrivateEndpoint/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/EventGridDomainPrivateEndpoint/variables.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/EventGridDomainPrivateEndpoint/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/EventHub/main.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/EventHub/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/EventHub/outputs.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/EventHub/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/EventHub/variables.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/EventHub/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/KeyVault/main.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/KeyVault/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-174",
+        "title": "Vault secret expiration date not set",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Key Vault",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-174",
+        "isGeneratedByCustomRule": false,
+        "issue": "Expiration date is not set for Azure Vault secret",
+        "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+        "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+        "remediation": {
+          "terraform": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+          "arm": "Set `properties.attributes.exp` attribute to date in the future time in seconds, e.g. `1658319657`"
+        },
+        "lineNumber": 61,
+        "iacDescription": {
+          "issue": "Expiration date is not set for Azure Vault secret",
+          "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+          "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`"
+        },
+        "publicId": "SNYK-CC-TF-174",
+        "msg": "resource.azurerm_key_vault_secret[passed_in_secrets]",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates"
+        ],
+        "path": [
+          "resource",
+          "azurerm_key_vault_secret[passed_in_secrets]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-175",
+        "title": "Key Vault accidental purge prevention disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Key Vault",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-175",
+        "isGeneratedByCustomRule": false,
+        "issue": "Key Vault accidental purge prevention disabled",
+        "impact": "Accidentally purged key material will not recoverable",
+        "resolve": "Set `purge_protection_enabled` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `purge_protection_enabled` attribute to `true`",
+          "arm": "Set `properties.enablePurgeProtection` attribute to `true`"
+        },
+        "lineNumber": 3,
+        "iacDescription": {
+          "issue": "Key Vault accidental purge prevention disabled",
+          "impact": "Accidentally purged key material will not recoverable",
+          "resolve": "Set `purge_protection_enabled` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-175",
+        "msg": "resource.azurerm_key_vault[kv].purge_protection_enabled",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview"
+        ],
+        "path": [
+          "resource",
+          "azurerm_key_vault[kv]",
+          "purge_protection_enabled"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/KeyVault/outputs.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/KeyVault/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/KeyVault/variables.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/KeyVault/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/Storage/main.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/Storage/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AZURE-649",
+        "title": "Storage Account geo-replication disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-649",
+        "isGeneratedByCustomRule": false,
+        "issue": "Storage Account geo-replication disabled",
+        "impact": "Data might be exposed to the risk of loss or unavailability",
+        "resolve": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`",
+        "remediation": {
+          "terraform": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`",
+          "arm": "Set `sku.name` to either `Standard_GRS`,`Standard_GZRS`,`Standard_RAGRS` or `Standard_RAGZRS`"
+        },
+        "lineNumber": 6,
+        "iacDescription": {
+          "issue": "Storage Account geo-replication disabled",
+          "impact": "Data might be exposed to the risk of loss or unavailability",
+          "resolve": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`"
+        },
+        "publicId": "SNYK-CC-AZURE-649",
+        "msg": "resource.azurerm_storage_account[ens_storage].account_replication_type",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy",
+          "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account",
+          "https://docs.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts?tabs=json"
+        ],
+        "path": [
+          "resource",
+          "azurerm_storage_account[ens_storage]",
+          "account_replication_type"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/Storage/outputs.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/Storage/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/Storage/variable.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/Storage/variable.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/Webapp/main.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/Webapp/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/Webapp/outputs.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/Webapp/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "Deployment/src/Modules/Webapp/variables.tf",
+    "projectName": "external-notification-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/external-notification-service/Deployment/src/Modules/Webapp/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/external-notification-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  }
+]

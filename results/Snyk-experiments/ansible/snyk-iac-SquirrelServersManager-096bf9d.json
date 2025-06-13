@@ -1,0 +1,14 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/SquirrelServersManager/server/.eslintrc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/SquirrelServersManager/shared-lib/.eslintrc.json"
+  }
+]

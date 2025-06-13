@@ -1,0 +1,6 @@
+{
+  "ok": false,
+  "code": 1021,
+  "error": "Failed to parse JSON file",
+  "path": "/home/mbissine/snyk_ansible/ansible-dcnm/tests/unit/modules/dcnm/fixtures/dcnm_intf_pc_have.json"
+}

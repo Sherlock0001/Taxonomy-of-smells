@@ -1,0 +1,14 @@
+[
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/snyk_ansible/Apktool/brut.apktool/apktool-lib/src/test/resources/apk/first_incorrect_indent.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/snyk_ansible/Apktool/brut.apktool/apktool-lib/src/test/resources/apk/skip_incorrect_indent.yml"
+  }
+]

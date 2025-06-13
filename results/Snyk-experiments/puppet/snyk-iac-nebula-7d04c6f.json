@@ -1,0 +1,6 @@
+{
+  "ok": false,
+  "code": 1022,
+  "error": "Failed to parse YAML file",
+  "path": "/home/mbissine/gitclone_puppet/nebula/doc/www-lib-crons.yaml"
+}

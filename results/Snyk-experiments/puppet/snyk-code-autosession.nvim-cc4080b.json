@@ -1,0 +1,135 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": []
+        }
+      },
+      "results": [],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "C",
+            "files": 22,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "C++",
+            "files": 8,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Go",
+            "files": 7,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "HTML",
+            "files": 6,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Java",
+            "files": 11,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "JavaScript",
+            "files": 17,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "PHP",
+            "files": 5,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Python",
+            "files": 17,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Ruby",
+            "files": 7,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Swift",
+            "files": 3,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "TypeScript",
+            "files": 2,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Vue",
+            "files": 3,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": false,
+            "lang": "C",
+            "files": 3,
+            "type": "FAILED_PARSING"
+          },
+          {
+            "isSupported": false,
+            "lang": "C++",
+            "files": 1,
+            "type": "FAILED_PARSING"
+          },
+          {
+            "isSupported": false,
+            "lang": "Java",
+            "files": 2,
+            "type": "FAILED_PARSING"
+          },
+          {
+            "isSupported": false,
+            "lang": "JavaScript",
+            "files": 1,
+            "type": "FAILED_PARSING"
+          },
+          {
+            "isSupported": false,
+            "lang": "PHP",
+            "files": 1,
+            "type": "FAILED_PARSING"
+          },
+          {
+            "isSupported": false,
+            "lang": "Python",
+            "files": 12,
+            "type": "FAILED_PARSING"
+          },
+          {
+            "isSupported": false,
+            "lang": "Ruby",
+            "files": 2,
+            "type": "FAILED_PARSING"
+          }
+        ]
+      }
+    }
+  ]
+}

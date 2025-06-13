@@ -1,0 +1,3503 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/azure.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/azure.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/resource-group.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/resource-group.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/AppInsights/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/AppInsights/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/AppInsights/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/AppInsights/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/AppInsights/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/AppInsights/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/EventHub/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/EventHub/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/EventHub/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/EventHub/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/EventHub/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/EventHub/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/KeyVault/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/KeyVault/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-174",
+        "title": "Vault secret expiration date not set",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Key Vault",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-174",
+        "isGeneratedByCustomRule": false,
+        "issue": "Expiration date is not set for Azure Vault secret",
+        "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+        "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+        "remediation": {
+          "terraform": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+          "arm": "Set `properties.attributes.exp` attribute to date in the future time in seconds, e.g. `1658319657`"
+        },
+        "lineNumber": 60,
+        "iacDescription": {
+          "issue": "Expiration date is not set for Azure Vault secret",
+          "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+          "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`"
+        },
+        "publicId": "SNYK-CC-TF-174",
+        "msg": "resource.azurerm_key_vault_secret[passed_in_secrets]",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates"
+        ],
+        "path": [
+          "resource",
+          "azurerm_key_vault_secret[passed_in_secrets]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-175",
+        "title": "Key Vault accidental purge prevention disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Key Vault",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-175",
+        "isGeneratedByCustomRule": false,
+        "issue": "Key Vault accidental purge prevention disabled",
+        "impact": "Accidentally purged key material will not recoverable",
+        "resolve": "Set `purge_protection_enabled` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `purge_protection_enabled` attribute to `true`",
+          "arm": "Set `properties.enablePurgeProtection` attribute to `true`"
+        },
+        "lineNumber": 3,
+        "iacDescription": {
+          "issue": "Key Vault accidental purge prevention disabled",
+          "impact": "Accidentally purged key material will not recoverable",
+          "resolve": "Set `purge_protection_enabled` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-175",
+        "msg": "resource.azurerm_key_vault[kv].purge_protection_enabled",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview"
+        ],
+        "path": [
+          "resource",
+          "azurerm_key_vault[kv]",
+          "purge_protection_enabled"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/KeyVault/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/KeyVault/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/KeyVault/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/KeyVault/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/MockWebApp/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/MockWebApp/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/MockWebApp/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/MockWebApp/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/MockWebApp/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/MockWebApp/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/Storage/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/Storage/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-149",
+        "title": "Storage Account does not enforce latest TLS",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-149",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure Storage Account does not enforce latest TLS version",
+        "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+        "resolve": "Set `min_tls_version` attribute to `TLS1_2`",
+        "remediation": {
+          "terraform": "Set `min_tls_version` attribute to `TLS1_2`",
+          "arm": "Set `properties.minimumTlsVersion`  attribute to `TLS1_2`"
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "Azure Storage Account does not enforce latest TLS version",
+          "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+          "resolve": "Set `min_tls_version` attribute to `TLS1_2`"
+        },
+        "publicId": "SNYK-CC-TF-149",
+        "msg": "resource.azurerm_storage_account[bess_storage].min_tls_version",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/storage/common/transport-layer-security-configure-minimum-version?tabs=portal"
+        ],
+        "path": [
+          "resource",
+          "azurerm_storage_account[bess_storage]",
+          "min_tls_version"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AZURE-649",
+        "title": "Storage Account geo-replication disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-649",
+        "isGeneratedByCustomRule": false,
+        "issue": "Storage Account geo-replication disabled",
+        "impact": "Data might be exposed to the risk of loss or unavailability",
+        "resolve": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`",
+        "remediation": {
+          "terraform": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`",
+          "arm": "Set `sku.name` to either `Standard_GRS`,`Standard_GZRS`,`Standard_RAGRS` or `Standard_RAGZRS`"
+        },
+        "lineNumber": 6,
+        "iacDescription": {
+          "issue": "Storage Account geo-replication disabled",
+          "impact": "Data might be exposed to the risk of loss or unavailability",
+          "resolve": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`"
+        },
+        "publicId": "SNYK-CC-AZURE-649",
+        "msg": "resource.azurerm_storage_account[pos_storage].account_replication_type",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy",
+          "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account",
+          "https://docs.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts?tabs=json"
+        ],
+        "path": [
+          "resource",
+          "azurerm_storage_account[pos_storage]",
+          "account_replication_type"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AZURE-649",
+        "title": "Storage Account geo-replication disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-649",
+        "isGeneratedByCustomRule": false,
+        "issue": "Storage Account geo-replication disabled",
+        "impact": "Data might be exposed to the risk of loss or unavailability",
+        "resolve": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`",
+        "remediation": {
+          "terraform": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`",
+          "arm": "Set `sku.name` to either `Standard_GRS`,`Standard_GZRS`,`Standard_RAGRS` or `Standard_RAGZRS`"
+        },
+        "lineNumber": 23,
+        "iacDescription": {
+          "issue": "Storage Account geo-replication disabled",
+          "impact": "Data might be exposed to the risk of loss or unavailability",
+          "resolve": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`"
+        },
+        "publicId": "SNYK-CC-AZURE-649",
+        "msg": "resource.azurerm_storage_account[bess_storage].account_replication_type",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy",
+          "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account",
+          "https://docs.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts?tabs=json"
+        ],
+        "path": [
+          "resource",
+          "azurerm_storage_account[bess_storage]",
+          "account_replication_type"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-149",
+        "title": "Storage Account does not enforce latest TLS",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-149",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure Storage Account does not enforce latest TLS version",
+        "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+        "resolve": "Set `min_tls_version` attribute to `TLS1_2`",
+        "remediation": {
+          "terraform": "Set `min_tls_version` attribute to `TLS1_2`",
+          "arm": "Set `properties.minimumTlsVersion`  attribute to `TLS1_2`"
+        },
+        "lineNumber": 1,
+        "iacDescription": {
+          "issue": "Azure Storage Account does not enforce latest TLS version",
+          "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+          "resolve": "Set `min_tls_version` attribute to `TLS1_2`"
+        },
+        "publicId": "SNYK-CC-TF-149",
+        "msg": "resource.azurerm_storage_account[pos_storage].min_tls_version",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/storage/common/transport-layer-security-configure-minimum-version?tabs=portal"
+        ],
+        "path": [
+          "resource",
+          "azurerm_storage_account[pos_storage]",
+          "min_tls_version"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/Storage/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/Storage/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/Storage/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/Storage/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/WebApp/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/WebApp/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/WebApp/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/WebApp/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "DevDeployment/src/Modules/WebApp/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/DevDeployment/src/Modules/WebApp/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/azure.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/azure.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/resource-group.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/resource-group.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/Modules/AppInsights/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/Modules/AppInsights/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/Modules/AppInsights/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/Modules/AppInsights/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/Modules/AppInsights/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/Modules/AppInsights/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/Modules/EventHub/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/Modules/EventHub/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/Modules/EventHub/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/Modules/EventHub/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/Modules/EventHub/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/Modules/EventHub/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/Modules/KeyVault/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/Modules/KeyVault/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-174",
+        "title": "Vault secret expiration date not set",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Key Vault",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-174",
+        "isGeneratedByCustomRule": false,
+        "issue": "Expiration date is not set for Azure Vault secret",
+        "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+        "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+        "remediation": {
+          "terraform": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+          "arm": "Set `properties.attributes.exp` attribute to date in the future time in seconds, e.g. `1658319657`"
+        },
+        "lineNumber": 61,
+        "iacDescription": {
+          "issue": "Expiration date is not set for Azure Vault secret",
+          "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+          "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`"
+        },
+        "publicId": "SNYK-CC-TF-174",
+        "msg": "resource.azurerm_key_vault_secret[passed_in_secrets]",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates"
+        ],
+        "path": [
+          "resource",
+          "azurerm_key_vault_secret[passed_in_secrets]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-175",
+        "title": "Key Vault accidental purge prevention disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Key Vault",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-175",
+        "isGeneratedByCustomRule": false,
+        "issue": "Key Vault accidental purge prevention disabled",
+        "impact": "Accidentally purged key material will not recoverable",
+        "resolve": "Set `purge_protection_enabled` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `purge_protection_enabled` attribute to `true`",
+          "arm": "Set `properties.enablePurgeProtection` attribute to `true`"
+        },
+        "lineNumber": 3,
+        "iacDescription": {
+          "issue": "Key Vault accidental purge prevention disabled",
+          "impact": "Accidentally purged key material will not recoverable",
+          "resolve": "Set `purge_protection_enabled` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-175",
+        "msg": "resource.azurerm_key_vault[kv].purge_protection_enabled",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview"
+        ],
+        "path": [
+          "resource",
+          "azurerm_key_vault[kv]",
+          "purge_protection_enabled"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/Modules/KeyVault/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/Modules/KeyVault/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/Modules/KeyVault/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/Modules/KeyVault/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/Modules/Storage/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/Modules/Storage/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-149",
+        "title": "Storage Account does not enforce latest TLS",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-149",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure Storage Account does not enforce latest TLS version",
+        "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+        "resolve": "Set `min_tls_version` attribute to `TLS1_2`",
+        "remediation": {
+          "terraform": "Set `min_tls_version` attribute to `TLS1_2`",
+          "arm": "Set `properties.minimumTlsVersion`  attribute to `TLS1_2`"
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "Azure Storage Account does not enforce latest TLS version",
+          "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+          "resolve": "Set `min_tls_version` attribute to `TLS1_2`"
+        },
+        "publicId": "SNYK-CC-TF-149",
+        "msg": "resource.azurerm_storage_account[bess_storage].min_tls_version",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/storage/common/transport-layer-security-configure-minimum-version?tabs=portal"
+        ],
+        "path": [
+          "resource",
+          "azurerm_storage_account[bess_storage]",
+          "min_tls_version"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AZURE-649",
+        "title": "Storage Account geo-replication disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-649",
+        "isGeneratedByCustomRule": false,
+        "issue": "Storage Account geo-replication disabled",
+        "impact": "Data might be exposed to the risk of loss or unavailability",
+        "resolve": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`",
+        "remediation": {
+          "terraform": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`",
+          "arm": "Set `sku.name` to either `Standard_GRS`,`Standard_GZRS`,`Standard_RAGRS` or `Standard_RAGZRS`"
+        },
+        "lineNumber": 6,
+        "iacDescription": {
+          "issue": "Storage Account geo-replication disabled",
+          "impact": "Data might be exposed to the risk of loss or unavailability",
+          "resolve": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`"
+        },
+        "publicId": "SNYK-CC-AZURE-649",
+        "msg": "resource.azurerm_storage_account[pos_storage].account_replication_type",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy",
+          "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account",
+          "https://docs.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts?tabs=json"
+        ],
+        "path": [
+          "resource",
+          "azurerm_storage_account[pos_storage]",
+          "account_replication_type"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AZURE-649",
+        "title": "Storage Account geo-replication disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-649",
+        "isGeneratedByCustomRule": false,
+        "issue": "Storage Account geo-replication disabled",
+        "impact": "Data might be exposed to the risk of loss or unavailability",
+        "resolve": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`",
+        "remediation": {
+          "terraform": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`",
+          "arm": "Set `sku.name` to either `Standard_GRS`,`Standard_GZRS`,`Standard_RAGRS` or `Standard_RAGZRS`"
+        },
+        "lineNumber": 23,
+        "iacDescription": {
+          "issue": "Storage Account geo-replication disabled",
+          "impact": "Data might be exposed to the risk of loss or unavailability",
+          "resolve": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`"
+        },
+        "publicId": "SNYK-CC-AZURE-649",
+        "msg": "resource.azurerm_storage_account[bess_storage].account_replication_type",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy",
+          "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account",
+          "https://docs.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts?tabs=json"
+        ],
+        "path": [
+          "resource",
+          "azurerm_storage_account[bess_storage]",
+          "account_replication_type"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-149",
+        "title": "Storage Account does not enforce latest TLS",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-149",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure Storage Account does not enforce latest TLS version",
+        "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+        "resolve": "Set `min_tls_version` attribute to `TLS1_2`",
+        "remediation": {
+          "terraform": "Set `min_tls_version` attribute to `TLS1_2`",
+          "arm": "Set `properties.minimumTlsVersion`  attribute to `TLS1_2`"
+        },
+        "lineNumber": 1,
+        "iacDescription": {
+          "issue": "Azure Storage Account does not enforce latest TLS version",
+          "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+          "resolve": "Set `min_tls_version` attribute to `TLS1_2`"
+        },
+        "publicId": "SNYK-CC-TF-149",
+        "msg": "resource.azurerm_storage_account[pos_storage].min_tls_version",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/storage/common/transport-layer-security-configure-minimum-version?tabs=portal"
+        ],
+        "path": [
+          "resource",
+          "azurerm_storage_account[pos_storage]",
+          "min_tls_version"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/Modules/Storage/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/Modules/Storage/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/Modules/Storage/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/Modules/Storage/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/Modules/Webapp/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/Modules/Webapp/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/Modules/Webapp/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/Modules/Webapp/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "QALiveDeployment/src/Modules/Webapp/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/QALiveDeployment/src/Modules/Webapp/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/azure.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/azure.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/resource-group.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/resource-group.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/AppInsights/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/AppInsights/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/AppInsights/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/AppInsights/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/AppInsights/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/AppInsights/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/EventHub/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/EventHub/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/EventHub/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/EventHub/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/EventHub/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/EventHub/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/KeyVault/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/KeyVault/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-174",
+        "title": "Vault secret expiration date not set",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Key Vault",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-174",
+        "isGeneratedByCustomRule": false,
+        "issue": "Expiration date is not set for Azure Vault secret",
+        "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+        "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+        "remediation": {
+          "terraform": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+          "arm": "Set `properties.attributes.exp` attribute to date in the future time in seconds, e.g. `1658319657`"
+        },
+        "lineNumber": 60,
+        "iacDescription": {
+          "issue": "Expiration date is not set for Azure Vault secret",
+          "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+          "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`"
+        },
+        "publicId": "SNYK-CC-TF-174",
+        "msg": "resource.azurerm_key_vault_secret[passed_in_secrets]",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates"
+        ],
+        "path": [
+          "resource",
+          "azurerm_key_vault_secret[passed_in_secrets]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-175",
+        "title": "Key Vault accidental purge prevention disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Key Vault",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-175",
+        "isGeneratedByCustomRule": false,
+        "issue": "Key Vault accidental purge prevention disabled",
+        "impact": "Accidentally purged key material will not recoverable",
+        "resolve": "Set `purge_protection_enabled` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `purge_protection_enabled` attribute to `true`",
+          "arm": "Set `properties.enablePurgeProtection` attribute to `true`"
+        },
+        "lineNumber": 3,
+        "iacDescription": {
+          "issue": "Key Vault accidental purge prevention disabled",
+          "impact": "Accidentally purged key material will not recoverable",
+          "resolve": "Set `purge_protection_enabled` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-175",
+        "msg": "resource.azurerm_key_vault[kv].purge_protection_enabled",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview"
+        ],
+        "path": [
+          "resource",
+          "azurerm_key_vault[kv]",
+          "purge_protection_enabled"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/KeyVault/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/KeyVault/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/KeyVault/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/KeyVault/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/MockWebApp/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/MockWebApp/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/MockWebApp/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/MockWebApp/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/MockWebApp/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/MockWebApp/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/Storage/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/Storage/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-149",
+        "title": "Storage Account does not enforce latest TLS",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-149",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure Storage Account does not enforce latest TLS version",
+        "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+        "resolve": "Set `min_tls_version` attribute to `TLS1_2`",
+        "remediation": {
+          "terraform": "Set `min_tls_version` attribute to `TLS1_2`",
+          "arm": "Set `properties.minimumTlsVersion`  attribute to `TLS1_2`"
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "Azure Storage Account does not enforce latest TLS version",
+          "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+          "resolve": "Set `min_tls_version` attribute to `TLS1_2`"
+        },
+        "publicId": "SNYK-CC-TF-149",
+        "msg": "resource.azurerm_storage_account[bess_storage].min_tls_version",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/storage/common/transport-layer-security-configure-minimum-version?tabs=portal"
+        ],
+        "path": [
+          "resource",
+          "azurerm_storage_account[bess_storage]",
+          "min_tls_version"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AZURE-649",
+        "title": "Storage Account geo-replication disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-649",
+        "isGeneratedByCustomRule": false,
+        "issue": "Storage Account geo-replication disabled",
+        "impact": "Data might be exposed to the risk of loss or unavailability",
+        "resolve": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`",
+        "remediation": {
+          "terraform": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`",
+          "arm": "Set `sku.name` to either `Standard_GRS`,`Standard_GZRS`,`Standard_RAGRS` or `Standard_RAGZRS`"
+        },
+        "lineNumber": 6,
+        "iacDescription": {
+          "issue": "Storage Account geo-replication disabled",
+          "impact": "Data might be exposed to the risk of loss or unavailability",
+          "resolve": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`"
+        },
+        "publicId": "SNYK-CC-AZURE-649",
+        "msg": "resource.azurerm_storage_account[pos_storage].account_replication_type",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy",
+          "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account",
+          "https://docs.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts?tabs=json"
+        ],
+        "path": [
+          "resource",
+          "azurerm_storage_account[pos_storage]",
+          "account_replication_type"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-149",
+        "title": "Storage Account does not enforce latest TLS",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-149",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure Storage Account does not enforce latest TLS version",
+        "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+        "resolve": "Set `min_tls_version` attribute to `TLS1_2`",
+        "remediation": {
+          "terraform": "Set `min_tls_version` attribute to `TLS1_2`",
+          "arm": "Set `properties.minimumTlsVersion`  attribute to `TLS1_2`"
+        },
+        "lineNumber": 1,
+        "iacDescription": {
+          "issue": "Azure Storage Account does not enforce latest TLS version",
+          "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+          "resolve": "Set `min_tls_version` attribute to `TLS1_2`"
+        },
+        "publicId": "SNYK-CC-TF-149",
+        "msg": "resource.azurerm_storage_account[pos_storage].min_tls_version",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/storage/common/transport-layer-security-configure-minimum-version?tabs=portal"
+        ],
+        "path": [
+          "resource",
+          "azurerm_storage_account[pos_storage]",
+          "min_tls_version"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/Storage/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/Storage/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/Storage/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/Storage/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/Webapp/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/Webapp/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/Webapp/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/Webapp/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextE2EDeployment/src/Modules/Webapp/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextE2EDeployment/src/Modules/Webapp/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/azure.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/azure.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/resource-group.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/resource-group.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/AppInsights/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/AppInsights/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/AppInsights/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/AppInsights/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/AppInsights/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/AppInsights/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/EventHub/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/EventHub/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/EventHub/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/EventHub/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/EventHub/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/EventHub/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/KeyVault/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/KeyVault/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-174",
+        "title": "Vault secret expiration date not set",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Key Vault",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-174",
+        "isGeneratedByCustomRule": false,
+        "issue": "Expiration date is not set for Azure Vault secret",
+        "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+        "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+        "remediation": {
+          "terraform": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+          "arm": "Set `properties.attributes.exp` attribute to date in the future time in seconds, e.g. `1658319657`"
+        },
+        "lineNumber": 61,
+        "iacDescription": {
+          "issue": "Expiration date is not set for Azure Vault secret",
+          "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+          "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`"
+        },
+        "publicId": "SNYK-CC-TF-174",
+        "msg": "resource.azurerm_key_vault_secret[passed_in_secrets]",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates"
+        ],
+        "path": [
+          "resource",
+          "azurerm_key_vault_secret[passed_in_secrets]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-175",
+        "title": "Key Vault accidental purge prevention disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Key Vault",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-175",
+        "isGeneratedByCustomRule": false,
+        "issue": "Key Vault accidental purge prevention disabled",
+        "impact": "Accidentally purged key material will not recoverable",
+        "resolve": "Set `purge_protection_enabled` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `purge_protection_enabled` attribute to `true`",
+          "arm": "Set `properties.enablePurgeProtection` attribute to `true`"
+        },
+        "lineNumber": 3,
+        "iacDescription": {
+          "issue": "Key Vault accidental purge prevention disabled",
+          "impact": "Accidentally purged key material will not recoverable",
+          "resolve": "Set `purge_protection_enabled` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-175",
+        "msg": "resource.azurerm_key_vault[kv].purge_protection_enabled",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview"
+        ],
+        "path": [
+          "resource",
+          "azurerm_key_vault[kv]",
+          "purge_protection_enabled"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/KeyVault/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/KeyVault/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/KeyVault/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/KeyVault/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/MockWebApp/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/MockWebApp/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/MockWebApp/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/MockWebApp/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/MockWebApp/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/MockWebApp/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/Storage/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/Storage/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-149",
+        "title": "Storage Account does not enforce latest TLS",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-149",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure Storage Account does not enforce latest TLS version",
+        "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+        "resolve": "Set `min_tls_version` attribute to `TLS1_2`",
+        "remediation": {
+          "terraform": "Set `min_tls_version` attribute to `TLS1_2`",
+          "arm": "Set `properties.minimumTlsVersion`  attribute to `TLS1_2`"
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "Azure Storage Account does not enforce latest TLS version",
+          "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+          "resolve": "Set `min_tls_version` attribute to `TLS1_2`"
+        },
+        "publicId": "SNYK-CC-TF-149",
+        "msg": "resource.azurerm_storage_account[bess_storage].min_tls_version",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/storage/common/transport-layer-security-configure-minimum-version?tabs=portal"
+        ],
+        "path": [
+          "resource",
+          "azurerm_storage_account[bess_storage]",
+          "min_tls_version"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AZURE-649",
+        "title": "Storage Account geo-replication disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-649",
+        "isGeneratedByCustomRule": false,
+        "issue": "Storage Account geo-replication disabled",
+        "impact": "Data might be exposed to the risk of loss or unavailability",
+        "resolve": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`",
+        "remediation": {
+          "terraform": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`",
+          "arm": "Set `sku.name` to either `Standard_GRS`,`Standard_GZRS`,`Standard_RAGRS` or `Standard_RAGZRS`"
+        },
+        "lineNumber": 6,
+        "iacDescription": {
+          "issue": "Storage Account geo-replication disabled",
+          "impact": "Data might be exposed to the risk of loss or unavailability",
+          "resolve": "Set `sku.name` to either `GRS`,`RAGRS`,`GZRS` or `RAGZRS`"
+        },
+        "publicId": "SNYK-CC-AZURE-649",
+        "msg": "resource.azurerm_storage_account[pos_storage].account_replication_type",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy",
+          "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account",
+          "https://docs.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts?tabs=json"
+        ],
+        "path": [
+          "resource",
+          "azurerm_storage_account[pos_storage]",
+          "account_replication_type"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-149",
+        "title": "Storage Account does not enforce latest TLS",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-149",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure Storage Account does not enforce latest TLS version",
+        "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+        "resolve": "Set `min_tls_version` attribute to `TLS1_2`",
+        "remediation": {
+          "terraform": "Set `min_tls_version` attribute to `TLS1_2`",
+          "arm": "Set `properties.minimumTlsVersion`  attribute to `TLS1_2`"
+        },
+        "lineNumber": 1,
+        "iacDescription": {
+          "issue": "Azure Storage Account does not enforce latest TLS version",
+          "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+          "resolve": "Set `min_tls_version` attribute to `TLS1_2`"
+        },
+        "publicId": "SNYK-CC-TF-149",
+        "msg": "resource.azurerm_storage_account[pos_storage].min_tls_version",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/storage/common/transport-layer-security-configure-minimum-version?tabs=portal"
+        ],
+        "path": [
+          "resource",
+          "azurerm_storage_account[pos_storage]",
+          "min_tls_version"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/Storage/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/Storage/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/Storage/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/Storage/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/WebApp/main.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/WebApp/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/WebApp/outputs.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/WebApp/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "vNextIATDeployment/src/Modules/WebApp/variables.tf",
+    "projectName": "periodic-output-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/periodic-output-service/vNextIATDeployment/src/Modules/WebApp/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/periodic-output-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  }
+]

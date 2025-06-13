@@ -1,0 +1,249 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "ruby/HardcodedCredential",
+              "name": "HardcodedCredential",
+              "shortDescription": {
+                "text": "Use of Hardcoded Credentials"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nDevelopers may use hardcoded credentials for convenience when coding in order to simplify their workflow. While they are responsible for removing these before production, occasionally this task may fall through the cracks. This also becomes a maintenance challenge when credentials are re-used across multiple applications.\n\nOnce attackers gain access, they may take advantage of privilege level to remove or alter data, take down a site or app, or hold any of the above for ransom. The risk across multiple similar projects is even greater. If code containing the credentials is reused across multiple projects, they will all be compromised.\n\n## Best practices for prevention\n* Plan software architecture such that keys and passwords are always stored outside the code, wherever possible.\n* Plan encryption into software architecture for all credential information and ensure proper handling of keys, credentials, and passwords.\n* Prompt for a secure password on first login rather than hard-code a default password.\n* If a hardcoded password or credential must be used, limit its use, for example, to system console users rather than via the network.\n* Use strong hashes for inbound password authentication, ideally with randomly assigned salts to increase the difficulty level in case of brute-force attack.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "ruby",
+                  "HardcodedCredential",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 0,
+                "cwe": [
+                  "CWE-798",
+                  "CWE-259"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "ruby/HardcodedCredential",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in with.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[with](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "spec/classes/python_spec.rb",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 161,
+                  "endLine": 161,
+                  "startColumn": 21,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "2e9c454cff819db9f817f69ac72f61c37475cb78901de9156c365b85e2ce9332",
+            "1": "8b006f46.98296aec.eaf37bfe.bab24181.9b157b56.bc1d84e6.6d9804d2.66a8326c.8b006f46.7e899848.203ea517.865d2ba5.aaa4104e.bc1d84e6.95698803.215dce8f"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/python_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 161,
+                            "endLine": 161,
+                            "startColumn": 27,
+                            "endColumn": 33
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/python_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 158,
+                            "endLine": 159,
+                            "startColumn": 36,
+                            "endColumn": 23
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 300,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "ruby/HardcodedCredential",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Do not hardcode credentials in code. Found hardcoded credential used in with.",
+            "markdown": "Do not hardcode credentials in code. Found {0} credential used in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[with](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "spec/classes/python_spec.rb",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 181,
+                  "endLine": 181,
+                  "startColumn": 21,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "c4428fd77a6ef33cd6a535e49829a106d39204f2ea415e571b46afe7b4be7422",
+            "1": "8b006f46.98296aec.eaf37bfe.bab24181.9b157b56.bc1d84e6.6d9804d2.66a8326c.8b006f46.7e899848.203ea517.865d2ba5.aaa4104e.bc1d84e6.95698803.215dce8f"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/python_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 181,
+                            "endLine": 181,
+                            "startColumn": 27,
+                            "endColumn": 33
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "spec/classes/python_spec.rb",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 178,
+                            "endLine": 179,
+                            "startColumn": 36,
+                            "endColumn": 23
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 300,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              }
+            ],
+            "isAutofixable": false
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "HTML+ERB",
+            "files": 2,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Ruby",
+            "files": 19,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

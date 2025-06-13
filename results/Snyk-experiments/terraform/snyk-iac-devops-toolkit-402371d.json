@@ -1,0 +1,545 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/hub-network.tf",
+    "projectName": "devops-toolkit",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/devops-toolkit/terraform/hub-network.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/devops-toolkit",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-33",
+        "title": "Azure Network Security Group allows public access",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Network",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-33",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure Network Security Group allows public access",
+        "impact": "Public access to all resources behind the network security group",
+        "resolve": "Set `source_address_prefix` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+        "remediation": {
+          "terraform": "Set `source_address_prefix` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+          "arm": "Set `properties.sourceAddressPrefix` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 86,
+        "iacDescription": {
+          "issue": "Azure Network Security Group allows public access",
+          "impact": "Public access to all resources behind the network security group",
+          "resolve": "Set `source_address_prefix` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-33",
+        "msg": "resource.azurerm_network_security_group[hub-internal_network_security_group].security_rule[1].source_address_prefix",
+        "references": [],
+        "path": [
+          "resource",
+          "azurerm_network_security_group[hub-internal_network_security_group]",
+          "security_rule[1]",
+          "source_address_prefix"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-33",
+        "title": "Azure Network Security Group allows public access",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Network",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-33",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure Network Security Group allows public access",
+        "impact": "Public access to all resources behind the network security group",
+        "resolve": "Set `source_address_prefix` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+        "remediation": {
+          "terraform": "Set `source_address_prefix` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+          "arm": "Set `properties.sourceAddressPrefix` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 53,
+        "iacDescription": {
+          "issue": "Azure Network Security Group allows public access",
+          "impact": "Public access to all resources behind the network security group",
+          "resolve": "Set `source_address_prefix` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-33",
+        "msg": "resource.azurerm_network_security_group[hub-external_network_security_group].security_rule[1].source_address_prefix",
+        "references": [],
+        "path": [
+          "resource",
+          "azurerm_network_security_group[hub-external_network_security_group]",
+          "security_rule[1]",
+          "source_address_prefix"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AZURE-516",
+        "title": "Virtual Network DDoS protection plan disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Network",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-516",
+        "isGeneratedByCustomRule": false,
+        "issue": "Virtual Network DDoS protection plan disabled",
+        "impact": "Services deployed in the network will not benefit from advanced DDoS protection features such as attack alerting and analytics",
+        "resolve": "Set `ddos_protection_plan.enable` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `ddos_protection_plan.enable` attribute to `true`",
+          "arm": "Set `properties.enableDdosProtection` to `true`"
+        },
+        "lineNumber": 1,
+        "iacDescription": {
+          "issue": "Virtual Network DDoS protection plan disabled",
+          "impact": "Services deployed in the network will not benefit from advanced DDoS protection features such as attack alerting and analytics",
+          "resolve": "Set `ddos_protection_plan.enable` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-AZURE-516",
+        "msg": "resource.azurerm_virtual_network[hub_virtual_network].ddos_protection_plan",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network#ddos_protection_plan",
+          "https://docs.microsoft.com/en-us/azure/ddos-protection/ddos-protection-overview"
+        ],
+        "path": [
+          "resource",
+          "azurerm_virtual_network[hub_virtual_network]",
+          "ddos_protection_plan"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/hub-nva.tf",
+    "projectName": "devops-toolkit",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/devops-toolkit/terraform/hub-nva.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/devops-toolkit",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-79",
+        "title": "Linux virtual machine has password authentication enabled",
+        "severity": "high",
+        "isIgnored": false,
+        "subType": "Compute",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-79",
+        "isGeneratedByCustomRule": false,
+        "issue": "Linux virtual machine has password authentication enabled",
+        "impact": "Password authentication is less resistant to brute force and educated guess attacks then SSH public key authentication",
+        "resolve": "Set `disable_password_authentication` attribute to `true` or remove the attribute",
+        "remediation": {
+          "terraform": "Set `disable_password_authentication` attribute to `true` or remove the attribute",
+          "arm": "Set `properties.osProfile.linuxConfiguration.disablePasswordAuthentication` attribute to `true` or remove the attribute"
+        },
+        "lineNumber": 46,
+        "iacDescription": {
+          "issue": "Linux virtual machine has password authentication enabled",
+          "impact": "Password authentication is less resistant to brute force and educated guess attacks then SSH public key authentication",
+          "resolve": "Set `disable_password_authentication` attribute to `true` or remove the attribute"
+        },
+        "publicId": "SNYK-CC-TF-79",
+        "msg": "resource.azurerm_linux_virtual_machine[hub-nva_virtual_machine].disable_password_authentication",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/virtual-machines/security-policy"
+        ],
+        "path": [
+          "resource",
+          "azurerm_linux_virtual_machine[hub-nva_virtual_machine]",
+          "disable_password_authentication"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-263",
+        "title": "Virtual machine is configured with password authentication for admin",
+        "severity": "high",
+        "isIgnored": false,
+        "subType": "Compute",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-263",
+        "isGeneratedByCustomRule": false,
+        "issue": "Administrative password has been set in configuration file",
+        "impact": "The secret value will be readable to anyone with access to VCS, which can lead to unauthorized data disclosure or privilege escalation",
+        "resolve": "Set `admin_ssh_key` attribute instead of password authentication",
+        "remediation": {
+          "terraform": "Set `admin_ssh_key` attribute instead of password authentication",
+          "arm": "Set `properties.osProfile.linuxConfiguration.ssh` attribute instead of password authentication"
+        },
+        "lineNumber": 47,
+        "iacDescription": {
+          "issue": "Administrative password has been set in configuration file",
+          "impact": "The secret value will be readable to anyone with access to VCS, which can lead to unauthorized data disclosure or privilege escalation",
+          "resolve": "Set `admin_ssh_key` attribute instead of password authentication"
+        },
+        "publicId": "SNYK-CC-TF-263",
+        "msg": "resource.azurerm_linux_virtual_machine[hub-nva_virtual_machine].admin_password",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys"
+        ],
+        "path": [
+          "resource",
+          "azurerm_linux_virtual_machine[hub-nva_virtual_machine]",
+          "admin_password"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/locals.tf",
+    "projectName": "devops-toolkit",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/devops-toolkit/terraform/locals.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/devops-toolkit",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/main.tf",
+    "projectName": "devops-toolkit",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/devops-toolkit/terraform/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/devops-toolkit",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/marketplace-agreement.tf",
+    "projectName": "devops-toolkit",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/devops-toolkit/terraform/marketplace-agreement.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/devops-toolkit",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/outputs.tf",
+    "projectName": "devops-toolkit",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/devops-toolkit/terraform/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/devops-toolkit",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/spoke-network.tf",
+    "projectName": "devops-toolkit",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/devops-toolkit/terraform/spoke-network.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/devops-toolkit",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-33",
+        "title": "Azure Network Security Group allows public access",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Network",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-33",
+        "isGeneratedByCustomRule": false,
+        "issue": "Azure Network Security Group allows public access",
+        "impact": "Public access to all resources behind the network security group",
+        "resolve": "Set `source_address_prefix` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+        "remediation": {
+          "terraform": "Set `source_address_prefix` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+          "arm": "Set `properties.sourceAddressPrefix` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 49,
+        "iacDescription": {
+          "issue": "Azure Network Security Group allows public access",
+          "impact": "Public access to all resources behind the network security group",
+          "resolve": "Set `source_address_prefix` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-33",
+        "msg": "resource.azurerm_network_security_group[spoke_network_security_group].security_rule[0].source_address_prefix",
+        "references": [],
+        "path": [
+          "resource",
+          "azurerm_network_security_group[spoke_network_security_group]",
+          "security_rule[0]",
+          "source_address_prefix"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AZURE-516",
+        "title": "Virtual Network DDoS protection plan disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Network",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AZURE-516",
+        "isGeneratedByCustomRule": false,
+        "issue": "Virtual Network DDoS protection plan disabled",
+        "impact": "Services deployed in the network will not benefit from advanced DDoS protection features such as attack alerting and analytics",
+        "resolve": "Set `ddos_protection_plan.enable` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `ddos_protection_plan.enable` attribute to `true`",
+          "arm": "Set `properties.enableDdosProtection` to `true`"
+        },
+        "lineNumber": 1,
+        "iacDescription": {
+          "issue": "Virtual Network DDoS protection plan disabled",
+          "impact": "Services deployed in the network will not benefit from advanced DDoS protection features such as attack alerting and analytics",
+          "resolve": "Set `ddos_protection_plan.enable` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-AZURE-516",
+        "msg": "resource.azurerm_virtual_network[spoke_virtual_network].ddos_protection_plan",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network#ddos_protection_plan",
+          "https://docs.microsoft.com/en-us/azure/ddos-protection/ddos-protection-overview"
+        ],
+        "path": [
+          "resource",
+          "azurerm_virtual_network[spoke_virtual_network]",
+          "ddos_protection_plan"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/terraform.tf",
+    "projectName": "devops-toolkit",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/devops-toolkit/terraform/terraform.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/devops-toolkit",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/tls-certificate-key.tf",
+    "projectName": "devops-toolkit",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/devops-toolkit/terraform/tls-certificate-key.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/devops-toolkit",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/variables.tf",
+    "projectName": "devops-toolkit",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/devops-toolkit/terraform/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/devops-toolkit",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  }
+]

@@ -1,0 +1,363 @@
+{
+  "meta": {
+    "isPrivate": true,
+    "isLicensesEnabled": false,
+    "ignoreSettings": {
+      "adminOnly": false,
+      "reasonRequired": false,
+      "disregardFilesystemIgnores": false
+    },
+    "org": "mbissine2022",
+    "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+    "policy": ""
+  },
+  "filesystemPolicy": false,
+  "vulnerabilities": [],
+  "dependencyCount": 0,
+  "licensesPolicy": null,
+  "ignoreSettings": null,
+  "targetFile": "openshift/repository-cache-filler.yml",
+  "projectName": "deployment",
+  "org": "mbissine2022",
+  "policy": "",
+  "isPrivate": true,
+  "targetFilePath": "/home/mbissine/snyk_ansible/deployment/openshift/repository-cache-filler.yml",
+  "packageManager": "k8sconfig",
+  "path": "/home/mbissine/snyk_ansible/deployment",
+  "projectType": "k8sconfig",
+  "ok": false,
+  "infrastructureAsCodeIssues": [
+    {
+      "id": "SNYK-CC-K8S-8",
+      "title": "Container is running with writable root filesystem",
+      "severity": "low",
+      "isIgnored": false,
+      "subType": "Pod",
+      "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-8",
+      "isGeneratedByCustomRule": false,
+      "issue": "`readOnlyRootFilesystem` attribute is not set to `true`",
+      "impact": "Compromised process could abuse writable root filesystem to elevate privileges",
+      "resolve": "Set `spec.{containers, initContainers}.securityContext.readOnlyRootFilesystem` to `true`",
+      "remediation": {
+        "kubernetes": "Set `spec.{containers, initContainers}.securityContext.readOnlyRootFilesystem` to `true`",
+        "terraform": "Set `security_context.read_only_root_filesystem` to `true`"
+      },
+      "lineNumber": 10,
+      "iacDescription": {
+        "issue": "`readOnlyRootFilesystem` attribute is not set to `true`",
+        "impact": "Compromised process could abuse writable root filesystem to elevate privileges",
+        "resolve": "Set `spec.{containers, initContainers}.securityContext.readOnlyRootFilesystem` to `true`"
+      },
+      "publicId": "SNYK-CC-K8S-8",
+      "msg": "spec.containers[repository-cache-filler].securityContext.readOnlyRootFilesystem",
+      "references": [
+        "https://kubernetes.io/blog/2016/08/security-best-practices-kubernetes-deployment/"
+      ],
+      "path": [
+        "[DocId: 0]",
+        "spec",
+        "containers[repository-cache-filler]",
+        "securityContext",
+        "readOnlyRootFilesystem"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "SNYK-CC-K8S-4",
+      "title": "Container is running without memory limit",
+      "severity": "low",
+      "isIgnored": false,
+      "subType": "Deployment",
+      "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-4",
+      "isGeneratedByCustomRule": false,
+      "issue": "Memory limit is not defined",
+      "impact": "Containers without memory limits are more likely to be terminated when the node runs out of memory",
+      "resolve": "Set `resources.limits.memory` value",
+      "remediation": {
+        "kubernetes": "Set `resources.limits.memory` value",
+        "terraform": "Set `resources.limits.memory` value"
+      },
+      "lineNumber": 10,
+      "iacDescription": {
+        "issue": "Memory limit is not defined",
+        "impact": "Containers without memory limits are more likely to be terminated when the node runs out of memory",
+        "resolve": "Set `resources.limits.memory` value"
+      },
+      "publicId": "SNYK-CC-K8S-4",
+      "msg": "input.spec.containers[repository-cache-filler].resources.limits.memory",
+      "references": [
+        "https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/",
+        "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/"
+      ],
+      "path": [
+        "[DocId: 0]",
+        "input",
+        "spec",
+        "containers[repository-cache-filler]",
+        "resources",
+        "limits",
+        "memory"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "SNYK-CC-K8S-42",
+      "title": "Container could be running with outdated image",
+      "severity": "low",
+      "isIgnored": false,
+      "subType": "Deployment",
+      "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-42",
+      "isGeneratedByCustomRule": false,
+      "issue": "The image policy does not prevent image reuse",
+      "impact": "The container may run with outdated or unauthorized image",
+      "resolve": "Set `imagePullPolicy` attribute to `Always`",
+      "remediation": {
+        "kubernetes": "Set `imagePullPolicy` attribute to `Always`",
+        "terraform": "Set `image_pull_policy` attribute to `Always"
+      },
+      "lineNumber": 11,
+      "iacDescription": {
+        "issue": "The image policy does not prevent image reuse",
+        "impact": "The container may run with outdated or unauthorized image",
+        "resolve": "Set `imagePullPolicy` attribute to `Always`"
+      },
+      "publicId": "SNYK-CC-K8S-42",
+      "msg": "spec.containers[repository-cache-filler].imagePullPolicy",
+      "references": [
+        "https://kubernetes.io/docs/concepts/containers/images/",
+        "https://kubernetes.io/docs/concepts/configuration/overview/#container-images"
+      ],
+      "path": [
+        "[DocId: 0]",
+        "spec",
+        "containers[repository-cache-filler]",
+        "imagePullPolicy"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "SNYK-CC-K8S-9",
+      "title": "Container is running without privilege escalation control",
+      "severity": "medium",
+      "isIgnored": false,
+      "subType": "Pod",
+      "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-9",
+      "isGeneratedByCustomRule": false,
+      "issue": "`allowPrivilegeEscalation` attribute is not set to `false`",
+      "impact": "Processes could elevate current privileges via known vectors, for example SUID binaries",
+      "resolve": "Set `spec.{containers, initContainers}.securityContext.allowPrivilegeEscalation` to `false`",
+      "remediation": {
+        "kubernetes": "Set `spec.{containers, initContainers}.securityContext.allowPrivilegeEscalation` to `false`",
+        "terraform": "Set `spec.container.security_context.allow_privilege_escalation` to `false`"
+      },
+      "lineNumber": 10,
+      "iacDescription": {
+        "issue": "`allowPrivilegeEscalation` attribute is not set to `false`",
+        "impact": "Processes could elevate current privileges via known vectors, for example SUID binaries",
+        "resolve": "Set `spec.{containers, initContainers}.securityContext.allowPrivilegeEscalation` to `false`"
+      },
+      "publicId": "SNYK-CC-K8S-9",
+      "msg": "spec.containers[repository-cache-filler].securityContext.allowPrivilegeEscalation",
+      "references": [
+        "https://www.kernel.org/doc/html/latest/userspace-api/no_new_privs.html"
+      ],
+      "path": [
+        "[DocId: 0]",
+        "spec",
+        "containers[repository-cache-filler]",
+        "securityContext",
+        "allowPrivilegeEscalation"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "SNYK-CC-K8S-11",
+      "title": "Container's or Pod's  UID could clash with host's UID",
+      "severity": "low",
+      "isIgnored": false,
+      "subType": "Deployment",
+      "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-11",
+      "isGeneratedByCustomRule": false,
+      "issue": "`runAsUser` value is set to low UID",
+      "impact": "UID of the container processes could clash with host's UIDs and lead to unintentional authorization bypass",
+      "resolve": "Set `securityContext.runAsUser` value to greater or equal than 10'000. SecurityContext can be set on both `pod` and `container` level. If both are set, then the container level takes precedence",
+      "remediation": {
+        "kubernetes": "Set `securityContext.runAsUser` value to greater or equal than 10'000. SecurityContext can be set on both `pod` and `container` level. If both are set, then the container level takes precedence",
+        "terraform": "Set `security_context.run_as_user` value to greater or equal than 10'000"
+      },
+      "lineNumber": 10,
+      "iacDescription": {
+        "issue": "`runAsUser` value is set to low UID",
+        "impact": "UID of the container processes could clash with host's UIDs and lead to unintentional authorization bypass",
+        "resolve": "Set `securityContext.runAsUser` value to greater or equal than 10'000. SecurityContext can be set on both `pod` and `container` level. If both are set, then the container level takes precedence"
+      },
+      "publicId": "SNYK-CC-K8S-11",
+      "msg": "input.spec.containers[repository-cache-filler].securityContext.runAsUser",
+      "references": [
+        "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container",
+        "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod",
+        "https://kubernetes.io/blog/2016/08/security-best-practices-kubernetes-deployment/"
+      ],
+      "path": [
+        "[DocId: 0]",
+        "input",
+        "spec",
+        "containers[repository-cache-filler]",
+        "securityContext",
+        "runAsUser"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "SNYK-CC-K8S-5",
+      "title": "Container has no CPU limit",
+      "severity": "low",
+      "isIgnored": false,
+      "subType": "Deployment",
+      "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-5",
+      "isGeneratedByCustomRule": false,
+      "issue": "Container has no CPU limit",
+      "impact": "CPU limits can prevent containers from consuming valuable compute time for no benefit (e.g. inefficient code) that might lead to unnecessary costs. It is advisable to also configure CPU requests to ensure application stability.",
+      "resolve": "Add `resources.limits.cpu` field with required CPU limit value",
+      "remediation": {
+        "kubernetes": "Add `resources.limits.cpu` field with required CPU limit value",
+        "terraform": "Add `spec.container.resources.limits.cpu` field with required CPU limit value"
+      },
+      "lineNumber": 10,
+      "iacDescription": {
+        "issue": "Container has no CPU limit",
+        "impact": "CPU limits can prevent containers from consuming valuable compute time for no benefit (e.g. inefficient code) that might lead to unnecessary costs. It is advisable to also configure CPU requests to ensure application stability.",
+        "resolve": "Add `resources.limits.cpu` field with required CPU limit value"
+      },
+      "publicId": "SNYK-CC-K8S-5",
+      "msg": "input.spec.containers[repository-cache-filler].resources.limits.cpu",
+      "references": [
+        "https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/",
+        "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/",
+        "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/",
+        "https://github.com/kubernetes/design-proposals-archive/blob/8da1442ea29adccea40693357d04727127e045ed/node/resource-qos.md#compressible-resource-guaranteess"
+      ],
+      "path": [
+        "[DocId: 0]",
+        "input",
+        "spec",
+        "containers[repository-cache-filler]",
+        "resources",
+        "limits",
+        "cpu"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "SNYK-CC-K8S-10",
+      "title": "Container or Pod is running without root user control",
+      "severity": "medium",
+      "isIgnored": false,
+      "subType": "Deployment",
+      "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-10",
+      "isGeneratedByCustomRule": false,
+      "issue": "Container or Pod is running without root user control",
+      "impact": "Container or Pod could be running with full administrative privileges",
+      "resolve": "Set `securityContext.runAsNonRoot` to `true`",
+      "remediation": {
+        "kubernetes": "Set `securityContext.runAsNonRoot` to `true`",
+        "terraform": "Set `security_context.run_as_non_root` to `true`"
+      },
+      "lineNumber": 10,
+      "iacDescription": {
+        "issue": "Container or Pod is running without root user control",
+        "impact": "Container or Pod could be running with full administrative privileges",
+        "resolve": "Set `securityContext.runAsNonRoot` to `true`"
+      },
+      "publicId": "SNYK-CC-K8S-10",
+      "msg": "input.spec.containers[repository-cache-filler].securityContext.runAsNonRoot",
+      "description": "",
+      "references": [
+        "https://kubernetes.io/blog/2016/08/security-best-practices-kubernetes-deployment/"
+      ],
+      "path": [
+        "[DocId: 0]",
+        "input",
+        "spec",
+        "containers[repository-cache-filler]",
+        "securityContext",
+        "runAsNonRoot"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "SNYK-CC-K8S-6",
+      "title": "Container does not drop all default capabilities",
+      "severity": "medium",
+      "isIgnored": false,
+      "subType": "Deployment",
+      "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-6",
+      "isGeneratedByCustomRule": false,
+      "issue": "All default capabilities are not explicitly dropped",
+      "impact": "Containers are running with potentially unnecessary privileges",
+      "resolve": "Add `ALL` to `securityContext.capabilities.drop` list, and add only required capabilities in `securityContext.capabilities.add`",
+      "remediation": {
+        "kubernetes": "Add `ALL` to `securityContext.capabilities.drop` list, and add only required capabilities in `securityContext.capabilities.add`",
+        "terraform": "Add `ALL` to `spec.container.security_context.capabilities.drop` list, and add only required capabilities to `spec.container.security_context.capabilities.add`, ensuring it also does not contain `ALL`"
+      },
+      "lineNumber": 10,
+      "iacDescription": {
+        "issue": "All default capabilities are not explicitly dropped",
+        "impact": "Containers are running with potentially unnecessary privileges",
+        "resolve": "Add `ALL` to `securityContext.capabilities.drop` list, and add only required capabilities in `securityContext.capabilities.add`"
+      },
+      "publicId": "SNYK-CC-K8S-6",
+      "msg": "input.spec.containers[repository-cache-filler].securityContext.capabilities.drop",
+      "references": [
+        "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/",
+        "https://linux-audit.com/linux-capabilities-hardening-linux-binaries-by-removing-setuid/"
+      ],
+      "path": [
+        "[DocId: 0]",
+        "input",
+        "spec",
+        "containers[repository-cache-filler]",
+        "securityContext",
+        "capabilities",
+        "drop"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "SNYK-CC-K8S-41",
+      "title": "Container is running without liveness probe",
+      "severity": "low",
+      "isIgnored": false,
+      "subType": "Deployment",
+      "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-41",
+      "isGeneratedByCustomRule": false,
+      "issue": "Liveness probe is not defined",
+      "impact": "Kubernetes will not be able to detect if application is able to service requests, and will not restart unhealthy pods",
+      "resolve": "Add `livenessProbe` attribute",
+      "remediation": {
+        "kubernetes": "Add `livenessProbe` attribute",
+        "terraform": "Add `liveness_probe` attribute"
+      },
+      "lineNumber": 10,
+      "iacDescription": {
+        "issue": "Liveness probe is not defined",
+        "impact": "Kubernetes will not be able to detect if application is able to service requests, and will not restart unhealthy pods",
+        "resolve": "Add `livenessProbe` attribute"
+      },
+      "publicId": "SNYK-CC-K8S-41",
+      "msg": "spec.containers[repository-cache-filler].livenessProbe",
+      "references": [
+        "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+        "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/",
+        "https://cloud.google.com/blog/products/gcp/kubernetes-best-practices-setting-up-health-checks-with-readiness-and-liveness-probes"
+      ],
+      "path": [
+        "[DocId: 0]",
+        "spec",
+        "containers[repository-cache-filler]",
+        "livenessProbe"
+      ],
+      "compliance": []
+    }
+  ]
+}
