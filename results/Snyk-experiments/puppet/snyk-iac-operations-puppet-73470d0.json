@@ -1,0 +1,447 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "modules/kubeadm/files/psp/base-pod-security-policies.yaml",
+    "projectName": "operations-puppet",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/operations-puppet/modules/kubeadm/files/psp/base-pod-security-policies.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/operations-puppet",
+    "projectType": "k8sconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-K8S-20",
+        "title": "Policy allows sharing of host's IPC namespace",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Pod Security Policy",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-20",
+        "isGeneratedByCustomRule": false,
+        "issue": "Policy does not prevent containers from running processes inside of host's IPC namespace",
+        "impact": "Containers will be able to communicate with host's shared channels. This breaks container security boundary.",
+        "resolve": "Remove the `hostIPC` attribute, or set value to `false`",
+        "remediation": {
+          "kubernetes": "Remove the `hostIPC` attribute, or set value to `false`",
+          "terraform": "Remove the `host_ipc` attribute, or set value to `false`"
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "Policy does not prevent containers from running processes inside of host's IPC namespace",
+          "impact": "Containers will be able to communicate with host's shared channels. This breaks container security boundary.",
+          "resolve": "Remove the `hostIPC` attribute, or set value to `false`"
+        },
+        "publicId": "SNYK-CC-K8S-20",
+        "msg": "input.spec.hostIPC",
+        "references": [
+          "https://kubernetes.io/docs/concepts/policy/pod-security-policy/#host-namespaces"
+        ],
+        "path": [
+          "[DocId: 0]",
+          "input",
+          "spec",
+          "hostIPC"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-16",
+        "title": "Policy allows `privileged` containers",
+        "severity": "high",
+        "isIgnored": false,
+        "subType": "Pod Security Policy",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-16",
+        "isGeneratedByCustomRule": false,
+        "issue": "Privileged containers are explicitly allowed",
+        "impact": "Pods will be able to run with `privileged` mode.",
+        "resolve": "Remove `privileged` attribute, or set vault to `false`",
+        "remediation": {
+          "kubernetes": "Remove `privileged` attribute, or set vault to `false`",
+          "terraform": "Remove `privileged` attribute, or set vault to `false`"
+        },
+        "lineNumber": 24,
+        "iacDescription": {
+          "issue": "Privileged containers are explicitly allowed",
+          "impact": "Pods will be able to run with `privileged` mode.",
+          "resolve": "Remove `privileged` attribute, or set vault to `false`"
+        },
+        "publicId": "SNYK-CC-K8S-16",
+        "msg": "input.spec.privileged",
+        "description": "",
+        "references": [
+          "https://kubernetes.io/docs/concepts/policy/pod-security-policy/#privileged",
+          "https://kubernetes.io/blog/2016/08/security-best-practices-kubernetes-deployment/"
+        ],
+        "path": [
+          "[DocId: 0]",
+          "input",
+          "spec",
+          "privileged"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-30",
+        "title": "Policy allows all volume types",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Pod Security Policy",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-30",
+        "isGeneratedByCustomRule": false,
+        "issue": "All volume types are allowed, including `hostPath`",
+        "impact": "The containers will be allowed to mount any type, and source of volumes. This can lead to information disclosure and privilege escalation.",
+        "resolve": "Set value to specific volume types, or remove the attribute",
+        "remediation": {
+          "kubernetes": "Set value to specific volume types, or remove the attribute",
+          "terraform": "Remove wildcard `*` from `spec.volumes`"
+        },
+        "lineNumber": 33,
+        "iacDescription": {
+          "issue": "All volume types are allowed, including `hostPath`",
+          "impact": "The containers will be allowed to mount any type, and source of volumes. This can lead to information disclosure and privilege escalation.",
+          "resolve": "Set value to specific volume types, or remove the attribute"
+        },
+        "publicId": "SNYK-CC-K8S-30",
+        "msg": "input.spec.volumes",
+        "references": [
+          "https://kubernetes.io/docs/concepts/policy/pod-security-policy/#volumes-and-file-systems",
+          "https://kubernetes.io/docs/concepts/security/pod-security-standards/",
+          "https://kubernetes.io/docs/concepts/storage/volumes/"
+        ],
+        "path": [
+          "[DocId: 0]",
+          "input",
+          "spec",
+          "volumes"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-21",
+        "title": "Policy allows sharing of host's Network namespace",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Pod Security Policy",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-21",
+        "isGeneratedByCustomRule": false,
+        "issue": "Policy does not prevent containers from running processes inside of host's Network namespace",
+        "impact": "Containers will be able to access host's networking resources. This breaks container security boundary.",
+        "resolve": "Remove `hostNetwork` attribute, or set value to `false`",
+        "remediation": {
+          "kubernetes": "Remove `hostNetwork` attribute, or set value to `false`",
+          "terraform": "Remove `host_network` attribute, or set value to `false`"
+        },
+        "lineNumber": 19,
+        "iacDescription": {
+          "issue": "Policy does not prevent containers from running processes inside of host's Network namespace",
+          "impact": "Containers will be able to access host's networking resources. This breaks container security boundary.",
+          "resolve": "Remove `hostNetwork` attribute, or set value to `false`"
+        },
+        "publicId": "SNYK-CC-K8S-21",
+        "msg": "input.spec.hostNetwork",
+        "references": [
+          "https://kubernetes.io/docs/concepts/policy/pod-security-policy/#host-namespaces"
+        ],
+        "path": [
+          "[DocId: 0]",
+          "input",
+          "spec",
+          "hostNetwork"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-22",
+        "title": "Policy does not prevent use of root user",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Pod Security Policy",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-22",
+        "isGeneratedByCustomRule": false,
+        "issue": "Policy explicitly allows `RunAsAny` user which allows container to run in root UID context",
+        "impact": "Pods will be able to run with root UID.",
+        "resolve": "Set `runAsUser` to `MustRunAsNonRoot`, or exclude UID `0` from `MustRunAs` range",
+        "remediation": {
+          "kubernetes": "Set `runAsUser` to `MustRunAsNonRoot`, or exclude UID `0` from `MustRunAs` range",
+          "terraform": "Set `run_as_user` to `MustRunAsNonRoot`, or exclude UID `0` from `MustRunAs` range"
+        },
+        "lineNumber": 27,
+        "iacDescription": {
+          "issue": "Policy explicitly allows `RunAsAny` user which allows container to run in root UID context",
+          "impact": "Pods will be able to run with root UID.",
+          "resolve": "Set `runAsUser` to `MustRunAsNonRoot`, or exclude UID `0` from `MustRunAs` range"
+        },
+        "publicId": "SNYK-CC-K8S-22",
+        "msg": "input.spec.runAsUser.rule",
+        "description": "",
+        "references": [
+          "https://kubernetes.io/docs/concepts/policy/pod-security-policy/#users-and-groups"
+        ],
+        "path": [
+          "[DocId: 0]",
+          "input",
+          "spec",
+          "runAsUser",
+          "rule"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-23",
+        "title": "Policy allows all capabilities",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Pod Security Policy",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-23",
+        "isGeneratedByCustomRule": false,
+        "issue": "The whitelist of allowed capability is set to all",
+        "impact": "The pods will be allowed to add any capability at runtime, including SYS_ADMIN",
+        "resolve": "Remove `allowedCapabilities` attribute, or set value to `[]`",
+        "remediation": {
+          "kubernetes": "Remove `allowedCapabilities` attribute, or set value to `[]`",
+          "terraform": "Remove `allowed_capabilities` attribute, or set value to `[]`"
+        },
+        "lineNumber": 14,
+        "iacDescription": {
+          "issue": "The whitelist of allowed capability is set to all",
+          "impact": "The pods will be allowed to add any capability at runtime, including SYS_ADMIN",
+          "resolve": "Remove `allowedCapabilities` attribute, or set value to `[]`"
+        },
+        "publicId": "SNYK-CC-K8S-23",
+        "msg": "input.spec.allowedCapabilities",
+        "references": [
+          "https://kubernetes.io/docs/concepts/policy/pod-security-policy/#capabilities",
+          "https://kubernetes.io/docs/concepts/security/pod-security-standards/"
+        ],
+        "path": [
+          "[DocId: 0]",
+          "input",
+          "spec",
+          "allowedCapabilities"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-24",
+        "title": "Policy does not restrict default capabilities",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Pod Security Policy",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-24",
+        "isGeneratedByCustomRule": false,
+        "issue": "Default insecure capabilities are not restricted",
+        "impact": "Pods will be allowed to run with too many permissions, including RAW network resource access",
+        "resolve": "Add `ALL` or `NET_RAW` to  `requiredDropCapabilities` attribute",
+        "remediation": {
+          "kubernetes": "Add `ALL` or `NET_RAW` to  `requiredDropCapabilities` attribute",
+          "terraform": "Add `ALL` or `NET_RAW` to  `requiredDropCapabilities` attribute"
+        },
+        "lineNumber": 12,
+        "iacDescription": {
+          "issue": "Default insecure capabilities are not restricted",
+          "impact": "Pods will be allowed to run with too many permissions, including RAW network resource access",
+          "resolve": "Add `ALL` or `NET_RAW` to  `requiredDropCapabilities` attribute"
+        },
+        "publicId": "SNYK-CC-K8S-24",
+        "msg": "input.spec.requiredDropCapabilities",
+        "references": [
+          "https://kubernetes.io/docs/concepts/policy/pod-security-policy/#capabilities"
+        ],
+        "path": [
+          "[DocId: 0]",
+          "input",
+          "spec",
+          "requiredDropCapabilities"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-17",
+        "title": "Policy allows privilege escalation",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Pod Security Policy",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-17",
+        "isGeneratedByCustomRule": false,
+        "issue": "Privilege escalation is not explicitly forbidden via `allowPrivilegeEscalation` attribute",
+        "impact": "Pods will be able to run with `allowPrivilegeEscalation` set to true (default value).",
+        "resolve": "Set `allowPrivilegeEscalation` to `false`",
+        "remediation": {
+          "kubernetes": "Set `allowPrivilegeEscalation` to `false`",
+          "terraform": "Set `allow_privilege_escalation` to `false`"
+        },
+        "lineNumber": 15,
+        "iacDescription": {
+          "issue": "Privilege escalation is not explicitly forbidden via `allowPrivilegeEscalation` attribute",
+          "impact": "Pods will be able to run with `allowPrivilegeEscalation` set to true (default value).",
+          "resolve": "Set `allowPrivilegeEscalation` to `false`"
+        },
+        "publicId": "SNYK-CC-K8S-17",
+        "msg": "input.spec.allowPrivilegeEscalation",
+        "references": [
+          "https://kubernetes.io/docs/concepts/policy/pod-security-policy/#privilege-escalation"
+        ],
+        "path": [
+          "[DocId: 0]",
+          "input",
+          "spec",
+          "allowPrivilegeEscalation"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-19",
+        "title": "Policy allows sharing of host's PID namespace",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Pod Security Policy",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-19",
+        "isGeneratedByCustomRule": false,
+        "issue": "Policy does not prevent containers from running processes inside of host's PID namespace",
+        "impact": "Containers will be able to enumerate and interact with host's processes. This breaks container security boundary",
+        "resolve": "Remove `hostPID` attribute, or set value to `false`",
+        "remediation": {
+          "kubernetes": "Remove `hostPID` attribute, or set value to `false`",
+          "terraform": "Remove `host_pid` attribute, or set value to `false`"
+        },
+        "lineNumber": 20,
+        "iacDescription": {
+          "issue": "Policy does not prevent containers from running processes inside of host's PID namespace",
+          "impact": "Containers will be able to enumerate and interact with host's processes. This breaks container security boundary",
+          "resolve": "Remove `hostPID` attribute, or set value to `false`"
+        },
+        "publicId": "SNYK-CC-K8S-19",
+        "msg": "input.spec.hostPID",
+        "references": [
+          "https://kubernetes.io/docs/concepts/policy/pod-security-policy/#host-namespaces"
+        ],
+        "path": [
+          "[DocId: 0]",
+          "input",
+          "spec",
+          "hostPID"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-28",
+        "title": "Policy allows insecure seccomp profiles",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Pod Security Policy",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-28",
+        "isGeneratedByCustomRule": false,
+        "issue": "Seccomp profile whitelist contains insecure entries",
+        "impact": "Pods will be able to start with seccomp disabled",
+        "resolve": "Ensure `spec.securityContext.seccompProfile.type` is not set to `Unconfined`.",
+        "remediation": {
+          "kubernetes": "Ensure `spec.securityContext.seccompProfile.type` is not set to `Unconfined`.",
+          "terraform": "Ensure `seccomp.security.alpha.kubernetes.io/allowedProfileNames` annotation does not contain `unconfined` or `*`"
+        },
+        "lineNumber": 6,
+        "iacDescription": {
+          "issue": "Seccomp profile whitelist contains insecure entries",
+          "impact": "Pods will be able to start with seccomp disabled",
+          "resolve": "Ensure `spec.securityContext.seccompProfile.type` is not set to `Unconfined`."
+        },
+        "publicId": "SNYK-CC-K8S-28",
+        "msg": "input.metadata.annotations[seccomp.security.alpha.kubernetes.io/allowedProfileNames]",
+        "references": [
+          "https://kubernetes.io/docs/tutorials/security/seccomp/",
+          "https://docs.docker.com/engine/security/seccomp/"
+        ],
+        "path": [
+          "[DocId: 0]",
+          "input",
+          "metadata",
+          "annotations[seccomp.security.alpha.kubernetes.io/allowedProfileNames]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-48",
+        "title": "Role that grant permissions to system reserved namespace",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "RoleBinding",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-48",
+        "isGeneratedByCustomRule": false,
+        "issue": "A role was found that grant permission over system reserved namespace (either default or kube-system)",
+        "impact": "Those namespaces should be used only by cluster operators, and should be treated as sensitive",
+        "resolve": "Consider creating different namespace and use it instead",
+        "remediation": {
+          "kubernetes": "Consider creating different namespace and use it instead",
+          "terraform": "Do not use `default` or `kube-system` in `subject.namespace`, create a different `namespace` and use it instead"
+        },
+        "lineNumber": 56,
+        "iacDescription": {
+          "issue": "A role was found that grant permission over system reserved namespace (either default or kube-system)",
+          "impact": "Those namespaces should be used only by cluster operators, and should be treated as sensitive",
+          "resolve": "Consider creating different namespace and use it instead"
+        },
+        "publicId": "SNYK-CC-K8S-48",
+        "msg": "metadata.namespace",
+        "references": [
+          "https://kubernetes.io/docs/reference/access-authn-authz/rbac/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/"
+        ],
+        "path": [
+          "[DocId: 2]",
+          "metadata",
+          "namespace"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "modules/toolforge/files/k8s/toolforge-tool-roles.yaml",
+    "projectName": "operations-puppet",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_puppet/operations-puppet/modules/toolforge/files/k8s/toolforge-tool-roles.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/gitclone_puppet/operations-puppet",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  }
+]

@@ -1,0 +1,10 @@
+CodeClientErrorWithDetail: Analysis file count limit exceeded
+    at resolveCodeClientErrorWithDetail (/snapshot/snyk/dist/cli/webpack:/snyk/src/lib/plugins/sast/index.ts:187:10)
+    at Object.test (/snapshot/snyk/dist/cli/webpack:/snyk/src/lib/plugins/sast/index.ts:115:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at testEcosystem (/snapshot/snyk/dist/cli/webpack:/snyk/src/lib/ecosystems/test.ts:33:60)
+    at test (/snapshot/snyk/dist/cli/webpack:/snyk/src/cli/commands/test/index.ts:135:29)
+    at runCommand (/snapshot/snyk/dist/cli/webpack:/snyk/src/cli/main.ts:58:25)
+    at main (/snapshot/snyk/dist/cli/webpack:/snyk/src/cli/main.ts:361:11)
+    at /snapshot/snyk/dist/cli/webpack:/snyk/src/cli/index.ts:13:3
+    at callHandlingUnexpectedErrors (/snapshot/snyk/dist/cli/webpack:/snyk/src/lib/unexpected-error.ts:43:5)

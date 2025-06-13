@@ -1,0 +1,74 @@
+[
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/snyk_ansible/pkgsrc/databases/elasticsearch/patches/patch-config_elasticsearch.yml"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/pkgsrc/databases/sqlrelay/patches/patch-src_api_nodejs_package__in.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/pkgsrc/mail/thunderbird/patches/patch-third__party_rust_authenticator_.cargo-checksum.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/pkgsrc/misc/calibre/patches/patch-setup_extensions.json"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/snyk_ansible/pkgsrc/parallel/ocl-icd/patches/patch-ocl__interface.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/pkgsrc/security/tor-browser/patches/patch-third__party_rust_authenticator_.cargo-checksum.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/pkgsrc/www/firefox78/patches/patch-third__party_rust_authenticator_.cargo-checksum.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/pkgsrc/x11/qt5-qtbase/patches/patch-src_corelib_configure.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/pkgsrc/x11/qt5-qtlocation/patches/patch-src_location_configure.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/pkgsrc/x11/qt5-qtwebengine/patches/patch-src_3rdparty_chromium_extensions_common_api___permission__features.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/pkgsrc/x11/qt5-qtwebengine/patches/patch-src_3rdparty_chromium_extensions_common_api_runtime.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/pkgsrc/x11/qt5-qtwebengine/patches/patch-src_buildtools_configure.json"
+  }
+]

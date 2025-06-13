@@ -1,0 +1,250 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "javascript/ElectronInsecureWebPreferences",
+              "name": "ElectronInsecureWebPreferences",
+              "shortDescription": {
+                "text": "Electron Insecure Web Preferences"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "\n## Info\n\nSome security configuration to consider when working with Electron are:\n\n-  `webSecurity`: Electron has a same-origin policy for all its scripts. Disabling this setting allows execution of scripts from other origins and is considered insecure.\n\n- `allowRunningInsecureContent`: When this feature is enabled it allows websites loaded over `HTTPS` to load resources over `HTTP`. It is considered insecure because the integrity of the data being transmitted, the traffic encryption and the authentication of the remote server are not guaranteed for these resources.\n\n- `nodeIntegration` and `nodeIntegrationInWorker`: When this feature is enabled, it allows JavaScript from the renderer window to use the Node.js API. This means that a presence of a Cross-Site Scripting (XSS) vulnerability could be potentially escalated to Remote Code Execution (RCE).\n\n- `contextIsolation`: Disabling this feature is considered insecure because malicious JavaScript code from the renderer process could potentially pollute/modify global JavaScript functions.\n\n- `sandbox`: Enabling this feature is highly recommended (especially when content from untrusted sources is loaded), because it introduces an additional layer of security by creating a browser window in a sandboxed renderer.\n\n## Details\n\nRather than a single specific weakness, 'configuration issues' refers to a category of weaknesses encompassing a wide range of problems with handling security-sensitive information. Most weaknesses stemming from configuration issues are avoidable through education, thoughtful configuration, and a clear chain of responsibility for all security-related code and parameters.\n\nFailure to plan and set up security configurations appropriately can have serious consequences, making this the most commonly exploited weakness category. For example, Gartner reports that 99% of firewall breaches are due to misconfiguration, while 39% of web application breaches are due to configuration problems rather than vulnerabilities.\n\nBreaches of these kinds can lead to data loss, damage to reputation, changes to core application functionality, ransom demands, fines for regulatory compliance failures, and more.\n\n## Best practices for prevention\n* Make sure to follow best practices and documentation provided by the library.\n* Familiarize yourself with the tools and settings required to secure your on-premises and cloud environments and applications.\n* Review policies frequently and identify a security configuration point person for all potential weak points.\n* Keep sensitive data encrypted at all stages to minimize damage and liability if a breach occurs.\n* Use built-in libraries within your development environment rather than taking a piecemeal or DIY approach to key security components.\n* Enable logging, review logs frequently, and set up automated alerting if possible for predetermined issues that could indicate trouble.\n* Adopt a left-shift approach to application security (DevSecOps), in which weaknesses and vulnerabilities are assessed and repaired early on in the development process.\n* Automate the patch release process to ensure that a fix is available to users as soon as possible after a weakness is discovered.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "ElectronInsecureWebPreferences",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/tiffany352/twitter-archive-browser/commit/3c01b6549c7c472beae0be765af3e20b3b889701?diff=split#diff-4a73844cfb319a4651095a2bb6736040a58889a21721d80e063821c7cb0a3377L-1",
+                    "lines": [
+                      {
+                        "line": "webSecurity: false\n",
+                        "lineNumber": 14,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "webSecurity: true\n",
+                        "lineNumber": 14,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/hackmdio/hackmd-desktop/commit/a25de1f8e14409ca4effe578e3dc65487be74a2c?diff=split#diff-58417e0f781b6656949d37258c8b9052ed266e2eb7a5163cad7b0863e6b2916aL-1",
+                    "lines": [
+                      {
+                        "line": "height: 768,\n",
+                        "lineNumber": 8,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "webPreferences: {\n",
+                        "lineNumber": 9,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\twebSecurity: false,\n",
+                        "lineNumber": 10,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\tnodeIntegration: false\n",
+                        "lineNumber": 11,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "}\n",
+                        "lineNumber": 12,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "height: 768\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/zegoim/zego-electron-quick-start/commit/952a2c4ab54f7b0cae86b2e56b44ba59370d7df6?diff=split#diff-58417e0f781b6656949d37258c8b9052ed266e2eb7a5163cad7b0863e6b2916aL-1",
+                    "lines": [
+                      {
+                        "line": "  mainWindow = new BrowserWindow({width: 800, height: 600,webPreferences: {\n",
+                        "lineNumber": 12,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    nodeIntegration: true\n",
+                        "lineNumber": 13,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "  }})\n",
+                        "lineNumber": 14,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "  mainWindow = new BrowserWindow({width: 800, height: 600})\n",
+                        "lineNumber": 12,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 13,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 54,
+                "cwe": [
+                  "CWE-16"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "javascript/ElectronInsecureWebPreferences",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Do not disable sandbox. Enabling this feature is highly recommended (especially when content from untrusted sources is loaded), because it introduces an additional layer of security by creating a browser window in a sandboxed renderer.",
+            "markdown": "Do not {0} {1}. Enabling this feature is highly recommended (especially when content from untrusted sources is loaded), because it introduces an additional layer of security by creating a browser window in a sandboxed renderer.",
+            "arguments": [
+              "[disable](0)",
+              "[sandbox](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "crates/taker-electron/src/main/main.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 91,
+                  "endLine": 91,
+                  "startColumn": 13,
+                  "endColumn": 20
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "5b009d58a93886770dc32ebf853f2e3dc002f8b499e57dc36669dd162a4d440c",
+            "1": "ca516799.3f481afb.673eb66b.59162423.79a7d027.fcf3002d.3179d742.ed6c04de.ca516799.2b412864.aea1808d.59162423.79a7d027.78cbe258.3179d742.6f69d9f1"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "crates/taker-electron/src/main/main.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 91,
+                            "endLine": 91,
+                            "startColumn": 13,
+                            "endColumn": 20
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "crates/taker-electron/src/main/main.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 91,
+                            "endLine": 91,
+                            "startColumn": 13,
+                            "endColumn": 20
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 600,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "EJS",
+            "files": 1,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "HTML",
+            "files": 2,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "JavaScript",
+            "files": 11,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "TypeScript",
+            "files": 73,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

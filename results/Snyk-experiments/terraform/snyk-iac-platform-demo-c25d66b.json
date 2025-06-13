@@ -1,0 +1,662 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/archive/eks.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/archive/eks.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-94",
+        "title": "EKS cluster allows public access",
+        "severity": "high",
+        "isIgnored": false,
+        "subType": "EKS",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-94",
+        "isGeneratedByCustomRule": false,
+        "issue": "API endpoint of the EKS cluster is public",
+        "impact": "Anyone may be able to establish network connectivity to the API server",
+        "resolve": "Set `vpc_config.public_access_cidrs` attribute to specific net address e.g. `192.168.0.0/24`, or set `vpc_config.endpoint_public_access` attribute to `false`",
+        "remediation": {
+          "terraform": "Set `vpc_config.public_access_cidrs` attribute to specific net address e.g. `192.168.0.0/24`, or set `vpc_config.endpoint_public_access` attribute to `false`"
+        },
+        "lineNumber": 1,
+        "iacDescription": {
+          "issue": "API endpoint of the EKS cluster is public",
+          "impact": "Anyone may be able to establish network connectivity to the API server",
+          "resolve": "Set `vpc_config.public_access_cidrs` attribute to specific net address e.g. `192.168.0.0/24`, or set `vpc_config.endpoint_public_access` attribute to `false`"
+        },
+        "publicId": "SNYK-CC-TF-94",
+        "msg": "resource.aws_eks_cluster[this].vpc_config[0]",
+        "references": [
+          "https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html"
+        ],
+        "path": [
+          "resource",
+          "aws_eks_cluster[this]",
+          "vpc_config[0]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-131",
+        "title": "EKS control plane logging insufficient",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "EKS",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-131",
+        "isGeneratedByCustomRule": false,
+        "issue": "Amazon EKS control plane logging is not enabled for all log types",
+        "impact": "Audit records may not be available during investigation",
+        "resolve": "Set `enabled_cluster_log_types` attribute to `['api', 'audit', 'authenticator', 'controllerManager', 'scheduler' ]`",
+        "remediation": {
+          "terraform": "Set `enabled_cluster_log_types` attribute to `['api', 'audit', 'authenticator', 'controllerManager', 'scheduler' ]`"
+        },
+        "lineNumber": 1,
+        "iacDescription": {
+          "issue": "Amazon EKS control plane logging is not enabled for all log types",
+          "impact": "Audit records may not be available during investigation",
+          "resolve": "Set `enabled_cluster_log_types` attribute to `['api', 'audit', 'authenticator', 'controllerManager', 'scheduler' ]`"
+        },
+        "publicId": "SNYK-CC-TF-131",
+        "msg": "resource.aws_eks_cluster[this].enabled_cluster_log_types",
+        "references": [
+          "https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html"
+        ],
+        "path": [
+          "resource",
+          "aws_eks_cluster[this]",
+          "enabled_cluster_log_types"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-107",
+        "title": "EKS cluster has non-encrypted secrets at rest",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "EKS",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-107",
+        "isGeneratedByCustomRule": false,
+        "issue": "EKS cluster secrets are not encrypted",
+        "impact": "That should someone gain unauthorized access to the data they would be able to read the contents.",
+        "resolve": "Set the `encryption_config` object with the relevant `provider` & `resources`.",
+        "remediation": {
+          "cloudformation": "Set the `Properties.EncryptionConfig` object with the relevant `provider` & `resources`.",
+          "terraform": "Set the `encryption_config` object with the relevant `provider` & `resources`."
+        },
+        "lineNumber": 1,
+        "iacDescription": {
+          "issue": "EKS cluster secrets are not encrypted",
+          "impact": "That should someone gain unauthorized access to the data they would be able to read the contents.",
+          "resolve": "Set the `encryption_config` object with the relevant `provider` & `resources`."
+        },
+        "publicId": "SNYK-CC-TF-107",
+        "msg": "resource.aws_eks_cluster[this].encryption_config",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_cluster#encryption_config",
+          "https://aws.amazon.com/blogs/containers/using-eks-encryption-provider-support-for-defense-in-depth/"
+        ],
+        "path": [
+          "resource",
+          "aws_eks_cluster[this]",
+          "encryption_config"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/archive/iam.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/archive/iam.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/archive/nodes.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/archive/nodes.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/environments/prd/backend.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/environments/prd/backend.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/environments/prd/main.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/environments/prd/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/environments/prd/provider.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/environments/prd/provider.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/environments/prd/variables.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/environments/prd/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/modules/eks/eks.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/modules/eks/eks.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/modules/eks/iam.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/modules/eks/iam.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/modules/eks/main.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/modules/eks/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/modules/eks/outputs.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/modules/eks/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/modules/eks/variables.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/modules/eks/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/modules/eks/vpc.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/modules/eks/vpc.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/modules/vpc/main.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/modules/vpc/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/modules/vpc/outputs.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/modules/vpc/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/modules/vpc/variables.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/modules/vpc/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "aws/terraform/modules/vpc/vpc.tf",
+    "projectName": "platform-demo",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/platform-demo/aws/terraform/modules/vpc/vpc.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/platform-demo",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AWS-427",
+        "title": "Public IPs are automatically mapped to instances",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-427",
+        "isGeneratedByCustomRule": false,
+        "issue": "Instances launched in this subnet will automatically have public IP assigned",
+        "impact": "Instances will be potentially accessible over public internet, which may lead to unauthorized access",
+        "resolve": "Set `map_public_ip_on_launch` attribute  with value `false`",
+        "remediation": {
+          "cloudformation": "Set `Properties.MapPublicIpOnLaunch` attribute with value `false`",
+          "terraform": "Set `map_public_ip_on_launch` attribute  with value `false`"
+        },
+        "lineNumber": 26,
+        "iacDescription": {
+          "issue": "Instances launched in this subnet will automatically have public IP assigned",
+          "impact": "Instances will be potentially accessible over public internet, which may lead to unauthorized access",
+          "resolve": "Set `map_public_ip_on_launch` attribute  with value `false`"
+        },
+        "publicId": "SNYK-CC-AWS-427",
+        "msg": "resource.aws_subnet[public].map_public_ip_on_launch",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html"
+        ],
+        "path": [
+          "resource",
+          "aws_subnet[public]",
+          "map_public_ip_on_launch"
+        ],
+        "compliance": []
+      }
+    ]
+  }
+]

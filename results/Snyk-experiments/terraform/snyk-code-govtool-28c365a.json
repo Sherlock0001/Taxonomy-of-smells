@@ -1,0 +1,1441 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "python/Ssrf",
+              "name": "Ssrf",
+              "shortDescription": {
+                "text": "Server-Side Request Forgery (SSRF)"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "\n## Details\nIn a server-side request forgery attack, a malicious user supplies a URL (an external URL or a network IP address such as 127.0.0.1) to the application's back end. The server then accesses the URL and shares its results, which may include sensitive information such as AWS metadata, internal configuration information, or database contents with the attacker. Because the request comes from the back end, it bypasses access controls, potentially exposing information the user does not have sufficient privileges to receive. The attacker can then exploit this information to gain access, modify the web application, or demand a ransom payment.\n\n## Best practices for prevention\n* Blacklists are problematic and attackers have numerous ways to bypass them; ideally, use a whitelist of all permitted domains and IP addresses.\n* Use authentication even within your own network to prevent exploitation of server-side requests.\n* Implement zero trust and sanitize and validate all URL and header data returning to the server from the user. Strip invalid or suspect characters, then inspect to be certain it contains a valid and expected value.\n* Ideally, avoid sending server requests based on user-provided data altogether.\n* Ensure that you are not sending raw response bodies from the server directly to the client. Only deliver expected responses.\n* Disable suspect and exploitable URL schemas. Common culprits include obscure and little-used schemas such as `file://`, `dict://`, `ftp://`, and `gopher://`.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "python",
+                  "Ssrf",
+                  "Security",
+                  "SourceServer",
+                  "SourceHttpHeader",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/agarwalsarthak121/web_crawlers/commit/ec945146d7940616dd9cf0842fa9f2fece3fc631?diff=split#diff-ff0a9820bf755219012ee637ff7c2d2b93c0dbe12ca3c5236adcfa9c6738d23fL-1",
+                    "lines": [
+                      {
+                        "line": "import requests,os\n",
+                        "lineNumber": 2,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "from bs4 import BeautifulSoup\n",
+                        "lineNumber": 3,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 4,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "search = input('Enter tutorial name: ')\n",
+                        "lineNumber": 5,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "url = 'http://www.tutorialspoint.com/tutorialslibrary.htm'\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "sc = requests.get(url)\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "soup = BeautifulSoup(sc.text,'html5lib')\n",
+                        "lineNumber": 8,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "ul = soup.findAll('ul',class_='menu')\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "links = []\n",
+                        "lineNumber": 10,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "for i in range(len(ul)):\n",
+                        "lineNumber": 11,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tlinks = links + ul[i].find_all('li')\n",
+                        "lineNumber": 12,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 13,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "url = input('Enter url of the tutorial to download: ')\n",
+                        "lineNumber": 6,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "name = input('Create new folder: ')\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "os.makedirs(name,exist_ok=True)\n",
+                        "lineNumber": 20,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "res = requests.get(url)\n",
+                        "lineNumber": 21,
+                        "lineChange": "none"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/ARM-software/vulkan_best_practice_for_mobile_developers/commit/23ad832af741f0354949a72e6c6f799eb9d2bace?diff=split#diff-7efee2ee97af01f846ed5818e84c955c51bd8efe06588e0dfa341c68966d945fL-1",
+                    "lines": [
+                      {
+                        "line": "    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter, description=\"Downloads and unpacks assets\")\n",
+                        "lineNumber": 31,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    parser.add_argument(\"zip_url\", action=\"store\", type=str, help=\"URL of the assets package\")\n",
+                        "lineNumber": 32,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    args = parser.parse_args()\n",
+                        "lineNumber": 33,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    url = \"https://github.com/ARM-software/vulkan_best_practice_for_mobile_developers/releases/download/v1.1.2/scenes.zip\"\n",
+                        "lineNumber": 31,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 34,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    try:\n",
+                        "lineNumber": 35,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        request = requests.get(args.zip_url, stream=True)\n",
+                        "lineNumber": 36,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        request = requests.get(url, stream=True)\n",
+                        "lineNumber": 34,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/ProjectQ-Framework/ProjectQ/commit/?diff=split#diff-64620288bd5b575a5abdb0d0c3f96185edc04d629e3772f51cf8eedd9b836b73L-1",
+                    "lines": [
+                      {
+                        "line": "r = requests.post(urljoin(_api_url, suffix),\n",
+                        "lineNumber": 117,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "r = requests.post(_api_url + suffix,\n",
+                        "lineNumber": 117,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 26,
+                "cwe": [
+                  "CWE-918"
+                ]
+              }
+            },
+            {
+              "id": "javascript/DisablePoweredBy/test",
+              "name": "DisablePoweredBy/test",
+              "shortDescription": {
+                "text": "Information Exposure"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "help": {
+                "markdown": "## Details\n\nSensitive data includes: personally identifiable information (PII) of employees, customers, users, or other third parties; financial information; code; intellectual property; or protected network information such as passwords. Exposure of sensitive information to an unauthorized actor occurs when any party who does not require this information for business purposes can remove this information from the secure network.\nConsequences of exposure can include holding it for ransom payment, identity theft, or access to other internal network resources-along with financial loss due to regulatory fines, court settlements, or cost to restore compromised systems. As most attackers aim to extract sensitive information, this CWE only describes exploits that take advantage of vulnerabilities related to how data is handled: the management, storage, transfer, or removal of sensitive information.\n\n## Best practices for prevention\n- Encrypt data at all times, whether in transit or at rest.\n- When transporting data, always use a secure protocol such as TLS.\n- Before collecting PII or financial information, consider whether there is a true business need for this information; similarly, before storing the data, ensure that there is an ongoing business need.\n- Classify all incoming data according to privacy and security guidelines to improve awareness of sensitive data.\n- Ensure that caching is disabled for all transactions involving sensitive information.\n- Store passwords with secure, salted hashing functions.\n- Apply a network-wide least-privilege policy so sensitive data is provided only to users with business need to know.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "DisablePoweredBy",
+                  "Security",
+                  "InTest"
+                ],
+                "categories": [
+                  "Security",
+                  "InTest"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/lucasweng/yelp-camp/commit/f4e907734aea3ec98000d61f5d49c729a95cb77c?diff=split#diff-e07d531ac040ce3f40e0ce632ac2a059d7cd60f20e61f78268ac3be015b3b28fL-1",
+                    "lines": [
+                      {
+                        "line": "      app            = express(),\n",
+                        "lineNumber": 1,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      bodyParser     = require(\"body-parser\"),\n",
+                        "lineNumber": 2,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      mongoose       = require(\"mongoose\"),\n",
+                        "lineNumber": 3,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      helmet         = require(\"helmet\"),\n",
+                        "lineNumber": 4,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "      flash          = require(\"connect-flash\"),\n",
+                        "lineNumber": 5,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      session        = require(\"express-session\"),\n",
+                        "lineNumber": 6,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      moment         = require(\"moment\"),\n",
+                        "lineNumber": 7,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      passport       = require(\"passport\"),\n",
+                        "lineNumber": 8,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      LocalStrategy  = require(\"passport-local\"),\n",
+                        "lineNumber": 9,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      methodOverride = require(\"method-override\"),\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      User           = require(\"./models/user\");\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 12,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "// requiring routes     \n",
+                        "lineNumber": 13,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "const indexRoute      = require(\"./routes/index\"),\n",
+                        "lineNumber": 14,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      campgroundRoute = require(\"./routes/campgrounds\"),\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      commentRoute    = require(\"./routes/comments\"),\n",
+                        "lineNumber": 16,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      userRoute       = require(\"./routes/user\"),\n",
+                        "lineNumber": 17,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      passwordRoute   = require(\"./routes/password\");\n",
+                        "lineNumber": 18,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "// connect to the DB\n",
+                        "lineNumber": 20,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "let url = process.env.DATABASEURL || \"mongodb://localhost/yelp_camp_v13\"; // fallback in case global var not working\n",
+                        "lineNumber": 21,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "mongoose.connect(url, {useMongoClient: true});\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.set(\"view engine\", \"ejs\");\n",
+                        "lineNumber": 24,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.use(helmet());\n",
+                        "lineNumber": 25,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/infor-design/enterprise/commit/20888f176d6bccc41b009a54b2d47a2b29845db3?diff=split#diff-322f0482bd28fc40f84fcb0aaf208fef7fb63082d462cf02d11f46e59c531c24L-1",
+                    "lines": [
+                      {
+                        "line": "const app = express();\n",
+                        "lineNumber": 9,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "const BASE_PATH = process.env.BASEPATH || '/';\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "const packageJSON = getJSONFile('../../../package.json');\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 12,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.set('view engine', 'html');\n",
+                        "lineNumber": 13,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.set('views', path.resolve(__dirname, 'views'));\n",
+                        "lineNumber": 14,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.set('basepath', BASE_PATH);\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.disable('x-powered-by');\n",
+                        "lineNumber": 16,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/galtenberg/evernote-random/commit/32109271055df8a60bf4dafe289b717dbb950305?diff=split#diff-bcb729747c92e72c12e4590f736a334041a572c429756da8af60b6ab89c6be79L-1",
+                    "lines": [
+                      {
+                        "line": "const csp = require('helmet-csp')\n",
+                        "lineNumber": 5,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 6,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "const app = express()\n",
+                        "lineNumber": 7,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 8,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.use(morgan(':remote-addr - :remote-user [:date[clf]] \":method :url HTTP/:http-version\" :status :res[content-length] :response-time ms'));\n",
+                        "lineNumber": 9,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "// parse application/x-www-form-urlencoded\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.use(bodyParser.urlencoded({ extended: false }))\n",
+                        "lineNumber": 12,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "// json parser\n",
+                        "lineNumber": 13,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.use(bodyParser.json())\n",
+                        "lineNumber": 14,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "// Serve static assets\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.use(express.static(path.resolve(__dirname, '..', 'build')))\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 17,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "// Re-enable on glitch.com\n",
+                        "lineNumber": 18,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "// Always return the main index.html, so react-router render the route in the client\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "//app.get('*', (req, res) => {\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  //res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));\n",
+                        "lineNumber": 21,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "//})\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.use(cookieSession({\n",
+                        "lineNumber": 24,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  name: 'evernoteSolitaire',\n",
+                        "lineNumber": 25,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  secret: 'evernote-sandbox-secret',\n",
+                        "lineNumber": 26,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  maxAge: 30 * 24 * 60 * 60 * 1000 // 1 month\n",
+                        "lineNumber": 27,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "}))\n",
+                        "lineNumber": 28,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 29,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "//require('./api/experiment')(app)\n",
+                        "lineNumber": 29,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "require('./api/auth')(app)\n",
+                        "lineNumber": 30,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "require('./api/notes')(app)\n",
+                        "lineNumber": 31,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 32,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "const PORT = process.env.PORT || 8000\n",
+                        "lineNumber": 33,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "app.use(bodyParser.json({\n",
+                        "lineNumber": 33,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  type: ['json', 'application/csp-report']\n",
+                        "lineNumber": 34,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "}))\n",
+                        "lineNumber": 35,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 36,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "app.post('/report-violation', function (req, res) {\n",
+                        "lineNumber": 37,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  if (req.body) {\n",
+                        "lineNumber": 38,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    console.log('CSP Violation: ', req.body)\n",
+                        "lineNumber": 39,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  } else {\n",
+                        "lineNumber": 40,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    console.log('CSP Violation: No data received!')\n",
+                        "lineNumber": 41,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  }\n",
+                        "lineNumber": 42,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  res.status(204).end()\n",
+                        "lineNumber": 43,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "})\n",
+                        "lineNumber": 44,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 45,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "const PORT = 8000 //process.env.PORT || 8000\n",
+                        "lineNumber": 46,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 47,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "app.use(csp({\n",
+                        "lineNumber": 48,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  directives: {\n",
+                        "lineNumber": 49,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    defaultSrc: [\"'self'\"],\n",
+                        "lineNumber": 50,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    scriptSrc: [\"'unsafe-inline'\"],\n",
+                        "lineNumber": 51,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    styleSrc: [\"'unsafe-inline'\"],\n",
+                        "lineNumber": 52,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    reportUri: '/report-violation',\n",
+                        "lineNumber": 53,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    upgradeInsecureRequests: true\n",
+                        "lineNumber": 54,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  },\n",
+                        "lineNumber": 55,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  reportOnly: false,\n",
+                        "lineNumber": 56,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  loose: true,\n",
+                        "lineNumber": 57,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  setAllHeaders: true,\n",
+                        "lineNumber": 58,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  browserSniff: false\n",
+                        "lineNumber": 59,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "}))\n",
+                        "lineNumber": 60,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 416,
+                "cwe": [
+                  "CWE-200"
+                ]
+              }
+            },
+            {
+              "id": "javascript/HardcodedNonCryptoSecret/test",
+              "name": "HardcodedNonCryptoSecret/test",
+              "shortDescription": {
+                "text": "Hardcoded Secret"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "help": {
+                "markdown": "## Details\n\nWhen constants are hardcoded into applications, this information could easily be reverse-engineered and become known to attackers. For example, if a breached authentication token is hardcoded in multiple places in the application, it may lead to components of the application remaining vulnerable if not all instances are changed.\nAnother negative effect of hard-coding constants is potential unpredictability in the application's performance if the development team fails to update every single instance of the hardcoded constant throughout the code. For these reasons, hard-coding security-relevant constants is considered bad coding practice and should be remedied if present and avoided in future.\n\n## Best practices for prevention\n- Never hard code security-related constants; use symbolic names or configuration lookup files.\n- As hard coding is often done by coders working alone on a small scale, examine all legacy code components and test carefully when scaling.\n- Adopt a \"future-proof code\" mindset: While use of constants may save a little time now and make development simpler in the short term, it could cost time and money adapting to scale or other unforeseen circumstances (such as new hardware) in the future.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "HardcodedNonCryptoSecret",
+                  "Security",
+                  "InTest"
+                ],
+                "categories": [
+                  "Security",
+                  "InTest"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/markstock7/FileManager/commit/50572778825dea6b6fdb34c9ae950d9915743e4c?diff=split#diff-408990876524f4737b49693cedc52fd267e31f665d0a7f71792dcb986d6a8268L-1",
+                    "lines": [
+                      {
+                        "line": "accessKeyId: 'pT3KujnBPxc0ey7G',\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "secretAccessKey: 'CcHjh2y7tIFljxgUT4U8sQLctkMBHu',\n",
+                        "lineNumber": 2,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "accessKeyId: '',\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "secretAccessKey: '',\n",
+                        "lineNumber": 2,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/leohmoraes/rocketseat-02/commit/69e888ed7c779a0fbb0d0c08a219afa11b3913bd?diff=split#diff-04122576a4101a4ed68c79faa4f4605c44d8fd93252cff9e64ba66ab9c561e86L-1",
+                    "lines": [
+                      {
+                        "line": "secret: '9dffij39asf23nsfnsvsdsa',\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "secret: process.env.APP_SECRET,\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/rodrigotamura/go-stack-2019/commit/26e020dfc2272fe76c82c28d86f492c3c84a94c5?diff=split#diff-92f76c0bccc1f970244da3b50449f200d4787cf60a87be14ff4f250d0ba1a590L-1",
+                    "lines": [
+                      {
+                        "line": "secret: '632ca4dfc8b2269e6fdf03ab5a55d2ec',\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "secret: process.env.APP_SECRET,\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 100,
+                "cwe": [
+                  "CWE-547"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "python/Ssrf",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from an HTTP header flows into requests.get, where it is used as an URL to perform a request. This may result in a Server Side Request Forgery vulnerability.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as an URL to perform a request. This may result in a Server Side Request Forgery vulnerability.",
+            "arguments": [
+              "[an HTTP header](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8),(9)",
+              "[requests.get](10)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "govtool/status-service/app.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 19,
+                  "endLine": 19,
+                  "startColumn": 11,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "5c0d7bb1be28d25a1908d32cc96ab6c8ffdc5a0e41c3e502f8ddddd5390beef7",
+            "1": "b0297d86.fdbdd04f.ef7ad415.139c59a8.19bf6b5e.ba14daf2.7314bc9d.4201a018.863d1c43.fdbdd04f.7be166b0.139c59a8.19bf6b5e.ba14daf2.cc914b1e.6aac30d8"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "govtool/status-service/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 22,
+                            "endColumn": 37
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "govtool/status-service/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 22,
+                            "endColumn": 37
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "govtool/status-service/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 22,
+                            "endColumn": 45
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "govtool/status-service/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 26,
+                            "endLine": 26,
+                            "startColumn": 32,
+                            "endColumn": 46
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "govtool/status-service/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 26,
+                            "endLine": 26,
+                            "startColumn": 19,
+                            "endColumn": 46
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "govtool/status-service/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 26,
+                            "endLine": 26,
+                            "startColumn": 19,
+                            "endColumn": 59
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "govtool/status-service/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "endLine": 28,
+                            "startColumn": 50,
+                            "endColumn": 61
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "govtool/status-service/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 17,
+                            "endLine": 17,
+                            "startColumn": 31,
+                            "endColumn": 42
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "govtool/status-service/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 19,
+                            "endLine": 19,
+                            "startColumn": 24,
+                            "endColumn": 35
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "govtool/status-service/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 19,
+                            "endLine": 19,
+                            "startColumn": 24,
+                            "endColumn": 52
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 10,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "govtool/status-service/app.py",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 19,
+                            "endLine": 19,
+                            "startColumn": 11,
+                            "endColumn": 23
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 520,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "javascript/DisablePoweredBy/test",
+          "ruleIndex": 1,
+          "level": "note",
+          "message": {
+            "text": "Disable X-Powered-By header for your Express app (consider using Helmet middleware), because it exposes information about the used framework to potential attackers.",
+            "markdown": "Disable X-Powered-By header for your {0} (consider using Helmet middleware), because it exposes information about the used framework to potential attackers.",
+            "arguments": [
+              "[Express app](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "tests/test-metrics-api/src/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 5,
+                  "endLine": 5,
+                  "startColumn": 22,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "0d5f54c5bb3aaf6a76bbb12e825d8e3d0884676f50cf9f0d36d22a54570cef21",
+            "1": "ae77ea27.883ce888.8b18f948.d7919eeb.ac82cb7b.5fce695c.ea4b1c47.89d75565.ae77ea27.da40fe0b.aa4dda5f.d7919eeb.79a7d027.5fce695c.60d372c8.ac1a49e7"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tests/test-metrics-api/src/index.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "endLine": 5,
+                            "startColumn": 22,
+                            "endColumn": 29
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 370,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret/test",
+          "ruleIndex": 2,
+          "level": "note",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "tests/govtool-frontend/cypress.config.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 16,
+                  "endLine": 16,
+                  "startColumn": 5,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "bea21f2e77a408517fef85736e477d29b369a5a14540a037e7ced153112f4875",
+            "1": "b14e6c52.7d8d7fe0.409e48d9.e052b9a9.79a7d027.fcf3002d.5b33117e.01193da6.565fcb8f.b9fac588.673eb66b.59162423.79a7d027.6bc315e9.5b33117e.636642a6"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tests/govtool-frontend/cypress.config.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 16,
+                            "endLine": 16,
+                            "startColumn": 23,
+                            "endColumn": 45
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tests/govtool-frontend/cypress.config.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 16,
+                            "endLine": 16,
+                            "startColumn": 5,
+                            "endColumn": 21
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 460,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret/test",
+          "ruleIndex": 2,
+          "level": "note",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "tests/govtool-frontend/cypress.config.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 18,
+                  "endLine": 18,
+                  "startColumn": 5,
+                  "endColumn": 16
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "8369f7cc491f992f8fd47ab8f1e0d56dcaee7d2da002546bcb4179e184e1cbbb",
+            "1": "17e525db.b9fac588.8fe97995.e052b9a9.79a7d027.fcf3002d.cb72ac62.ac9d0bd9.565fcb8f.b9fac588.673eb66b.59162423.79a7d027.6bc315e9.5b33117e.636642a6"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tests/govtool-frontend/cypress.config.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 18,
+                            "endLine": 18,
+                            "startColumn": 18,
+                            "endColumn": 34
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tests/govtool-frontend/cypress.config.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 18,
+                            "endLine": 18,
+                            "startColumn": 5,
+                            "endColumn": 16
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 460,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret/test",
+          "ruleIndex": 2,
+          "level": "note",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "tests/govtool-frontend/cypress/lib/wallet/blockfrost.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 3,
+                  "endLine": 3,
+                  "startColumn": 3,
+                  "endColumn": 9
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "d2d7330f035b6ec68b67a57af6d06b48bb2164c1620d8656db723711867713a6",
+            "1": "9ae1b186.93dc32e3.2c8e1c15.f18cd428.79a7d027.8020cfdf.7a8c7288.e0f43150.ae77ea27.93dc32e3.8b18f948.f18cd428.79a7d027.6bc315e9.b92be27a.ee930194"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tests/govtool-frontend/cypress/lib/wallet/blockfrost.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 3,
+                            "endLine": 3,
+                            "startColumn": 11,
+                            "endColumn": 44
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "tests/govtool-frontend/cypress/lib/wallet/blockfrost.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 3,
+                            "endLine": 3,
+                            "startColumn": 3,
+                            "endColumn": 9
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 410,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "HTML",
+            "files": 3,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Java",
+            "files": 14,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "JavaScript",
+            "files": 2,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Python",
+            "files": 22,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "TypeScript",
+            "files": 265,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Vue",
+            "files": 4,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "XML",
+            "files": 2,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/arm64/ampere/emag/bus.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/arm64/ampere/emag/cache.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/arm64/ampere/emag/clock.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/arm64/ampere/emag/exception.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/arm64/ampere/emag/instruction.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/arm64/ampere/emag/memory.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/arm64/arm/cortex-a76-n1/branch.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/arm64/arm/cortex-a76-n1/bus.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/arm64/arm/cortex-a76-n1/cache.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/arm64/arm/cortex-a76-n1/exception.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/arm64/arm/cortex-a76-n1/instruction.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/arm64/arm/cortex-a76-n1/memory.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/arm64/arm/cortex-a76-n1/other.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/arm64/arm/cortex-a76-n1/pipeline.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/arm64/hisilicon/hip08/metrics.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/nds32/n13/atcpmu.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_z10/basic.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_z10/crypto.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_z10/extended.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_z13/basic.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_z13/crypto.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_z13/extended.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_z14/basic.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_z14/crypto.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_z14/extended.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_z15/basic.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_z15/crypto.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_z15/crypto6.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_z15/extended.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_z196/basic.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_z196/crypto.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_z196/extended.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_zec12/basic.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_zec12/crypto.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/s390/cf_zec12/extended.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/test/test_soc/cpu/uncore.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/test/test_soc/sys/uncore.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/salt/fuxi/tools/perf/pmu-events/arch/x86/icelakex/icx-metrics.json"
+  }
+]

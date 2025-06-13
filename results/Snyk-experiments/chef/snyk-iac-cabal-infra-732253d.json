@@ -1,0 +1,3045 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/dns/main.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/dns/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-124",
+        "title": "S3 bucket versioning disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-124",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket versioning is disabled",
+        "impact": "Changes or deletion of objects will not be reversible",
+        "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.VersioningConfiguration.Status` attribute to `Enabled`",
+          "terraform": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "lineNumber": 45,
+        "iacDescription": {
+          "issue": "S3 bucket versioning is disabled",
+          "impact": "Changes or deletion of objects will not be reversible",
+          "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "publicId": "SNYK-CC-TF-124",
+        "msg": "resource.aws_s3_bucket[this].versioning.enabled",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[this]",
+          "versioning",
+          "enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-45",
+        "title": "S3 server access logging is disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-45",
+        "isGeneratedByCustomRule": false,
+        "issue": "The s3 access logs will not be collected",
+        "impact": "There will be no audit trail of access to s3 objects",
+        "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.LoggingConfiguration` attribute",
+          "terraform": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "lineNumber": 45,
+        "iacDescription": {
+          "issue": "The s3 access logs will not be collected",
+          "impact": "There will be no audit trail of access to s3 objects",
+          "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "publicId": "SNYK-CC-TF-45",
+        "msg": "input.resource.aws_s3_bucket[this].logging",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html"
+        ],
+        "path": [
+          "input",
+          "resource",
+          "aws_s3_bucket[this]",
+          "logging"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-127",
+        "title": "S3 bucket MFA delete control disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-127",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket will not enforce MFA login on delete requests",
+        "impact": "Object could be deleted without stronger MFA authorization",
+        "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file",
+        "remediation": {
+          "terraform": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "lineNumber": 45,
+        "iacDescription": {
+          "issue": "S3 bucket will not enforce MFA login on delete requests",
+          "impact": "Object could be deleted without stronger MFA authorization",
+          "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "publicId": "SNYK-CC-TF-127",
+        "msg": "resource.aws_s3_bucket[this].versioning.mfa_delete",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMFADelete.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[this]",
+          "versioning",
+          "mfa_delete"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/dns/outputs.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/dns/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/dns/variables.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/dns/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/dns/versions.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/dns/versions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/main.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/outputs.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/variables.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/versions.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/versions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/app/cloudfront.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/app/cloudfront.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-75",
+        "title": "Cloudfront distribution without WAF",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "CloudFront",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-75",
+        "isGeneratedByCustomRule": false,
+        "issue": "The AWS WAF is not in front of cloudfront distribution",
+        "impact": "The WAF service will not protect the application from common web based attacks such as SQL injections",
+        "resolve": "Set `web_acl_id` attribute to existing AWS WAF acl ARN",
+        "remediation": {
+          "cloudformation": "Set `Properties.DistributionConfig.WebACLId` attribute to existing AWS WAF acl ARN",
+          "terraform": "Set `web_acl_id` attribute to existing AWS WAF acl ARN"
+        },
+        "lineNumber": 3,
+        "iacDescription": {
+          "issue": "The AWS WAF is not in front of cloudfront distribution",
+          "impact": "The WAF service will not protect the application from common web based attacks such as SQL injections",
+          "resolve": "Set `web_acl_id` attribute to existing AWS WAF acl ARN"
+        },
+        "publicId": "SNYK-CC-TF-75",
+        "msg": "resource.aws_cloudfront_distribution[cdn].web_acl_id",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-awswaf.html",
+          "https://docs.aws.amazon.com/waf/latest/developerguide/web-acl.html"
+        ],
+        "path": [
+          "resource",
+          "aws_cloudfront_distribution[cdn]",
+          "web_acl_id"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-142",
+        "title": "CloudFront access logging disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "CloudFront",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-142",
+        "isGeneratedByCustomRule": false,
+        "issue": "Amazon CloudFront distribution access logging is not enabled",
+        "impact": "Audit records may not be available during investigation",
+        "resolve": "Set `logging_config` attribute",
+        "remediation": {
+          "cloudformation": "Set `Properties.DistributionConfig.Logging` attribute",
+          "terraform": "Set `logging_config` attribute"
+        },
+        "lineNumber": 3,
+        "iacDescription": {
+          "issue": "Amazon CloudFront distribution access logging is not enabled",
+          "impact": "Audit records may not be available during investigation",
+          "resolve": "Set `logging_config` attribute"
+        },
+        "publicId": "SNYK-CC-TF-142",
+        "msg": "resource.aws_cloudfront_distribution[cdn].logging_config",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/logging_using_cloudtrail.html"
+        ],
+        "path": [
+          "resource",
+          "aws_cloudfront_distribution[cdn]",
+          "logging_config"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-58",
+        "title": "Distribution does not enforce latest TLS/SSL policy",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "CloudFront",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-58",
+        "isGeneratedByCustomRule": false,
+        "issue": "The cloudfront distribution will accept older TLS/SSL cipher suits",
+        "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+        "resolve": "Set `viewer_certificate.minimum_protocol_version` attribute to `TLSv1.2_2019`",
+        "remediation": {
+          "cloudformation": "Set `Properties.DistributionConfig.ViewerCertificate.MinimumProtocolVersion` attribute to `TLSv1.2_2019`",
+          "terraform": "Set `viewer_certificate.minimum_protocol_version` attribute to `TLSv1.2_2019`"
+        },
+        "lineNumber": 76,
+        "iacDescription": {
+          "issue": "The cloudfront distribution will accept older TLS/SSL cipher suits",
+          "impact": "Older cipher suites could be vulnerable to hijacking and information disclosure",
+          "resolve": "Set `viewer_certificate.minimum_protocol_version` attribute to `TLSv1.2_2019`"
+        },
+        "publicId": "SNYK-CC-TF-58",
+        "msg": "resource.aws_cloudfront_distribution[cdn].viewer_certificate.minimum_protocol_version",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValues-security-policy",
+          "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html"
+        ],
+        "path": [
+          "resource",
+          "aws_cloudfront_distribution[cdn]",
+          "viewer_certificate",
+          "minimum_protocol_version"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/app/global_dns.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/app/global_dns.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/app/locals.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/app/locals.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/app/main.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/app/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-129",
+        "title": "API Gateway X-Ray tracing disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "API Gateway (REST APIs)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-129",
+        "isGeneratedByCustomRule": false,
+        "issue": "X-Ray tracing is not enabled for this api gateway stage",
+        "impact": "Traces will not be collected for this api gateway, which can impede incident management",
+        "resolve": "Set `xray_tracing_enabled` attribute to `true`",
+        "remediation": {
+          "cloudformation": "Set `Properties.TracingEnabled` attribute to `true`",
+          "terraform": "Set `xray_tracing_enabled` attribute to `true`"
+        },
+        "lineNumber": 83,
+        "iacDescription": {
+          "issue": "X-Ray tracing is not enabled for this api gateway stage",
+          "impact": "Traces will not be collected for this api gateway, which can impede incident management",
+          "resolve": "Set `xray_tracing_enabled` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-129",
+        "msg": "resource.aws_api_gateway_stage[api_stage].xray_tracing_enabled",
+        "references": [
+          "https://docs.aws.amazon.com/xray/latest/devguide/xray-services-apigateway.html",
+          "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-enabling-xray.html",
+          "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-understanding-xray-traces.html"
+        ],
+        "path": [
+          "resource",
+          "aws_api_gateway_stage[api_stage]",
+          "xray_tracing_enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-138",
+        "title": "API Gateway access logging disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "API Gateway (REST APIs)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-138",
+        "isGeneratedByCustomRule": false,
+        "issue": "Amazon Api Gateway access logging is not enabled",
+        "impact": "Audit records may not be available during investigation",
+        "resolve": "Set `access_log_settings` attribute",
+        "remediation": {
+          "cloudformation": "Set `Properties.AccessLogSetting.DestinationArn` attribute",
+          "terraform": "Set `access_log_settings` attribute"
+        },
+        "lineNumber": 83,
+        "iacDescription": {
+          "issue": "Amazon Api Gateway access logging is not enabled",
+          "impact": "Audit records may not be available during investigation",
+          "resolve": "Set `access_log_settings` attribute"
+        },
+        "publicId": "SNYK-CC-TF-138",
+        "msg": "resource.aws_api_gateway_stage[api_stage].access_log_settings",
+        "references": [
+          "https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-logging.html"
+        ],
+        "path": [
+          "resource",
+          "aws_api_gateway_stage[api_stage]",
+          "access_log_settings"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/app/outputs.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/app/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/app/s3.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/app/s3.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-124",
+        "title": "S3 bucket versioning disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-124",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket versioning is disabled",
+        "impact": "Changes or deletion of objects will not be reversible",
+        "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.VersioningConfiguration.Status` attribute to `Enabled`",
+          "terraform": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "lineNumber": -1,
+        "iacDescription": {
+          "issue": "S3 bucket versioning is disabled",
+          "impact": "Changes or deletion of objects will not be reversible",
+          "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "publicId": "SNYK-CC-TF-124",
+        "msg": "resource.aws_s3_bucket[cache].versioning.enabled",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[cache]",
+          "versioning",
+          "enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-45",
+        "title": "S3 server access logging is disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-45",
+        "isGeneratedByCustomRule": false,
+        "issue": "The s3 access logs will not be collected",
+        "impact": "There will be no audit trail of access to s3 objects",
+        "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.LoggingConfiguration` attribute",
+          "terraform": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "lineNumber": -1,
+        "iacDescription": {
+          "issue": "The s3 access logs will not be collected",
+          "impact": "There will be no audit trail of access to s3 objects",
+          "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "publicId": "SNYK-CC-TF-45",
+        "msg": "input.resource.aws_s3_bucket[cache].logging",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html"
+        ],
+        "path": [
+          "input",
+          "resource",
+          "aws_s3_bucket[cache]",
+          "logging"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-127",
+        "title": "S3 bucket MFA delete control disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-127",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket will not enforce MFA login on delete requests",
+        "impact": "Object could be deleted without stronger MFA authorization",
+        "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file",
+        "remediation": {
+          "terraform": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "lineNumber": -1,
+        "iacDescription": {
+          "issue": "S3 bucket will not enforce MFA login on delete requests",
+          "impact": "Object could be deleted without stronger MFA authorization",
+          "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "publicId": "SNYK-CC-TF-127",
+        "msg": "resource.aws_s3_bucket[cache].versioning.mfa_delete",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMFADelete.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[cache]",
+          "versioning",
+          "mfa_delete"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/app/ssm.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/app/ssm.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/app/variables.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/app/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/app/versions.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/app/versions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/app/modules/call/lambda.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/app/modules/call/lambda.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-133",
+        "title": "X-ray tracing is disabled for Lambda function",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Lambda",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-133",
+        "isGeneratedByCustomRule": false,
+        "issue": "Amazon X-Ray tracing is not enabled for Lambda function",
+        "impact": "Trace logs will not be available during investigation",
+        "resolve": "Set `tracing_config.mode` attribute to `Active` or `PassThrough`",
+        "remediation": {
+          "cloudformation": "Set `Properties.TracingConfig.Mode` attribute to `Active` or `PassThrough`",
+          "terraform": "Set `tracing_config.mode` attribute to `Active` or `PassThrough`"
+        },
+        "lineNumber": -1,
+        "iacDescription": {
+          "issue": "Amazon X-Ray tracing is not enabled for Lambda function",
+          "impact": "Trace logs will not be available during investigation",
+          "resolve": "Set `tracing_config.mode` attribute to `Active` or `PassThrough`"
+        },
+        "publicId": "SNYK-CC-TF-133",
+        "msg": "resource.aws_lambda_function[api_call].tracing_config",
+        "references": [
+          "https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html"
+        ],
+        "path": [
+          "resource",
+          "aws_lambda_function[api_call]",
+          "tracing_config"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/app/modules/call/main.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/app/modules/call/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/app/modules/call/outputs.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/app/modules/call/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/app/modules/call/variables.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/app/modules/call/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/app/modules/call/versions.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/app/modules/call/versions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/asg/iam.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/asg/iam.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/asg/main.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/asg/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/asg/security_group.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/asg/security_group.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-72",
+        "title": "Rule allows open egress",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-72",
+        "isGeneratedByCustomRule": false,
+        "issue": "The security group rule allows open egress",
+        "impact": "Open egress can be used to exfiltrate data to unauthorized destinations, and enable access to potentially malicious resources",
+        "resolve": "Set `cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`",
+        "remediation": {
+          "cloudformation": "Set `Properties.SecurityGroupEgress.CidrIp` attribute to specific ranges e.g. `192.168.1.0/24`",
+          "terraform": "Set `cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 7,
+        "iacDescription": {
+          "issue": "The security group rule allows open egress",
+          "impact": "Open egress can be used to exfiltrate data to unauthorized destinations, and enable access to potentially malicious resources",
+          "resolve": "Set `cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-72",
+        "msg": "resource.aws_security_group_rule[allow_out]",
+        "references": [
+          "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html",
+          "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-best-practices.html",
+          "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html"
+        ],
+        "path": [
+          "resource",
+          "aws_security_group_rule[allow_out]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-37",
+        "title": "AWS Security Group Rule allows public access",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-37",
+        "isGeneratedByCustomRule": false,
+        "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+        "impact": "That potentially everyone can access your resource",
+        "resolve": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+        "remediation": {
+          "cloudformation": "Set `CidrIp` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+          "terraform": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 25,
+        "iacDescription": {
+          "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+          "impact": "That potentially everyone can access your resource",
+          "resolve": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-37",
+        "msg": "resource.aws_security_group_rule[allow_in_world].cidr_blocks",
+        "references": [],
+        "path": [
+          "resource",
+          "aws_security_group_rule[allow_in_world]",
+          "cidr_blocks"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/asg/variables.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/asg/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/asg/versions.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/asg/versions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/backup/main.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/backup/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/backup/variables.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/backup/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/backup/versions.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/backup/versions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/cert/acme.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/cert/acme.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/cert/main.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/cert/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/cert/outputs.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/cert/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/cert/variables.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/cert/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/cert/versions.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/cert/versions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/domains/main.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/domains/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/domains/outputs.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/domains/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/domains/variables.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/domains/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/domains/versions.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/domains/versions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/efs/main.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/efs/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/efs/outputs.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/efs/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/efs/variables.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/efs/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/efs/versions.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/efs/versions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/elb/dns.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/elb/dns.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/elb/imap.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/elb/imap.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/elb/main.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/elb/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-48",
+        "title": "Load balancer is internet facing",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Elastic Load Balancing",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-48",
+        "isGeneratedByCustomRule": false,
+        "issue": "Load balancer is internet facing",
+        "impact": "Increases attack vector reachability",
+        "resolve": "Set `internal` attribute to `true`",
+        "remediation": {
+          "cloudformation": "Set `Properties.Scheme` attribute to `internal`",
+          "terraform": "Set `internal` attribute to `true`"
+        },
+        "lineNumber": 7,
+        "iacDescription": {
+          "issue": "Load balancer is internet facing",
+          "impact": "Increases attack vector reachability",
+          "resolve": "Set `internal` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-48",
+        "msg": "resource.aws_lb[elb].internal",
+        "references": [
+          "https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-internet-facing-load-balancers.html"
+        ],
+        "path": [
+          "resource",
+          "aws_lb[elb]",
+          "internal"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/elb/outputs.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/elb/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/elb/relay.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/elb/relay.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/elb/submission.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/elb/submission.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/elb/variables.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/elb/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/elb/versions.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/elb/versions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/lambda_layers/locals.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/lambda_layers/locals.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/lambda_layers/main.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/lambda_layers/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/lambda_layers/outputs.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/lambda_layers/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/lambda_layers/variables.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/lambda_layers/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/s3/main.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/s3/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/s3/outputs.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/s3/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/s3/variables.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/s3/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/s3/versions.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/s3/versions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/table/main.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/table/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AWS-417",
+        "title": "DynamoDB not encrypted with customer managed key",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "DynamoDB",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-417",
+        "isGeneratedByCustomRule": false,
+        "issue": "DynamoDB table is not encrypted with customer managed KMS key",
+        "impact": "Scope of use of the key cannot be controlled via KMS/IAM policies",
+        "resolve": "Set `server_side_encryption.kms_key_arn` attribute to customer managed key ARN",
+        "remediation": {
+          "cloudformation": "Set `Properties.SSESpecification.SSEType` attribute to `KMS`, and `Properties.SSESpecification.KMSMasterKeyId` attribute to customer managed key ARN",
+          "terraform": "Set `server_side_encryption.kms_key_arn` attribute to customer managed key ARN"
+        },
+        "lineNumber": 15,
+        "iacDescription": {
+          "issue": "DynamoDB table is not encrypted with customer managed KMS key",
+          "impact": "Scope of use of the key cannot be controlled via KMS/IAM policies",
+          "resolve": "Set `server_side_encryption.kms_key_arn` attribute to customer managed key ARN"
+        },
+        "publicId": "SNYK-CC-AWS-417",
+        "msg": "resource.aws_dynamodb_table[addresses].server_side_encryption.kms_key_arn",
+        "references": [
+          "https://docs.aws.amazon.com/kms/latest/developerguide/services-dynamodb.html",
+          "https://docs.aws.amazon.com/whitepapers/latest/kms-best-practices/aws-managed-and-customer-managed-cmks.html"
+        ],
+        "path": [
+          "resource",
+          "aws_dynamodb_table[addresses]",
+          "server_side_encryption",
+          "kms_key_arn"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/table/outputs.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/table/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/table/versions.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/table/versions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/user_pool/dynamodb.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/user_pool/dynamodb.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-125",
+        "title": "DynamoDB point-in-time recovery disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "DynamoDB",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-125",
+        "isGeneratedByCustomRule": false,
+        "issue": "DynamoDB does not have Point-in-Time Recovery enabled",
+        "impact": "No automated backups of DynamoDB data",
+        "resolve": "Set `point_in_time_recovery.enabled` attribute to `true`",
+        "remediation": {
+          "cloudformation": "Set `Properties.PointInTimeRecoverySpecification.PointInTimeRecoveryEnabled` attribute to `true`",
+          "terraform": "Set `point_in_time_recovery.enabled` attribute to `true`"
+        },
+        "lineNumber": 5,
+        "iacDescription": {
+          "issue": "DynamoDB does not have Point-in-Time Recovery enabled",
+          "impact": "No automated backups of DynamoDB data",
+          "resolve": "Set `point_in_time_recovery.enabled` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-125",
+        "msg": "resource.aws_dynamodb_table[counter]",
+        "references": [
+          "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/PointInTimeRecovery_Howitworks.html",
+          "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dynamodb_table#point_in_time_recovery"
+        ],
+        "path": [
+          "resource",
+          "aws_dynamodb_table[counter]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AWS-417",
+        "title": "DynamoDB not encrypted with customer managed key",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "DynamoDB",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-417",
+        "isGeneratedByCustomRule": false,
+        "issue": "DynamoDB table is not encrypted with customer managed KMS key",
+        "impact": "Scope of use of the key cannot be controlled via KMS/IAM policies",
+        "resolve": "Set `server_side_encryption.kms_key_arn` attribute to customer managed key ARN",
+        "remediation": {
+          "cloudformation": "Set `Properties.SSESpecification.SSEType` attribute to `KMS`, and `Properties.SSESpecification.KMSMasterKeyId` attribute to customer managed key ARN",
+          "terraform": "Set `server_side_encryption.kms_key_arn` attribute to customer managed key ARN"
+        },
+        "lineNumber": 5,
+        "iacDescription": {
+          "issue": "DynamoDB table is not encrypted with customer managed KMS key",
+          "impact": "Scope of use of the key cannot be controlled via KMS/IAM policies",
+          "resolve": "Set `server_side_encryption.kms_key_arn` attribute to customer managed key ARN"
+        },
+        "publicId": "SNYK-CC-AWS-417",
+        "msg": "resource.aws_dynamodb_table[counter].server_side_encryption.kms_key_arn",
+        "references": [
+          "https://docs.aws.amazon.com/kms/latest/developerguide/services-dynamodb.html",
+          "https://docs.aws.amazon.com/whitepapers/latest/kms-best-practices/aws-managed-and-customer-managed-cmks.html"
+        ],
+        "path": [
+          "resource",
+          "aws_dynamodb_table[counter]",
+          "server_side_encryption",
+          "kms_key_arn"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/user_pool/iam.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/user_pool/iam.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/user_pool/main.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/user_pool/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AWS-451",
+        "title": "Cognito user pool without MFA",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cognito",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-451",
+        "isGeneratedByCustomRule": false,
+        "issue": "Cognito user pool does not require multi-factor authentication method",
+        "impact": "Single-factor authentication mechanisms such as passwords can be lost or compromised",
+        "resolve": "Set `mfa_configuration` attribute to `OFF`",
+        "remediation": {
+          "cloudformation": "Set `Properties.MfaConfiguration` attribute to `OFF`",
+          "terraform": "Set `mfa_configuration` attribute to `OFF`"
+        },
+        "lineNumber": 101,
+        "iacDescription": {
+          "issue": "Cognito user pool does not require multi-factor authentication method",
+          "impact": "Single-factor authentication mechanisms such as passwords can be lost or compromised",
+          "resolve": "Set `mfa_configuration` attribute to `OFF`"
+        },
+        "publicId": "SNYK-CC-AWS-451",
+        "msg": "resource.aws_cognito_user_pool[users].mfa_configuration",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_pool",
+          "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html"
+        ],
+        "path": [
+          "resource",
+          "aws_cognito_user_pool[users]",
+          "mfa_configuration"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-133",
+        "title": "X-ray tracing is disabled for Lambda function",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Lambda",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-133",
+        "isGeneratedByCustomRule": false,
+        "issue": "Amazon X-Ray tracing is not enabled for Lambda function",
+        "impact": "Trace logs will not be available during investigation",
+        "resolve": "Set `tracing_config.mode` attribute to `Active` or `PassThrough`",
+        "remediation": {
+          "cloudformation": "Set `Properties.TracingConfig.Mode` attribute to `Active` or `PassThrough`",
+          "terraform": "Set `tracing_config.mode` attribute to `Active` or `PassThrough`"
+        },
+        "lineNumber": 83,
+        "iacDescription": {
+          "issue": "Amazon X-Ray tracing is not enabled for Lambda function",
+          "impact": "Trace logs will not be available during investigation",
+          "resolve": "Set `tracing_config.mode` attribute to `Active` or `PassThrough`"
+        },
+        "publicId": "SNYK-CC-TF-133",
+        "msg": "resource.aws_lambda_function[assign_osid].tracing_config",
+        "references": [
+          "https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html"
+        ],
+        "path": [
+          "resource",
+          "aws_lambda_function[assign_osid]",
+          "tracing_config"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/user_pool/outputs.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/user_pool/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/user_pool/variables.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/user_pool/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/user_pool/versions.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/user_pool/versions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/vpc/main.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/vpc/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/vpc/natgw.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/vpc/natgw.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/vpc/outputs.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/vpc/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/vpc/route.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/vpc/route.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/vpc/subnets.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/vpc/subnets.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/vpc/variables.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/vpc/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/vpc/versions.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/vpc/versions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/infra/modules/vpc/zone.tf",
+    "projectName": "cabal-infra",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone/cabal-infra/terraform/infra/modules/vpc/zone.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone/cabal-infra",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  }
+]

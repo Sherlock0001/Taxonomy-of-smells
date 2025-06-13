@@ -1,0 +1,285 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "java/NonCryptoHardcodedSecret",
+              "name": "NonCryptoHardcodedSecret",
+              "shortDescription": {
+                "text": "Use of Hardcoded, Security-relevant Constants"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "help": {
+                "markdown": "## Details\n\nWhen constants are hardcoded into applications, this information could easily be reverse-engineered and become known to attackers. For example, if a breached authentication token is hardcoded in multiple places in the application, it may lead to components of the application remaining vulnerable if not all instances are changed.\nAnother negative effect of hard-coding constants is potential unpredictability in the application's performance if the development team fails to update every single instance of the hardcoded constant throughout the code. For these reasons, hard-coding security-relevant constants is considered bad coding practice and should be remedied if present and avoided in future.\n\n## Best practices for prevention\n* Never hard code security-related constants; use symbolic names or configuration lookup files.\n* As hard coding is often done by coders working alone on a small scale, examine all legacy code components and test carefully when scaling.\n* Adopt a \"future-proof code\" mindset: While use of constants may save a little time now and make development simpler in the short term, it could cost time and money adapting to scale or other unforeseen circumstances (such as new hardware) in the future.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "java",
+                  "NonCryptoHardcodedSecret",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/tronprotocol/java-tron/commit/84148c19e3d15f344fc164913be5bee478c1f637?diff=split#diff-9ff136527c21b19349c00267ff04c85b76dae23a2d28bc0f17a7c5b2eac78565L-1",
+                    "lines": [
+                      {
+                        "line": "private String ownerAddress = \"TDZdB4ogHSgU1CGrun8WXaMb2QDDkvAKQm\";\n",
+                        "lineNumber": 17,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "private String ownerAddress = Configuration.getByPath(\"stress.conf\").getString(\"address.exchangeOwnerAddress\");\n",
+                        "lineNumber": 18,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "private long exchangeID = commonexchangeid;\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "private long quant = 1000000L;\n",
+                        "lineNumber": 20,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "private String privateKey = \"549c7797b351e48ab1c6bb5857138b418012d97526fc2acba022357d49c93ac0\";\n",
+                        "lineNumber": 20,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "private String privateKey = Configuration.getByPath(\"stress.conf\").getString(\"privateKey.exchangeOwnerKey\");\n",
+                        "lineNumber": 21,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/shuxianfeng/movision/commit/5ee84a05bac382bea508e6a42da3330b1ccf4371?diff=split#diff-bdd70437062ccb0d3735e4c014d182875ef0c029af6c9c8c3e2a42e4136d410fL-1",
+                    "lines": [
+                      {
+                        "line": "        String accessKeyId = \"LTAITI0FOKgMZQty\";\n",
+                        "lineNumber": 15,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        String accessKeySecret = \"5x12H1yASg31OlPanhTCg0z0PzNr3t\";\n",
+                        "lineNumber": 16,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        String accessKeyId = PropertiesLoader.getValue(\"access.key.id\");\n",
+                        "lineNumber": 17,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        String accessKeySecret = PropertiesLoader.getValue(\"access.key.secret\");\n",
+                        "lineNumber": 18,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 19,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/xiexianbin/UEditor-for-aliyun-OSS/commit/324d6fd48c4c99d43ac30545ba30f9736b505c61?diff=split#diff-4d95e836c61d2ea3ffdda0f95df204e45f3b74f5ba58cb53c85cdb5114efa29fL-1",
+                    "lines": [
+                      {
+                        "line": "static {\r\n",
+                        "lineNumber": 17,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "String OSSKeyPath = SystemUtil.getProjectClassesPath() + \"OSSKey.properties\";\r\n",
+                        "lineNumber": 18,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "// \u751f\u6210\u6587\u4ef6\u8f93\u5165\u6d41\r\n",
+                        "lineNumber": 19,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "FileInputStream inpf = null;\r\n",
+                        "lineNumber": 20,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "try {\r\n",
+                        "lineNumber": 21,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    inpf = new FileInputStream(new File(OSSKeyPath));\r\n",
+                        "lineNumber": 22,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    OSSKeyProperties.load(inpf);\r\n",
+                        "lineNumber": 23,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    useStatus = (Boolean) OSSKeyProperties.get(\"useStatus\");\r\n",
+                        "lineNumber": 24,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    key = (String) OSSKeyProperties.get(\"key\");\r\n",
+                        "lineNumber": 25,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    secret = (String) OSSKeyProperties.get(\"secret\");\r\n",
+                        "lineNumber": 26,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    endPoint = (String) OSSKeyProperties.get(\"endPoint\");\r\n",
+                        "lineNumber": 27,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "} catch (Exception e) {\r\n",
+                        "lineNumber": 28,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    e.printStackTrace();\r\n",
+                        "lineNumber": 29,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "}\r\n",
+                        "lineNumber": 30,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "}\r\n",
+                        "lineNumber": 31,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 33,
+                "cwe": [
+                  "CWE-547"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "java/NonCryptoHardcodedSecret",
+          "ruleIndex": 0,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found hardcoded secret.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found hardcoded {0}.",
+            "arguments": [
+              "[secret](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "extensions/did-example-resolver/src/main/java/org/eclipse/edc/iam/identitytrust/core/SecretsExtension.java",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 59,
+                  "endLine": 65,
+                  "startColumn": 30,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "04fe35fcfc65dbffa5e798532ae55d9cc6520e8dfd6c3e1d98e056c6e7333507",
+            "1": "19689298.e7c4b4d3.3120fdea.e94b474f.dd2c44b1.ba2b7f9a.be04624c.a53f31d8.19689298.e7c4b4d3.3120fdea.e94b474f.dd2c44b1.ba2b7f9a.be04624c.a53f31d8"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "extensions/did-example-resolver/src/main/java/org/eclipse/edc/iam/identitytrust/core/SecretsExtension.java",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 59,
+                            "endLine": 65,
+                            "startColumn": 30,
+                            "endColumn": 24
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 850,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "Java",
+            "files": 21,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "XML",
+            "files": 14,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

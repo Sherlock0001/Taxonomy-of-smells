@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "isPrivate": true,
+    "isLicensesEnabled": false,
+    "ignoreSettings": {
+      "adminOnly": false,
+      "reasonRequired": false,
+      "disregardFilesystemIgnores": false,
+      "autoApproveIgnores": false
+    },
+    "org": "mbisss2025",
+    "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+    "policy": ""
+  },
+  "filesystemPolicy": false,
+  "vulnerabilities": [],
+  "dependencyCount": 0,
+  "licensesPolicy": null,
+  "ignoreSettings": null,
+  "targetFile": "etc/yml/pvc.yml",
+  "projectName": "CanDIGv2",
+  "org": "mbisss2025",
+  "policy": "",
+  "isPrivate": true,
+  "targetFilePath": "/home/mbissine/gitclone_vagrant/CanDIGv2/etc/yml/pvc.yml",
+  "packageManager": "k8sconfig",
+  "path": "/home/mbissine/gitclone_vagrant/CanDIGv2",
+  "projectType": "k8sconfig",
+  "ok": true,
+  "infrastructureAsCodeIssues": []
+}

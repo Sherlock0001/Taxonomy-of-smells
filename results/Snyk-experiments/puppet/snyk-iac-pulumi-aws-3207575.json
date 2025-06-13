@@ -1,0 +1,164 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/examples/testdata/recorded/5.42.0/resources/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/examples/webserver/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/apigateway-integrationresponse/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/apigateway-methodreponse/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/apigateway-resource/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/apigateway-resource-response/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/bucket/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/cloudwatch/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/cloudwatch-eventrule/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/cloudwatch-loggroup/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/dynamodb-table/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/ecr-lifecyclepolicy/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/ecr-repository/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/eks-cluster/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/eventbus/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/iam-instanceprofile/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/iam-openidconnectprovider/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/job-queue/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/kms-key/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/lambda-layer-new/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/logGroup/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/queue/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/rds-instance/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/route53/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/route53-resolver-endpoint/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/secretsmanager-secret/5.42.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-aws/provider/testdata/recorded/TestProviderUpgrade/sns-topic/5.42.0/grpc.json"
+  }
+]

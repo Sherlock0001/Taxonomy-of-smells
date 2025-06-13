@@ -1,0 +1,640 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infrastructure/terraform/example_sequencer_nodes/main.tf",
+    "projectName": "starknet_stack",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/starknet_stack/infrastructure/terraform/example_sequencer_nodes/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/starknet_stack",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infrastructure/terraform/example_sequencer_nodes/providers.tf",
+    "projectName": "starknet_stack",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/starknet_stack/infrastructure/terraform/example_sequencer_nodes/providers.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/starknet_stack",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infrastructure/terraform/modules/aws_ec2_cluster/ec2.tf",
+    "projectName": "starknet_stack",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/starknet_stack/infrastructure/terraform/modules/aws_ec2_cluster/ec2.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/starknet_stack",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-51",
+        "title": "Resource has public IP assigned",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "EC2",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-51",
+        "isGeneratedByCustomRule": false,
+        "issue": "AWS resource could be accessed externally via public IP",
+        "impact": "Increases attack vector reachability",
+        "resolve": "Set `associate_public_ip_address` attribute to `false`",
+        "remediation": {
+          "terraform": "Set `associate_public_ip_address` attribute to `false`"
+        },
+        "lineNumber": 14,
+        "iacDescription": {
+          "issue": "AWS resource could be accessed externally via public IP",
+          "impact": "Increases attack vector reachability",
+          "resolve": "Set `associate_public_ip_address` attribute to `false`"
+        },
+        "publicId": "SNYK-CC-TF-51",
+        "msg": "resource.aws_launch_template[nodes].network_interfaces.associate_public_ip_address",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html",
+          "https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html"
+        ],
+        "path": [
+          "resource",
+          "aws_launch_template[nodes]",
+          "network_interfaces",
+          "associate_public_ip_address"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infrastructure/terraform/modules/aws_ec2_cluster/iam.tf",
+    "projectName": "starknet_stack",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/starknet_stack/infrastructure/terraform/modules/aws_ec2_cluster/iam.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/starknet_stack",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infrastructure/terraform/modules/aws_ec2_cluster/security_group.tf",
+    "projectName": "starknet_stack",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/starknet_stack/infrastructure/terraform/modules/aws_ec2_cluster/security_group.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/starknet_stack",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-37",
+        "title": "AWS Security Group Rule allows public access",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-37",
+        "isGeneratedByCustomRule": false,
+        "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+        "impact": "That potentially everyone can access your resource",
+        "resolve": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+        "remediation": {
+          "cloudformation": "Set `CidrIp` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+          "terraform": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 49,
+        "iacDescription": {
+          "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+          "impact": "That potentially everyone can access your resource",
+          "resolve": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-37",
+        "msg": "resource.aws_security_group_rule[rpc].cidr_blocks",
+        "references": [],
+        "path": [
+          "resource",
+          "aws_security_group_rule[rpc]",
+          "cidr_blocks"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-37",
+        "title": "AWS Security Group Rule allows public access",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-37",
+        "isGeneratedByCustomRule": false,
+        "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+        "impact": "That potentially everyone can access your resource",
+        "resolve": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+        "remediation": {
+          "cloudformation": "Set `CidrIp` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+          "terraform": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 60,
+        "iacDescription": {
+          "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+          "impact": "That potentially everyone can access your resource",
+          "resolve": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-37",
+        "msg": "resource.aws_security_group_rule[transaction].cidr_blocks",
+        "references": [],
+        "path": [
+          "resource",
+          "aws_security_group_rule[transaction]",
+          "cidr_blocks"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-72",
+        "title": "Rule allows open egress",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-72",
+        "isGeneratedByCustomRule": false,
+        "issue": "The security group rule allows open egress",
+        "impact": "Open egress can be used to exfiltrate data to unauthorized destinations, and enable access to potentially malicious resources",
+        "resolve": "Set `cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`",
+        "remediation": {
+          "cloudformation": "Set `Properties.SecurityGroupEgress.CidrIp` attribute to specific ranges e.g. `192.168.1.0/24`",
+          "terraform": "Set `cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 7,
+        "iacDescription": {
+          "issue": "The security group rule allows open egress",
+          "impact": "Open egress can be used to exfiltrate data to unauthorized destinations, and enable access to potentially malicious resources",
+          "resolve": "Set `cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-72",
+        "msg": "resource.aws_security_group_rule[outbound_traffic]",
+        "references": [
+          "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html",
+          "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-best-practices.html",
+          "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html"
+        ],
+        "path": [
+          "resource",
+          "aws_security_group_rule[outbound_traffic]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-37",
+        "title": "AWS Security Group Rule allows public access",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-37",
+        "isGeneratedByCustomRule": false,
+        "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+        "impact": "That potentially everyone can access your resource",
+        "resolve": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+        "remediation": {
+          "cloudformation": "Set `CidrIp` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+          "terraform": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 38,
+        "iacDescription": {
+          "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+          "impact": "That potentially everyone can access your resource",
+          "resolve": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-37",
+        "msg": "resource.aws_security_group_rule[ssh].cidr_blocks",
+        "references": [],
+        "path": [
+          "resource",
+          "aws_security_group_rule[ssh]",
+          "cidr_blocks"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-56",
+        "title": "Security group description is missing",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-56",
+        "isGeneratedByCustomRule": false,
+        "issue": "The description field is missing in the security group",
+        "impact": "Increases the security management overhead",
+        "resolve": "Set `description` attribute to meaningful statement",
+        "remediation": {
+          "terraform": "Set `description` attribute to meaningful statement"
+        },
+        "lineNumber": 1,
+        "iacDescription": {
+          "issue": "The description field is missing in the security group",
+          "impact": "Increases the security management overhead",
+          "resolve": "Set `description` attribute to meaningful statement"
+        },
+        "publicId": "SNYK-CC-TF-56",
+        "msg": "resource.aws_security_group[nodes].description",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html"
+        ],
+        "path": [
+          "resource",
+          "aws_security_group[nodes]",
+          "description"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infrastructure/terraform/modules/aws_ec2_cluster/variables.tf",
+    "projectName": "starknet_stack",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/starknet_stack/infrastructure/terraform/modules/aws_ec2_cluster/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/starknet_stack",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infrastructure/terraform/modules/aws_ec2_cluster/vpc.tf",
+    "projectName": "starknet_stack",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/starknet_stack/infrastructure/terraform/modules/aws_ec2_cluster/vpc.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/starknet_stack",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infrastructure/terraform/watcher_prover/main.tf",
+    "projectName": "starknet_stack",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/starknet_stack/infrastructure/terraform/watcher_prover/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/starknet_stack",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-53",
+        "title": "Non-Encrypted root block device",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "EC2",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-53",
+        "isGeneratedByCustomRule": false,
+        "issue": "The root block device for ec2 instance is not encrypted",
+        "impact": "That should someone gain unauthorized access to the data they would be able to read the contents.",
+        "resolve": "Set `root_block_device.encrypted` attribute to `true`",
+        "remediation": {
+          "cloudformation": "Set `BlockDeviceMappings.Encrypted` attribute of root device to `true`",
+          "terraform": "Set `root_block_device.encrypted` attribute to `true`"
+        },
+        "lineNumber": 99,
+        "iacDescription": {
+          "issue": "The root block device for ec2 instance is not encrypted",
+          "impact": "That should someone gain unauthorized access to the data they would be able to read the contents.",
+          "resolve": "Set `root_block_device.encrypted` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-53",
+        "msg": "resource.aws_instance[watcher_prover].root_block_device.encrypted",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html",
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html",
+          "https://aws.amazon.com/premiumsupport/knowledge-center/cloudformation-root-volume-property/",
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html"
+        ],
+        "path": [
+          "resource",
+          "aws_instance[watcher_prover]",
+          "root_block_device",
+          "encrypted"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-130",
+        "title": "EC2 instance accepts IMDSv1",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "EC2",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-130",
+        "isGeneratedByCustomRule": false,
+        "issue": "Instance Metadata Service v2 is not enforced",
+        "impact": "Metadata service may be vulnerable to reverse proxy/open firewall misconfigurations and server side request forgery attacks",
+        "resolve": "Set `metadata_options.http_tokens` attribute to `required`",
+        "remediation": {
+          "cloudformation": "Set `MetadataOptions.HttpTokens` attribute to `required` in `AWS::EC2::LaunchTemplate`",
+          "terraform": "Set `metadata_options.http_tokens` attribute to `required`"
+        },
+        "lineNumber": 99,
+        "iacDescription": {
+          "issue": "Instance Metadata Service v2 is not enforced",
+          "impact": "Metadata service may be vulnerable to reverse proxy/open firewall misconfigurations and server side request forgery attacks",
+          "resolve": "Set `metadata_options.http_tokens` attribute to `required`"
+        },
+        "publicId": "SNYK-CC-TF-130",
+        "msg": "resource.aws_instance[watcher_prover].metadata_options",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html",
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html",
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-retrieval.html",
+          "https://aws.amazon.com/blogs/security/defense-in-depth-open-firewalls-reverse-proxies-ssrf-vulnerabilities-ec2-instance-metadata-service/"
+        ],
+        "path": [
+          "resource",
+          "aws_instance[watcher_prover]",
+          "metadata_options"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-72",
+        "title": "Rule allows open egress",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-72",
+        "isGeneratedByCustomRule": false,
+        "issue": "The security group rule allows open egress",
+        "impact": "Open egress can be used to exfiltrate data to unauthorized destinations, and enable access to potentially malicious resources",
+        "resolve": "Set `cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`",
+        "remediation": {
+          "cloudformation": "Set `Properties.SecurityGroupEgress.CidrIp` attribute to specific ranges e.g. `192.168.1.0/24`",
+          "terraform": "Set `cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 35,
+        "iacDescription": {
+          "issue": "The security group rule allows open egress",
+          "impact": "Open egress can be used to exfiltrate data to unauthorized destinations, and enable access to potentially malicious resources",
+          "resolve": "Set `cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-72",
+        "msg": "resource.aws_security_group_rule[outbound_traffic]",
+        "references": [
+          "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html",
+          "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-best-practices.html",
+          "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html"
+        ],
+        "path": [
+          "resource",
+          "aws_security_group_rule[outbound_traffic]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AWS-426",
+        "title": "EC2 API termination protection is not enabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "EC2",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-426",
+        "isGeneratedByCustomRule": false,
+        "issue": "To prevent instance from being accidentally terminated using Amazon EC2, you can enable termination protection for the instance",
+        "impact": "Without this setting enabled the instances can be terminated by accident. This setting should only be used for instances with high availability requirements. Enabling this may prevent IaC workflows from updating the instance, for example terraform will not be able to terminate the instance to update instance type",
+        "resolve": "Set `disable_api_termination` attribute  with value `true`",
+        "remediation": {
+          "cloudformation": "Set `DisableApiTermination` attribute with value `true`",
+          "terraform": "Set `disable_api_termination` attribute  with value `true`"
+        },
+        "lineNumber": 99,
+        "iacDescription": {
+          "issue": "To prevent instance from being accidentally terminated using Amazon EC2, you can enable termination protection for the instance",
+          "impact": "Without this setting enabled the instances can be terminated by accident. This setting should only be used for instances with high availability requirements. Enabling this may prevent IaC workflows from updating the instance, for example terraform will not be able to terminate the instance to update instance type",
+          "resolve": "Set `disable_api_termination` attribute  with value `true`"
+        },
+        "publicId": "SNYK-CC-AWS-426",
+        "msg": "resource.aws_instance[watcher_prover].disable_api_termination",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination"
+        ],
+        "path": [
+          "resource",
+          "aws_instance[watcher_prover]",
+          "disable_api_termination"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-56",
+        "title": "Security group description is missing",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-56",
+        "isGeneratedByCustomRule": false,
+        "issue": "The description field is missing in the security group",
+        "impact": "Increases the security management overhead",
+        "resolve": "Set `description` attribute to meaningful statement",
+        "remediation": {
+          "terraform": "Set `description` attribute to meaningful statement"
+        },
+        "lineNumber": 30,
+        "iacDescription": {
+          "issue": "The description field is missing in the security group",
+          "impact": "Increases the security management overhead",
+          "resolve": "Set `description` attribute to meaningful statement"
+        },
+        "publicId": "SNYK-CC-TF-56",
+        "msg": "resource.aws_security_group[watcher_prover].description",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html"
+        ],
+        "path": [
+          "resource",
+          "aws_security_group[watcher_prover]",
+          "description"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "infrastructure/terraform/watcher_prover/providers.tf",
+    "projectName": "starknet_stack",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/starknet_stack/infrastructure/terraform/watcher_prover/providers.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/starknet_stack",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  }
+]

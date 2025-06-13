@@ -1,0 +1,2487 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/app-engine.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/app-engine.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/artifact-registry.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/artifact-registry.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/backend.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/backend.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/bigquery-scheduled-queries.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/bigquery-scheduled-queries.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/bigquery.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/bigquery.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/build-trigger.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/build-trigger.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/cloud-armor.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/cloud-armor.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/cloud-composer.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/cloud-composer.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/cloud-functions.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/cloud-functions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/cloud-logging.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/cloud-logging.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/cloud-memorystore.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/cloud-memorystore.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-GCP-697",
+        "title": "Memorystore (Redis) does not use Standard Tier for High Availability",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "MemoryStore (Redis)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-697",
+        "isGeneratedByCustomRule": false,
+        "issue": "Memorystore (Redis) does not use Standard Tier for High Availability",
+        "impact": "Not using the Redis Standard Tier might negatively impact service availability",
+        "resolve": "Set `tier` to `STANDARD_HA`",
+        "remediation": {
+          "terraform": "Set `tier` to `STANDARD_HA`"
+        },
+        "lineNumber": 38,
+        "iacDescription": {
+          "issue": "Memorystore (Redis) does not use Standard Tier for High Availability",
+          "impact": "Not using the Redis Standard Tier might negatively impact service availability",
+          "resolve": "Set `tier` to `STANDARD_HA`"
+        },
+        "publicId": "SNYK-CC-GCP-697",
+        "msg": "resource.google_redis_instance[pathways_metric_cache].tier",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/redis_instance",
+          "https://cloud.google.com/memorystore/docs/redis/redis-tiers"
+        ],
+        "path": [
+          "resource",
+          "google_redis_instance[pathways_metric_cache]",
+          "tier"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-696",
+        "title": "In transit encryption is disabled for Memorystore instances",
+        "severity": "high",
+        "isIgnored": false,
+        "subType": "MemoryStore (Redis)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-696",
+        "isGeneratedByCustomRule": false,
+        "issue": "In transit encryption is disabled for Memorystore instances",
+        "impact": "Unencrypted communication between Redis client and server is vulnerable to eavesdropping and unauthorized modification",
+        "resolve": "Set `transit_encryption_mode` to `SERVER_AUTHENTICATION`",
+        "remediation": {
+          "terraform": "Set `transit_encryption_mode` to `SERVER_AUTHENTICATION`"
+        },
+        "lineNumber": 34,
+        "iacDescription": {
+          "issue": "In transit encryption is disabled for Memorystore instances",
+          "impact": "Unencrypted communication between Redis client and server is vulnerable to eavesdropping and unauthorized modification",
+          "resolve": "Set `transit_encryption_mode` to `SERVER_AUTHENTICATION`"
+        },
+        "publicId": "SNYK-CC-GCP-696",
+        "msg": "resource.google_redis_instance[pathways_metric_cache].transit_encryption_mode",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/redis_instance",
+          "https://cloud.google.com/memorystore/docs/redis/enabling-in-transit-encryption"
+        ],
+        "path": [
+          "resource",
+          "google_redis_instance[pathways_metric_cache]",
+          "transit_encryption_mode"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-697",
+        "title": "Memorystore (Redis) does not use Standard Tier for High Availability",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "MemoryStore (Redis)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-697",
+        "isGeneratedByCustomRule": false,
+        "issue": "Memorystore (Redis) does not use Standard Tier for High Availability",
+        "impact": "Not using the Redis Standard Tier might negatively impact service availability",
+        "resolve": "Set `tier` to `STANDARD_HA`",
+        "remediation": {
+          "terraform": "Set `tier` to `STANDARD_HA`"
+        },
+        "lineNumber": 22,
+        "iacDescription": {
+          "issue": "Memorystore (Redis) does not use Standard Tier for High Availability",
+          "impact": "Not using the Redis Standard Tier might negatively impact service availability",
+          "resolve": "Set `tier` to `STANDARD_HA`"
+        },
+        "publicId": "SNYK-CC-GCP-697",
+        "msg": "resource.google_redis_instance[case_triage_rate_limiter_cache].tier",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/redis_instance",
+          "https://cloud.google.com/memorystore/docs/redis/redis-tiers"
+        ],
+        "path": [
+          "resource",
+          "google_redis_instance[case_triage_rate_limiter_cache]",
+          "tier"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-695",
+        "title": "Memorystore has Redis AUTH disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "MemoryStore (Redis)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-695",
+        "isGeneratedByCustomRule": false,
+        "issue": "Memorystore has Redis AUTH disabled",
+        "impact": "Disabled AUTH configuration allows anonymous client access to the Memorystore",
+        "resolve": "Set `auth_enabled` to `true`",
+        "remediation": {
+          "terraform": "Set `auth_enabled` to `true`"
+        },
+        "lineNumber": 42,
+        "iacDescription": {
+          "issue": "Memorystore has Redis AUTH disabled",
+          "impact": "Disabled AUTH configuration allows anonymous client access to the Memorystore",
+          "resolve": "Set `auth_enabled` to `true`"
+        },
+        "publicId": "SNYK-CC-GCP-695",
+        "msg": "resource.google_redis_instance[admin_panel_cache].auth_enabled",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/redis_instance",
+          "https://cloud.google.com/memorystore/docs/redis/managing-auth"
+        ],
+        "path": [
+          "resource",
+          "google_redis_instance[admin_panel_cache]",
+          "auth_enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-695",
+        "title": "Memorystore has Redis AUTH disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "MemoryStore (Redis)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-695",
+        "isGeneratedByCustomRule": false,
+        "issue": "Memorystore has Redis AUTH disabled",
+        "impact": "Disabled AUTH configuration allows anonymous client access to the Memorystore",
+        "resolve": "Set `auth_enabled` to `true`",
+        "remediation": {
+          "terraform": "Set `auth_enabled` to `true`"
+        },
+        "lineNumber": 34,
+        "iacDescription": {
+          "issue": "Memorystore has Redis AUTH disabled",
+          "impact": "Disabled AUTH configuration allows anonymous client access to the Memorystore",
+          "resolve": "Set `auth_enabled` to `true`"
+        },
+        "publicId": "SNYK-CC-GCP-695",
+        "msg": "resource.google_redis_instance[pathways_metric_cache].auth_enabled",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/redis_instance",
+          "https://cloud.google.com/memorystore/docs/redis/managing-auth"
+        ],
+        "path": [
+          "resource",
+          "google_redis_instance[pathways_metric_cache]",
+          "auth_enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-696",
+        "title": "In transit encryption is disabled for Memorystore instances",
+        "severity": "high",
+        "isIgnored": false,
+        "subType": "MemoryStore (Redis)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-696",
+        "isGeneratedByCustomRule": false,
+        "issue": "In transit encryption is disabled for Memorystore instances",
+        "impact": "Unencrypted communication between Redis client and server is vulnerable to eavesdropping and unauthorized modification",
+        "resolve": "Set `transit_encryption_mode` to `SERVER_AUTHENTICATION`",
+        "remediation": {
+          "terraform": "Set `transit_encryption_mode` to `SERVER_AUTHENTICATION`"
+        },
+        "lineNumber": 26,
+        "iacDescription": {
+          "issue": "In transit encryption is disabled for Memorystore instances",
+          "impact": "Unencrypted communication between Redis client and server is vulnerable to eavesdropping and unauthorized modification",
+          "resolve": "Set `transit_encryption_mode` to `SERVER_AUTHENTICATION`"
+        },
+        "publicId": "SNYK-CC-GCP-696",
+        "msg": "resource.google_redis_instance[case_triage_sessions_cache].transit_encryption_mode",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/redis_instance",
+          "https://cloud.google.com/memorystore/docs/redis/enabling-in-transit-encryption"
+        ],
+        "path": [
+          "resource",
+          "google_redis_instance[case_triage_sessions_cache]",
+          "transit_encryption_mode"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-697",
+        "title": "Memorystore (Redis) does not use Standard Tier for High Availability",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "MemoryStore (Redis)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-697",
+        "isGeneratedByCustomRule": false,
+        "issue": "Memorystore (Redis) does not use Standard Tier for High Availability",
+        "impact": "Not using the Redis Standard Tier might negatively impact service availability",
+        "resolve": "Set `tier` to `STANDARD_HA`",
+        "remediation": {
+          "terraform": "Set `tier` to `STANDARD_HA`"
+        },
+        "lineNumber": 30,
+        "iacDescription": {
+          "issue": "Memorystore (Redis) does not use Standard Tier for High Availability",
+          "impact": "Not using the Redis Standard Tier might negatively impact service availability",
+          "resolve": "Set `tier` to `STANDARD_HA`"
+        },
+        "publicId": "SNYK-CC-GCP-697",
+        "msg": "resource.google_redis_instance[case_triage_sessions_cache].tier",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/redis_instance",
+          "https://cloud.google.com/memorystore/docs/redis/redis-tiers"
+        ],
+        "path": [
+          "resource",
+          "google_redis_instance[case_triage_sessions_cache]",
+          "tier"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-696",
+        "title": "In transit encryption is disabled for Memorystore instances",
+        "severity": "high",
+        "isIgnored": false,
+        "subType": "MemoryStore (Redis)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-696",
+        "isGeneratedByCustomRule": false,
+        "issue": "In transit encryption is disabled for Memorystore instances",
+        "impact": "Unencrypted communication between Redis client and server is vulnerable to eavesdropping and unauthorized modification",
+        "resolve": "Set `transit_encryption_mode` to `SERVER_AUTHENTICATION`",
+        "remediation": {
+          "terraform": "Set `transit_encryption_mode` to `SERVER_AUTHENTICATION`"
+        },
+        "lineNumber": 42,
+        "iacDescription": {
+          "issue": "In transit encryption is disabled for Memorystore instances",
+          "impact": "Unencrypted communication between Redis client and server is vulnerable to eavesdropping and unauthorized modification",
+          "resolve": "Set `transit_encryption_mode` to `SERVER_AUTHENTICATION`"
+        },
+        "publicId": "SNYK-CC-GCP-696",
+        "msg": "resource.google_redis_instance[admin_panel_cache].transit_encryption_mode",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/redis_instance",
+          "https://cloud.google.com/memorystore/docs/redis/enabling-in-transit-encryption"
+        ],
+        "path": [
+          "resource",
+          "google_redis_instance[admin_panel_cache]",
+          "transit_encryption_mode"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-697",
+        "title": "Memorystore (Redis) does not use Standard Tier for High Availability",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "MemoryStore (Redis)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-697",
+        "isGeneratedByCustomRule": false,
+        "issue": "Memorystore (Redis) does not use Standard Tier for High Availability",
+        "impact": "Not using the Redis Standard Tier might negatively impact service availability",
+        "resolve": "Set `tier` to `STANDARD_HA`",
+        "remediation": {
+          "terraform": "Set `tier` to `STANDARD_HA`"
+        },
+        "lineNumber": 46,
+        "iacDescription": {
+          "issue": "Memorystore (Redis) does not use Standard Tier for High Availability",
+          "impact": "Not using the Redis Standard Tier might negatively impact service availability",
+          "resolve": "Set `tier` to `STANDARD_HA`"
+        },
+        "publicId": "SNYK-CC-GCP-697",
+        "msg": "resource.google_redis_instance[admin_panel_cache].tier",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/redis_instance",
+          "https://cloud.google.com/memorystore/docs/redis/redis-tiers"
+        ],
+        "path": [
+          "resource",
+          "google_redis_instance[admin_panel_cache]",
+          "tier"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-695",
+        "title": "Memorystore has Redis AUTH disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "MemoryStore (Redis)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-695",
+        "isGeneratedByCustomRule": false,
+        "issue": "Memorystore has Redis AUTH disabled",
+        "impact": "Disabled AUTH configuration allows anonymous client access to the Memorystore",
+        "resolve": "Set `auth_enabled` to `true`",
+        "remediation": {
+          "terraform": "Set `auth_enabled` to `true`"
+        },
+        "lineNumber": 26,
+        "iacDescription": {
+          "issue": "Memorystore has Redis AUTH disabled",
+          "impact": "Disabled AUTH configuration allows anonymous client access to the Memorystore",
+          "resolve": "Set `auth_enabled` to `true`"
+        },
+        "publicId": "SNYK-CC-GCP-695",
+        "msg": "resource.google_redis_instance[case_triage_sessions_cache].auth_enabled",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/redis_instance",
+          "https://cloud.google.com/memorystore/docs/redis/managing-auth"
+        ],
+        "path": [
+          "resource",
+          "google_redis_instance[case_triage_sessions_cache]",
+          "auth_enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-696",
+        "title": "In transit encryption is disabled for Memorystore instances",
+        "severity": "high",
+        "isIgnored": false,
+        "subType": "MemoryStore (Redis)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-696",
+        "isGeneratedByCustomRule": false,
+        "issue": "In transit encryption is disabled for Memorystore instances",
+        "impact": "Unencrypted communication between Redis client and server is vulnerable to eavesdropping and unauthorized modification",
+        "resolve": "Set `transit_encryption_mode` to `SERVER_AUTHENTICATION`",
+        "remediation": {
+          "terraform": "Set `transit_encryption_mode` to `SERVER_AUTHENTICATION`"
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "In transit encryption is disabled for Memorystore instances",
+          "impact": "Unencrypted communication between Redis client and server is vulnerable to eavesdropping and unauthorized modification",
+          "resolve": "Set `transit_encryption_mode` to `SERVER_AUTHENTICATION`"
+        },
+        "publicId": "SNYK-CC-GCP-696",
+        "msg": "resource.google_redis_instance[case_triage_rate_limiter_cache].transit_encryption_mode",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/redis_instance",
+          "https://cloud.google.com/memorystore/docs/redis/enabling-in-transit-encryption"
+        ],
+        "path": [
+          "resource",
+          "google_redis_instance[case_triage_rate_limiter_cache]",
+          "transit_encryption_mode"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-695",
+        "title": "Memorystore has Redis AUTH disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "MemoryStore (Redis)",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-695",
+        "isGeneratedByCustomRule": false,
+        "issue": "Memorystore has Redis AUTH disabled",
+        "impact": "Disabled AUTH configuration allows anonymous client access to the Memorystore",
+        "resolve": "Set `auth_enabled` to `true`",
+        "remediation": {
+          "terraform": "Set `auth_enabled` to `true`"
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "Memorystore has Redis AUTH disabled",
+          "impact": "Disabled AUTH configuration allows anonymous client access to the Memorystore",
+          "resolve": "Set `auth_enabled` to `true`"
+        },
+        "publicId": "SNYK-CC-GCP-695",
+        "msg": "resource.google_redis_instance[case_triage_rate_limiter_cache].auth_enabled",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/redis_instance",
+          "https://cloud.google.com/memorystore/docs/redis/managing-auth"
+        ],
+        "path": [
+          "resource",
+          "google_redis_instance[case_triage_rate_limiter_cache]",
+          "auth_enabled"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/cloud-run-admin-panel.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/cloud-run-admin-panel.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/cloud-run-jobs.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/cloud-run-jobs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/cloud-run.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/cloud-run.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/cloud-scheduler.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/cloud-scheduler.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/cloud-sql.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/cloud-sql.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/cloud-storage-notifications.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/cloud-storage-notifications.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/cloud-storage.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/cloud-storage.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-GCP-274",
+        "title": "Logging is not enabled on storage bucket",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-274",
+        "isGeneratedByCustomRule": false,
+        "issue": "Logging is not enabled on storage bucket",
+        "impact": "Usage information will not be collected. This may impact ability to determine who accessed data stored in the bucket",
+        "resolve": "Set `logging` block attribute",
+        "remediation": {
+          "terraform": "Set `logging` block attribute"
+        },
+        "lineNumber": 412,
+        "iacDescription": {
+          "issue": "Logging is not enabled on storage bucket",
+          "impact": "Usage information will not be collected. This may impact ability to determine who accessed data stored in the bucket",
+          "resolve": "Set `logging` block attribute"
+        },
+        "publicId": "SNYK-CC-GCP-274",
+        "msg": "resource.google_storage_bucket[dataflow-templates-scratch].logging",
+        "references": [
+          "https://cloud.google.com/storage/docs/xml-api/put-bucket-logging",
+          "https://cloud.google.com/storage/docs/access-logs"
+        ],
+        "path": [
+          "resource",
+          "google_storage_bucket[dataflow-templates-scratch]",
+          "logging"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-185",
+        "title": "Google storage bucket does not use customer-managed keys to encrypt data",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-185",
+        "isGeneratedByCustomRule": false,
+        "issue": "Google storage bucket does not use customer-managed keys to encrypt data",
+        "impact": "Google will manage the encryption keys on its servers and could access the data without authorization",
+        "resolve": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly.",
+        "remediation": {
+          "terraform": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly."
+        },
+        "lineNumber": 412,
+        "iacDescription": {
+          "issue": "Google storage bucket does not use customer-managed keys to encrypt data",
+          "impact": "Google will manage the encryption keys on its servers and could access the data without authorization",
+          "resolve": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly."
+        },
+        "publicId": "SNYK-CC-TF-185",
+        "msg": "resource.google_storage_bucket[dataflow-templates-scratch].encryption.default_kms_key_name",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket#encryption",
+          "https://cloud.google.com/storage/docs/encryption",
+          "https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys"
+        ],
+        "path": [
+          "resource",
+          "google_storage_bucket[dataflow-templates-scratch]",
+          "encryption",
+          "default_kms_key_name"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/cloud-task-queues.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/cloud-task-queues.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/custom-roles.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/custom-roles.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/dataflow-flex.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/dataflow-flex.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/direct-ingest-constants.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/direct-ingest-constants.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/loadbalancer.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/loadbalancer.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/networks.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/networks.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/outputs.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/providers.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/providers.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/pubsub.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/pubsub.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/reference-tables.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/reference-tables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/state-direct-ingest.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/state-direct-ingest.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/state-sftp-download.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/state-sftp-download.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/terraform.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/terraform.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/uptime-checks.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/uptime-checks.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/variables.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/vpn-tunnels.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/vpn-tunnels.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/base-scraper-task-queue/main.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/base-scraper-task-queue/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/base-scraper-task-queue/variables.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/base-scraper-task-queue/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/base-task-queue/main.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/base-task-queue/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/base-task-queue/variables.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/base-task-queue/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/big_query_dataset/main.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/big_query_dataset/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/big_query_dataset/outputs.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/big_query_dataset/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/cloud-sql-instance/main.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/cloud-sql-instance/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-GCP-292",
+        "title": "SQL statements may be logged",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud SQL",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-292",
+        "isGeneratedByCustomRule": false,
+        "issue": "PostgreSQL 'log_min_duration_statement' is not set to -1",
+        "impact": "Some SQL statements may be logged and expose sensitive information",
+        "resolve": "Set the `settings.database_flags.name` attribute to `\"log_min_duration_statement\"` and `settings.database_flags.value` attribute to `-1`",
+        "remediation": {
+          "terraform": "Set the `settings.database_flags.name` attribute to `\"log_min_duration_statement\"` and `settings.database_flags.value` attribute to `-1`"
+        },
+        "lineNumber": 129,
+        "iacDescription": {
+          "issue": "PostgreSQL 'log_min_duration_statement' is not set to -1",
+          "impact": "Some SQL statements may be logged and expose sensitive information",
+          "resolve": "Set the `settings.database_flags.name` attribute to `\"log_min_duration_statement\"` and `settings.database_flags.value` attribute to `-1`"
+        },
+        "publicId": "SNYK-CC-GCP-292",
+        "msg": "resource.google_sql_database_instance[data].settings",
+        "references": [
+          "https://cloud.google.com/sql/docs/postgres/flags"
+        ],
+        "path": [
+          "resource",
+          "google_sql_database_instance[data]",
+          "settings"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-242",
+        "title": "Public IP assigned to SQL database instance",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Cloud SQL",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-242",
+        "isGeneratedByCustomRule": false,
+        "issue": "Public IP will be assigned to the SQL database",
+        "impact": "Database may be accessed remotely over public internet",
+        "resolve": "Set `settings.ip_configuration.ipv4_enabled` attribute to `false`",
+        "remediation": {
+          "terraform": "Set `settings.ip_configuration.ipv4_enabled` attribute to `false`"
+        },
+        "lineNumber": 183,
+        "iacDescription": {
+          "issue": "Public IP will be assigned to the SQL database",
+          "impact": "Database may be accessed remotely over public internet",
+          "resolve": "Set `settings.ip_configuration.ipv4_enabled` attribute to `false`"
+        },
+        "publicId": "SNYK-CC-TF-242",
+        "msg": "resource.google_sql_database_instance[data].settings.ip_configuration.ipv4_enabled",
+        "references": [
+          "https://cloud.google.com/sql/docs/mysql/configure-private-ip",
+          "https://cloud.google.com/sql/docs/mysql/configure-ip#disable-public"
+        ],
+        "path": [
+          "resource",
+          "google_sql_database_instance[data]",
+          "settings",
+          "ip_configuration",
+          "ipv4_enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-287",
+        "title": "The log_checkpoints is disabled on PostgreSQL DB",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud SQL",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-287",
+        "isGeneratedByCustomRule": false,
+        "issue": "PostgreSQL 'log_checkpoints' is disabled",
+        "impact": "Verbose logging information of database will not be collected",
+        "resolve": "Set `settings.database_flags.name` attribute to `\"log_checkpoints\"`, and `settings.database_flags.value` attribute to `\"on\"`",
+        "remediation": {
+          "terraform": "Set `settings.database_flags.name` attribute to `\"log_checkpoints\"`, and `settings.database_flags.value` attribute to `\"on\"`"
+        },
+        "lineNumber": 129,
+        "iacDescription": {
+          "issue": "PostgreSQL 'log_checkpoints' is disabled",
+          "impact": "Verbose logging information of database will not be collected",
+          "resolve": "Set `settings.database_flags.name` attribute to `\"log_checkpoints\"`, and `settings.database_flags.value` attribute to `\"on\"`"
+        },
+        "publicId": "SNYK-CC-GCP-287",
+        "msg": "resource.google_sql_database_instance[data].settings",
+        "references": [
+          "https://cloud.google.com/sql/docs/postgres/flags"
+        ],
+        "path": [
+          "resource",
+          "google_sql_database_instance[data]",
+          "settings"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-693",
+        "title": "Cloud IAM not configured for CloudSQL instance",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Cloud SQL",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-693",
+        "isGeneratedByCustomRule": false,
+        "issue": "Cloud IAM not configured for CloudSQL instance",
+        "impact": "Dismissing Cloud IAM makes access control management more difficult and error-prone",
+        "resolve": "Configure a `settings.database_flags` block, with `name` as `cloudsql_iam_authentication` and `value` as `On`",
+        "remediation": {
+          "terraform": "Configure a `settings.database_flags` block, with `name` as `cloudsql_iam_authentication` and `value` as `On`"
+        },
+        "lineNumber": 140,
+        "iacDescription": {
+          "issue": "Cloud IAM not configured for CloudSQL instance",
+          "impact": "Dismissing Cloud IAM makes access control management more difficult and error-prone",
+          "resolve": "Configure a `settings.database_flags` block, with `name` as `cloudsql_iam_authentication` and `value` as `On`"
+        },
+        "publicId": "SNYK-CC-GCP-693",
+        "msg": "resource.google_sql_database_instance[data].settings.database_flags",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/sql_database_instance",
+          "https://cloud.google.com/sql/docs/mysql/create-edit-iam-instances#configure-iam-db-instance"
+        ],
+        "path": [
+          "resource",
+          "google_sql_database_instance[data]",
+          "settings",
+          "database_flags"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-291",
+        "title": "Temporary file information is not logged",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud SQL",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-291",
+        "isGeneratedByCustomRule": false,
+        "issue": "PostgreSQL 'log_temp_files' is not set to 0",
+        "impact": "Some temporary files information may not be logged, which may impact ability to identify potential performance issues",
+        "resolve": "Set the `settings.database_flags.name` attribute to `\"log_temp_files\"`, and `settings.database_flags.value` attribute to `0`",
+        "remediation": {
+          "terraform": "Set the `settings.database_flags.name` attribute to `\"log_temp_files\"`, and `settings.database_flags.value` attribute to `0`"
+        },
+        "lineNumber": 129,
+        "iacDescription": {
+          "issue": "PostgreSQL 'log_temp_files' is not set to 0",
+          "impact": "Some temporary files information may not be logged, which may impact ability to identify potential performance issues",
+          "resolve": "Set the `settings.database_flags.name` attribute to `\"log_temp_files\"`, and `settings.database_flags.value` attribute to `0`"
+        },
+        "publicId": "SNYK-CC-GCP-291",
+        "msg": "resource.google_sql_database_instance[data].settings",
+        "references": [
+          "https://cloud.google.com/sql/docs/postgres/flags"
+        ],
+        "path": [
+          "resource",
+          "google_sql_database_instance[data]",
+          "settings"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/cloud-sql-instance/outputs.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/cloud-sql-instance/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/cloud-storage-bucket/main.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/cloud-storage-bucket/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-185",
+        "title": "Google storage bucket does not use customer-managed keys to encrypt data",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-185",
+        "isGeneratedByCustomRule": false,
+        "issue": "Google storage bucket does not use customer-managed keys to encrypt data",
+        "impact": "Google will manage the encryption keys on its servers and could access the data without authorization",
+        "resolve": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly.",
+        "remediation": {
+          "terraform": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly."
+        },
+        "lineNumber": 79,
+        "iacDescription": {
+          "issue": "Google storage bucket does not use customer-managed keys to encrypt data",
+          "impact": "Google will manage the encryption keys on its servers and could access the data without authorization",
+          "resolve": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly."
+        },
+        "publicId": "SNYK-CC-TF-185",
+        "msg": "resource.google_storage_bucket[bucket].encryption.default_kms_key_name",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket#encryption",
+          "https://cloud.google.com/storage/docs/encryption",
+          "https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys"
+        ],
+        "path": [
+          "resource",
+          "google_storage_bucket[bucket]",
+          "encryption",
+          "default_kms_key_name"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/cloud-storage-bucket/outputs.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/cloud-storage-bucket/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/cloud-storage-notification/main.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/cloud-storage-notification/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/nat/main.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/nat/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/reference-table/main.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/reference-table/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/reference-table/variables.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/reference-table/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/state-direct-ingest-resources/bigquery.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/state-direct-ingest-resources/bigquery.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/state-direct-ingest-resources/buckets.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/state-direct-ingest-resources/buckets.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-185",
+        "title": "Google storage bucket does not use customer-managed keys to encrypt data",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-185",
+        "isGeneratedByCustomRule": false,
+        "issue": "Google storage bucket does not use customer-managed keys to encrypt data",
+        "impact": "Google will manage the encryption keys on its servers and could access the data without authorization",
+        "resolve": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly.",
+        "remediation": {
+          "terraform": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly."
+        },
+        "lineNumber": 19,
+        "iacDescription": {
+          "issue": "Google storage bucket does not use customer-managed keys to encrypt data",
+          "impact": "Google will manage the encryption keys on its servers and could access the data without authorization",
+          "resolve": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly."
+        },
+        "publicId": "SNYK-CC-TF-185",
+        "msg": "resource.google_storage_bucket[direct-ingest-bucket].encryption.default_kms_key_name",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket#encryption",
+          "https://cloud.google.com/storage/docs/encryption",
+          "https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys"
+        ],
+        "path": [
+          "resource",
+          "google_storage_bucket[direct-ingest-bucket]",
+          "encryption",
+          "default_kms_key_name"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-185",
+        "title": "Google storage bucket does not use customer-managed keys to encrypt data",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-185",
+        "isGeneratedByCustomRule": false,
+        "issue": "Google storage bucket does not use customer-managed keys to encrypt data",
+        "impact": "Google will manage the encryption keys on its servers and could access the data without authorization",
+        "resolve": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly.",
+        "remediation": {
+          "terraform": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly."
+        },
+        "lineNumber": 38,
+        "iacDescription": {
+          "issue": "Google storage bucket does not use customer-managed keys to encrypt data",
+          "impact": "Google will manage the encryption keys on its servers and could access the data without authorization",
+          "resolve": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly."
+        },
+        "publicId": "SNYK-CC-TF-185",
+        "msg": "resource.google_storage_bucket[prod-only-testing-direct-ingest-bucket].encryption.default_kms_key_name",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket#encryption",
+          "https://cloud.google.com/storage/docs/encryption",
+          "https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys"
+        ],
+        "path": [
+          "resource",
+          "google_storage_bucket[prod-only-testing-direct-ingest-bucket]",
+          "encryption",
+          "default_kms_key_name"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-274",
+        "title": "Logging is not enabled on storage bucket",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-274",
+        "isGeneratedByCustomRule": false,
+        "issue": "Logging is not enabled on storage bucket",
+        "impact": "Usage information will not be collected. This may impact ability to determine who accessed data stored in the bucket",
+        "resolve": "Set `logging` block attribute",
+        "remediation": {
+          "terraform": "Set `logging` block attribute"
+        },
+        "lineNumber": 38,
+        "iacDescription": {
+          "issue": "Logging is not enabled on storage bucket",
+          "impact": "Usage information will not be collected. This may impact ability to determine who accessed data stored in the bucket",
+          "resolve": "Set `logging` block attribute"
+        },
+        "publicId": "SNYK-CC-GCP-274",
+        "msg": "resource.google_storage_bucket[prod-only-testing-direct-ingest-bucket].logging",
+        "references": [
+          "https://cloud.google.com/storage/docs/xml-api/put-bucket-logging",
+          "https://cloud.google.com/storage/docs/access-logs"
+        ],
+        "path": [
+          "resource",
+          "google_storage_bucket[prod-only-testing-direct-ingest-bucket]",
+          "logging"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-274",
+        "title": "Logging is not enabled on storage bucket",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-274",
+        "isGeneratedByCustomRule": false,
+        "issue": "Logging is not enabled on storage bucket",
+        "impact": "Usage information will not be collected. This may impact ability to determine who accessed data stored in the bucket",
+        "resolve": "Set `logging` block attribute",
+        "remediation": {
+          "terraform": "Set `logging` block attribute"
+        },
+        "lineNumber": 19,
+        "iacDescription": {
+          "issue": "Logging is not enabled on storage bucket",
+          "impact": "Usage information will not be collected. This may impact ability to determine who accessed data stored in the bucket",
+          "resolve": "Set `logging` block attribute"
+        },
+        "publicId": "SNYK-CC-GCP-274",
+        "msg": "resource.google_storage_bucket[direct-ingest-bucket].logging",
+        "references": [
+          "https://cloud.google.com/storage/docs/xml-api/put-bucket-logging",
+          "https://cloud.google.com/storage/docs/access-logs"
+        ],
+        "path": [
+          "resource",
+          "google_storage_bucket[direct-ingest-bucket]",
+          "logging"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/state-direct-ingest-resources/cloud-storage-notifications.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/state-direct-ingest-resources/cloud-storage-notifications.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/state-direct-ingest-resources/cloud-task-queues.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/state-direct-ingest-resources/cloud-task-queues.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/state-direct-ingest-resources/main.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/state-direct-ingest-resources/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/state-direct-ingest-resources/variables.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/state-direct-ingest-resources/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/state-sftp-download-resources/main.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/state-sftp-download-resources/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "recidiviz/tools/deploy/terraform/modules/state-sftp-download-resources/variables.tf",
+    "projectName": "pulse-data",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/pulse-data/recidiviz/tools/deploy/terraform/modules/state-sftp-download-resources/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/snyk_ansible/pulse-data",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  }
+]

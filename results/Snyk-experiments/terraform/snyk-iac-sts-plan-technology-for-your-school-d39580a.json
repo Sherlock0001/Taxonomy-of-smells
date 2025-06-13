@@ -1,0 +1,660 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/container-app/backend.tf",
+    "projectName": "sts-plan-technology-for-your-school",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school/terraform/container-app/backend.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/container-app/client_config.tf",
+    "projectName": "sts-plan-technology-for-your-school",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school/terraform/container-app/client_config.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/container-app/key-vault.tf",
+    "projectName": "sts-plan-technology-for-your-school",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school/terraform/container-app/key-vault.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-174",
+        "title": "Vault secret expiration date not set",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Key Vault",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-174",
+        "isGeneratedByCustomRule": false,
+        "issue": "Expiration date is not set for Azure Vault secret",
+        "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+        "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+        "remediation": {
+          "terraform": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+          "arm": "Set `properties.attributes.exp` attribute to date in the future time in seconds, e.g. `1658319657`"
+        },
+        "lineNumber": 93,
+        "iacDescription": {
+          "issue": "Expiration date is not set for Azure Vault secret",
+          "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+          "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`"
+        },
+        "publicId": "SNYK-CC-TF-174",
+        "msg": "resource.azurerm_key_vault_secret[vault_secret_database_connectionstring]",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates"
+        ],
+        "path": [
+          "resource",
+          "azurerm_key_vault_secret[vault_secret_database_connectionstring]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-174",
+        "title": "Vault secret expiration date not set",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Key Vault",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-174",
+        "isGeneratedByCustomRule": false,
+        "issue": "Expiration date is not set for Azure Vault secret",
+        "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+        "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+        "remediation": {
+          "terraform": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+          "arm": "Set `properties.attributes.exp` attribute to date in the future time in seconds, e.g. `1658319657`"
+        },
+        "lineNumber": 80,
+        "iacDescription": {
+          "issue": "Expiration date is not set for Azure Vault secret",
+          "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+          "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`"
+        },
+        "publicId": "SNYK-CC-TF-174",
+        "msg": "resource.azurerm_key_vault_secret[vault_secret_contentful_environment]",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates"
+        ],
+        "path": [
+          "resource",
+          "azurerm_key_vault_secret[vault_secret_contentful_environment]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-174",
+        "title": "Vault secret expiration date not set",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Key Vault",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-174",
+        "isGeneratedByCustomRule": false,
+        "issue": "Expiration date is not set for Azure Vault secret",
+        "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+        "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+        "remediation": {
+          "terraform": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+          "arm": "Set `properties.attributes.exp` attribute to date in the future time in seconds, e.g. `1658319657`"
+        },
+        "lineNumber": 54,
+        "iacDescription": {
+          "issue": "Expiration date is not set for Azure Vault secret",
+          "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+          "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`"
+        },
+        "publicId": "SNYK-CC-TF-174",
+        "msg": "resource.azurerm_key_vault_secret[vault_secret_contentful_previewapikey]",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates"
+        ],
+        "path": [
+          "resource",
+          "azurerm_key_vault_secret[vault_secret_contentful_previewapikey]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-173",
+        "title": "Vault key expiration date not set",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Key Vault",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-173",
+        "isGeneratedByCustomRule": false,
+        "issue": "Expiration date is not set for Azure Vault key",
+        "impact": "Key rotation will not be enforced, which can lead to use of stale or compromised credentials",
+        "resolve": "Set `expiration_date` attribute to date in the future, with format `YYYY-MM-DD'T'H:M:S'Z'`, e.g `2019-01-01T01:02:03Z`",
+        "remediation": {
+          "terraform": "Set `expiration_date` attribute to date in the future, with format `YYYY-MM-DD'T'H:M:S'Z'`, e.g `2019-01-01T01:02:03Z`",
+          "arm": "Set `properties.attributes.exp` attribute to date in the future time in seconds, e.g. `1658319657`"
+        },
+        "lineNumber": 106,
+        "iacDescription": {
+          "issue": "Expiration date is not set for Azure Vault key",
+          "impact": "Key rotation will not be enforced, which can lead to use of stale or compromised credentials",
+          "resolve": "Set `expiration_date` attribute to date in the future, with format `YYYY-MM-DD'T'H:M:S'Z'`, e.g `2019-01-01T01:02:03Z`"
+        },
+        "publicId": "SNYK-CC-TF-173",
+        "msg": "resource.azurerm_key_vault_key[data_protection_key]",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts"
+        ],
+        "path": [
+          "resource",
+          "azurerm_key_vault_key[data_protection_key]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-174",
+        "title": "Vault secret expiration date not set",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Key Vault",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-174",
+        "isGeneratedByCustomRule": false,
+        "issue": "Expiration date is not set for Azure Vault secret",
+        "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+        "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+        "remediation": {
+          "terraform": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+          "arm": "Set `properties.attributes.exp` attribute to date in the future time in seconds, e.g. `1658319657`"
+        },
+        "lineNumber": 67,
+        "iacDescription": {
+          "issue": "Expiration date is not set for Azure Vault secret",
+          "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+          "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`"
+        },
+        "publicId": "SNYK-CC-TF-174",
+        "msg": "resource.azurerm_key_vault_secret[vault_secret_contentful_spaceid]",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates"
+        ],
+        "path": [
+          "resource",
+          "azurerm_key_vault_secret[vault_secret_contentful_spaceid]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-174",
+        "title": "Vault secret expiration date not set",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Key Vault",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-174",
+        "isGeneratedByCustomRule": false,
+        "issue": "Expiration date is not set for Azure Vault secret",
+        "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+        "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+        "remediation": {
+          "terraform": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`",
+          "arm": "Set `properties.attributes.exp` attribute to date in the future time in seconds, e.g. `1658319657`"
+        },
+        "lineNumber": 41,
+        "iacDescription": {
+          "issue": "Expiration date is not set for Azure Vault secret",
+          "impact": "Secret rotation will not be enforced, which can lead to use of stale or compromised credentials",
+          "resolve": "Set `expiration_date` attribute to date in the future, with format `Y-m-d'T'H:M:S'Z'`, e.g.`2019-01-01T01:02:03Z`"
+        },
+        "publicId": "SNYK-CC-TF-174",
+        "msg": "resource.azurerm_key_vault_secret[vault_secret_contentful_deliveryapikey]",
+        "references": [
+          "https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates"
+        ],
+        "path": [
+          "resource",
+          "azurerm_key_vault_secret[vault_secret_contentful_deliveryapikey]"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/container-app/locals.tf",
+    "projectName": "sts-plan-technology-for-your-school",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school/terraform/container-app/locals.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/container-app/main-hosting.tf",
+    "projectName": "sts-plan-technology-for-your-school",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school/terraform/container-app/main-hosting.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/container-app/providers.tf",
+    "projectName": "sts-plan-technology-for-your-school",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school/terraform/container-app/providers.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/container-app/user-assigned-identity.tf",
+    "projectName": "sts-plan-technology-for-your-school",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school/terraform/container-app/user-assigned-identity.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/container-app/variables.tf",
+    "projectName": "sts-plan-technology-for-your-school",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school/terraform/container-app/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/container-app/versions.tf",
+    "projectName": "sts-plan-technology-for-your-school",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school/terraform/container-app/versions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/container-app/waf.tf",
+    "projectName": "sts-plan-technology-for-your-school",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school/terraform/container-app/waf.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/dns-zone/backend.tf",
+    "projectName": "sts-plan-technology-for-your-school",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school/terraform/dns-zone/backend.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/dns-zone/dns-zone.tf",
+    "projectName": "sts-plan-technology-for-your-school",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school/terraform/dns-zone/dns-zone.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/dns-zone/providers.tf",
+    "projectName": "sts-plan-technology-for-your-school",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school/terraform/dns-zone/providers.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/dns-zone/variables.tf",
+    "projectName": "sts-plan-technology-for-your-school",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school/terraform/dns-zone/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/dns-zone/versions.tf",
+    "projectName": "sts-plan-technology-for-your-school",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school/terraform/dns-zone/versions.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/sts-plan-technology-for-your-school",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  }
+]

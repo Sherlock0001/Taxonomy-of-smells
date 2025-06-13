@@ -1,0 +1,343 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "csharp/LogForging",
+              "name": "LogForging",
+              "shortDescription": {
+                "text": "Log Forging"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nLog files are essential for properly functioning security. They are often processed automatically to generate alerts or scanned manually to determine the context of any failure or reported incident. When this weakness is present, an attacker is able to pass data to the server, which can falsify the security logs. The attacker could potentially write extra lines into the log-adding misleading data to cover their tracks, generating false positives or negatives or corrupting the log, and creating confusing results or flooding the log files to skew statistics-fooling security software and deflecting attention so their intrusion will go undetected. In an even more severe scenario, an attacker could insert code or other commands directly into the log file, which could be processed by the server should a vulnerability exist in the log processing application.\n\n## Best practices for prevention\n* Assume all user input, or all kinds, is malicious. Always sanitize user input, scanning in specific for special characters such as CRLF (`\\r` and `\\n`) along with other denylist characters that could introduce new lines to log files.\n* Create strict definitions for log file entry structure wherever possible to avoid gibberish or maliciously created log files.\n* Consider implementing output encoding such as ISO-8859-1, UTF-7, or UTF-8 immediately before log files are passed to the application.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "csharp",
+                  "LogForging",
+                  "Security",
+                  "SourceServer",
+                  "SourceHttpParam",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/OrchardCMS/Orchard/commit/8fbc1e41f33c8dfd2435136591346e76aa58f2fd?diff=split#diff-51158780dabbb30adaeca5f1220551ae819458035c5c7db21de415f3dd20dc62L-1",
+                    "lines": [
+                      {
+                        "line": "Logger.Debug(\"Request for URL '{0}' ignored because it's a child action.\", filterContext.RequestContext.HttpContext.Request.RawUrl);\r\n",
+                        "lineNumber": 88,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "Logger.Debug(\"Action '{0}' ignored because it's a child action.\", filterContext.ActionDescriptor.ActionName);\r\n",
+                        "lineNumber": 88,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/JudahGabriel/Chavah/commit/92e02d2ab8beb26225d20d11cb609b3ca5e9c439?diff=split#diff-2681669e846d3f50a9da87362e616e15821b34721df03c3c6268831faff92b27L-1",
+                    "lines": [
+                      {
+                        "line": "logger.LogInformation(executedContext.Exception, \"Task cancelled\");\n",
+                        "lineNumber": 84,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "logger.LogInformation(\"Task cancelled\");\n",
+                        "lineNumber": 84,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/Azure/AIPlatform/commit/?diff=split#diff-b330b153e28769640f2cd60ebf2daa7e1dd5e607becd5cd3b82fea0030ba6ce4L-1",
+                    "lines": [
+                      {
+                        "line": "_logger.LogInformation($\"Get all apiVersions in deployment {deploymentName} in product {productName}.\");\n",
+                        "lineNumber": 49,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "_logger.LogInformation($\"Get all apiVersions in deployment in product.\");\n",
+                        "lineNumber": 49,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 20,
+                "cwe": [
+                  "CWE-117"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "csharp/LogForging",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Unsanitized input from an HTTP parameter flows into LogWarning, where it is used as log input. This may result in a Logs Forging vulnerability.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used as log input. This may result in a Logs Forging vulnerability.",
+            "arguments": [
+              "[an HTTP parameter](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8)",
+              "[LogWarning](9)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/Dfe.PlanTech.Web/Controllers/PagesController.cs",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 26,
+                  "endLine": 26,
+                  "startColumn": 25,
+                  "endColumn": 68
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "bcfbd6f8dfc3e9e2c496535bb7a85236370728e161e8081a4ccdf9ee18044af7",
+            "1": "5ccaa1cc.5894468a.1d075b06.f5757239.63feb440.06fd774f.b5c08ad5.5ec68fda.5ccaa1cc.8c06c0b2.527a2ee1.f5757239.63feb440.f74ea945.4e7651ea.7d7ec2d8"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/Dfe.PlanTech.Web/Controllers/PagesController.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 24,
+                            "endLine": 24,
+                            "startColumn": 37,
+                            "endColumn": 85
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/Dfe.PlanTech.Web/Controllers/PagesController.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 24,
+                            "endLine": 24,
+                            "startColumn": 37,
+                            "endColumn": 85
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/Dfe.PlanTech.Web/Controllers/PagesController.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 26,
+                            "endLine": 26,
+                            "startColumn": 43,
+                            "endColumn": 47
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/Dfe.PlanTech.Web/Models/PageViewModel.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 11,
+                            "endLine": 11,
+                            "startColumn": 26,
+                            "endColumn": 35
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/Dfe.PlanTech.Web/Models/PageViewModel.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 125,
+                            "endColumn": 129
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/Dfe.PlanTech.Web/Models/PageViewModel.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 125,
+                            "endColumn": 133
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/Dfe.PlanTech.Web/Models/PageViewModel.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 125,
+                            "endColumn": 136
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/Dfe.PlanTech.Web/Models/PageViewModel.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 105,
+                            "endColumn": 136
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/Dfe.PlanTech.Web/Models/PageViewModel.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 13,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/Dfe.PlanTech.Web/Models/PageViewModel.cs",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "endLine": 25,
+                            "startColumn": 13,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 450,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "C#",
+            "files": 296,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "JavaScript",
+            "files": 41,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

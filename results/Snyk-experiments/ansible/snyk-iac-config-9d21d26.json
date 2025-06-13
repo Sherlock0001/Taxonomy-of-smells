@@ -1,0 +1,152 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "sysinv/sysinv/sysinv/sysinv/tests/helm/fluxcd-test-manifest/base/helmrepository.yaml",
+    "projectName": "config",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/config/sysinv/sysinv/sysinv/sysinv/tests/helm/fluxcd-test-manifest/base/helmrepository.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/config",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "sysinv/sysinv/sysinv/sysinv/tests/helm/fluxcd-test-manifest/base/namespace.yaml",
+    "projectName": "config",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/config/sysinv/sysinv/sysinv/sysinv/tests/helm/fluxcd-test-manifest/base/namespace.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/config",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "sysinv/sysinv/sysinv/sysinv/tests/helm/fluxcd-test-manifest/release1/helmrelease.yaml",
+    "projectName": "config",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/config/sysinv/sysinv/sysinv/sysinv/tests/helm/fluxcd-test-manifest/release1/helmrelease.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/config",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "sysinv/sysinv/sysinv/sysinv/tests/helm/fluxcd-test-manifest/release2/helmrelease.yaml",
+    "projectName": "config",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/config/sysinv/sysinv/sysinv/sysinv/tests/helm/fluxcd-test-manifest/release2/helmrelease.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/config",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false
+      },
+      "org": "mbissine2022",
+      "orgPublicId": "a4e8e0af-6ef6-42f7-ba8c-edc4687b1910",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "sysinv/sysinv/sysinv/sysinv/tests/helm/fluxcd-test-manifest/release3/helmrelease.yaml",
+    "projectName": "config",
+    "org": "mbissine2022",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/snyk_ansible/config/sysinv/sysinv/sysinv/sysinv/tests/helm/fluxcd-test-manifest/release3/helmrelease.yaml",
+    "packageManager": "k8sconfig",
+    "path": "/home/mbissine/snyk_ansible/config",
+    "projectType": "k8sconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  }
+]

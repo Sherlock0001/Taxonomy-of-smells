@@ -1,0 +1,14 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/ci-mgmt/native-provider-ci/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/ci-mgmt/provider-ci/internal/pkg/templates/dev-container/devbox.json"
+  }
+]

@@ -1,0 +1,158 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/.vscode/settings.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/pkg/backend/display/testdata/not-truncated/template-body.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/pkg/backend/display/testdata/not-truncated/up-2.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/pkg/backend/display/testdata/not-truncated/up-3.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/pkg/backend/display/testdata/not-truncated/up-4.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/pkg/backend/display/testdata/not-truncated/up-5.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/pkg/backend/display/testdata/not-truncated/up.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/pkg/backend/display/testdata/not-truncated/webserver-userdata.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/pkg/backend/display/testdata/truncated/up-truncate.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/sdk/nodejs/tests/sxs_ts_test/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/tests/integration/component_provider_schema/testcomponent/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/tests/integration/construct_component/testcomponent/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/tests/integration/construct_component_error_apply/testcomponent/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/tests/integration/construct_component_methods/testcomponent/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/tests/integration/construct_component_methods_errors/testcomponent/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/tests/integration/construct_component_methods_unknown/testcomponent/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/tests/integration/construct_component_output_values/testcomponent/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/tests/integration/construct_component_plain/testcomponent/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/tests/integration/construct_component_provider/testcomponent/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/tests/integration/construct_component_slow/testcomponent/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/tests/integration/construct_component_unknown/testcomponent/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/tests/integration/nodejs/compiler_options/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/tests/integration/nodejs/omit-stacktrace/syntax-error/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/tests/integration/nodejs/omit-stacktrace/ts-error/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/tests/integration/policy/policy_pack_w_config/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi/tests/integration/policy/policy_pack_wo_config/tsconfig.json"
+  }
+]

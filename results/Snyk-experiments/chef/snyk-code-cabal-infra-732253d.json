@@ -1,0 +1,57 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": []
+        }
+      },
+      "results": [],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "HTML+ERB",
+            "files": 15,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "HTML",
+            "files": 3,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "JavaScript",
+            "files": 23,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Python",
+            "files": 12,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Ruby",
+            "files": 21,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": false,
+            "lang": "JavaScript",
+            "files": 1,
+            "type": "FAILED_PARSING"
+          }
+        ]
+      }
+    }
+  ]
+}

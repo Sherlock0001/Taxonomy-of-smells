@@ -1,0 +1,3572 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/environments/kv_server.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/environments/kv_server.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/environments/kv_server_variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/environments/kv_server_variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/environments/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/environments/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/modules/kv_server/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/modules/kv_server/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/modules/kv_server/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/modules/kv_server/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/modules/kv_server/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/modules/kv_server/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/autoscaling/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/autoscaling/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/autoscaling/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/autoscaling/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/autoscaling/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/autoscaling/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/backend_services/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/backend_services/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-69",
+        "title": "Wildcard action in IAM Policy",
+        "severity": "high",
+        "isIgnored": false,
+        "subType": "IAM",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-69",
+        "isGeneratedByCustomRule": false,
+        "issue": "The IAM policy allows all actions on resource",
+        "impact": "Granting permission to perform any action is against 'least privilege' principle",
+        "resolve": "Set `statement.action` attribute to specific actions e.g. `s3:ListBucket`",
+        "remediation": {
+          "cloudformation": "Set `Action` attribute in `Properties.PolicyDocument` to specific actions e.g. `s3:ListBucket`",
+          "terraform": "Set `statement.action` attribute to specific actions e.g. `s3:ListBucket`"
+        },
+        "lineNumber": -1,
+        "iacDescription": {
+          "issue": "The IAM policy allows all actions on resource",
+          "impact": "Granting permission to perform any action is against 'least privilege' principle",
+          "resolve": "Set `statement.action` attribute to specific actions e.g. `s3:ListBucket`"
+        },
+        "publicId": "SNYK-CC-TF-69",
+        "msg": "aws_iam_policy_document[vpce_policy_doc].statement",
+        "description": "",
+        "references": [
+          "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_action.html",
+          "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_grammar.html"
+        ],
+        "path": [
+          "aws_iam_policy_document[vpce_policy_doc]",
+          "statement"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-119",
+        "title": "IAM Policy grants full administrative rights",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "IAM",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-119",
+        "isGeneratedByCustomRule": false,
+        "issue": "The IAM Policy grants all permissions to all resources",
+        "impact": "Any identity with this policy will have full administrative rights in the account",
+        "resolve": "Set `Actions` and `Resources` attributes to limited subset, e.g `Actions: ['s3:Create*']`",
+        "remediation": {
+          "cloudformation": "Set `Actions` and `Resources` attributes to limited subset, e.g `Actions: ['s3:Create*']`",
+          "terraform": "Set `Actions` and `Resources` attributes to limited subset, e.g `Actions: ['s3:Create*']`"
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "The IAM Policy grants all permissions to all resources",
+          "impact": "Any identity with this policy will have full administrative rights in the account",
+          "resolve": "Set `Actions` and `Resources` attributes to limited subset, e.g `Actions: ['s3:Create*']`"
+        },
+        "publicId": "SNYK-CC-TF-119",
+        "msg": "data.aws_iam_policy_document[vpce_policy_doc]",
+        "references": [
+          "https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html"
+        ],
+        "path": [
+          "data",
+          "aws_iam_policy_document[vpce_policy_doc]"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/backend_services/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/backend_services/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/backend_services/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/backend_services/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/dashboard/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/dashboard/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/dashboard/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/dashboard/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/dashboard/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/dashboard/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/data_storage/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/data_storage/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-55",
+        "title": "Non-Encrypted SNS Topic",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "SNS",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-55",
+        "isGeneratedByCustomRule": false,
+        "issue": "The SNS topic is not encrypted at rest",
+        "impact": "That should someone gain unauthorized access to the data they would be able to read the contents.",
+        "resolve": "Set `kms_master_key_id` attribute to KMS key",
+        "remediation": {
+          "cloudformation": "Set `KmsMasterKeyId` attribute to KMS key for example `alias/aws/sns`",
+          "terraform": "Set `kms_master_key_id` attribute to KMS key"
+        },
+        "lineNumber": 61,
+        "iacDescription": {
+          "issue": "The SNS topic is not encrypted at rest",
+          "impact": "That should someone gain unauthorized access to the data they would be able to read the contents.",
+          "resolve": "Set `kms_master_key_id` attribute to KMS key"
+        },
+        "publicId": "SNYK-CC-TF-55",
+        "msg": "resource.aws_sns_topic[sns_topic].kms_master_key_id",
+        "references": [
+          "https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html"
+        ],
+        "path": [
+          "resource",
+          "aws_sns_topic[sns_topic]",
+          "kms_master_key_id"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-127",
+        "title": "S3 bucket MFA delete control disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-127",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket will not enforce MFA login on delete requests",
+        "impact": "Object could be deleted without stronger MFA authorization",
+        "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file",
+        "remediation": {
+          "terraform": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "S3 bucket will not enforce MFA login on delete requests",
+          "impact": "Object could be deleted without stronger MFA authorization",
+          "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "publicId": "SNYK-CC-TF-127",
+        "msg": "resource.aws_s3_bucket[bucket].versioning.mfa_delete",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMFADelete.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[bucket]",
+          "versioning",
+          "mfa_delete"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-55",
+        "title": "Non-Encrypted SNS Topic",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "SNS",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-55",
+        "isGeneratedByCustomRule": false,
+        "issue": "The SNS topic is not encrypted at rest",
+        "impact": "That should someone gain unauthorized access to the data they would be able to read the contents.",
+        "resolve": "Set `kms_master_key_id` attribute to KMS key",
+        "remediation": {
+          "cloudformation": "Set `KmsMasterKeyId` attribute to KMS key for example `alias/aws/sns`",
+          "terraform": "Set `kms_master_key_id` attribute to KMS key"
+        },
+        "lineNumber": 103,
+        "iacDescription": {
+          "issue": "The SNS topic is not encrypted at rest",
+          "impact": "That should someone gain unauthorized access to the data they would be able to read the contents.",
+          "resolve": "Set `kms_master_key_id` attribute to KMS key"
+        },
+        "publicId": "SNYK-CC-TF-55",
+        "msg": "resource.aws_sns_topic[realtime_sns_topic].kms_master_key_id",
+        "references": [
+          "https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html"
+        ],
+        "path": [
+          "resource",
+          "aws_sns_topic[realtime_sns_topic]",
+          "kms_master_key_id"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-124",
+        "title": "S3 bucket versioning disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-124",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket versioning is disabled",
+        "impact": "Changes or deletion of objects will not be reversible",
+        "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.VersioningConfiguration.Status` attribute to `Enabled`",
+          "terraform": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "S3 bucket versioning is disabled",
+          "impact": "Changes or deletion of objects will not be reversible",
+          "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "publicId": "SNYK-CC-TF-124",
+        "msg": "resource.aws_s3_bucket[bucket].versioning.enabled",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[bucket]",
+          "versioning",
+          "enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AWS-422",
+        "title": "SNS topic is not encrypted with customer managed key",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "SNS",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-422",
+        "isGeneratedByCustomRule": false,
+        "issue": "SNS topic is not encrypted with customer managed key",
+        "impact": "Scope of use of the encryption key cannot be controlled via KMS/IAM policies",
+        "resolve": "Set `kms_master_key_id` attribute to a customer managed key id",
+        "remediation": {
+          "cloudformation": "Set `Properties.KmsMasterKeyId` attribute to a customer managed key id ",
+          "terraform": "Set `kms_master_key_id` attribute to a customer managed key id"
+        },
+        "lineNumber": 61,
+        "iacDescription": {
+          "issue": "SNS topic is not encrypted with customer managed key",
+          "impact": "Scope of use of the encryption key cannot be controlled via KMS/IAM policies",
+          "resolve": "Set `kms_master_key_id` attribute to a customer managed key id"
+        },
+        "publicId": "SNYK-CC-AWS-422",
+        "msg": "resource.aws_sns_topic[sns_topic].kms_master_key_id",
+        "references": [
+          "https://docs.aws.amazon.com/sns/latest/dg/sns-create-topic.html",
+          "https://docs.aws.amazon.com/whitepapers/latest/kms-best-practices/aws-managed-and-customer-managed-cmks.html"
+        ],
+        "path": [
+          "resource",
+          "aws_sns_topic[sns_topic]",
+          "kms_master_key_id"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-45",
+        "title": "S3 server access logging is disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-45",
+        "isGeneratedByCustomRule": false,
+        "issue": "The s3 access logs will not be collected",
+        "impact": "There will be no audit trail of access to s3 objects",
+        "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.LoggingConfiguration` attribute",
+          "terraform": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "The s3 access logs will not be collected",
+          "impact": "There will be no audit trail of access to s3 objects",
+          "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "publicId": "SNYK-CC-TF-45",
+        "msg": "input.resource.aws_s3_bucket[bucket].logging",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html"
+        ],
+        "path": [
+          "input",
+          "resource",
+          "aws_s3_bucket[bucket]",
+          "logging"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AWS-422",
+        "title": "SNS topic is not encrypted with customer managed key",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "SNS",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-422",
+        "isGeneratedByCustomRule": false,
+        "issue": "SNS topic is not encrypted with customer managed key",
+        "impact": "Scope of use of the encryption key cannot be controlled via KMS/IAM policies",
+        "resolve": "Set `kms_master_key_id` attribute to a customer managed key id",
+        "remediation": {
+          "cloudformation": "Set `Properties.KmsMasterKeyId` attribute to a customer managed key id ",
+          "terraform": "Set `kms_master_key_id` attribute to a customer managed key id"
+        },
+        "lineNumber": 103,
+        "iacDescription": {
+          "issue": "SNS topic is not encrypted with customer managed key",
+          "impact": "Scope of use of the encryption key cannot be controlled via KMS/IAM policies",
+          "resolve": "Set `kms_master_key_id` attribute to a customer managed key id"
+        },
+        "publicId": "SNYK-CC-AWS-422",
+        "msg": "resource.aws_sns_topic[realtime_sns_topic].kms_master_key_id",
+        "references": [
+          "https://docs.aws.amazon.com/sns/latest/dg/sns-create-topic.html",
+          "https://docs.aws.amazon.com/whitepapers/latest/kms-best-practices/aws-managed-and-customer-managed-cmks.html"
+        ],
+        "path": [
+          "resource",
+          "aws_sns_topic[realtime_sns_topic]",
+          "kms_master_key_id"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/data_storage/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/data_storage/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/data_storage/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/data_storage/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/iam_group_policies/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/iam_group_policies/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/iam_group_policies/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/iam_group_policies/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/iam_groups/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/iam_groups/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/iam_groups/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/iam_groups/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/iam_groups/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/iam_groups/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/iam_role_policies/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/iam_role_policies/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/iam_role_policies/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/iam_role_policies/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/iam_role_policies/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/iam_role_policies/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/iam_roles/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/iam_roles/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/iam_roles/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/iam_roles/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/iam_roles/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/iam_roles/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/load_balancing/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/load_balancing/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AWS-405",
+        "title": "ALB does not drop invalid headers",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Elastic Load Balancing",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-405",
+        "isGeneratedByCustomRule": false,
+        "issue": "The application load balancer is not set to drop invalid headers.",
+        "impact": "Maliciously crafted headers may be accepted by the load balancer",
+        "resolve": "Set `drop_invalid_header_fields` to `true`",
+        "remediation": {
+          "cloudformation": "Set `Properties.LoadBalancerAttributes.Key` to `routing.http.drop_invalid_header_fields.enabled` and `Properties.LoadBalancerAttributes.Value` to `true`",
+          "terraform": "Set `drop_invalid_header_fields` to `true`"
+        },
+        "lineNumber": 17,
+        "iacDescription": {
+          "issue": "The application load balancer is not set to drop invalid headers.",
+          "impact": "Maliciously crafted headers may be accepted by the load balancer",
+          "resolve": "Set `drop_invalid_header_fields` to `true`"
+        },
+        "publicId": "SNYK-CC-AWS-405",
+        "msg": "resource.aws_lb[public_alb]",
+        "references": [
+          "https://docs.aws.amazon.com/config/latest/developerguide/alb-http-drop-invalid-header-enabled.html"
+        ],
+        "path": [
+          "resource",
+          "aws_lb[public_alb]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-48",
+        "title": "Load balancer is internet facing",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Elastic Load Balancing",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-48",
+        "isGeneratedByCustomRule": false,
+        "issue": "Load balancer is internet facing",
+        "impact": "Increases attack vector reachability",
+        "resolve": "Set `internal` attribute to `true`",
+        "remediation": {
+          "cloudformation": "Set `Properties.Scheme` attribute to `internal`",
+          "terraform": "Set `internal` attribute to `true`"
+        },
+        "lineNumber": 19,
+        "iacDescription": {
+          "issue": "Load balancer is internet facing",
+          "impact": "Increases attack vector reachability",
+          "resolve": "Set `internal` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-48",
+        "msg": "resource.aws_lb[public_alb].internal",
+        "references": [
+          "https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-internet-facing-load-balancers.html"
+        ],
+        "path": [
+          "resource",
+          "aws_lb[public_alb]",
+          "internal"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/load_balancing/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/load_balancing/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/load_balancing/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/load_balancing/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/networking/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/networking/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AWS-427",
+        "title": "Public IPs are automatically mapped to instances",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-427",
+        "isGeneratedByCustomRule": false,
+        "issue": "Instances launched in this subnet will automatically have public IP assigned",
+        "impact": "Instances will be potentially accessible over public internet, which may lead to unauthorized access",
+        "resolve": "Set `map_public_ip_on_launch` attribute  with value `false`",
+        "remediation": {
+          "cloudformation": "Set `Properties.MapPublicIpOnLaunch` attribute with value `false`",
+          "terraform": "Set `map_public_ip_on_launch` attribute  with value `false`"
+        },
+        "lineNumber": 43,
+        "iacDescription": {
+          "issue": "Instances launched in this subnet will automatically have public IP assigned",
+          "impact": "Instances will be potentially accessible over public internet, which may lead to unauthorized access",
+          "resolve": "Set `map_public_ip_on_launch` attribute  with value `false`"
+        },
+        "publicId": "SNYK-CC-AWS-427",
+        "msg": "resource.aws_subnet[public_subnet].map_public_ip_on_launch",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html"
+        ],
+        "path": [
+          "resource",
+          "aws_subnet[public_subnet]",
+          "map_public_ip_on_launch"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/networking/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/networking/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/networking/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/networking/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/parameter/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/parameter/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/parameter/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/parameter/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/parameter/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/parameter/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/security_group_rules/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/security_group_rules/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-72",
+        "title": "Rule allows open egress",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-72",
+        "isGeneratedByCustomRule": false,
+        "issue": "The security group rule allows open egress",
+        "impact": "Open egress can be used to exfiltrate data to unauthorized destinations, and enable access to potentially malicious resources",
+        "resolve": "Set `cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`",
+        "remediation": {
+          "cloudformation": "Set `Properties.SecurityGroupEgress.CidrIp` attribute to specific ranges e.g. `192.168.1.0/24`",
+          "terraform": "Set `cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 161,
+        "iacDescription": {
+          "issue": "The security group rule allows open egress",
+          "impact": "Open egress can be used to exfiltrate data to unauthorized destinations, and enable access to potentially malicious resources",
+          "resolve": "Set `cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-72",
+        "msg": "resource.aws_security_group_rule[allow_ec2_secure_tcp_egress]",
+        "references": [
+          "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html",
+          "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-best-practices.html",
+          "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html"
+        ],
+        "path": [
+          "resource",
+          "aws_security_group_rule[allow_ec2_secure_tcp_egress]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-72",
+        "title": "Rule allows open egress",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-72",
+        "isGeneratedByCustomRule": false,
+        "issue": "The security group rule allows open egress",
+        "impact": "Open egress can be used to exfiltrate data to unauthorized destinations, and enable access to potentially malicious resources",
+        "resolve": "Set `cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`",
+        "remediation": {
+          "cloudformation": "Set `Properties.SecurityGroupEgress.CidrIp` attribute to specific ranges e.g. `192.168.1.0/24`",
+          "terraform": "Set `cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 64,
+        "iacDescription": {
+          "issue": "The security group rule allows open egress",
+          "impact": "Open egress can be used to exfiltrate data to unauthorized destinations, and enable access to potentially malicious resources",
+          "resolve": "Set `cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-72",
+        "msg": "resource.aws_security_group_rule[allow_ssh_secure_tcp_egress]",
+        "references": [
+          "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html",
+          "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-best-practices.html",
+          "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html"
+        ],
+        "path": [
+          "resource",
+          "aws_security_group_rule[allow_ssh_secure_tcp_egress]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-37",
+        "title": "AWS Security Group Rule allows public access",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-37",
+        "isGeneratedByCustomRule": false,
+        "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+        "impact": "That potentially everyone can access your resource",
+        "resolve": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+        "remediation": {
+          "cloudformation": "Set `CidrIp` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+          "terraform": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 24,
+        "iacDescription": {
+          "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+          "impact": "That potentially everyone can access your resource",
+          "resolve": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-37",
+        "msg": "resource.aws_security_group_rule[allow_all_elb_ingress].cidr_blocks",
+        "references": [],
+        "path": [
+          "resource",
+          "aws_security_group_rule[allow_all_elb_ingress]",
+          "cidr_blocks"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-37",
+        "title": "AWS Security Group Rule allows public access",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-37",
+        "isGeneratedByCustomRule": false,
+        "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+        "impact": "That potentially everyone can access your resource",
+        "resolve": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+        "remediation": {
+          "cloudformation": "Set `CidrIp` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+          "terraform": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 33,
+        "iacDescription": {
+          "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+          "impact": "That potentially everyone can access your resource",
+          "resolve": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-37",
+        "msg": "resource.aws_security_group_rule[allow_all_elb_ingress2].cidr_blocks",
+        "references": [],
+        "path": [
+          "resource",
+          "aws_security_group_rule[allow_all_elb_ingress2]",
+          "cidr_blocks"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/security_group_rules/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/security_group_rules/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/security_groups/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/security_groups/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-56",
+        "title": "Security group description is missing",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-56",
+        "isGeneratedByCustomRule": false,
+        "issue": "The description field is missing in the security group",
+        "impact": "Increases the security management overhead",
+        "resolve": "Set `description` attribute to meaningful statement",
+        "remediation": {
+          "terraform": "Set `description` attribute to meaningful statement"
+        },
+        "lineNumber": 52,
+        "iacDescription": {
+          "issue": "The description field is missing in the security group",
+          "impact": "Increases the security management overhead",
+          "resolve": "Set `description` attribute to meaningful statement"
+        },
+        "publicId": "SNYK-CC-TF-56",
+        "msg": "resource.aws_security_group[vpce_security_group].description",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html"
+        ],
+        "path": [
+          "resource",
+          "aws_security_group[vpce_security_group]",
+          "description"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-56",
+        "title": "Security group description is missing",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-56",
+        "isGeneratedByCustomRule": false,
+        "issue": "The description field is missing in the security group",
+        "impact": "Increases the security management overhead",
+        "resolve": "Set `description` attribute to meaningful statement",
+        "remediation": {
+          "terraform": "Set `description` attribute to meaningful statement"
+        },
+        "lineNumber": 42,
+        "iacDescription": {
+          "issue": "The description field is missing in the security group",
+          "impact": "Increases the security management overhead",
+          "resolve": "Set `description` attribute to meaningful statement"
+        },
+        "publicId": "SNYK-CC-TF-56",
+        "msg": "resource.aws_security_group[instance_security_group].description",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html"
+        ],
+        "path": [
+          "resource",
+          "aws_security_group[instance_security_group]",
+          "description"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-56",
+        "title": "Security group description is missing",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-56",
+        "isGeneratedByCustomRule": false,
+        "issue": "The description field is missing in the security group",
+        "impact": "Increases the security management overhead",
+        "resolve": "Set `description` attribute to meaningful statement",
+        "remediation": {
+          "terraform": "Set `description` attribute to meaningful statement"
+        },
+        "lineNumber": 32,
+        "iacDescription": {
+          "issue": "The description field is missing in the security group",
+          "impact": "Increases the security management overhead",
+          "resolve": "Set `description` attribute to meaningful statement"
+        },
+        "publicId": "SNYK-CC-TF-56",
+        "msg": "resource.aws_security_group[ssh_security_group].description",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html"
+        ],
+        "path": [
+          "resource",
+          "aws_security_group[ssh_security_group]",
+          "description"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-56",
+        "title": "Security group description is missing",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-56",
+        "isGeneratedByCustomRule": false,
+        "issue": "The description field is missing in the security group",
+        "impact": "Increases the security management overhead",
+        "resolve": "Set `description` attribute to meaningful statement",
+        "remediation": {
+          "terraform": "Set `description` attribute to meaningful statement"
+        },
+        "lineNumber": 22,
+        "iacDescription": {
+          "issue": "The description field is missing in the security group",
+          "impact": "Increases the security management overhead",
+          "resolve": "Set `description` attribute to meaningful statement"
+        },
+        "publicId": "SNYK-CC-TF-56",
+        "msg": "resource.aws_security_group[elb_security_group].description",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html"
+        ],
+        "path": [
+          "resource",
+          "aws_security_group[elb_security_group]",
+          "description"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/security_groups/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/security_groups/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/security_groups/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/security_groups/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/sqs_cleanup/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/sqs_cleanup/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-133",
+        "title": "X-ray tracing is disabled for Lambda function",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Lambda",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-133",
+        "isGeneratedByCustomRule": false,
+        "issue": "Amazon X-Ray tracing is not enabled for Lambda function",
+        "impact": "Trace logs will not be available during investigation",
+        "resolve": "Set `tracing_config.mode` attribute to `Active` or `PassThrough`",
+        "remediation": {
+          "cloudformation": "Set `Properties.TracingConfig.Mode` attribute to `Active` or `PassThrough`",
+          "terraform": "Set `tracing_config.mode` attribute to `Active` or `PassThrough`"
+        },
+        "lineNumber": 17,
+        "iacDescription": {
+          "issue": "Amazon X-Ray tracing is not enabled for Lambda function",
+          "impact": "Trace logs will not be available during investigation",
+          "resolve": "Set `tracing_config.mode` attribute to `Active` or `PassThrough`"
+        },
+        "publicId": "SNYK-CC-TF-133",
+        "msg": "resource.aws_lambda_function[sqs_cleanup_function].tracing_config",
+        "references": [
+          "https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html"
+        ],
+        "path": [
+          "resource",
+          "aws_lambda_function[sqs_cleanup_function]",
+          "tracing_config"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/sqs_cleanup/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/sqs_cleanup/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/sqs_cleanup/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/sqs_cleanup/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/ssh/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/ssh/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AWS-426",
+        "title": "EC2 API termination protection is not enabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "EC2",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-426",
+        "isGeneratedByCustomRule": false,
+        "issue": "To prevent instance from being accidentally terminated using Amazon EC2, you can enable termination protection for the instance",
+        "impact": "Without this setting enabled the instances can be terminated by accident. This setting should only be used for instances with high availability requirements. Enabling this may prevent IaC workflows from updating the instance, for example terraform will not be able to terminate the instance to update instance type",
+        "resolve": "Set `disable_api_termination` attribute  with value `true`",
+        "remediation": {
+          "cloudformation": "Set `DisableApiTermination` attribute with value `true`",
+          "terraform": "Set `disable_api_termination` attribute  with value `true`"
+        },
+        "lineNumber": 41,
+        "iacDescription": {
+          "issue": "To prevent instance from being accidentally terminated using Amazon EC2, you can enable termination protection for the instance",
+          "impact": "Without this setting enabled the instances can be terminated by accident. This setting should only be used for instances with high availability requirements. Enabling this may prevent IaC workflows from updating the instance, for example terraform will not be able to terminate the instance to update instance type",
+          "resolve": "Set `disable_api_termination` attribute  with value `true`"
+        },
+        "publicId": "SNYK-CC-AWS-426",
+        "msg": "resource.aws_instance[ssh_instance].disable_api_termination",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination"
+        ],
+        "path": [
+          "resource",
+          "aws_instance[ssh_instance]",
+          "disable_api_termination"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-53",
+        "title": "Non-Encrypted root block device",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "EC2",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-53",
+        "isGeneratedByCustomRule": false,
+        "issue": "The root block device for ec2 instance is not encrypted",
+        "impact": "That should someone gain unauthorized access to the data they would be able to read the contents.",
+        "resolve": "Set `root_block_device.encrypted` attribute to `true`",
+        "remediation": {
+          "cloudformation": "Set `BlockDeviceMappings.Encrypted` attribute of root device to `true`",
+          "terraform": "Set `root_block_device.encrypted` attribute to `true`"
+        },
+        "lineNumber": 41,
+        "iacDescription": {
+          "issue": "The root block device for ec2 instance is not encrypted",
+          "impact": "That should someone gain unauthorized access to the data they would be able to read the contents.",
+          "resolve": "Set `root_block_device.encrypted` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-53",
+        "msg": "resource.aws_instance[ssh_instance].root_block_device.encrypted",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html",
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html",
+          "https://aws.amazon.com/premiumsupport/knowledge-center/cloudformation-root-volume-property/",
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html"
+        ],
+        "path": [
+          "resource",
+          "aws_instance[ssh_instance]",
+          "root_block_device",
+          "encrypted"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/ssh/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/ssh/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/ssh/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/ssh/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/telemetry/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/telemetry/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/telemetry/output.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/telemetry/output.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/aws/services/telemetry/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/aws/services/telemetry/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/environments/kv_server.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/environments/kv_server.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/environments/kv_server_variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/environments/kv_server_variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/environments/terraform.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/environments/terraform.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/modules/kv_server/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/modules/kv_server/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/modules/kv_server/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/modules/kv_server/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/autoscaling/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/autoscaling/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/autoscaling/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/autoscaling/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/autoscaling/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/autoscaling/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/dashboards/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/dashboards/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/dashboards/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/dashboards/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/data_storage/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/data_storage/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-GCP-274",
+        "title": "Logging is not enabled on storage bucket",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-274",
+        "isGeneratedByCustomRule": false,
+        "issue": "Logging is not enabled on storage bucket",
+        "impact": "Usage information will not be collected. This may impact ability to determine who accessed data stored in the bucket",
+        "resolve": "Set `logging` block attribute",
+        "remediation": {
+          "terraform": "Set `logging` block attribute"
+        },
+        "lineNumber": 17,
+        "iacDescription": {
+          "issue": "Logging is not enabled on storage bucket",
+          "impact": "Usage information will not be collected. This may impact ability to determine who accessed data stored in the bucket",
+          "resolve": "Set `logging` block attribute"
+        },
+        "publicId": "SNYK-CC-GCP-274",
+        "msg": "resource.google_storage_bucket[default].logging",
+        "references": [
+          "https://cloud.google.com/storage/docs/xml-api/put-bucket-logging",
+          "https://cloud.google.com/storage/docs/access-logs"
+        ],
+        "path": [
+          "resource",
+          "google_storage_bucket[default]",
+          "logging"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-185",
+        "title": "Google storage bucket does not use customer-managed keys to encrypt data",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-185",
+        "isGeneratedByCustomRule": false,
+        "issue": "Google storage bucket does not use customer-managed keys to encrypt data",
+        "impact": "Google will manage the encryption keys on its servers and could access the data without authorization",
+        "resolve": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly.",
+        "remediation": {
+          "terraform": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly."
+        },
+        "lineNumber": 17,
+        "iacDescription": {
+          "issue": "Google storage bucket does not use customer-managed keys to encrypt data",
+          "impact": "Google will manage the encryption keys on its servers and could access the data without authorization",
+          "resolve": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly."
+        },
+        "publicId": "SNYK-CC-TF-185",
+        "msg": "resource.google_storage_bucket[default].encryption.default_kms_key_name",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket#encryption",
+          "https://cloud.google.com/storage/docs/encryption",
+          "https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys"
+        ],
+        "path": [
+          "resource",
+          "google_storage_bucket[default]",
+          "encryption",
+          "default_kms_key_name"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-271",
+        "title": "Object versioning is not enabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-271",
+        "isGeneratedByCustomRule": false,
+        "issue": "Object versioning is not enabled",
+        "impact": "The accidental or malicious changes to object will not be reversible",
+        "resolve": "Set `versioning.enabled` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `versioning.enabled` attribute to `true`"
+        },
+        "lineNumber": 17,
+        "iacDescription": {
+          "issue": "Object versioning is not enabled",
+          "impact": "The accidental or malicious changes to object will not be reversible",
+          "resolve": "Set `versioning.enabled` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-GCP-271",
+        "msg": "resource.google_storage_bucket[default].versioning",
+        "references": [
+          "https://cloud.google.com/storage/docs/object-versioning"
+        ],
+        "path": [
+          "resource",
+          "google_storage_bucket[default]",
+          "versioning"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/data_storage/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/data_storage/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/external_load_balancing/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/external_load_balancing/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/external_load_balancing/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/external_load_balancing/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/metrics_collector/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/metrics_collector/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/metrics_collector/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/metrics_collector/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/metrics_collector/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/metrics_collector/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/metrics_collector_autoscaling/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/metrics_collector_autoscaling/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/metrics_collector_autoscaling/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/metrics_collector_autoscaling/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/metrics_collector_autoscaling/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/metrics_collector_autoscaling/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/networking/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/networking/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-194",
+        "title": "VPC Flow Logs for VPC Network Subnets Disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Compute Engine",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-194",
+        "isGeneratedByCustomRule": false,
+        "issue": "Ensure that VPC Flow Logs is enabled for every subnet in a VPC Network",
+        "impact": "No visibility into network traffic within this subnet",
+        "resolve": "Define a `flow_logs` field with `aggregation_interval`, `flow_sampling` and `metadata` subfields.",
+        "remediation": {
+          "terraform": "Define a `flow_logs` field with `aggregation_interval`, `flow_sampling` and `metadata` subfields."
+        },
+        "lineNumber": 23,
+        "iacDescription": {
+          "issue": "Ensure that VPC Flow Logs is enabled for every subnet in a VPC Network",
+          "impact": "No visibility into network traffic within this subnet",
+          "resolve": "Define a `flow_logs` field with `aggregation_interval`, `flow_sampling` and `metadata` subfields."
+        },
+        "publicId": "SNYK-CC-TF-194",
+        "msg": "resource.google_compute_subnetwork[kv_server]",
+        "references": [
+          "https://cloud.google.com/vpc/docs/using-flow-logs",
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_subnetwork#log_config"
+        ],
+        "path": [
+          "resource",
+          "google_compute_subnetwork[kv_server]"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/networking/outputs.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/networking/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/networking/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/networking/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/parameter/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/parameter/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/parameter/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/parameter/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/realtime/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/realtime/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/realtime/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/realtime/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/security/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/security/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-32",
+        "title": "GCP Compute Firewall allows public access",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Compute Engine",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-32",
+        "isGeneratedByCustomRule": false,
+        "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+        "impact": "That potentially everyone can access your resource",
+        "resolve": "Set source_ranges to specific IP range only, e.g. `192.168.1.0/24`",
+        "remediation": {
+          "terraform": "Set source_ranges to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 39,
+        "iacDescription": {
+          "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+          "impact": "That potentially everyone can access your resource",
+          "resolve": "Set source_ranges to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-32",
+        "msg": "resource.google_compute_firewall[kvs_fw_allow_ssh].source_ranges",
+        "references": [],
+        "path": [
+          "resource",
+          "google_compute_firewall[kvs_fw_allow_ssh]",
+          "source_ranges"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-295",
+        "title": "Unrestricted SSH access",
+        "severity": "high",
+        "isIgnored": false,
+        "subType": "Compute Engine",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-295",
+        "isGeneratedByCustomRule": false,
+        "issue": "Compute firewall allows all access to the SSH port",
+        "impact": "SSH service may be accessible over the internet which defeats network segmentation controls",
+        "resolve": "Set `source_ranges` attribute to specific IP range for example `192.168.0.0/24`",
+        "remediation": {
+          "terraform": "Set `source_ranges` attribute to specific IP range for example `192.168.0.0/24`"
+        },
+        "lineNumber": 30,
+        "iacDescription": {
+          "issue": "Compute firewall allows all access to the SSH port",
+          "impact": "SSH service may be accessible over the internet which defeats network segmentation controls",
+          "resolve": "Set `source_ranges` attribute to specific IP range for example `192.168.0.0/24`"
+        },
+        "publicId": "SNYK-CC-GCP-295",
+        "msg": "resource.google_compute_firewall[kvs_fw_allow_ssh]",
+        "references": [
+          "https://cloud.google.com/vpc/docs/firewalls"
+        ],
+        "path": [
+          "resource",
+          "google_compute_firewall[kvs_fw_allow_ssh]"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/security/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/security/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/service_mesh/main.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/service_mesh/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/service_mesh/output.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/service_mesh/output.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "production/terraform/gcp/services/service_mesh/variables.tf",
+    "projectName": "protected-auction-key-value-service",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service/production/terraform/gcp/services/service_mesh/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/protected-auction-key-value-service",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  }
+]

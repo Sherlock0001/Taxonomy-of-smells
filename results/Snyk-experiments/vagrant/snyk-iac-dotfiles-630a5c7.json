@@ -1,0 +1,38 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_vagrant/dotfiles/Tmain/json-limit-recursion.d/input512-two.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_vagrant/dotfiles/Tmain/json-limit-recursion.d/input513-two.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_vagrant/dotfiles/Units/afl-fuzz.r/github-issue-541-json.d/input.json"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_vagrant/dotfiles/Units/parser-ansibleplaybook.r/broken-input.d/input.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_vagrant/dotfiles/Units/parser-openapi.r/broken-input.d/input.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_vagrant/dotfiles/Units/parser-openapi.r/crash-test.d/input.yml"
+  }
+]

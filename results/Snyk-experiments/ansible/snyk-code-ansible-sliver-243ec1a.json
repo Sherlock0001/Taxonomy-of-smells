@@ -1,0 +1,5 @@
+{
+  "ok": false,
+  "error": "Snyk Code is not supported for your current organization: `mbissine2022`.",
+  "path": "/home/mbissine/snyk_ansible/ansible-sliver"
+}

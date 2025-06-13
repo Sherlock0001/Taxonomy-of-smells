@@ -1,0 +1,1390 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "go/HardcodedPassword",
+              "name": "HardcodedPassword",
+              "shortDescription": {
+                "text": "Use of Hardcoded Passwords"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nDevelopers may use hardcoded passwords during development to streamline setup or simplify authentication while testing. Although these passwords are intended to be removed before deployment, they are sometimes inadvertently left in the code. This introduces serious security risks, especially if the password grants elevated privileges or is reused across multiple systems.\n\nAn attacker who discovers a hardcoded password can potentially gain unauthorized access, escalate privileges, exfiltrate sensitive data, or disrupt service availability. If the password is reused across different environments or applications, the compromise can spread quickly and broadly.\n\n## Best practices for prevention\n* Plan software architecture such that keys and passwords are always stored outside the code, wherever possible.\n* Plan encryption into software architecture for all credential information and ensure proper handling of keys, credentials, and passwords.\n* Prompt for a secure password on first login rather than hard-code a default password.\n* If a hardcoded password or credential must be used, limit its use, for example, to system console users rather than via the network.\n* Use strong hashes for inbound password authentication, ideally with randomly assigned salts to increase the difficulty level in case of brute-force attack.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "go",
+                  "HardcodedPassword",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/biningo/note-gin/commit/42791cf29b4b86e2d1f4c384a940591a47e13219?diff=split#diff-ca713ed723a0edf86b651d90157af74fd9d9e739b791097a4b13e697e5699253L-1",
+                    "lines": [
+                      {
+                        "line": "func GetToken() string {\n",
+                        "lineNumber": 7,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\taccessKey := \"WdlLw-oFN1mbj-0vngrbQ8Si39u0dgackq0v9L4T\"\n",
+                        "lineNumber": 8,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\tsecretKey := \"HoKZLcwE1BtYWe9ze__jmwWsfqPeAcbHURN48t9A\"\n",
+                        "lineNumber": 9,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\tbucket := \"note-gin\"\n",
+                        "lineNumber": 10,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\tputPolicy := storage.PutPolicy{\n",
+                        "lineNumber": 11,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t\tScope: bucket,\n",
+                        "lineNumber": 12,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\t}\n",
+                        "lineNumber": 13,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\tmac := qbox.NewMac(accessKey, secretKey)\n",
+                        "lineNumber": 14,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\tupToken := putPolicy.UploadToken(mac)\n",
+                        "lineNumber": 15,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\treturn upToken\n",
+                        "lineNumber": 16,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "var QiniuAccessKey string\n",
+                        "lineNumber": 4,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "var QiniuSecretKey string\n",
+                        "lineNumber": 5,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "func SetUp() {\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tQiniuAccessKey = config.Conf.AppConfig.QiniuAccessKey\n",
+                        "lineNumber": 8,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tQiniuSecretKey = config.Conf.AppConfig.QiniuSecretKey\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/weibocom/opendcp/commit/ec5209d39b8ce28a67bf10f0fe6379f6c65ec454?diff=split#diff-d842348011b17bb4526453c3a207e6032219a4a6cafdf5f0e2c9b3d0da2fae8cL-1",
+                    "lines": [
+                      {
+                        "line": "IdentityEndpoint: \"http://10.39.59.27:5000/v3\",\n",
+                        "lineNumber": 124,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "Username: \"admin\",\n",
+                        "lineNumber": 125,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "Password: \"ZYGL32NDG7JS8IGC\",\n",
+                        "lineNumber": 126,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "IdentityEndpoint: url,\n",
+                        "lineNumber": 127,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "Username: conf.Config.OpUserName,\n",
+                        "lineNumber": 128,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "Password: conf.Config.OpPassWord,\n",
+                        "lineNumber": 129,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/jointwt/twtxt/commit/14e86ea4b5ef71df46297a8ffccc8f259a677fb5?diff=split#diff-0c6fb9f312dbfbfed47d840e0d73f6ba10291681cf8b70ad10979fa20b6aa350L-1",
+                    "lines": [
+                      {
+                        "line": "\t// InvalidConfigValue is the constant value for invalid config values\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t// which must be changed for production configurations before successful\n",
+                        "lineNumber": 10,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t// startup\n",
+                        "lineNumber": 11,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tInvalidConfigValue = \"INVALID CONFIG VALUE - PLEASE CHANGE THIS VALUE\"\n",
+                        "lineNumber": 12,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 13,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\t// DebugMode is the default debug mode\n",
+                        "lineNumber": 14,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tDefaultDebug = false\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 16,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t// DefaultData is the default data directory for storage\n",
+                        "lineNumber": 17,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tDefaultData = \"./data\"\n",
+                        "lineNumber": 18,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t// DefaultStore is the default data store used for accounts, sessions, etc\n",
+                        "lineNumber": 20,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tDefaultStore = \"bitcask://twtxt.db\"\n",
+                        "lineNumber": 21,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t// DefaultBaseURL is the default Base URL for the app used to construct feed URLs\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tDefaultBaseURL = \"http://0.0.0.0:8000\"\n",
+                        "lineNumber": 24,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 25,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t// DefaultAdminXXX is the default admin user / pod operator\n",
+                        "lineNumber": 26,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tDefaultAdminUser  = \"admin\"\n",
+                        "lineNumber": 27,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tDefaultAdminName  = \"Administrator\"\n",
+                        "lineNumber": 28,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tDefaultAdminEmail = \"support@twt.social\"\n",
+                        "lineNumber": 29,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 30,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t// DefaultName is the default instance name\n",
+                        "lineNumber": 31,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tDefaultName = \"twtxt.net\"\n",
+                        "lineNumber": 32,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 33,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t// DefaultMetaxxx are the default set of <meta> tags used on non-specific views\n",
+                        "lineNumber": 34,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tDefaultMetaTitle       = \"\"\n",
+                        "lineNumber": 35,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tDefaultMetaAuthor      = \"twtxt.net / twt.social\"\n",
+                        "lineNumber": 36,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tDefaultMetaKeywords    = \"twtxt, twt, blog, micro-blogging, social, media, decentralised, pod\"\n",
+                        "lineNumber": 37,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tDefaultMetaDescription = \"\ud83d\udcd5 twtxt is a Self-Hosted, Twitter\u2122-like Decentralised microBlogging platform. No ads, no tracking, your content, your data!\"\n",
+                        "lineNumber": 38,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 39,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t// DefaultTheme is the default theme to use ('light' or 'dark')\n",
+                        "lineNumber": 40,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tDefaultTheme = \"dark\"\n",
+                        "lineNumber": 41,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 42,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t// DefaultOpenRegistrations is the default for open user registrations\n",
+                        "lineNumber": 43,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tDefaultOpenRegistrations = false\n",
+                        "lineNumber": 44,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 45,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t// DefaultRegisterMessage is the default message displayed when  registrations are disabled\n",
+                        "lineNumber": 46,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tDefaultRegisterMessage = \"\"\n",
+                        "lineNumber": 47,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 48,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t// DefaultCookieSecret is the server's default cookie secret\n",
+                        "lineNumber": 49,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tDefaultCookieSecret = \"PLEASE_CHANGE_ME!!!\"\n",
+                        "lineNumber": 45,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "\tDefaultCookieSecret = InvalidConfigValue\n",
+                        "lineNumber": 50,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 20,
+                "cwe": [
+                  "CWE-798",
+                  "CWE-259"
+                ]
+              }
+            },
+            {
+              "id": "javascript/DisablePoweredBy",
+              "name": "DisablePoweredBy",
+              "shortDescription": {
+                "text": "Information Exposure"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "## Details\n\nSensitive data includes: personally identifiable information (PII) of employees, customers, users, or other third parties; financial information; code; intellectual property; or protected network information such as passwords. Exposure of sensitive information to an unauthorized actor occurs when any party who does not require this information for business purposes can remove this information from the secure network.\nConsequences of exposure can include holding it for ransom payment, identity theft, or access to other internal network resources-along with financial loss due to regulatory fines, court settlements, or cost to restore compromised systems. As most attackers aim to extract sensitive information, this CWE only describes exploits that take advantage of vulnerabilities related to how data is handled: the management, storage, transfer, or removal of sensitive information.\n\n## Best practices for prevention\n- Encrypt data at all times, whether in transit or at rest.\n- When transporting data, always use a secure protocol such as TLS.\n- Before collecting PII or financial information, consider whether there is a true business need for this information; similarly, before storing the data, ensure that there is an ongoing business need.\n- Classify all incoming data according to privacy and security guidelines to improve awareness of sensitive data.\n- Ensure that caching is disabled for all transactions involving sensitive information.\n- Store passwords with secure, salted hashing functions.\n- Apply a network-wide least-privilege policy so sensitive data is provided only to users with business need to know.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "DisablePoweredBy",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/lucasweng/yelp-camp/commit/f4e907734aea3ec98000d61f5d49c729a95cb77c?diff=split#diff-e07d531ac040ce3f40e0ce632ac2a059d7cd60f20e61f78268ac3be015b3b28fL-1",
+                    "lines": [
+                      {
+                        "line": "      app            = express(),\n",
+                        "lineNumber": 1,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      bodyParser     = require(\"body-parser\"),\n",
+                        "lineNumber": 2,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      mongoose       = require(\"mongoose\"),\n",
+                        "lineNumber": 3,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      helmet         = require(\"helmet\"),\n",
+                        "lineNumber": 4,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "      flash          = require(\"connect-flash\"),\n",
+                        "lineNumber": 5,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      session        = require(\"express-session\"),\n",
+                        "lineNumber": 6,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      moment         = require(\"moment\"),\n",
+                        "lineNumber": 7,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      passport       = require(\"passport\"),\n",
+                        "lineNumber": 8,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      LocalStrategy  = require(\"passport-local\"),\n",
+                        "lineNumber": 9,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      methodOverride = require(\"method-override\"),\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      User           = require(\"./models/user\");\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 12,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "// requiring routes     \n",
+                        "lineNumber": 13,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "const indexRoute      = require(\"./routes/index\"),\n",
+                        "lineNumber": 14,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      campgroundRoute = require(\"./routes/campgrounds\"),\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      commentRoute    = require(\"./routes/comments\"),\n",
+                        "lineNumber": 16,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      userRoute       = require(\"./routes/user\"),\n",
+                        "lineNumber": 17,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "      passwordRoute   = require(\"./routes/password\");\n",
+                        "lineNumber": 18,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "// connect to the DB\n",
+                        "lineNumber": 20,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "let url = process.env.DATABASEURL || \"mongodb://localhost/yelp_camp_v13\"; // fallback in case global var not working\n",
+                        "lineNumber": 21,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "mongoose.connect(url, {useMongoClient: true});\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.set(\"view engine\", \"ejs\");\n",
+                        "lineNumber": 24,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.use(helmet());\n",
+                        "lineNumber": 25,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/infor-design/enterprise/commit/20888f176d6bccc41b009a54b2d47a2b29845db3?diff=split#diff-322f0482bd28fc40f84fcb0aaf208fef7fb63082d462cf02d11f46e59c531c24L-1",
+                    "lines": [
+                      {
+                        "line": "const app = express();\n",
+                        "lineNumber": 9,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "const BASE_PATH = process.env.BASEPATH || '/';\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "const packageJSON = getJSONFile('../../../package.json');\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 12,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.set('view engine', 'html');\n",
+                        "lineNumber": 13,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.set('views', path.resolve(__dirname, 'views'));\n",
+                        "lineNumber": 14,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.set('basepath', BASE_PATH);\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.disable('x-powered-by');\n",
+                        "lineNumber": 16,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/galtenberg/evernote-random/commit/32109271055df8a60bf4dafe289b717dbb950305?diff=split#diff-bcb729747c92e72c12e4590f736a334041a572c429756da8af60b6ab89c6be79L-1",
+                    "lines": [
+                      {
+                        "line": "const csp = require('helmet-csp')\n",
+                        "lineNumber": 5,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 6,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "const app = express()\n",
+                        "lineNumber": 7,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 8,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.use(morgan(':remote-addr - :remote-user [:date[clf]] \":method :url HTTP/:http-version\" :status :res[content-length] :response-time ms'));\n",
+                        "lineNumber": 9,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "// parse application/x-www-form-urlencoded\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.use(bodyParser.urlencoded({ extended: false }))\n",
+                        "lineNumber": 12,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "// json parser\n",
+                        "lineNumber": 13,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.use(bodyParser.json())\n",
+                        "lineNumber": 14,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "// Serve static assets\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.use(express.static(path.resolve(__dirname, '..', 'build')))\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 17,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "// Re-enable on glitch.com\n",
+                        "lineNumber": 18,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "// Always return the main index.html, so react-router render the route in the client\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "//app.get('*', (req, res) => {\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  //res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));\n",
+                        "lineNumber": 21,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "//})\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "app.use(cookieSession({\n",
+                        "lineNumber": 24,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  name: 'evernoteSolitaire',\n",
+                        "lineNumber": 25,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  secret: 'evernote-sandbox-secret',\n",
+                        "lineNumber": 26,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  maxAge: 30 * 24 * 60 * 60 * 1000 // 1 month\n",
+                        "lineNumber": 27,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "}))\n",
+                        "lineNumber": 28,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 29,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "//require('./api/experiment')(app)\n",
+                        "lineNumber": 29,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "require('./api/auth')(app)\n",
+                        "lineNumber": 30,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "require('./api/notes')(app)\n",
+                        "lineNumber": 31,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 32,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "const PORT = process.env.PORT || 8000\n",
+                        "lineNumber": 33,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "app.use(bodyParser.json({\n",
+                        "lineNumber": 33,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  type: ['json', 'application/csp-report']\n",
+                        "lineNumber": 34,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "}))\n",
+                        "lineNumber": 35,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 36,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "app.post('/report-violation', function (req, res) {\n",
+                        "lineNumber": 37,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  if (req.body) {\n",
+                        "lineNumber": 38,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    console.log('CSP Violation: ', req.body)\n",
+                        "lineNumber": 39,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  } else {\n",
+                        "lineNumber": 40,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    console.log('CSP Violation: No data received!')\n",
+                        "lineNumber": 41,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  }\n",
+                        "lineNumber": 42,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  res.status(204).end()\n",
+                        "lineNumber": 43,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "})\n",
+                        "lineNumber": 44,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 45,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "const PORT = 8000 //process.env.PORT || 8000\n",
+                        "lineNumber": 46,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 47,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "app.use(csp({\n",
+                        "lineNumber": 48,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  directives: {\n",
+                        "lineNumber": 49,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    defaultSrc: [\"'self'\"],\n",
+                        "lineNumber": 50,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    scriptSrc: [\"'unsafe-inline'\"],\n",
+                        "lineNumber": 51,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    styleSrc: [\"'unsafe-inline'\"],\n",
+                        "lineNumber": 52,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    reportUri: '/report-violation',\n",
+                        "lineNumber": 53,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    upgradeInsecureRequests: true\n",
+                        "lineNumber": 54,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  },\n",
+                        "lineNumber": 55,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  reportOnly: false,\n",
+                        "lineNumber": 56,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  loose: true,\n",
+                        "lineNumber": 57,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  setAllHeaders: true,\n",
+                        "lineNumber": 58,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  browserSniff: false\n",
+                        "lineNumber": 59,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "}))\n",
+                        "lineNumber": 60,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 416,
+                "cwe": [
+                  "CWE-200"
+                ]
+              }
+            },
+            {
+              "id": "javascript/InsecureHash",
+              "name": "InsecureHash",
+              "shortDescription": {
+                "text": "Use of Password Hash With Insufficient Computational Effort"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nSensitive information should never be stored in plain text, since this makes it very easy for unauthorized users, whether malicious insiders or outside attackers, to access. Hashing methods are used to make stored passwords and other sensitive data unreadable to users. For example, when a password is defined for the first time, it is hashed and then stored. The next time that user attempts to log on, the password they enter is hashed following the same procedure and compared with the stored value. In this way, the original password never needs to be stored in the system.\n\nHashing is a one-way scheme, meaning a hashed password cannot be reverse engineered. However, if an outdated or custom programmed hashing scheme is used, it becomes simple for an attacker with powerful modern computing power to gain access to the hashes used. This opens up access to all stored password information, leading to breached security. Therefore, it is essential for developers to understand modern, secure password hashing techniques.\n\n## Best practices for prevention\n* Use strong standard algorithms for hashing rather than simpler but outdated methods or DIY hashing schemes, which may have inherent weaknesses.\n* Use modular design for all code dealing with hashing so it can be swapped out as security standards change over time.\n* Use salting in combination with hashing (While this places more demands on resources, it is an essential step for tighter security.).\n* Implement zero-trust architecture to ensure that access to password data is granted only for legitimate business purposes.\n* Increase developer awareness of current standards in data security and cryptography.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "InsecureHash",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/mafintosh/hyperlog/commit/d93cc65e485d740face1dacffa66dbcf03bcc7c3?diff=split#diff-b29a862e995b5e16d1763a35604cec4f13f3ca08bb9318d8f7ccfa24b757f7e0L-1",
+                    "lines": [
+                      {
+                        "line": "return crypto.createHash('sha1')\n",
+                        "lineNumber": 3,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "return crypto.createHash('sha256')\n",
+                        "lineNumber": 3,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/raphael-group/magi/commit/1e1ed6435a97858e38d0cab962d7e248710f60e1?diff=split#diff-a4bd8e7c606b00ad2f2d6eeb95ba96714ece5c8b1266c2b503f3531b12d46257L-1",
+                    "lines": [
+                      {
+                        "line": "hasher = crypto.createHash('md5').update(url),\n",
+                        "lineNumber": 7,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "hasher = crypto.createHash('RIPEMD-64').update(url),\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/steilerDev/homebridge-openhab2-complete/commit/6e92ef40f991cc372b701390945e0e5bbeb71016?diff=split#diff-34bbd467b1ab0e3497ce244b09d2bfbc4ab192303dd90b13603baf6711b522dfL-1",
+                    "lines": [
+                      {
+                        "line": "function generate(name) {\n",
+                        "lineNumber": 4,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    const sha1sum = crypto.createHash('sha1');\n",
+                        "lineNumber": 5,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    sha1sum.update(name);\n",
+                        "lineNumber": 6,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "function generate(name, type) {\n",
+                        "lineNumber": 4,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    const hash = crypto.createHash('sha512');\n",
+                        "lineNumber": 5,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    hash.update(name);\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    hash.update(type);\n",
+                        "lineNumber": 7,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 134,
+                "cwe": [
+                  "CWE-916"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "go/HardcodedPassword",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Do not hardcode passwords in code. Found hardcoded saved in opsworksMod.",
+            "markdown": "Do not hardcode passwords in code. Found {0} saved in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[opsworksMod](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "provider/resources.go",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 182,
+                  "endLine": 182,
+                  "startColumn": 2,
+                  "endColumn": 13
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "29d01b6ef2fa113579d7337d3def3987fc78d835c3049cd90b74512df59717f2",
+            "1": "424eddda.ef407988.45df3e14.79502f34.6ee851a6.34934a07.8ee950b3.52145f00.424eddda.ef407988.45df3e14.79502f34.6ee851a6.34934a07.8ee950b3.52145f00"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "provider/resources.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 182,
+                            "endLine": 182,
+                            "startColumn": 32,
+                            "endColumn": 42
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "provider/resources.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 182,
+                            "endLine": 182,
+                            "startColumn": 2,
+                            "endColumn": 13
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 600,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "go/HardcodedPassword",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Do not hardcode passwords in code. Found hardcoded saved in opsworksMod.",
+            "markdown": "Do not hardcode passwords in code. Found {0} saved in {1}.",
+            "arguments": [
+              "[hardcoded](0)",
+              "[opsworksMod](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "provider/resources.go",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 388,
+                  "endLine": 388,
+                  "startColumn": 37,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "dbeaadba543d5fdccf73db5c44bb19f14885648dfee77dfd846a4a6496eedeb4",
+            "1": "424eddda.98f0ff0f.45df3e14.79502f34.6ee851a6.34934a07.d3250bdc.52145f00.424eddda.98f0ff0f.45df3e14.79502f34.6ee851a6.34934a07.d3250bdc.52145f00"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "provider/resources.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 182,
+                            "endLine": 182,
+                            "startColumn": 32,
+                            "endColumn": 42
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "provider/resources.go",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 388,
+                            "endLine": 388,
+                            "startColumn": 37,
+                            "endColumn": 48
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 600,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "javascript/DisablePoweredBy",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Disable X-Powered-By header for your Express app (consider using Helmet middleware), because it exposes information about the used framework to potential attackers.",
+            "markdown": "Disable X-Powered-By header for your {0} (consider using Helmet middleware), because it exposes information about the used framework to potential attackers.",
+            "arguments": [
+              "[Express app](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/express/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 16,
+                  "endLine": 16,
+                  "startColumn": 17,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "61dfc26bbadd0cef40d8705c663cb1627bbe03e2147c7a2bb9a5cf8a50d6ea98",
+            "1": "ac103527.706318d0.8b18f948.d7919eeb.a1fb1152.8020cfdf.cd61fc56.08f293cc.ac103527.706318d0.44eded10.d7919eeb.a1fb1152.8020cfdf.60d372c8.08f293cc"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "examples/express/index.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 16,
+                            "endLine": 16,
+                            "startColumn": 17,
+                            "endColumn": 24
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 525,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/InsecureHash",
+          "ruleIndex": 2,
+          "level": "note",
+          "message": {
+            "text": "crypto.createHash hash (used in crypto.createHash) is insecure. Consider changing it to a secure hashing algorithm.",
+            "markdown": "{0} hash (used in {1}) is insecure. Consider changing it to a secure hashing algorithm.",
+            "arguments": [
+              "[crypto.createHash](0)",
+              "[crypto.createHash](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sdk/nodejs/utils.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 28,
+                  "endLine": 28,
+                  "startColumn": 31,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "7cc2d099b87228084a3836cd76d43249ca030fa285598d8f204129bfc1adde3c",
+            "1": "37bc1bfe.ef45cec4.191eaf2b.d7919eeb.ef9f7d82.82ca542b.cd61fc56.71520ffe.9ff0579e.706318d0.191eaf2b.d7919eeb.ef9f7d82.5fce695c.cd61fc56.71520ffe"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "sdk/nodejs/utils.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "endLine": 28,
+                            "startColumn": 31,
+                            "endColumn": 48
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "sdk/nodejs/utils.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "endLine": 28,
+                            "startColumn": 31,
+                            "endColumn": 48
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 375,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "C#",
+            "files": 16216,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Go",
+            "files": 2259,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Java",
+            "files": 15727,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "JavaScript",
+            "files": 1,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "Python",
+            "files": 2425,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "TypeScript",
+            "files": 2158,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

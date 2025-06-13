@@ -1,0 +1,2558 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-74",
+        "title": "Credentials are configured via provider attributes",
+        "severity": "high",
+        "isIgnored": false,
+        "subType": "Provider",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-74",
+        "isGeneratedByCustomRule": false,
+        "issue": "Credentials are configured via provider attributes",
+        "impact": "Use of provider attributes can lead to accidental disclosure of credentials in configuration files, variable definition files, event logs or console logs",
+        "resolve": "Set access credentials via environment variables, and remove `access_key` and `secret_key` attributes from the configuration",
+        "remediation": {
+          "terraform": "Set access credentials via environment variables, and remove `access_key` and `secret_key` attributes from the configuration"
+        },
+        "lineNumber": -1,
+        "iacDescription": {
+          "issue": "Credentials are configured via provider attributes",
+          "impact": "Use of provider attributes can lead to accidental disclosure of credentials in configuration files, variable definition files, event logs or console logs",
+          "resolve": "Set access credentials via environment variables, and remove `access_key` and `secret_key` attributes from the configuration"
+        },
+        "publicId": "SNYK-CC-TF-74",
+        "msg": "provider[aws][0]",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html",
+          "https://registry.terraform.io/providers/hashicorp/aws/latest/docs"
+        ],
+        "path": [
+          "provider[aws][0]"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/vars.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/vars.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/algolia/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/algolia/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/algolia/outputs.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/algolia/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/algolia/providers.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/algolia/providers.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/algolia/vars.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/algolia/vars.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AWS-418",
+        "title": "ECR repository is not encrypted with customer managed key",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "ECR",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-418",
+        "isGeneratedByCustomRule": false,
+        "issue": "ECR repository is not encrypted with customer managed key",
+        "impact": "Scope of use of the key cannot be controlled via KMS/IAM policies",
+        "resolve": "Set `encryption_configuration.kms_key` attribute to customer managed KMS key",
+        "remediation": {
+          "cloudformation": "Set `Properties.EncryptionConfiguration.KmsKey` attribute to customer managed KMS key",
+          "terraform": "Set `encryption_configuration.kms_key` attribute to customer managed KMS key"
+        },
+        "lineNumber": 16,
+        "iacDescription": {
+          "issue": "ECR repository is not encrypted with customer managed key",
+          "impact": "Scope of use of the key cannot be controlled via KMS/IAM policies",
+          "resolve": "Set `encryption_configuration.kms_key` attribute to customer managed KMS key"
+        },
+        "publicId": "SNYK-CC-AWS-418",
+        "msg": "resource.aws_ecr_repository[default].encryption_configuration",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html",
+          "https://docs.aws.amazon.com/whitepapers/latest/kms-best-practices/aws-managed-and-customer-managed-cmks.html"
+        ],
+        "path": [
+          "resource",
+          "aws_ecr_repository[default]",
+          "encryption_configuration"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-126",
+        "title": "ECR Registry allows mutable tags",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "ECR",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-126",
+        "isGeneratedByCustomRule": false,
+        "issue": "The AWS ECR registry does not enforce immutable tags",
+        "impact": "Image tags can be modified post deployment",
+        "resolve": "Set `image_tag_mutability` attribute to `IMMUTABLE`",
+        "remediation": {
+          "cloudformation": "Set `Properties.ImageTagMutability` attribute to `IMMUTABLE`",
+          "terraform": "Set `image_tag_mutability` attribute to `IMMUTABLE`"
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "The AWS ECR registry does not enforce immutable tags",
+          "impact": "Image tags can be modified post deployment",
+          "resolve": "Set `image_tag_mutability` attribute to `IMMUTABLE`"
+        },
+        "publicId": "SNYK-CC-TF-126",
+        "msg": "resource.aws_ecr_repository[default].image_tag_mutability",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-tag-mutability.html"
+        ],
+        "path": [
+          "resource",
+          "aws_ecr_repository[default]",
+          "image_tag_mutability"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/providers.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/providers.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/vars.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/vars.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/cloudwatch/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/cloudwatch/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-124",
+        "title": "S3 bucket versioning disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-124",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket versioning is disabled",
+        "impact": "Changes or deletion of objects will not be reversible",
+        "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.VersioningConfiguration.Status` attribute to `Enabled`",
+          "terraform": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "lineNumber": -1,
+        "iacDescription": {
+          "issue": "S3 bucket versioning is disabled",
+          "impact": "Changes or deletion of objects will not be reversible",
+          "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "publicId": "SNYK-CC-TF-124",
+        "msg": "resource.aws_s3_bucket[artifacts].versioning.enabled",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[artifacts]",
+          "versioning",
+          "enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-127",
+        "title": "S3 bucket MFA delete control disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-127",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket will not enforce MFA login on delete requests",
+        "impact": "Object could be deleted without stronger MFA authorization",
+        "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file",
+        "remediation": {
+          "terraform": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "lineNumber": -1,
+        "iacDescription": {
+          "issue": "S3 bucket will not enforce MFA login on delete requests",
+          "impact": "Object could be deleted without stronger MFA authorization",
+          "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "publicId": "SNYK-CC-TF-127",
+        "msg": "resource.aws_s3_bucket[artifacts].versioning.mfa_delete",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMFADelete.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[artifacts]",
+          "versioning",
+          "mfa_delete"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-45",
+        "title": "S3 server access logging is disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-45",
+        "isGeneratedByCustomRule": false,
+        "issue": "The s3 access logs will not be collected",
+        "impact": "There will be no audit trail of access to s3 objects",
+        "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.LoggingConfiguration` attribute",
+          "terraform": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "lineNumber": -1,
+        "iacDescription": {
+          "issue": "The s3 access logs will not be collected",
+          "impact": "There will be no audit trail of access to s3 objects",
+          "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "publicId": "SNYK-CC-TF-45",
+        "msg": "input.resource.aws_s3_bucket[artifacts].logging",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html"
+        ],
+        "path": [
+          "input",
+          "resource",
+          "aws_s3_bucket[artifacts]",
+          "logging"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/ec2/vpc_bridge/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/ec2/vpc_bridge/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-73",
+        "title": "AWS Security Group allows open egress",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-73",
+        "isGeneratedByCustomRule": false,
+        "issue": "The inline security group rule allows open egress",
+        "impact": "Open egress can be used to exfiltrate data to unauthorized destinations, and enable access to potentially malicious resources",
+        "resolve": "Set `egress.cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`",
+        "remediation": {
+          "cloudformation": "Set `Properties.SecurityGroupEgress.CidrIp` attribute to specific ranges e.g. `192.168.1.0/24`",
+          "terraform": "Set `egress.cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 82,
+        "iacDescription": {
+          "issue": "The inline security group rule allows open egress",
+          "impact": "Open egress can be used to exfiltrate data to unauthorized destinations, and enable access to potentially malicious resources",
+          "resolve": "Set `egress.cidr_blocks` attribute to specific ranges e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-73",
+        "msg": "resource.aws_security_group[bridge].egress",
+        "references": [
+          "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html",
+          "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-best-practices.html"
+        ],
+        "path": [
+          "resource",
+          "aws_security_group[bridge]",
+          "egress"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-51",
+        "title": "Resource has public IP assigned",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "EC2",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-51",
+        "isGeneratedByCustomRule": false,
+        "issue": "AWS resource could be accessed externally via public IP",
+        "impact": "Increases attack vector reachability",
+        "resolve": "Set `associate_public_ip_address` attribute to `false`",
+        "remediation": {
+          "terraform": "Set `associate_public_ip_address` attribute to `false`"
+        },
+        "lineNumber": 105,
+        "iacDescription": {
+          "issue": "AWS resource could be accessed externally via public IP",
+          "impact": "Increases attack vector reachability",
+          "resolve": "Set `associate_public_ip_address` attribute to `false`"
+        },
+        "publicId": "SNYK-CC-TF-51",
+        "msg": "resource.aws_instance[bridge].associate_public_ip_address",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html",
+          "https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html"
+        ],
+        "path": [
+          "resource",
+          "aws_instance[bridge]",
+          "associate_public_ip_address"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-53",
+        "title": "Non-Encrypted root block device",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "EC2",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-53",
+        "isGeneratedByCustomRule": false,
+        "issue": "The root block device for ec2 instance is not encrypted",
+        "impact": "That should someone gain unauthorized access to the data they would be able to read the contents.",
+        "resolve": "Set `root_block_device.encrypted` attribute to `true`",
+        "remediation": {
+          "cloudformation": "Set `BlockDeviceMappings.Encrypted` attribute of root device to `true`",
+          "terraform": "Set `root_block_device.encrypted` attribute to `true`"
+        },
+        "lineNumber": 100,
+        "iacDescription": {
+          "issue": "The root block device for ec2 instance is not encrypted",
+          "impact": "That should someone gain unauthorized access to the data they would be able to read the contents.",
+          "resolve": "Set `root_block_device.encrypted` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-53",
+        "msg": "resource.aws_instance[bridge].root_block_device.encrypted",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html",
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html",
+          "https://aws.amazon.com/premiumsupport/knowledge-center/cloudformation-root-volume-property/",
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html"
+        ],
+        "path": [
+          "resource",
+          "aws_instance[bridge]",
+          "root_block_device",
+          "encrypted"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-1",
+        "title": "Security Group allows open ingress",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-1",
+        "isGeneratedByCustomRule": false,
+        "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+        "impact": "That potentially everyone can access your resource",
+        "resolve": "Set `cidr_block` attribute with a more restrictive IP, for example `192.16.0.0/24`",
+        "remediation": {
+          "cloudformation": "Set `Properties.SecurityGroupIngress.CidrIp` attribute with a more restrictive IP, for example `192.16.0.0/24`",
+          "terraform": "Set `cidr_block` attribute with a more restrictive IP, for example `192.16.0.0/24`"
+        },
+        "lineNumber": 75,
+        "iacDescription": {
+          "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+          "impact": "That potentially everyone can access your resource",
+          "resolve": "Set `cidr_block` attribute with a more restrictive IP, for example `192.16.0.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-1",
+        "msg": "input.resource.aws_security_group[bridge].ingress",
+        "references": [
+          "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        ],
+        "path": [
+          "input",
+          "resource",
+          "aws_security_group[bridge]",
+          "ingress"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-130",
+        "title": "EC2 instance accepts IMDSv1",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "EC2",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-130",
+        "isGeneratedByCustomRule": false,
+        "issue": "Instance Metadata Service v2 is not enforced",
+        "impact": "Metadata service may be vulnerable to reverse proxy/open firewall misconfigurations and server side request forgery attacks",
+        "resolve": "Set `metadata_options.http_tokens` attribute to `required`",
+        "remediation": {
+          "cloudformation": "Set `MetadataOptions.HttpTokens` attribute to `required` in `AWS::EC2::LaunchTemplate`",
+          "terraform": "Set `metadata_options.http_tokens` attribute to `required`"
+        },
+        "lineNumber": 100,
+        "iacDescription": {
+          "issue": "Instance Metadata Service v2 is not enforced",
+          "impact": "Metadata service may be vulnerable to reverse proxy/open firewall misconfigurations and server side request forgery attacks",
+          "resolve": "Set `metadata_options.http_tokens` attribute to `required`"
+        },
+        "publicId": "SNYK-CC-TF-130",
+        "msg": "resource.aws_instance[bridge].metadata_options",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html",
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html",
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-retrieval.html",
+          "https://aws.amazon.com/blogs/security/defense-in-depth-open-firewalls-reverse-proxies-ssrf-vulnerabilities-ec2-instance-metadata-service/"
+        ],
+        "path": [
+          "resource",
+          "aws_instance[bridge]",
+          "metadata_options"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AWS-426",
+        "title": "EC2 API termination protection is not enabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "EC2",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-426",
+        "isGeneratedByCustomRule": false,
+        "issue": "To prevent instance from being accidentally terminated using Amazon EC2, you can enable termination protection for the instance",
+        "impact": "Without this setting enabled the instances can be terminated by accident. This setting should only be used for instances with high availability requirements. Enabling this may prevent IaC workflows from updating the instance, for example terraform will not be able to terminate the instance to update instance type",
+        "resolve": "Set `disable_api_termination` attribute  with value `true`",
+        "remediation": {
+          "cloudformation": "Set `DisableApiTermination` attribute with value `true`",
+          "terraform": "Set `disable_api_termination` attribute  with value `true`"
+        },
+        "lineNumber": 100,
+        "iacDescription": {
+          "issue": "To prevent instance from being accidentally terminated using Amazon EC2, you can enable termination protection for the instance",
+          "impact": "Without this setting enabled the instances can be terminated by accident. This setting should only be used for instances with high availability requirements. Enabling this may prevent IaC workflows from updating the instance, for example terraform will not be able to terminate the instance to update instance type",
+          "resolve": "Set `disable_api_termination` attribute  with value `true`"
+        },
+        "publicId": "SNYK-CC-AWS-426",
+        "msg": "resource.aws_instance[bridge].disable_api_termination",
+        "references": [
+          "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination"
+        ],
+        "path": [
+          "resource",
+          "aws_instance[bridge]",
+          "disable_api_termination"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/ec2/vpc_bridge/providers.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/ec2/vpc_bridge/providers.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/ecs/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/ecs/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-1",
+        "title": "Security Group allows open ingress",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-1",
+        "isGeneratedByCustomRule": false,
+        "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+        "impact": "That potentially everyone can access your resource",
+        "resolve": "Set `cidr_block` attribute with a more restrictive IP, for example `192.16.0.0/24`",
+        "remediation": {
+          "cloudformation": "Set `Properties.SecurityGroupIngress.CidrIp` attribute with a more restrictive IP, for example `192.16.0.0/24`",
+          "terraform": "Set `cidr_block` attribute with a more restrictive IP, for example `192.16.0.0/24`"
+        },
+        "lineNumber": 221,
+        "iacDescription": {
+          "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+          "impact": "That potentially everyone can access your resource",
+          "resolve": "Set `cidr_block` attribute with a more restrictive IP, for example `192.16.0.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-1",
+        "msg": "input.resource.aws_security_group[public_http].ingress",
+        "references": [
+          "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        ],
+        "path": [
+          "input",
+          "resource",
+          "aws_security_group[public_http]",
+          "ingress"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-134",
+        "title": "CloudWatch Log group retention period not set",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "CloudWatch",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-134",
+        "isGeneratedByCustomRule": false,
+        "issue": "Amazon CloudWatch log group does not specify retention period",
+        "impact": "Logs will be kept indefinitely and incur AWS costs",
+        "resolve": "Set `retention_in_days` attribute to required value, e.g. set `365`",
+        "remediation": {
+          "cloudformation": "Set `Properties.RetentionInDays` attribute to required value, e.g. set `365`",
+          "terraform": "Set `retention_in_days` attribute to required value, e.g. set `365`"
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "Amazon CloudWatch log group does not specify retention period",
+          "impact": "Logs will be kept indefinitely and incur AWS costs",
+          "resolve": "Set `retention_in_days` attribute to required value, e.g. set `365`"
+        },
+        "publicId": "SNYK-CC-TF-134",
+        "msg": "resource.aws_cloudwatch_log_group[this].retention_in_days",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html"
+        ],
+        "path": [
+          "resource",
+          "aws_cloudwatch_log_group[this]",
+          "retention_in_days"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-37",
+        "title": "AWS Security Group Rule allows public access",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-37",
+        "isGeneratedByCustomRule": false,
+        "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+        "impact": "That potentially everyone can access your resource",
+        "resolve": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+        "remediation": {
+          "cloudformation": "Set `CidrIp` attribute to specific IP range only, e.g. `192.168.1.0/24`",
+          "terraform": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "lineNumber": 97,
+        "iacDescription": {
+          "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+          "impact": "That potentially everyone can access your resource",
+          "resolve": "Set `cidr_blocks` attribute to specific IP range only, e.g. `192.168.1.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-37",
+        "msg": "resource.aws_security_group_rule[rds-external-access].cidr_blocks",
+        "references": [],
+        "path": [
+          "resource",
+          "aws_security_group_rule[rds-external-access]",
+          "cidr_blocks"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AWS-415",
+        "title": "CloudWatch log group not encrypted with managed key",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "CloudWatch",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-415",
+        "isGeneratedByCustomRule": false,
+        "issue": "Log group is not encrypted with customer managed key",
+        "impact": "Scope of use of the key cannot be controlled via KMS/IAM policies",
+        "resolve": "Set `kms_key_id` attribute with customer managed key id",
+        "remediation": {
+          "cloudformation": "Set `Properties.KmsKeyId` attribute with customer managed key id",
+          "terraform": "Set `kms_key_id` attribute with customer managed key id"
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "Log group is not encrypted with customer managed key",
+          "impact": "Scope of use of the key cannot be controlled via KMS/IAM policies",
+          "resolve": "Set `kms_key_id` attribute with customer managed key id"
+        },
+        "publicId": "SNYK-CC-AWS-415",
+        "msg": "resource.aws_cloudwatch_log_group[this].kms_key_id",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/encrypt-log-data-kms.html",
+          "https://docs.aws.amazon.com/whitepapers/latest/kms-best-practices/aws-managed-and-customer-managed-cmks.html"
+        ],
+        "path": [
+          "resource",
+          "aws_cloudwatch_log_group[this]",
+          "kms_key_id"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-14",
+        "title": "KMS key does not have key rotation enabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "KMS",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-14",
+        "isGeneratedByCustomRule": false,
+        "issue": "That your encryption keys are not being rotated by AWS",
+        "impact": "That data is being encrypted with a key which is valid for a longer period of time, resulting in a greater exposure window should that key be leaked",
+        "resolve": "Set `enable_key_rotation` attribute to `true`",
+        "remediation": {
+          "cloudformation": "Set `Properties.EnableKeyRotation` attribute to `true`",
+          "terraform": "Set `enable_key_rotation` attribute to `true`"
+        },
+        "lineNumber": 12,
+        "iacDescription": {
+          "issue": "That your encryption keys are not being rotated by AWS",
+          "impact": "That data is being encrypted with a key which is valid for a longer period of time, resulting in a greater exposure window should that key be leaked",
+          "resolve": "Set `enable_key_rotation` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-14",
+        "msg": "input.resource.aws_kms_key[this].enable_key_rotation",
+        "references": [],
+        "path": [
+          "input",
+          "resource",
+          "aws_kms_key[this]",
+          "enable_key_rotation"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-1",
+        "title": "Security Group allows open ingress",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "VPC",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-1",
+        "isGeneratedByCustomRule": false,
+        "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+        "impact": "That potentially everyone can access your resource",
+        "resolve": "Set `cidr_block` attribute with a more restrictive IP, for example `192.16.0.0/24`",
+        "remediation": {
+          "cloudformation": "Set `Properties.SecurityGroupIngress.CidrIp` attribute with a more restrictive IP, for example `192.16.0.0/24`",
+          "terraform": "Set `cidr_block` attribute with a more restrictive IP, for example `192.16.0.0/24`"
+        },
+        "lineNumber": 209,
+        "iacDescription": {
+          "issue": "That inbound traffic is allowed to a resource from any source instead of a restricted range",
+          "impact": "That potentially everyone can access your resource",
+          "resolve": "Set `cidr_block` attribute with a more restrictive IP, for example `192.16.0.0/24`"
+        },
+        "publicId": "SNYK-CC-TF-1",
+        "msg": "input.resource.aws_security_group[public_https].ingress",
+        "references": [
+          "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        ],
+        "path": [
+          "input",
+          "resource",
+          "aws_security_group[public_https]",
+          "ingress"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/ecs/services/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/ecs/services/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/ecs/services/providers.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/ecs/services/providers.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/ecs/services/vars.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/ecs/services/vars.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/ecs/services/elb/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/ecs/services/elb/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-47",
+        "title": "Load balancer endpoint does not enforce HTTPS",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Elastic Load Balancing",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-47",
+        "isGeneratedByCustomRule": false,
+        "issue": "Load balancer endpoint does not enforce HTTPS",
+        "impact": "The content could be intercepted and manipulated in transit",
+        "resolve": "Set the `protocol` attribute to `HTTPS` or `TLS`",
+        "remediation": {
+          "cloudformation": "Set the `Properties.Protocol` attribute to `HTTPS` or `TLS`",
+          "terraform": "Set the `protocol` attribute to `HTTPS` or `TLS`"
+        },
+        "lineNumber": 52,
+        "iacDescription": {
+          "issue": "Load balancer endpoint does not enforce HTTPS",
+          "impact": "The content could be intercepted and manipulated in transit",
+          "resolve": "Set the `protocol` attribute to `HTTPS` or `TLS`"
+        },
+        "publicId": "SNYK-CC-TF-47",
+        "msg": "resource.aws_alb_listener[http].protocol",
+        "references": [
+          "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html"
+        ],
+        "path": [
+          "resource",
+          "aws_alb_listener[http]",
+          "protocol"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AWS-405",
+        "title": "ALB does not drop invalid headers",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Elastic Load Balancing",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-405",
+        "isGeneratedByCustomRule": false,
+        "issue": "The application load balancer is not set to drop invalid headers.",
+        "impact": "Maliciously crafted headers may be accepted by the load balancer",
+        "resolve": "Set `drop_invalid_header_fields` to `true`",
+        "remediation": {
+          "cloudformation": "Set `Properties.LoadBalancerAttributes.Key` to `routing.http.drop_invalid_header_fields.enabled` and `Properties.LoadBalancerAttributes.Value` to `true`",
+          "terraform": "Set `drop_invalid_header_fields` to `true`"
+        },
+        "lineNumber": 8,
+        "iacDescription": {
+          "issue": "The application load balancer is not set to drop invalid headers.",
+          "impact": "Maliciously crafted headers may be accepted by the load balancer",
+          "resolve": "Set `drop_invalid_header_fields` to `true`"
+        },
+        "publicId": "SNYK-CC-AWS-405",
+        "msg": "resource.aws_alb[alb]",
+        "references": [
+          "https://docs.aws.amazon.com/config/latest/developerguide/alb-http-drop-invalid-header-enabled.html"
+        ],
+        "path": [
+          "resource",
+          "aws_alb[alb]"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-48",
+        "title": "Load balancer is internet facing",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Elastic Load Balancing",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-48",
+        "isGeneratedByCustomRule": false,
+        "issue": "Load balancer is internet facing",
+        "impact": "Increases attack vector reachability",
+        "resolve": "Set `internal` attribute to `true`",
+        "remediation": {
+          "cloudformation": "Set `Properties.Scheme` attribute to `internal`",
+          "terraform": "Set `internal` attribute to `true`"
+        },
+        "lineNumber": 10,
+        "iacDescription": {
+          "issue": "Load balancer is internet facing",
+          "impact": "Increases attack vector reachability",
+          "resolve": "Set `internal` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-TF-48",
+        "msg": "resource.aws_alb[alb].internal",
+        "references": [
+          "https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-internet-facing-load-balancers.html"
+        ],
+        "path": [
+          "resource",
+          "aws_alb[alb]",
+          "internal"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/ecs/services/elb/providers.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/ecs/services/elb/providers.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/ecs/services/elb/vars.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/ecs/services/elb/vars.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/elasticache/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/elasticache/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AWS-407",
+        "title": "ElastiCache automatic backup is disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "ElastiCache",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-407",
+        "isGeneratedByCustomRule": false,
+        "issue": "ElastiCache cluster automatic backup is disabled",
+        "impact": "No cluster backups will be saved automatically, rebuilding after disaster may be more difficult",
+        "resolve": "Set `resource.snapshot_retention_limit` to `1` or more",
+        "remediation": {
+          "cloudformation": "Set `Properties.SnapshotRetentionLimit` to `1` or more",
+          "terraform": "Set `resource.snapshot_retention_limit` to `1` or more"
+        },
+        "lineNumber": 10,
+        "iacDescription": {
+          "issue": "ElastiCache cluster automatic backup is disabled",
+          "impact": "No cluster backups will be saved automatically, rebuilding after disaster may be more difficult",
+          "resolve": "Set `resource.snapshot_retention_limit` to `1` or more"
+        },
+        "publicId": "SNYK-CC-AWS-407",
+        "msg": "resource.aws_elasticache_cluster[redis_cache]",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_Snapshot.html"
+        ],
+        "path": [
+          "resource",
+          "aws_elasticache_cluster[redis_cache]"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/lambda/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/lambda/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AWS-415",
+        "title": "CloudWatch log group not encrypted with managed key",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "CloudWatch",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-415",
+        "isGeneratedByCustomRule": false,
+        "issue": "Log group is not encrypted with customer managed key",
+        "impact": "Scope of use of the key cannot be controlled via KMS/IAM policies",
+        "resolve": "Set `kms_key_id` attribute with customer managed key id",
+        "remediation": {
+          "cloudformation": "Set `Properties.KmsKeyId` attribute with customer managed key id",
+          "terraform": "Set `kms_key_id` attribute with customer managed key id"
+        },
+        "lineNumber": -1,
+        "iacDescription": {
+          "issue": "Log group is not encrypted with customer managed key",
+          "impact": "Scope of use of the key cannot be controlled via KMS/IAM policies",
+          "resolve": "Set `kms_key_id` attribute with customer managed key id"
+        },
+        "publicId": "SNYK-CC-AWS-415",
+        "msg": "resource.aws_cloudwatch_log_group[api_gw].kms_key_id",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/encrypt-log-data-kms.html",
+          "https://docs.aws.amazon.com/whitepapers/latest/kms-best-practices/aws-managed-and-customer-managed-cmks.html"
+        ],
+        "path": [
+          "resource",
+          "aws_cloudwatch_log_group[api_gw]",
+          "kms_key_id"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/lambda/providers.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/lambda/providers.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/lambda/route/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/lambda/route/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/lambda/type-image/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/lambda/type-image/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-133",
+        "title": "X-ray tracing is disabled for Lambda function",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Lambda",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-133",
+        "isGeneratedByCustomRule": false,
+        "issue": "Amazon X-Ray tracing is not enabled for Lambda function",
+        "impact": "Trace logs will not be available during investigation",
+        "resolve": "Set `tracing_config.mode` attribute to `Active` or `PassThrough`",
+        "remediation": {
+          "cloudformation": "Set `Properties.TracingConfig.Mode` attribute to `Active` or `PassThrough`",
+          "terraform": "Set `tracing_config.mode` attribute to `Active` or `PassThrough`"
+        },
+        "lineNumber": 26,
+        "iacDescription": {
+          "issue": "Amazon X-Ray tracing is not enabled for Lambda function",
+          "impact": "Trace logs will not be available during investigation",
+          "resolve": "Set `tracing_config.mode` attribute to `Active` or `PassThrough`"
+        },
+        "publicId": "SNYK-CC-TF-133",
+        "msg": "resource.aws_lambda_function[lambda].tracing_config",
+        "references": [
+          "https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html"
+        ],
+        "path": [
+          "resource",
+          "aws_lambda_function[lambda]",
+          "tracing_config"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/rds/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/rds/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-AWS-414",
+        "title": "RDS IAM authentication is disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "RDS",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-414",
+        "isGeneratedByCustomRule": false,
+        "issue": "IAM database authentication is disabled, authentication tokens are not used to connect to DB instance",
+        "impact": "Users will connect to DB instance with password, which are less secure than temporary tokens which expire",
+        "resolve": "Set `iam_database_authentication_enabled` to `true`.",
+        "remediation": {
+          "cloudformation": "Set `Properties.EnableIAMDatabaseAuthentication` to `true`.",
+          "terraform": "Set `iam_database_authentication_enabled` to `true`."
+        },
+        "lineNumber": 93,
+        "iacDescription": {
+          "issue": "IAM database authentication is disabled, authentication tokens are not used to connect to DB instance",
+          "impact": "Users will connect to DB instance with password, which are less secure than temporary tokens which expire",
+          "resolve": "Set `iam_database_authentication_enabled` to `true`."
+        },
+        "publicId": "SNYK-CC-AWS-414",
+        "msg": "resource.aws_db_instance[db_external_access].iam_database_authentication_enabled",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"
+        ],
+        "path": [
+          "resource",
+          "aws_db_instance[db_external_access]",
+          "iam_database_authentication_enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AWS-408",
+        "title": "RDS automatic backup is disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "type": "terraform",
+        "subType": "RDS",
+        "policyEngineType": "opa",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-408",
+        "isGeneratedByCustomRule": false,
+        "issue": "Automatic backup of AWS Relational Database is disabled",
+        "impact": "No automatic backups will occur, availability risk if disaster occurs and manual backups have not been set",
+        "resolve": "Set `resource.backup_retention_period` to `1` or more",
+        "remediation": {
+          "cloudformation": "Set `Properties.BackupRetentionPeriod` to `1` or more",
+          "terraform": "Set `resource.backup_retention_period` to `1` or more"
+        },
+        "lineNumber": 68,
+        "iacDescription": {
+          "issue": "Automatic backup of AWS Relational Database is disabled",
+          "impact": "No automatic backups will occur, availability risk if disaster occurs and manual backups have not been set",
+          "resolve": "Set `resource.backup_retention_period` to `1` or more"
+        },
+        "publicId": "SNYK-CC-AWS-408",
+        "msg": "resource.aws_db_instance[db_replica].backup_retention_period",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html"
+        ],
+        "path": [
+          "resource",
+          "aws_db_instance[db_replica]",
+          "backup_retention_period"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AWS-414",
+        "title": "RDS IAM authentication is disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "RDS",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-414",
+        "isGeneratedByCustomRule": false,
+        "issue": "IAM database authentication is disabled, authentication tokens are not used to connect to DB instance",
+        "impact": "Users will connect to DB instance with password, which are less secure than temporary tokens which expire",
+        "resolve": "Set `iam_database_authentication_enabled` to `true`.",
+        "remediation": {
+          "cloudformation": "Set `Properties.EnableIAMDatabaseAuthentication` to `true`.",
+          "terraform": "Set `iam_database_authentication_enabled` to `true`."
+        },
+        "lineNumber": 31,
+        "iacDescription": {
+          "issue": "IAM database authentication is disabled, authentication tokens are not used to connect to DB instance",
+          "impact": "Users will connect to DB instance with password, which are less secure than temporary tokens which expire",
+          "resolve": "Set `iam_database_authentication_enabled` to `true`."
+        },
+        "publicId": "SNYK-CC-AWS-414",
+        "msg": "resource.aws_db_instance[db_instance].iam_database_authentication_enabled",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"
+        ],
+        "path": [
+          "resource",
+          "aws_db_instance[db_instance]",
+          "iam_database_authentication_enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AWS-408",
+        "title": "RDS automatic backup is disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "type": "terraform",
+        "subType": "RDS",
+        "policyEngineType": "opa",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-408",
+        "isGeneratedByCustomRule": false,
+        "issue": "Automatic backup of AWS Relational Database is disabled",
+        "impact": "No automatic backups will occur, availability risk if disaster occurs and manual backups have not been set",
+        "resolve": "Set `resource.backup_retention_period` to `1` or more",
+        "remediation": {
+          "cloudformation": "Set `Properties.BackupRetentionPeriod` to `1` or more",
+          "terraform": "Set `resource.backup_retention_period` to `1` or more"
+        },
+        "lineNumber": 101,
+        "iacDescription": {
+          "issue": "Automatic backup of AWS Relational Database is disabled",
+          "impact": "No automatic backups will occur, availability risk if disaster occurs and manual backups have not been set",
+          "resolve": "Set `resource.backup_retention_period` to `1` or more"
+        },
+        "publicId": "SNYK-CC-AWS-408",
+        "msg": "resource.aws_db_instance[db_external_access].backup_retention_period",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html"
+        ],
+        "path": [
+          "resource",
+          "aws_db_instance[db_external_access]",
+          "backup_retention_period"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-50",
+        "title": "Resource is publicly accessible",
+        "severity": "high",
+        "isIgnored": false,
+        "subType": "Public Access",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-50",
+        "isGeneratedByCustomRule": false,
+        "issue": "AWS resource is publicly accessible",
+        "impact": "Increases attack vector reachability",
+        "resolve": "Set `publicly_accessible` attribute to `false`",
+        "remediation": {
+          "terraform": "Set `publicly_accessible` attribute to `false`"
+        },
+        "lineNumber": 106,
+        "iacDescription": {
+          "issue": "AWS resource is publicly accessible",
+          "impact": "Increases attack vector reachability",
+          "resolve": "Set `publicly_accessible` attribute to `false`"
+        },
+        "publicId": "SNYK-CC-TF-50",
+        "msg": "resource.aws_db_instance[db_external_access].publicly_accessible",
+        "description": "",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html",
+          "https://docs.aws.amazon.com/redshift/latest/mgmt/managing-clusters-vpc.html"
+        ],
+        "path": [
+          "resource",
+          "aws_db_instance[db_external_access]",
+          "publicly_accessible"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-AWS-414",
+        "title": "RDS IAM authentication is disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "RDS",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-AWS-414",
+        "isGeneratedByCustomRule": false,
+        "issue": "IAM database authentication is disabled, authentication tokens are not used to connect to DB instance",
+        "impact": "Users will connect to DB instance with password, which are less secure than temporary tokens which expire",
+        "resolve": "Set `iam_database_authentication_enabled` to `true`.",
+        "remediation": {
+          "cloudformation": "Set `Properties.EnableIAMDatabaseAuthentication` to `true`.",
+          "terraform": "Set `iam_database_authentication_enabled` to `true`."
+        },
+        "lineNumber": 68,
+        "iacDescription": {
+          "issue": "IAM database authentication is disabled, authentication tokens are not used to connect to DB instance",
+          "impact": "Users will connect to DB instance with password, which are less secure than temporary tokens which expire",
+          "resolve": "Set `iam_database_authentication_enabled` to `true`."
+        },
+        "publicId": "SNYK-CC-AWS-414",
+        "msg": "resource.aws_db_instance[db_replica].iam_database_authentication_enabled",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"
+        ],
+        "path": [
+          "resource",
+          "aws_db_instance[db_replica]",
+          "iam_database_authentication_enabled"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/aws/s3/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/aws/s3/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-45",
+        "title": "S3 server access logging is disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-45",
+        "isGeneratedByCustomRule": false,
+        "issue": "The s3 access logs will not be collected",
+        "impact": "There will be no audit trail of access to s3 objects",
+        "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.LoggingConfiguration` attribute",
+          "terraform": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "lineNumber": 11,
+        "iacDescription": {
+          "issue": "The s3 access logs will not be collected",
+          "impact": "There will be no audit trail of access to s3 objects",
+          "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "publicId": "SNYK-CC-TF-45",
+        "msg": "input.resource.aws_s3_bucket[categories].logging",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html"
+        ],
+        "path": [
+          "input",
+          "resource",
+          "aws_s3_bucket[categories]",
+          "logging"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-45",
+        "title": "S3 server access logging is disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-45",
+        "isGeneratedByCustomRule": false,
+        "issue": "The s3 access logs will not be collected",
+        "impact": "There will be no audit trail of access to s3 objects",
+        "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.LoggingConfiguration` attribute",
+          "terraform": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "lineNumber": 19,
+        "iacDescription": {
+          "issue": "The s3 access logs will not be collected",
+          "impact": "There will be no audit trail of access to s3 objects",
+          "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "publicId": "SNYK-CC-TF-45",
+        "msg": "input.resource.aws_s3_bucket[interests].logging",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html"
+        ],
+        "path": [
+          "input",
+          "resource",
+          "aws_s3_bucket[interests]",
+          "logging"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-127",
+        "title": "S3 bucket MFA delete control disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-127",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket will not enforce MFA login on delete requests",
+        "impact": "Object could be deleted without stronger MFA authorization",
+        "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file",
+        "remediation": {
+          "terraform": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "lineNumber": 3,
+        "iacDescription": {
+          "issue": "S3 bucket will not enforce MFA login on delete requests",
+          "impact": "Object could be deleted without stronger MFA authorization",
+          "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "publicId": "SNYK-CC-TF-127",
+        "msg": "resource.aws_s3_bucket[collections].versioning.mfa_delete",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMFADelete.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[collections]",
+          "versioning",
+          "mfa_delete"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-45",
+        "title": "S3 server access logging is disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-45",
+        "isGeneratedByCustomRule": false,
+        "issue": "The s3 access logs will not be collected",
+        "impact": "There will be no audit trail of access to s3 objects",
+        "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.LoggingConfiguration` attribute",
+          "terraform": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "lineNumber": 27,
+        "iacDescription": {
+          "issue": "The s3 access logs will not be collected",
+          "impact": "There will be no audit trail of access to s3 objects",
+          "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "publicId": "SNYK-CC-TF-45",
+        "msg": "input.resource.aws_s3_bucket[mlflow].logging",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html"
+        ],
+        "path": [
+          "input",
+          "resource",
+          "aws_s3_bucket[mlflow]",
+          "logging"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-124",
+        "title": "S3 bucket versioning disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-124",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket versioning is disabled",
+        "impact": "Changes or deletion of objects will not be reversible",
+        "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.VersioningConfiguration.Status` attribute to `Enabled`",
+          "terraform": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "lineNumber": 11,
+        "iacDescription": {
+          "issue": "S3 bucket versioning is disabled",
+          "impact": "Changes or deletion of objects will not be reversible",
+          "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "publicId": "SNYK-CC-TF-124",
+        "msg": "resource.aws_s3_bucket[categories].versioning.enabled",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[categories]",
+          "versioning",
+          "enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-124",
+        "title": "S3 bucket versioning disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-124",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket versioning is disabled",
+        "impact": "Changes or deletion of objects will not be reversible",
+        "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.VersioningConfiguration.Status` attribute to `Enabled`",
+          "terraform": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "lineNumber": 3,
+        "iacDescription": {
+          "issue": "S3 bucket versioning is disabled",
+          "impact": "Changes or deletion of objects will not be reversible",
+          "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "publicId": "SNYK-CC-TF-124",
+        "msg": "resource.aws_s3_bucket[collections].versioning.enabled",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[collections]",
+          "versioning",
+          "enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-124",
+        "title": "S3 bucket versioning disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-124",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket versioning is disabled",
+        "impact": "Changes or deletion of objects will not be reversible",
+        "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.VersioningConfiguration.Status` attribute to `Enabled`",
+          "terraform": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "lineNumber": 19,
+        "iacDescription": {
+          "issue": "S3 bucket versioning is disabled",
+          "impact": "Changes or deletion of objects will not be reversible",
+          "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "publicId": "SNYK-CC-TF-124",
+        "msg": "resource.aws_s3_bucket[interests].versioning.enabled",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[interests]",
+          "versioning",
+          "enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-127",
+        "title": "S3 bucket MFA delete control disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-127",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket will not enforce MFA login on delete requests",
+        "impact": "Object could be deleted without stronger MFA authorization",
+        "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file",
+        "remediation": {
+          "terraform": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "lineNumber": 11,
+        "iacDescription": {
+          "issue": "S3 bucket will not enforce MFA login on delete requests",
+          "impact": "Object could be deleted without stronger MFA authorization",
+          "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "publicId": "SNYK-CC-TF-127",
+        "msg": "resource.aws_s3_bucket[categories].versioning.mfa_delete",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMFADelete.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[categories]",
+          "versioning",
+          "mfa_delete"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-127",
+        "title": "S3 bucket MFA delete control disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-127",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket will not enforce MFA login on delete requests",
+        "impact": "Object could be deleted without stronger MFA authorization",
+        "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file",
+        "remediation": {
+          "terraform": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "lineNumber": 19,
+        "iacDescription": {
+          "issue": "S3 bucket will not enforce MFA login on delete requests",
+          "impact": "Object could be deleted without stronger MFA authorization",
+          "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "publicId": "SNYK-CC-TF-127",
+        "msg": "resource.aws_s3_bucket[interests].versioning.mfa_delete",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMFADelete.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[interests]",
+          "versioning",
+          "mfa_delete"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-127",
+        "title": "S3 bucket MFA delete control disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-127",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket will not enforce MFA login on delete requests",
+        "impact": "Object could be deleted without stronger MFA authorization",
+        "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file",
+        "remediation": {
+          "terraform": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "lineNumber": 27,
+        "iacDescription": {
+          "issue": "S3 bucket will not enforce MFA login on delete requests",
+          "impact": "Object could be deleted without stronger MFA authorization",
+          "resolve": "Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html` to manually configure the MFA setting. For AWS provider < v4.0.0 set `versioning.mfa_delete` attribute to `true` in aws_s3_bucket resource. For AWS provider >= v4.0.0 set 'versioning_configuration.mfa_delete` attribute to `Enabled`. The terraform change is required to reflect the setting in the state file"
+        },
+        "publicId": "SNYK-CC-TF-127",
+        "msg": "resource.aws_s3_bucket[mlflow].versioning.mfa_delete",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiFactorAuthenticationDelete.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html",
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMFADelete.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[mlflow]",
+          "versioning",
+          "mfa_delete"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-124",
+        "title": "S3 bucket versioning disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-124",
+        "isGeneratedByCustomRule": false,
+        "issue": "S3 bucket versioning is disabled",
+        "impact": "Changes or deletion of objects will not be reversible",
+        "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.VersioningConfiguration.Status` attribute to `Enabled`",
+          "terraform": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "lineNumber": 27,
+        "iacDescription": {
+          "issue": "S3 bucket versioning is disabled",
+          "impact": "Changes or deletion of objects will not be reversible",
+          "resolve": "For AWS provider < v4.0.0, set `versioning.enabled` attribute to `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning resource."
+        },
+        "publicId": "SNYK-CC-TF-124",
+        "msg": "resource.aws_s3_bucket[mlflow].versioning.enabled",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html"
+        ],
+        "path": [
+          "resource",
+          "aws_s3_bucket[mlflow]",
+          "versioning",
+          "enabled"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-45",
+        "title": "S3 server access logging is disabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "S3",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-45",
+        "isGeneratedByCustomRule": false,
+        "issue": "The s3 access logs will not be collected",
+        "impact": "There will be no audit trail of access to s3 objects",
+        "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource.",
+        "remediation": {
+          "cloudformation": "Set `Properties.LoggingConfiguration` attribute",
+          "terraform": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "lineNumber": 3,
+        "iacDescription": {
+          "issue": "The s3 access logs will not be collected",
+          "impact": "There will be no audit trail of access to s3 objects",
+          "resolve": "For AWS provider < v4.0.0, add `logging` block attribute. For AWS provider >= v4.0.0, add aws_s3_bucket_logging resource."
+        },
+        "publicId": "SNYK-CC-TF-45",
+        "msg": "input.resource.aws_s3_bucket[collections].logging",
+        "references": [
+          "https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html"
+        ],
+        "path": [
+          "input",
+          "resource",
+          "aws_s3_bucket[collections]",
+          "logging"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/datadog/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/datadog/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/datadog/providers.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/datadog/providers.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/datadog/vars.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/datadog/vars.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/firebase/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/firebase/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-GCP-275",
+        "title": "Default network automatically created",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud Platform",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-275",
+        "isGeneratedByCustomRule": false,
+        "issue": "Default network will be automatically created for the project",
+        "impact": "Increases security management overhead",
+        "resolve": "Set `auto_create_network` attribute to `false`",
+        "remediation": {
+          "terraform": "Set `auto_create_network` attribute to `false`"
+        },
+        "lineNumber": 11,
+        "iacDescription": {
+          "issue": "Default network will be automatically created for the project",
+          "impact": "Increases security management overhead",
+          "resolve": "Set `auto_create_network` attribute to `false`"
+        },
+        "publicId": "SNYK-CC-GCP-275",
+        "msg": "resource.google_project[project].auto_create_network",
+        "references": [
+          "https://cloud.google.com/vpc/docs/vp://cloud.google.com/vpc/docs/vpc#default-networkc"
+        ],
+        "path": [
+          "resource",
+          "google_project[project]",
+          "auto_create_network"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "terraform/firebase/functions/main.tf",
+    "projectName": "gainy",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/gainy/terraform/firebase/functions/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/gainy",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-TF-240",
+        "title": "Uniform bucket-level access disabled",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Cloud Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-240",
+        "isGeneratedByCustomRule": false,
+        "issue": "Cloud Storage uniform bucket-level access is not enabled",
+        "impact": "Both bucket ACLs and IAM permissions can be used to grant permissions",
+        "resolve": "Set `uniform_bucket_level_access` attribute to `true",
+        "remediation": {
+          "terraform": "Set `uniform_bucket_level_access` attribute to `true"
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "Cloud Storage uniform bucket-level access is not enabled",
+          "impact": "Both bucket ACLs and IAM permissions can be used to grant permissions",
+          "resolve": "Set `uniform_bucket_level_access` attribute to `true"
+        },
+        "publicId": "SNYK-CC-TF-240",
+        "msg": "resource.google_storage_bucket[bucket].uniform_bucket_level_access",
+        "references": [
+          "https://cloud.google.com/storage/docs/uniform-bucket-level-access"
+        ],
+        "path": [
+          "resource",
+          "google_storage_bucket[bucket]",
+          "uniform_bucket_level_access"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-271",
+        "title": "Object versioning is not enabled",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-271",
+        "isGeneratedByCustomRule": false,
+        "issue": "Object versioning is not enabled",
+        "impact": "The accidental or malicious changes to object will not be reversible",
+        "resolve": "Set `versioning.enabled` attribute to `true`",
+        "remediation": {
+          "terraform": "Set `versioning.enabled` attribute to `true`"
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "Object versioning is not enabled",
+          "impact": "The accidental or malicious changes to object will not be reversible",
+          "resolve": "Set `versioning.enabled` attribute to `true`"
+        },
+        "publicId": "SNYK-CC-GCP-271",
+        "msg": "resource.google_storage_bucket[bucket].versioning",
+        "references": [
+          "https://cloud.google.com/storage/docs/object-versioning"
+        ],
+        "path": [
+          "resource",
+          "google_storage_bucket[bucket]",
+          "versioning"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-GCP-274",
+        "title": "Logging is not enabled on storage bucket",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-GCP-274",
+        "isGeneratedByCustomRule": false,
+        "issue": "Logging is not enabled on storage bucket",
+        "impact": "Usage information will not be collected. This may impact ability to determine who accessed data stored in the bucket",
+        "resolve": "Set `logging` block attribute",
+        "remediation": {
+          "terraform": "Set `logging` block attribute"
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "Logging is not enabled on storage bucket",
+          "impact": "Usage information will not be collected. This may impact ability to determine who accessed data stored in the bucket",
+          "resolve": "Set `logging` block attribute"
+        },
+        "publicId": "SNYK-CC-GCP-274",
+        "msg": "resource.google_storage_bucket[bucket].logging",
+        "references": [
+          "https://cloud.google.com/storage/docs/xml-api/put-bucket-logging",
+          "https://cloud.google.com/storage/docs/access-logs"
+        ],
+        "path": [
+          "resource",
+          "google_storage_bucket[bucket]",
+          "logging"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-TF-185",
+        "title": "Google storage bucket does not use customer-managed keys to encrypt data",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Cloud Storage",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-TF-185",
+        "isGeneratedByCustomRule": false,
+        "issue": "Google storage bucket does not use customer-managed keys to encrypt data",
+        "impact": "Google will manage the encryption keys on its servers and could access the data without authorization",
+        "resolve": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly.",
+        "remediation": {
+          "terraform": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly."
+        },
+        "lineNumber": 18,
+        "iacDescription": {
+          "issue": "Google storage bucket does not use customer-managed keys to encrypt data",
+          "impact": "Google will manage the encryption keys on its servers and could access the data without authorization",
+          "resolve": "Use encryption keys from self-managed key management service and configure the `encryption` block accordingly."
+        },
+        "publicId": "SNYK-CC-TF-185",
+        "msg": "resource.google_storage_bucket[bucket].encryption.default_kms_key_name",
+        "references": [
+          "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket#encryption",
+          "https://cloud.google.com/storage/docs/encryption",
+          "https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys"
+        ],
+        "path": [
+          "resource",
+          "google_storage_bucket[bucket]",
+          "encryption",
+          "default_kms_key_name"
+        ],
+        "compliance": []
+      }
+    ]
+  }
+]

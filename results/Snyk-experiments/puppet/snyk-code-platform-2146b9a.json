@@ -1,0 +1,2051 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "javascript/HTTPSourceWithUncheckedType",
+              "name": "HTTPSourceWithUncheckedType",
+              "shortDescription": {
+                "text": "Improper Type Validation"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nWhen an object is coming from `req.body` or `req.query`, coming from the express framework. The value of this property can be controlled by the user. This could be abused by an attacker to craft the properties of the object to crash the application or bypass its logic. As such, consider checking the type of the object.\n\nIf this weakness is present, illegitimate input provided from the user's end could lead to unpredictable results such as the program crashing, unauthorized access to secure resources or command execution at the server side. In addition, if the server is overwhelmed by these types of malfunctions, it may lead to denial of service to legitimate users and tasks.\n\nExample:\n\n```\nmodule.exports = function(req, res) {\n    var data = req.query;\n      // type of value isnt checked before being used\n      data.ids = data.ids.split(',');\n      doStuff(data.ids);\n\n  };\n```\n\n\n\n## Best practices for prevention\n* Adopt a zero-trust model in which all input is considered potentially suspect.\n* Check the type of the object.\n\nExample:\n\n```\nmodule.exports = function(req, res) {\n    var data = req.query;\n    if (data.ids && typeof data.ids == 'string') {\n\n      // type of value is checked\n      data.ids = data.ids.split(',');\n      doStuff(data.ids);\n    } else {}\n  };\n```\n\n##  References\n\n* [CWE-1287: Improper Validation of Specified Type of Input](https://cwe.mitre.org/data/definitions/1287.html)\n* [JavaScript type confusion: Bypassed input validation (and how to remediate)](https://snyk.io/blog/remediate-javascript-type-confusion-bypassed-input-validation/)\n* [req.query Documentation](https://expressjs.com/en/4x/api.html#req.query)",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "HTTPSourceWithUncheckedType",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/connect-foundation/2019-06/commit/1a40f5c0b196b90c1507f641b8365b6fecc2ef43?diff=split#diff-2b47394c3c204942caa13fdb05e841a00f9db9a9d4b4d754c616f79cd658a305L-1",
+                    "lines": [
+                      {
+                        "line": "const { to, subject, text } = req.body;\n",
+                        "lineNumber": 23,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "const { subject, text } = req.body;\n",
+                        "lineNumber": 23,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "let { to } = req.body;\n",
+                        "lineNumber": 24,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "if (!Array.isArray(to)) {\n",
+                        "lineNumber": 25,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "  to = [to];\n",
+                        "lineNumber": 26,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "}\n",
+                        "lineNumber": 27,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "const from = req.user.email;\n",
+                        "lineNumber": 28,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "if (!to.every(val => validate('email', val))) {\n",
+                        "lineNumber": 29,
+                        "lineChange": "none"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/vasanthv/jsonbox/commit/e87f453992e57bbd419dc82367a2f3b986a0c8bb?diff=split#diff-5be3472e332802c8d82e9cec3027a0a2fa3f784f068659c744077612732a8180L-1",
+                    "lines": [
+                      {
+                        "line": "switch (req.query.query_type.toLowerCase()) {\n",
+                        "lineNumber": 47,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "const queryType = (typeof req.query.query_type === 'string') ? req.query.query_type.toLowerCase() : null\n",
+                        "lineNumber": 47,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "switch (queryType) {\n",
+                        "lineNumber": 48,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\tcase 'startswith':\n",
+                        "lineNumber": 49,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tregexp = new RegExp(\"^\" + req.query.query_value, \"i\");\n",
+                        "lineNumber": 50,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tbreak;\n",
+                        "lineNumber": 51,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tcase 'endswith':\n",
+                        "lineNumber": 52,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tregexp = new RegExp(req.query.query_value + '$', \"i\");\n",
+                        "lineNumber": 53,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tbreak;\n",
+                        "lineNumber": 54,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tcase 'anywhere':\n",
+                        "lineNumber": 55,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tregexp = new RegExp(req.query.query_value, \"i\");\n",
+                        "lineNumber": 56,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tbreak;\n",
+                        "lineNumber": 57,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\tdefault:\n",
+                        "lineNumber": 58,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tregexp = new RegExp('^' + req.query.query_value + '$', \"i\");\n",
+                        "lineNumber": 59,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tbreak;\n",
+                        "lineNumber": 60,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "}\n",
+                        "lineNumber": 61,
+                        "lineChange": "none"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/TheFive/osmbc/commit/25537b69d42f9f096adcb74f3906565f3ff3c3cf?diff=split#diff-c630f9b08348fcf62a4b60cccad256a95bc44e16a53ca91a52b836e12aed8939L-1",
+                    "lines": [
+                      {
+                        "line": "  if (date && typeof date !== \"string\" ) return next(new Error(\"Datatype Error\"));\n",
+                        "lineNumber": 48,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 49,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  const search = {};\n",
+                        "lineNumber": 50,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  if (date) search.timestamp = date + \"%\";\n",
+                        "lineNumber": 51,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  if (date && ((date.indexOf(\"<\") >= 0) || (date.indexOf(\">\") >= 0))) search.timestamp = date;\n",
+                        "lineNumber": 52,
+                        "lineChange": "none"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 164,
+                "cwe": [
+                  "CWE-1287"
+                ]
+              }
+            },
+            {
+              "id": "javascript/HardcodedNonCryptoSecret",
+              "name": "HardcodedNonCryptoSecret",
+              "shortDescription": {
+                "text": "Hardcoded Secret"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "help": {
+                "markdown": "## Details\n\nWhen constants are hardcoded into applications, this information could easily be reverse-engineered and become known to attackers. For example, if a breached authentication token is hardcoded in multiple places in the application, it may lead to components of the application remaining vulnerable if not all instances are changed.\nAnother negative effect of hard-coding constants is potential unpredictability in the application's performance if the development team fails to update every single instance of the hardcoded constant throughout the code. For these reasons, hard-coding security-relevant constants is considered bad coding practice and should be remedied if present and avoided in future.\n\n## Best practices for prevention\n- Never hard code security-related constants; use symbolic names or configuration lookup files.\n- As hard coding is often done by coders working alone on a small scale, examine all legacy code components and test carefully when scaling.\n- Adopt a \"future-proof code\" mindset: While use of constants may save a little time now and make development simpler in the short term, it could cost time and money adapting to scale or other unforeseen circumstances (such as new hardware) in the future.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "HardcodedNonCryptoSecret",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/markstock7/FileManager/commit/50572778825dea6b6fdb34c9ae950d9915743e4c?diff=split#diff-408990876524f4737b49693cedc52fd267e31f665d0a7f71792dcb986d6a8268L-1",
+                    "lines": [
+                      {
+                        "line": "accessKeyId: 'pT3KujnBPxc0ey7G',\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "secretAccessKey: 'CcHjh2y7tIFljxgUT4U8sQLctkMBHu',\n",
+                        "lineNumber": 2,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "accessKeyId: '',\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "secretAccessKey: '',\n",
+                        "lineNumber": 2,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/leohmoraes/rocketseat-02/commit/69e888ed7c779a0fbb0d0c08a219afa11b3913bd?diff=split#diff-04122576a4101a4ed68c79faa4f4605c44d8fd93252cff9e64ba66ab9c561e86L-1",
+                    "lines": [
+                      {
+                        "line": "secret: '9dffij39asf23nsfnsvsdsa',\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "secret: process.env.APP_SECRET,\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/rodrigotamura/go-stack-2019/commit/26e020dfc2272fe76c82c28d86f492c3c84a94c5?diff=split#diff-92f76c0bccc1f970244da3b50449f200d4787cf60a87be14ff4f250d0ba1a590L-1",
+                    "lines": [
+                      {
+                        "line": "secret: '632ca4dfc8b2269e6fdf03ab5a55d2ec',\n",
+                        "lineNumber": 1,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "secret: process.env.APP_SECRET,\n",
+                        "lineNumber": 1,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 100,
+                "cwe": [
+                  "CWE-547"
+                ]
+              }
+            },
+            {
+              "id": "javascript/JwtDecodeMethod",
+              "name": "JwtDecodeMethod",
+              "shortDescription": {
+                "text": "Insecure JWT Verification Method"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "## Details\n\nSome JSON Web Token (JWT) parse/decode methods do not enforce validation or integrity checks of the JWT. If an application relies on these methods to authenticate users, an attacker could create arbitrary JWTs that may be accepted by the application.\n\n### Best practices for prevention\n\n- Always enforce JWT signature verification by using safe verification methods to ensure the structure and integrity of the JWT is validated before processing.\n\n## Best practices for prevention\n* [JWT Validation](https://auth0.com/docs/secure/tokens/json-web-tokens/validate-json-web-tokens)",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "JwtDecodeMethod",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/LinWeb/blog/commit/543ad5795d80ca9b9f396061c027d8543907f320?diff=split#diff-da4ef0bd8d62fc58923ab92dc5a94b4fdaeaa2a36242311727356d7e3f1d44d0L-1",
+                    "lines": [
+                      {
+                        "line": "let decoded = jwt.decode(token, { complete: true })\n",
+                        "lineNumber": 9,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "try {\n",
+                        "lineNumber": 9,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    let decoded = jwt.verify(token, TOKEN_KEY)\n",
+                        "lineNumber": 10,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    return decoded.payload\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "} catch (e) {\n",
+                        "lineNumber": 12,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    return {\n",
+                        "lineNumber": 13,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        auth: 0\n",
+                        "lineNumber": 14,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    }\n",
+                        "lineNumber": 15,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "}\n",
+                        "lineNumber": 16,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/brainhubeu/hadron/commit/2252a2ad4297f6c11d22c787e111b99f374369b0?diff=split#diff-51cbc145c367c160646ad7cc834515e53878ac2c836c21e1dc0657796e96f665L-1",
+                    "lines": [
+                      {
+                        "line": "      const decoded: any = jwt.decode(token);\n",
+                        "lineNumber": 19,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "      const token = req.headers.authorization.split(' ')[1];\n",
+                        "lineNumber": 19,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "      const secret = container.take('authSecret');\n",
+                        "lineNumber": 20,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 21,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "      console.log(token);\n",
+                        "lineNumber": 22,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 23,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "      const id: any = jwt.verify(token, secret);\n",
+                        "lineNumber": 24,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 25,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "      console.log(id);\n",
+                        "lineNumber": 26,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/SBU-BMI/quip_distro/commit/69dacbc89f368567a473bdcfdf8c6dc8184d4e59?diff=split#diff-0ab1bb032bc5a5956b4d508e6f25533a7e6b0617bd4927b5a77fb14a6ff18e2eL-1",
+                    "lines": [
+                      {
+                        "line": "var token = jwt.decode(getToken(req))\n",
+                        "lineNumber": 21,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "var token = jwt.verify(getToken(req), SECRET)\n",
+                        "lineNumber": 52,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 6,
+                "cwe": [
+                  "CWE-347"
+                ]
+              }
+            },
+            {
+              "id": "javascript/NoHardcodedPasswords",
+              "name": "NoHardcodedPasswords",
+              "shortDescription": {
+                "text": "Use of Hardcoded Passwords"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "markdown": "\n## Details\n\nDevelopers may use hardcoded passwords during development to streamline setup or simplify authentication while testing. Although these passwords are intended to be removed before deployment, they are sometimes inadvertently left in the code. This introduces serious security risks, especially if the password grants elevated privileges or is reused across multiple systems.\n\nAn attacker who discovers a hardcoded password can potentially gain unauthorized access, escalate privileges, exfiltrate sensitive data, or disrupt service availability. If the password is reused across different environments or applications, the compromise can spread quickly and broadly.\n\n## Best practices for prevention\n* Plan software architecture such that keys and passwords are always stored outside the code, wherever possible.\n* Plan encryption into software architecture for all credential information and ensure proper handling of keys, credentials, and passwords.\n* Prompt for a secure password on first login rather than hard-code a default password.\n* If a hardcoded password or credential must be used, limit its use, for example, to system console users rather than via the network.\n* Use strong hashes for inbound password authentication, ideally with randomly assigned salts to increase the difficulty level in case of brute-force attack.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "NoHardcodedPasswords",
+                  "Security"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/UsabilityDynamics/node-rabbit-client/commit/bf652950ac5eb1cd85ebe349b29ad045df51dd07?diff=split#diff-506a1dcb4e0d34ef96430d0fa0790cc3e84cbf193ea91b3e49e5e52c86dad0f4L-1",
+                    "lines": [
+                      {
+                        "line": "login        : 'udx',\n",
+                        "lineNumber": 5,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "password     : 'ISM0Rules'\n",
+                        "lineNumber": 6,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "login        : process.env.RABBIT_LOGIN,\n",
+                        "lineNumber": 5,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "password     : process.env.RABBIT_PASSWORD\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/perborgen/data_hub/commit/8de6d9c7efdc6d0a773808c872c83f3374643a8e?diff=split#diff-58417e0f781b6656949d37258c8b9052ed266e2eb7a5163cad7b0863e6b2916aL-1",
+                    "lines": [
+                      {
+                        "line": "var config  = require('./config');\n",
+                        "lineNumber": 2,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "var handler = require('./api/handler');\n",
+                        "lineNumber": 3,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "var inert   = require('inert');\n",
+                        "lineNumber": 4,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "var bell    = require('bell');\n",
+                        "lineNumber": 5,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "var hapiAC  = require('hapi-auth-cookie');\n",
+                        "lineNumber": 6,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 7,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "server.connection({\n",
+                        "lineNumber": 8,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    port: process.env.PORT || 8080,\n",
+                        "lineNumber": 9,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    host: \"0.0.0.0\" || \"localhost\"\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "});\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 12,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "server.register([inert, bell, hapiAC], function(err){\n",
+                        "lineNumber": 13,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 14,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    if (err) {\n",
+                        "lineNumber": 15,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        throw err;\n",
+                        "lineNumber": 16,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    }\n",
+                        "lineNumber": 17,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 18,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    var authCookieOptions = {\n",
+                        "lineNumber": 19,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        password: 'cookie-encryption-password', //Password used for encryption\n",
+                        "lineNumber": 20,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        cookie: 'sitepoint-auth', // Name of cookie to set\n",
+                        "lineNumber": 21,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "        password: config.password || process.env.PASSWORD, //Password used for encryption\n",
+                        "lineNumber": 20,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "        cookie: 'auth', // Name of cookie to set\n",
+                        "lineNumber": 21,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/Gitualize/Gitualize/commit/f6de5689d637dc41abd4b43eea40371fd1088d33?diff=split#diff-273ae97b30b3f18c1d3fc9bf418b55be30c6e4a19f3f51953362cfa762980c63L-1",
+                    "lines": [
+                      {
+                        "line": "user: 'docker',\n",
+                        "lineNumber": 2,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "password: 'docker',\n",
+                        "lineNumber": 3,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "database: 'docker',\n",
+                        "lineNumber": 4,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "user: process.env.DATABASE_USER,\n",
+                        "lineNumber": 2,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "password: process.env.DATABASE_PASSWORD,\n",
+                        "lineNumber": 3,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "database: process.env.DATABASE_NAME,\n",
+                        "lineNumber": 4,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 44,
+                "cwe": [
+                  "CWE-798",
+                  "CWE-259"
+                ]
+              }
+            },
+            {
+              "id": "javascript/XSS",
+              "name": "XSS",
+              "shortDescription": {
+                "text": "Cross-site Scripting (XSS)"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "help": {
+                "markdown": "## Details\n\nA cross-site scripting attack occurs when the attacker tricks a legitimate web-based application or site to accept a request as originating from a trusted source.\n\nThis is done by escaping the context of the web application; the web application then delivers that data to its users along with other trusted dynamic content, without validating it. The browser unknowingly executes malicious script on the client side (through client-side languages; usually JavaScript or HTML)  in order to perform actions that are otherwise typically blocked by the browser's Same Origin Policy.\n\nInjecting malicious code is the most prevalent manner by which XSS is exploited; for this reason, escaping characters in order to prevent this manipulation is the top method for securing code against this vulnerability.\n\nEscaping means that the application is coded to mark key characters, and particularly key characters included in user input, to prevent those characters from being interpreted in a dangerous context. For example, in HTML, `<` can be coded as  `&lt`; and `>` can be coded as `&gt`; in order to be interpreted and displayed as themselves in text, while within the code itself, they are used for HTML tags. If malicious content is injected into an application that escapes special characters and that malicious content uses `<` and `>` as HTML tags, those characters are nonetheless not interpreted as HTML tags by the browser if they've been correctly escaped in the application code and in this way the attempted attack is diverted.\n\nThe most prominent use of XSS is to steal cookies (source: OWASP HttpOnly) and hijack user sessions, but XSS exploits have been used to expose sensitive information, enable access to privileged services and functionality and deliver malware.\n\n### Types of attacks\nThere are a few methods by which XSS can be manipulated:\n\n|Type|Origin|Description|\n|--|--|--|\n|**Stored**|Server|The malicious code is inserted in the application (usually as a link) by the attacker. The code is activated every time a user clicks the link.|\n|**Reflected**|Server|The attacker delivers a malicious link externally from the vulnerable web site application to a user. When clicked, malicious code is sent to the vulnerable web site, which reflects the attack back to the user's browser.|\n|**DOM-based**|Client|The attacker forces the user's browser to render a malicious page. The data in the page itself delivers the cross-site scripting data.|\n|**Mutated**| |The attacker injects code that appears safe, but is then rewritten and modified by the browser, while parsing the markup. An example is rebalancing unclosed quotation marks or even adding quotation marks to unquoted parameters.|\n\n### Affected environments\nThe following environments are susceptible to an XSS attack:\n\n* Web servers\n* Application servers\n* Web application environments\n\n## Best practices for prevention\nThis section describes the top best practices designed to specifically protect your code:\n\n* Sanitize data input in an HTTP request before reflecting it back, ensuring all data is validated, filtered or escaped before echoing anything back to the user, such as the values of query parameters during searches.\n* Convert special characters such as `?`, `&`, `/`, `<`, `>` and spaces to their respective HTML or URL encoded equivalents.\n* Give users the option to disable client-side scripts.\n* Redirect invalid requests.\n* Detect simultaneous logins, including those from two separate IP addresses, and invalidate those sessions.\n* Use and enforce a Content Security Policy (source: Wikipedia) to disable any features that might be manipulated for an XSS attack.\n* Read the documentation for any of the libraries referenced in your code to understand which elements allow for embedded HTML.",
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "javascript",
+                  "XSS",
+                  "Security",
+                  "SourceServer",
+                  "SourceHttpParam",
+                  "Taint"
+                ],
+                "categories": [
+                  "Security"
+                ],
+                "exampleCommitFixes": [
+                  {
+                    "commitURL": "https://github.com/nategood/httpful/commit/56bece201beeae6d80ed23a1195f7ab685dfde0c?diff=split#diff-27153a4cc821a38fb1466ae1c19c9f48fdc8b5028f971c1f88fd3d36af3081d2L-1",
+                    "lines": [
+                      {
+                        "line": "\n",
+                        "lineNumber": 6,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    res.writeHead(200);\n",
+                        "lineNumber": 7,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    res.writeHead(200, {\"Content-Type\":\"application/json\"});\n",
+                        "lineNumber": 6,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "    req.on('data', function(data){\n",
+                        "lineNumber": 8,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "        echo += data;\n",
+                        "lineNumber": 9,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    });\n",
+                        "lineNumber": 10,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    req.on('end', function(){\n",
+                        "lineNumber": 11,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\tres.write(\n",
+                        "lineNumber": 12,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "\t\t\tJSON.stringify({\n",
+                        "lineNumber": 13,
+                        "lineChange": "none"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/mjackson/unpkg/commit/db53a296aafebe18b854a0da2d4e09fb39e2aca8?diff=split#diff-efedef52a9612fa34544d4ad8a68232d242c481eaa0de73b416064cf5c5c4cb6L-1",
+                    "lines": [
+                      {
+                        "line": "    return res.status(403).send(`Invalid URL: ${req.url}`)\n",
+                        "lineNumber": 21,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    return res.status(403).type('text').send(`Invalid URL: ${req.url}`)\n",
+                        "lineNumber": 21,
+                        "lineChange": "added"
+                      },
+                      {
+                        "line": "\n",
+                        "lineNumber": 22,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  // Do not allow unrecognized query parameters because\n",
+                        "lineNumber": 23,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  // some people use them to bust the cache.\n",
+                        "lineNumber": 24,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "  if (!queryIsValid(url.query))\n",
+                        "lineNumber": 25,
+                        "lineChange": "none"
+                      },
+                      {
+                        "line": "    return res.status(403).send(`Invalid query: ${JSON.stringify(url.query)}`)\n",
+                        "lineNumber": 26,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "    return res.status(403).type('text').send(`Invalid query: ${JSON.stringify(url.query)}`)\n",
+                        "lineNumber": 26,
+                        "lineChange": "added"
+                      }
+                    ]
+                  },
+                  {
+                    "commitURL": "https://github.com/angular-cms/angular-cms/commit/49e3845bf11f21e5f63997ed4c522cfa923c89a7?diff=split#diff-2458b7a314e52c34fd950457c17939524367c06572e8c78acfce08e6a6293e68L-1",
+                    "lines": [
+                      {
+                        "line": "res.send(result);\n",
+                        "lineNumber": 20,
+                        "lineChange": "removed"
+                      },
+                      {
+                        "line": "res.status(httpStatus.OK).json(result);\n",
+                        "lineNumber": 21,
+                        "lineChange": "added"
+                      }
+                    ]
+                  }
+                ],
+                "exampleCommitDescriptions": [],
+                "precision": "very-high",
+                "repoDatasetSize": 339,
+                "cwe": [
+                  "CWE-79"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "javascript/HTTPSourceWithUncheckedType",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "The type of this object, coming from query and the value of its trim property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.",
+            "markdown": "The type of this {0}, coming from {1} and the value of its {2} property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.",
+            "arguments": [
+              "[object](0)",
+              "[query](1)",
+              "[trim](2)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "apps/api-gateway/src/authz/guards/ecosystem-roles.guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 34,
+                  "endLine": 34,
+                  "startColumn": 78,
+                  "endColumn": 82
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "39472510398673797100e1c034e6038e70e0e3384ce218d3bf0f9fda95d5648f",
+            "1": "d6aab2be.f9697af6.607187b5.1f269b07.ef9f7d82.c4a11d72.6977003a.17c85c92.5a562d4f.e9a4c62d.8b18f948.d7919eeb.d8d192ab.f8890b3c.cd61fc56.17c85c92"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/ecosystem-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 34,
+                            "endLine": 34,
+                            "startColumn": 54,
+                            "endColumn": 76
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/ecosystem-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 34,
+                            "endLine": 34,
+                            "startColumn": 58,
+                            "endColumn": 63
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/ecosystem-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 34,
+                            "endLine": 34,
+                            "startColumn": 78,
+                            "endColumn": 82
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 455,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HTTPSourceWithUncheckedType",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "The type of this object, coming from query and the value of its trim property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.",
+            "markdown": "The type of this {0}, coming from {1} and the value of its {2} property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.",
+            "arguments": [
+              "[object](0)",
+              "[query](1)",
+              "[trim](2)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "apps/api-gateway/src/authz/guards/org-roles.guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 30,
+                  "endLine": 30,
+                  "startColumn": 60,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "aa7c86a7a7559b8a0bbe88f63f8391effc803072ec801bb30d7e437d63e3df17",
+            "1": "d6aab2be.f9697af6.607187b5.1f269b07.ef9f7d82.c4a11d72.6977003a.17c85c92.5e6a04ab.e9a4c62d.8b18f948.d7919eeb.d8d192ab.c7259cda.cd61fc56.17c85c92"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/org-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 30,
+                            "endLine": 30,
+                            "startColumn": 42,
+                            "endColumn": 58
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/org-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 30,
+                            "endLine": 30,
+                            "startColumn": 46,
+                            "endColumn": 51
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/org-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 30,
+                            "endLine": 30,
+                            "startColumn": 60,
+                            "endColumn": 64
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 455,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HTTPSourceWithUncheckedType",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "The type of this object, coming from body and the value of its trim property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.",
+            "markdown": "The type of this {0}, coming from {1} and the value of its {2} property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.",
+            "arguments": [
+              "[object](0)",
+              "[body](1)",
+              "[trim](2)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "apps/api-gateway/src/authz/guards/ecosystem-roles.guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 35,
+                  "endLine": 35,
+                  "startColumn": 75,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "cf3385768f343ab2f1aa93a8d092c2ab3885335176092299bd41370c3430d8bb",
+            "1": "d6aab2be.f9697af6.607187b5.1f269b07.ef9f7d82.c4a11d72.6977003a.17c85c92.f759b1f9.e9a4c62d.8b18f948.08906714.d8d192ab.f8890b3c.cd61fc56.17c85c92"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/ecosystem-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "endLine": 35,
+                            "startColumn": 52,
+                            "endColumn": 73
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/ecosystem-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "endLine": 35,
+                            "startColumn": 56,
+                            "endColumn": 60
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/ecosystem-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "endLine": 35,
+                            "startColumn": 75,
+                            "endColumn": 79
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 455,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HTTPSourceWithUncheckedType",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "The type of this object, coming from body and the value of its trim property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.",
+            "markdown": "The type of this {0}, coming from {1} and the value of its {2} property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.",
+            "arguments": [
+              "[object](0)",
+              "[body](1)",
+              "[trim](2)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "apps/api-gateway/src/authz/guards/org-roles.guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 31,
+                  "endLine": 31,
+                  "startColumn": 57,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "a292a1eeb8f617a2933ffd022d9701d945dd16c5fe45ed04c1cb1c6e5b9128e8",
+            "1": "d6aab2be.f9697af6.607187b5.1f269b07.ef9f7d82.c4a11d72.6977003a.17c85c92.5e6a04ab.e9a4c62d.8b18f948.08906714.d8d192ab.c7259cda.cd61fc56.17c85c92"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/org-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "endLine": 31,
+                            "startColumn": 40,
+                            "endColumn": 55
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/org-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "endLine": 31,
+                            "startColumn": 44,
+                            "endColumn": 48
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/org-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "endLine": 31,
+                            "startColumn": 57,
+                            "endColumn": 61
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 455,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HTTPSourceWithUncheckedType",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "The type of this object, coming from body and the value of its toString property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.",
+            "markdown": "The type of this {0}, coming from {1} and the value of its {2} property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.",
+            "arguments": [
+              "[object](0)",
+              "[body](1)",
+              "[toString](2)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "apps/api-gateway/src/authz/guards/org-roles.guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 56,
+                  "endLine": 56,
+                  "startColumn": 61,
+                  "endColumn": 69
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "f8ee002344d13ad4d9b592da2a6060ba27bcada5992c11e403a4d5a73583eae8",
+            "1": "92fcdfe8.4773f344.607187b5.31e0caa9.b0f6e810.e9c60572.30dd16a8.17c85c92.5e6a04ab.e9a4c62d.39431920.e4909f4a.b0f6e810.c7259cda.cd61fc56.5f482cff"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/org-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 56,
+                            "endLine": 56,
+                            "startColumn": 55,
+                            "endColumn": 60
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/org-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 33,
+                            "endLine": 33,
+                            "startColumn": 62,
+                            "endColumn": 66
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/org-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 56,
+                            "endLine": 56,
+                            "startColumn": 61,
+                            "endColumn": 69
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 455,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HTTPSourceWithUncheckedType",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "The type of this object, coming from body and the value of its toString property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.",
+            "markdown": "The type of this {0}, coming from {1} and the value of its {2} property can be controlled by the user. An attacker may craft the properties of the object to crash the application or bypass its logic. Consider checking the type of the object.",
+            "arguments": [
+              "[object](0)",
+              "[body](1)",
+              "[toString](2)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "apps/api-gateway/src/authz/guards/org-roles.guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 66,
+                  "endLine": 66,
+                  "startColumn": 80,
+                  "endColumn": 88
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "8cf02c7c79b77f5940d4dcbeac302017d92b9306cf981fc34e26221de15bcfa6",
+            "1": "92fcdfe8.4773f344.607187b5.31e0caa9.b0f6e810.e9c60572.30dd16a8.17c85c92.839b1d0f.4773f344.39431920.e4909f4a.b0f6e810.e9c60572.df7e59ba.5f482cff"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/org-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 66,
+                            "endLine": 66,
+                            "startColumn": 74,
+                            "endColumn": 79
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/org-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 33,
+                            "endLine": 33,
+                            "startColumn": 62,
+                            "endColumn": 66
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/guards/org-roles.guard.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 66,
+                            "endLine": 66,
+                            "startColumn": 80,
+                            "endColumn": 88
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 455,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/HardcodedNonCryptoSecret",
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.",
+            "markdown": "Avoid hardcoding values that are meant to be secret. Found {0} used in {1}.",
+            "arguments": [
+              "[a hardcoded string](0)",
+              "[here](1)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "apps/api-gateway/src/authz/dtos/auth-token-res.dto.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 5,
+                  "endLine": 5,
+                  "startColumn": 37,
+                  "endColumn": 2778
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "76c19fc26202951e3e9383235fdff76ecc5a320ee83e3254bbcd82246ca13bf7",
+            "1": "ef6eaaa5.4773f344.607187b5.e052b9a9.79a7d027.fcf3002d.40ea4e52.3cee0341.ef6eaaa5.4773f344.607187b5.e052b9a9.79a7d027.fcf3002d.40ea4e52.3cee0341"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/dtos/auth-token-res.dto.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "endLine": 5,
+                            "startColumn": 37,
+                            "endColumn": 2778
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/dtos/auth-token-res.dto.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "endLine": 5,
+                            "startColumn": 37,
+                            "endColumn": 2778
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 760,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/JwtDecodeMethod",
+          "ruleIndex": 2,
+          "level": "warning",
+          "message": {
+            "text": "A JWT decode() method is used that decodes the token but does not check its validity or integrity. If the JWT has originated from an untrusted source, decoded data could be crafted by an attacker and should not be considered safe to use or process within the application. Always use JWT verification methods to validate the structure and integrity of a token.",
+            "markdown": "A JWT decode() method is used that decodes the token but does not check its validity or integrity. If the JWT has originated from an untrusted source, decoded data could be crafted by an attacker and should not be considered safe to use or process within the application. Always use JWT verification methods to validate the structure and integrity of a token.",
+            "arguments": []
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "apps/api-gateway/src/authz/jwt.strategy.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 31,
+                  "endLine": 31,
+                  "startColumn": 35,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "8d49df20cde57855c72ccb19246f330ebd3764705e2f1806523eafc6b6a43324",
+            "1": "b30593f5.4773f344.0f22609d.ecedd41a.33ba132a.8020cfdf.83265159.3357ef26.b30593f5.4773f344.0f22609d.ecedd41a.33ba132a.8020cfdf.83265159.3357ef26"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/jwt.strategy.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "endLine": 31,
+                            "startColumn": 35,
+                            "endColumn": 45
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 519,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "javascript/JwtDecodeMethod",
+          "ruleIndex": 2,
+          "level": "warning",
+          "message": {
+            "text": "A JWT decode() method is used that decodes the token but does not check its validity or integrity. If the JWT has originated from an untrusted source, decoded data could be crafted by an attacker and should not be considered safe to use or process within the application. Always use JWT verification methods to validate the structure and integrity of a token.",
+            "markdown": "A JWT decode() method is used that decodes the token but does not check its validity or integrity. If the JWT has originated from an untrusted source, decoded data could be crafted by an attacker and should not be considered safe to use or process within the application. Always use JWT verification methods to validate the structure and integrity of a token.",
+            "arguments": []
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "apps/api-gateway/src/authz/mobile-jwt.strategy.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 21,
+                  "endLine": 21,
+                  "startColumn": 35,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "95a35526d8059ab4b80edcba7d0f9fcb583e936b0c2d8292a7993a6425dd4319",
+            "1": "b30593f5.4773f344.0f22609d.ecedd41a.33ba132a.8020cfdf.83265159.8c017d4e.b30593f5.4773f344.0f22609d.ecedd41a.33ba132a.8020cfdf.83265159.8c017d4e"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/authz/mobile-jwt.strategy.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 21,
+                            "endLine": 21,
+                            "startColumn": 35,
+                            "endColumn": 45
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 519,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "javascript/NoHardcodedPasswords",
+          "ruleIndex": 3,
+          "level": "warning",
+          "message": {
+            "text": "Do not hardcode passwords in code. Found hardcoded password used in change_password.",
+            "markdown": "Do not hardcode passwords in code. Found hardcoded password used in {0}.",
+            "arguments": [
+              "[change_password](0)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "libs/client-registration/src/client-registration.service.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 697,
+                  "endLine": 697,
+                  "startColumn": 11,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "83c19d0528a4692133b458de661bbd88c56474e397ad6bbf40b2b74fca7d7b37",
+            "1": "d90925c8.3f481afb.94db1bdf.b63f1801.79a7d027.fcf3002d.54f2bcce.3252fe9f.d90925c8.3f481afb.94db1bdf.b63f1801.79a7d027.fcf3002d.54f2bcce.3252fe9f"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "libs/client-registration/src/client-registration.service.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 697,
+                            "endLine": 697,
+                            "startColumn": 11,
+                            "endColumn": 26
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 510,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        },
+        {
+          "ruleId": "javascript/XSS",
+          "ruleIndex": 4,
+          "level": "error",
+          "message": {
+            "text": "Unsanitized input from an HTTP parameter flows into send, where it is used to render an HTML page returned to the user. This may result in a Cross-Site Scripting attack (XSS).",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used to render an HTML page returned to the user. This may result in a Cross-Site Scripting attack (XSS).",
+            "arguments": [
+              "[an HTTP parameter](0)",
+              "[flows](1),(2),(3),(4),(5),(6),(7),(8),(9)",
+              "[send](10)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "apps/api-gateway/src/issuance/issuance.controller.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 196,
+                  "endLine": 196,
+                  "startColumn": 10,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "bd8acb0083b42a690a982276c849ef0080906111964105a715ca34d13b19fde7",
+            "1": "2acb54cb.4773f344.a32ed1a1.7162cc20.ef9f7d82.8020cfdf.cd61fc56.2f05c567.67e7998e.00c21631.c9330245.c3ede95a.4463c21f.8431f2ca.55818220.2f05c567"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/issuance/issuance.controller.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 185,
+                            "endLine": 185,
+                            "startColumn": 38,
+                            "endColumn": 68
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/issuance/issuance.controller.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 185,
+                            "endLine": 185,
+                            "startColumn": 38,
+                            "endColumn": 68
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/issuance/issuance.controller.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 191,
+                            "endLine": 191,
+                            "startColumn": 9,
+                            "endColumn": 31
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/issuance/issuance.controller.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 190,
+                            "endLine": 190,
+                            "startColumn": 82,
+                            "endColumn": 99
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 4,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/issuance/issuance.controller.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 190,
+                            "endLine": 190,
+                            "startColumn": 54,
+                            "endColumn": 99
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 5,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/issuance/issuance.controller.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 190,
+                            "endLine": 192,
+                            "startColumn": 48,
+                            "endColumn": 8
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 6,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/issuance/issuance.controller.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 190,
+                            "endLine": 190,
+                            "startColumn": 13,
+                            "endColumn": 45
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 7,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/issuance/issuance.controller.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 196,
+                            "endLine": 196,
+                            "startColumn": 15,
+                            "endColumn": 27
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 8,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/issuance/issuance.controller.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 196,
+                            "endLine": 196,
+                            "startColumn": 28,
+                            "endColumn": 39
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 9,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/issuance/issuance.controller.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 196,
+                            "endLine": 196,
+                            "startColumn": 15,
+                            "endColumn": 39
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 10,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "apps/api-gateway/src/issuance/issuance.controller.ts",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 196,
+                            "endLine": 196,
+                            "startColumn": 10,
+                            "endColumn": 14
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 760,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "hotFileCodeFlow"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": true
+          }
+        }
+      ],
+      "properties": {
+        "coverage": [
+          {
+            "isSupported": true,
+            "lang": "JavaScript",
+            "files": 1,
+            "type": "SUPPORTED"
+          },
+          {
+            "isSupported": true,
+            "lang": "TypeScript",
+            "files": 453,
+            "type": "SUPPORTED"
+          }
+        ]
+      }
+    }
+  ]
+}

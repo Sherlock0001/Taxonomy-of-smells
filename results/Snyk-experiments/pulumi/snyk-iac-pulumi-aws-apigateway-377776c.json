@@ -1,0 +1,20 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi-aws-apigateway/provider/pkg/testdata/recorded/TestProviderUpgrade/api/1.0.1/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi-aws-apigateway/provider/pkg/testdata/recorded/TestProviderUpgrade/simple-no-binary-media-type/2.1.0/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_pulumi/pulumi-aws-apigateway/provider/pkg/testdata/recorded/TestProviderUpgrade/simple-with-manual-swagger-spec/2.1.0/grpc.json"
+  }
+]

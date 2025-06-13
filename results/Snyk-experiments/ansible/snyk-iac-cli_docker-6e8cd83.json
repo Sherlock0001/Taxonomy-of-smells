@@ -1,0 +1,20 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/cli_docker/libs/template/templates/dbt-sql/template/{{.project_name}}/.vscode/extensions.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/cli_docker/libs/template/templates/default-python/template/{{.project_name}}/.vscode/settings.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/snyk_ansible/cli_docker/libs/template/templates/default-sql/template/{{.project_name}}/.vscode/extensions.json"
+  }
+]

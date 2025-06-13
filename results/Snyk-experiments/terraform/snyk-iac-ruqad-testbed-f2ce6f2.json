@@ -1,0 +1,1878 @@
+[
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/consumer.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/consumer.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/main.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/outputs.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/provider.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/provider.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/variables.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/catalog-server/catalog-server.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/catalog-server/catalog-server.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-K8S-36",
+        "title": "Container is running with multiple open ports",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-36",
+        "isGeneratedByCustomRule": false,
+        "issue": "Container is declaring more than 2 listening ports",
+        "impact": "Increases the attack surface of the application and the container.",
+        "resolve": "Reduce `ports` count to 2",
+        "remediation": {
+          "kubernetes": "Reduce `ports` count to 2",
+          "terraform": "Reduce `ports` count to 2"
+        },
+        "lineNumber": 44,
+        "iacDescription": {
+          "issue": "Container is declaring more than 2 listening ports",
+          "impact": "Increases the attack surface of the application and the container.",
+          "resolve": "Reduce `ports` count to 2"
+        },
+        "publicId": "SNYK-CC-K8S-36",
+        "msg": "resource.kubernetes_deployment[connector].spec.template.spec.container[0].port",
+        "description": "",
+        "references": [
+          "https://kubernetes.io/docs/concepts/services-networking/service/#field-spec-ports"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[connector]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "port"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-6",
+        "title": "Container does not drop all default capabilities",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-6",
+        "isGeneratedByCustomRule": false,
+        "issue": "All default capabilities are not explicitly dropped",
+        "impact": "Containers are running with potentially unnecessary privileges",
+        "resolve": "Add `ALL` to `spec.container.security_context.capabilities.drop` list, and add only required capabilities to `spec.container.security_context.capabilities.add`, ensuring it also does not contain `ALL`",
+        "remediation": {
+          "kubernetes": "Add `ALL` to `securityContext.capabilities.drop` list, and add only required capabilities in `securityContext.capabilities.add`",
+          "terraform": "Add `ALL` to `spec.container.security_context.capabilities.drop` list, and add only required capabilities to `spec.container.security_context.capabilities.add`, ensuring it also does not contain `ALL`"
+        },
+        "lineNumber": 29,
+        "iacDescription": {
+          "issue": "All default capabilities are not explicitly dropped",
+          "impact": "Containers are running with potentially unnecessary privileges",
+          "resolve": "Add `ALL` to `spec.container.security_context.capabilities.drop` list, and add only required capabilities to `spec.container.security_context.capabilities.add`, ensuring it also does not contain `ALL`"
+        },
+        "publicId": "SNYK-CC-K8S-6",
+        "msg": "resource.kubernetes_deployment[connector].spec.spec.template.container[0].security_context.capabilities",
+        "references": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/",
+          "https://linux-audit.com/linux-capabilities-hardening-linux-binaries-by-removing-setuid/"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[connector]",
+          "spec",
+          "spec",
+          "template",
+          "container[0]",
+          "security_context",
+          "capabilities"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-10",
+        "title": "Container or Pod is running without root user control",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-10",
+        "isGeneratedByCustomRule": false,
+        "issue": "Container or Pod is running without root user control",
+        "impact": "Container or Pod could be running with full administrative privileges",
+        "resolve": "Set `security_context.run_as_non_root` to `true`",
+        "remediation": {
+          "kubernetes": "Set `securityContext.runAsNonRoot` to `true`",
+          "terraform": "Set `security_context.run_as_non_root` to `true`"
+        },
+        "lineNumber": 44,
+        "iacDescription": {
+          "issue": "Container or Pod is running without root user control",
+          "impact": "Container or Pod could be running with full administrative privileges",
+          "resolve": "Set `security_context.run_as_non_root` to `true`"
+        },
+        "publicId": "SNYK-CC-K8S-10",
+        "msg": "resource.kubernetes_deployment[connector].spec.template.spec.container[0].security_context.capabilities",
+        "description": "",
+        "references": [
+          "https://kubernetes.io/blog/2016/08/security-best-practices-kubernetes-deployment/"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[connector]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "security_context",
+          "capabilities"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-4",
+        "title": "Container is running without memory limit",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-4",
+        "isGeneratedByCustomRule": false,
+        "issue": "Memory limit is not defined",
+        "impact": "Containers without memory limits are more likely to be terminated when the node runs out of memory",
+        "resolve": "Set `resources.limits.memory` value",
+        "remediation": {
+          "kubernetes": "Set `resources.limits.memory` value",
+          "terraform": "Set `resources.limits.memory` value"
+        },
+        "lineNumber": 44,
+        "iacDescription": {
+          "issue": "Memory limit is not defined",
+          "impact": "Containers without memory limits are more likely to be terminated when the node runs out of memory",
+          "resolve": "Set `resources.limits.memory` value"
+        },
+        "publicId": "SNYK-CC-K8S-4",
+        "msg": "resource.kubernetes_deployment[connector].spec.template.spec.container[0].resources.limits.memory",
+        "references": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[connector]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "resources",
+          "limits",
+          "memory"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-5",
+        "title": "Container has no CPU limit",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-5",
+        "isGeneratedByCustomRule": false,
+        "issue": "Container has no CPU limit",
+        "impact": "CPU limits can prevent containers from consuming valuable compute time for no benefit (e.g. inefficient code) that might lead to unnecessary costs. It is advisable to also configure CPU requests to ensure application stability.",
+        "resolve": "Add `spec.container.resources.limits.cpu` field with required CPU limit value",
+        "remediation": {
+          "kubernetes": "Add `resources.limits.cpu` field with required CPU limit value",
+          "terraform": "Add `spec.container.resources.limits.cpu` field with required CPU limit value"
+        },
+        "lineNumber": 44,
+        "iacDescription": {
+          "issue": "Container has no CPU limit",
+          "impact": "CPU limits can prevent containers from consuming valuable compute time for no benefit (e.g. inefficient code) that might lead to unnecessary costs. It is advisable to also configure CPU requests to ensure application stability.",
+          "resolve": "Add `spec.container.resources.limits.cpu` field with required CPU limit value"
+        },
+        "publicId": "SNYK-CC-K8S-5",
+        "msg": "resource.kubernetes_deployment[connector].spec.template.spec.container[0].resources.limits.cpu",
+        "references": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/",
+          "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/",
+          "https://github.com/kubernetes/design-proposals-archive/blob/8da1442ea29adccea40693357d04727127e045ed/node/resource-qos.md#compressible-resource-guaranteess"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[connector]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "resources",
+          "limits",
+          "cpu"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-9",
+        "title": "Container is running without privilege escalation control",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Pod",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-9",
+        "isGeneratedByCustomRule": false,
+        "issue": "`allowPrivilegeEscalation` attribute is not set to `false`",
+        "impact": "Processes could elevate current privileges via known vectors, for example SUID binaries",
+        "resolve": "Set `spec.container.security_context.allow_privilege_escalation` to `false`",
+        "remediation": {
+          "kubernetes": "Set `spec.{containers, initContainers}.securityContext.allowPrivilegeEscalation` to `false`",
+          "terraform": "Set `spec.container.security_context.allow_privilege_escalation` to `false`"
+        },
+        "lineNumber": 44,
+        "iacDescription": {
+          "issue": "`allowPrivilegeEscalation` attribute is not set to `false`",
+          "impact": "Processes could elevate current privileges via known vectors, for example SUID binaries",
+          "resolve": "Set `spec.container.security_context.allow_privilege_escalation` to `false`"
+        },
+        "publicId": "SNYK-CC-K8S-9",
+        "msg": "resource.kubernetes_deployment[connector].spec.template.spec.container[0].security_context.allow_privilege_escalation",
+        "references": [
+          "https://www.kernel.org/doc/html/latest/userspace-api/no_new_privs.html"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[connector]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "security_context",
+          "allow_privilege_escalation"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-42",
+        "title": "Container could be running with outdated image",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-42",
+        "isGeneratedByCustomRule": false,
+        "issue": "The image policy does not prevent image reuse",
+        "impact": "The container may run with outdated or unauthorized image",
+        "resolve": "Set `image_pull_policy` attribute to `Always",
+        "remediation": {
+          "kubernetes": "Set `imagePullPolicy` attribute to `Always`",
+          "terraform": "Set `image_pull_policy` attribute to `Always"
+        },
+        "lineNumber": 44,
+        "iacDescription": {
+          "issue": "The image policy does not prevent image reuse",
+          "impact": "The container may run with outdated or unauthorized image",
+          "resolve": "Set `image_pull_policy` attribute to `Always"
+        },
+        "publicId": "SNYK-CC-K8S-42",
+        "msg": "resource.kubernetes_deployment[connector].spec.template.spec.container[0].image_pull_policy",
+        "references": [
+          "https://kubernetes.io/docs/concepts/containers/images/",
+          "https://kubernetes.io/docs/concepts/configuration/overview/#container-images"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[connector]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "image_pull_policy"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/catalog-server/ingress.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/catalog-server/ingress.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/catalog-server/outputs.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/catalog-server/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/catalog-server/services.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/catalog-server/services.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/catalog-server/variables.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/catalog-server/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/connector/connector.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/connector/connector.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-K8S-36",
+        "title": "Container is running with multiple open ports",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-36",
+        "isGeneratedByCustomRule": false,
+        "issue": "Container is declaring more than 2 listening ports",
+        "impact": "Increases the attack surface of the application and the container.",
+        "resolve": "Reduce `ports` count to 2",
+        "remediation": {
+          "kubernetes": "Reduce `ports` count to 2",
+          "terraform": "Reduce `ports` count to 2"
+        },
+        "lineNumber": 44,
+        "iacDescription": {
+          "issue": "Container is declaring more than 2 listening ports",
+          "impact": "Increases the attack surface of the application and the container.",
+          "resolve": "Reduce `ports` count to 2"
+        },
+        "publicId": "SNYK-CC-K8S-36",
+        "msg": "resource.kubernetes_deployment[connector].spec.template.spec.container[0].port",
+        "description": "",
+        "references": [
+          "https://kubernetes.io/docs/concepts/services-networking/service/#field-spec-ports"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[connector]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "port"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-6",
+        "title": "Container does not drop all default capabilities",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-6",
+        "isGeneratedByCustomRule": false,
+        "issue": "All default capabilities are not explicitly dropped",
+        "impact": "Containers are running with potentially unnecessary privileges",
+        "resolve": "Add `ALL` to `spec.container.security_context.capabilities.drop` list, and add only required capabilities to `spec.container.security_context.capabilities.add`, ensuring it also does not contain `ALL`",
+        "remediation": {
+          "kubernetes": "Add `ALL` to `securityContext.capabilities.drop` list, and add only required capabilities in `securityContext.capabilities.add`",
+          "terraform": "Add `ALL` to `spec.container.security_context.capabilities.drop` list, and add only required capabilities to `spec.container.security_context.capabilities.add`, ensuring it also does not contain `ALL`"
+        },
+        "lineNumber": 29,
+        "iacDescription": {
+          "issue": "All default capabilities are not explicitly dropped",
+          "impact": "Containers are running with potentially unnecessary privileges",
+          "resolve": "Add `ALL` to `spec.container.security_context.capabilities.drop` list, and add only required capabilities to `spec.container.security_context.capabilities.add`, ensuring it also does not contain `ALL`"
+        },
+        "publicId": "SNYK-CC-K8S-6",
+        "msg": "resource.kubernetes_deployment[connector].spec.spec.template.container[0].security_context.capabilities",
+        "references": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/",
+          "https://linux-audit.com/linux-capabilities-hardening-linux-binaries-by-removing-setuid/"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[connector]",
+          "spec",
+          "spec",
+          "template",
+          "container[0]",
+          "security_context",
+          "capabilities"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-10",
+        "title": "Container or Pod is running without root user control",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-10",
+        "isGeneratedByCustomRule": false,
+        "issue": "Container or Pod is running without root user control",
+        "impact": "Container or Pod could be running with full administrative privileges",
+        "resolve": "Set `security_context.run_as_non_root` to `true`",
+        "remediation": {
+          "kubernetes": "Set `securityContext.runAsNonRoot` to `true`",
+          "terraform": "Set `security_context.run_as_non_root` to `true`"
+        },
+        "lineNumber": 44,
+        "iacDescription": {
+          "issue": "Container or Pod is running without root user control",
+          "impact": "Container or Pod could be running with full administrative privileges",
+          "resolve": "Set `security_context.run_as_non_root` to `true`"
+        },
+        "publicId": "SNYK-CC-K8S-10",
+        "msg": "resource.kubernetes_deployment[connector].spec.template.spec.container[0].security_context.capabilities",
+        "description": "",
+        "references": [
+          "https://kubernetes.io/blog/2016/08/security-best-practices-kubernetes-deployment/"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[connector]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "security_context",
+          "capabilities"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-4",
+        "title": "Container is running without memory limit",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-4",
+        "isGeneratedByCustomRule": false,
+        "issue": "Memory limit is not defined",
+        "impact": "Containers without memory limits are more likely to be terminated when the node runs out of memory",
+        "resolve": "Set `resources.limits.memory` value",
+        "remediation": {
+          "kubernetes": "Set `resources.limits.memory` value",
+          "terraform": "Set `resources.limits.memory` value"
+        },
+        "lineNumber": 44,
+        "iacDescription": {
+          "issue": "Memory limit is not defined",
+          "impact": "Containers without memory limits are more likely to be terminated when the node runs out of memory",
+          "resolve": "Set `resources.limits.memory` value"
+        },
+        "publicId": "SNYK-CC-K8S-4",
+        "msg": "resource.kubernetes_deployment[connector].spec.template.spec.container[0].resources.limits.memory",
+        "references": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[connector]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "resources",
+          "limits",
+          "memory"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-5",
+        "title": "Container has no CPU limit",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-5",
+        "isGeneratedByCustomRule": false,
+        "issue": "Container has no CPU limit",
+        "impact": "CPU limits can prevent containers from consuming valuable compute time for no benefit (e.g. inefficient code) that might lead to unnecessary costs. It is advisable to also configure CPU requests to ensure application stability.",
+        "resolve": "Add `spec.container.resources.limits.cpu` field with required CPU limit value",
+        "remediation": {
+          "kubernetes": "Add `resources.limits.cpu` field with required CPU limit value",
+          "terraform": "Add `spec.container.resources.limits.cpu` field with required CPU limit value"
+        },
+        "lineNumber": 44,
+        "iacDescription": {
+          "issue": "Container has no CPU limit",
+          "impact": "CPU limits can prevent containers from consuming valuable compute time for no benefit (e.g. inefficient code) that might lead to unnecessary costs. It is advisable to also configure CPU requests to ensure application stability.",
+          "resolve": "Add `spec.container.resources.limits.cpu` field with required CPU limit value"
+        },
+        "publicId": "SNYK-CC-K8S-5",
+        "msg": "resource.kubernetes_deployment[connector].spec.template.spec.container[0].resources.limits.cpu",
+        "references": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/",
+          "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/",
+          "https://github.com/kubernetes/design-proposals-archive/blob/8da1442ea29adccea40693357d04727127e045ed/node/resource-qos.md#compressible-resource-guaranteess"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[connector]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "resources",
+          "limits",
+          "cpu"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-9",
+        "title": "Container is running without privilege escalation control",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Pod",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-9",
+        "isGeneratedByCustomRule": false,
+        "issue": "`allowPrivilegeEscalation` attribute is not set to `false`",
+        "impact": "Processes could elevate current privileges via known vectors, for example SUID binaries",
+        "resolve": "Set `spec.container.security_context.allow_privilege_escalation` to `false`",
+        "remediation": {
+          "kubernetes": "Set `spec.{containers, initContainers}.securityContext.allowPrivilegeEscalation` to `false`",
+          "terraform": "Set `spec.container.security_context.allow_privilege_escalation` to `false`"
+        },
+        "lineNumber": 44,
+        "iacDescription": {
+          "issue": "`allowPrivilegeEscalation` attribute is not set to `false`",
+          "impact": "Processes could elevate current privileges via known vectors, for example SUID binaries",
+          "resolve": "Set `spec.container.security_context.allow_privilege_escalation` to `false`"
+        },
+        "publicId": "SNYK-CC-K8S-9",
+        "msg": "resource.kubernetes_deployment[connector].spec.template.spec.container[0].security_context.allow_privilege_escalation",
+        "references": [
+          "https://www.kernel.org/doc/html/latest/userspace-api/no_new_privs.html"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[connector]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "security_context",
+          "allow_privilege_escalation"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-42",
+        "title": "Container could be running with outdated image",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-42",
+        "isGeneratedByCustomRule": false,
+        "issue": "The image policy does not prevent image reuse",
+        "impact": "The container may run with outdated or unauthorized image",
+        "resolve": "Set `image_pull_policy` attribute to `Always",
+        "remediation": {
+          "kubernetes": "Set `imagePullPolicy` attribute to `Always`",
+          "terraform": "Set `image_pull_policy` attribute to `Always"
+        },
+        "lineNumber": 44,
+        "iacDescription": {
+          "issue": "The image policy does not prevent image reuse",
+          "impact": "The container may run with outdated or unauthorized image",
+          "resolve": "Set `image_pull_policy` attribute to `Always"
+        },
+        "publicId": "SNYK-CC-K8S-42",
+        "msg": "resource.kubernetes_deployment[connector].spec.template.spec.container[0].image_pull_policy",
+        "references": [
+          "https://kubernetes.io/docs/concepts/containers/images/",
+          "https://kubernetes.io/docs/concepts/configuration/overview/#container-images"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[connector]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "image_pull_policy"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/connector/ingress.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/connector/ingress.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/connector/outputs.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/connector/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/connector/services.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/connector/services.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/connector/variables.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/connector/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/identity-hub/identityhub.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/identity-hub/identityhub.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-K8S-9",
+        "title": "Container is running without privilege escalation control",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Pod",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-9",
+        "isGeneratedByCustomRule": false,
+        "issue": "`allowPrivilegeEscalation` attribute is not set to `false`",
+        "impact": "Processes could elevate current privileges via known vectors, for example SUID binaries",
+        "resolve": "Set `spec.container.security_context.allow_privilege_escalation` to `false`",
+        "remediation": {
+          "kubernetes": "Set `spec.{containers, initContainers}.securityContext.allowPrivilegeEscalation` to `false`",
+          "terraform": "Set `spec.container.security_context.allow_privilege_escalation` to `false`"
+        },
+        "lineNumber": 38,
+        "iacDescription": {
+          "issue": "`allowPrivilegeEscalation` attribute is not set to `false`",
+          "impact": "Processes could elevate current privileges via known vectors, for example SUID binaries",
+          "resolve": "Set `spec.container.security_context.allow_privilege_escalation` to `false`"
+        },
+        "publicId": "SNYK-CC-K8S-9",
+        "msg": "resource.kubernetes_deployment[identityhub].spec.template.spec.container[0].security_context.allow_privilege_escalation",
+        "references": [
+          "https://www.kernel.org/doc/html/latest/userspace-api/no_new_privs.html"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[identityhub]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "security_context",
+          "allow_privilege_escalation"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-41",
+        "title": "Container is running without liveness probe",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-41",
+        "isGeneratedByCustomRule": false,
+        "issue": "Liveness probe is not defined",
+        "impact": "Kubernetes will not be able to detect if application is able to service requests, and will not restart unhealthy pods",
+        "resolve": "Add `liveness_probe` attribute",
+        "remediation": {
+          "kubernetes": "Add `livenessProbe` attribute",
+          "terraform": "Add `liveness_probe` attribute"
+        },
+        "lineNumber": 38,
+        "iacDescription": {
+          "issue": "Liveness probe is not defined",
+          "impact": "Kubernetes will not be able to detect if application is able to service requests, and will not restart unhealthy pods",
+          "resolve": "Add `liveness_probe` attribute"
+        },
+        "publicId": "SNYK-CC-K8S-41",
+        "msg": "resource.kubernetes_deployment[identityhub].spec.template.spec.container[0].liveness_probe",
+        "references": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/",
+          "https://cloud.google.com/blog/products/gcp/kubernetes-best-practices-setting-up-health-checks-with-readiness-and-liveness-probes"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[identityhub]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "liveness_probe"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-6",
+        "title": "Container does not drop all default capabilities",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-6",
+        "isGeneratedByCustomRule": false,
+        "issue": "All default capabilities are not explicitly dropped",
+        "impact": "Containers are running with potentially unnecessary privileges",
+        "resolve": "Add `ALL` to `spec.container.security_context.capabilities.drop` list, and add only required capabilities to `spec.container.security_context.capabilities.add`, ensuring it also does not contain `ALL`",
+        "remediation": {
+          "kubernetes": "Add `ALL` to `securityContext.capabilities.drop` list, and add only required capabilities in `securityContext.capabilities.add`",
+          "terraform": "Add `ALL` to `spec.container.security_context.capabilities.drop` list, and add only required capabilities to `spec.container.security_context.capabilities.add`, ensuring it also does not contain `ALL`"
+        },
+        "lineNumber": 23,
+        "iacDescription": {
+          "issue": "All default capabilities are not explicitly dropped",
+          "impact": "Containers are running with potentially unnecessary privileges",
+          "resolve": "Add `ALL` to `spec.container.security_context.capabilities.drop` list, and add only required capabilities to `spec.container.security_context.capabilities.add`, ensuring it also does not contain `ALL`"
+        },
+        "publicId": "SNYK-CC-K8S-6",
+        "msg": "resource.kubernetes_deployment[identityhub].spec.spec.template.container[0].security_context.capabilities",
+        "references": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/",
+          "https://linux-audit.com/linux-capabilities-hardening-linux-binaries-by-removing-setuid/"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[identityhub]",
+          "spec",
+          "spec",
+          "template",
+          "container[0]",
+          "security_context",
+          "capabilities"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-42",
+        "title": "Container could be running with outdated image",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-42",
+        "isGeneratedByCustomRule": false,
+        "issue": "The image policy does not prevent image reuse",
+        "impact": "The container may run with outdated or unauthorized image",
+        "resolve": "Set `image_pull_policy` attribute to `Always",
+        "remediation": {
+          "kubernetes": "Set `imagePullPolicy` attribute to `Always`",
+          "terraform": "Set `image_pull_policy` attribute to `Always"
+        },
+        "lineNumber": 38,
+        "iacDescription": {
+          "issue": "The image policy does not prevent image reuse",
+          "impact": "The container may run with outdated or unauthorized image",
+          "resolve": "Set `image_pull_policy` attribute to `Always"
+        },
+        "publicId": "SNYK-CC-K8S-42",
+        "msg": "resource.kubernetes_deployment[identityhub].spec.template.spec.container[0].image_pull_policy",
+        "references": [
+          "https://kubernetes.io/docs/concepts/containers/images/",
+          "https://kubernetes.io/docs/concepts/configuration/overview/#container-images"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[identityhub]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "image_pull_policy"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-10",
+        "title": "Container or Pod is running without root user control",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-10",
+        "isGeneratedByCustomRule": false,
+        "issue": "Container or Pod is running without root user control",
+        "impact": "Container or Pod could be running with full administrative privileges",
+        "resolve": "Set `security_context.run_as_non_root` to `true`",
+        "remediation": {
+          "kubernetes": "Set `securityContext.runAsNonRoot` to `true`",
+          "terraform": "Set `security_context.run_as_non_root` to `true`"
+        },
+        "lineNumber": 38,
+        "iacDescription": {
+          "issue": "Container or Pod is running without root user control",
+          "impact": "Container or Pod could be running with full administrative privileges",
+          "resolve": "Set `security_context.run_as_non_root` to `true`"
+        },
+        "publicId": "SNYK-CC-K8S-10",
+        "msg": "resource.kubernetes_deployment[identityhub].spec.template.spec.container[0].security_context.capabilities",
+        "description": "",
+        "references": [
+          "https://kubernetes.io/blog/2016/08/security-best-practices-kubernetes-deployment/"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[identityhub]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "security_context",
+          "capabilities"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-4",
+        "title": "Container is running without memory limit",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-4",
+        "isGeneratedByCustomRule": false,
+        "issue": "Memory limit is not defined",
+        "impact": "Containers without memory limits are more likely to be terminated when the node runs out of memory",
+        "resolve": "Set `resources.limits.memory` value",
+        "remediation": {
+          "kubernetes": "Set `resources.limits.memory` value",
+          "terraform": "Set `resources.limits.memory` value"
+        },
+        "lineNumber": 38,
+        "iacDescription": {
+          "issue": "Memory limit is not defined",
+          "impact": "Containers without memory limits are more likely to be terminated when the node runs out of memory",
+          "resolve": "Set `resources.limits.memory` value"
+        },
+        "publicId": "SNYK-CC-K8S-4",
+        "msg": "resource.kubernetes_deployment[identityhub].spec.template.spec.container[0].resources.limits.memory",
+        "references": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[identityhub]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "resources",
+          "limits",
+          "memory"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-36",
+        "title": "Container is running with multiple open ports",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-36",
+        "isGeneratedByCustomRule": false,
+        "issue": "Container is declaring more than 2 listening ports",
+        "impact": "Increases the attack surface of the application and the container.",
+        "resolve": "Reduce `ports` count to 2",
+        "remediation": {
+          "kubernetes": "Reduce `ports` count to 2",
+          "terraform": "Reduce `ports` count to 2"
+        },
+        "lineNumber": 38,
+        "iacDescription": {
+          "issue": "Container is declaring more than 2 listening ports",
+          "impact": "Increases the attack surface of the application and the container.",
+          "resolve": "Reduce `ports` count to 2"
+        },
+        "publicId": "SNYK-CC-K8S-36",
+        "msg": "resource.kubernetes_deployment[identityhub].spec.template.spec.container[0].port",
+        "description": "",
+        "references": [
+          "https://kubernetes.io/docs/concepts/services-networking/service/#field-spec-ports"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[identityhub]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "port"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-5",
+        "title": "Container has no CPU limit",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-5",
+        "isGeneratedByCustomRule": false,
+        "issue": "Container has no CPU limit",
+        "impact": "CPU limits can prevent containers from consuming valuable compute time for no benefit (e.g. inefficient code) that might lead to unnecessary costs. It is advisable to also configure CPU requests to ensure application stability.",
+        "resolve": "Add `spec.container.resources.limits.cpu` field with required CPU limit value",
+        "remediation": {
+          "kubernetes": "Add `resources.limits.cpu` field with required CPU limit value",
+          "terraform": "Add `spec.container.resources.limits.cpu` field with required CPU limit value"
+        },
+        "lineNumber": 38,
+        "iacDescription": {
+          "issue": "Container has no CPU limit",
+          "impact": "CPU limits can prevent containers from consuming valuable compute time for no benefit (e.g. inefficient code) that might lead to unnecessary costs. It is advisable to also configure CPU requests to ensure application stability.",
+          "resolve": "Add `spec.container.resources.limits.cpu` field with required CPU limit value"
+        },
+        "publicId": "SNYK-CC-K8S-5",
+        "msg": "resource.kubernetes_deployment[identityhub].spec.template.spec.container[0].resources.limits.cpu",
+        "references": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/",
+          "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/",
+          "https://github.com/kubernetes/design-proposals-archive/blob/8da1442ea29adccea40693357d04727127e045ed/node/resource-qos.md#compressible-resource-guaranteess"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[identityhub]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "resources",
+          "limits",
+          "cpu"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/identity-hub/ingress.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/identity-hub/ingress.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/identity-hub/outputs.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/identity-hub/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/identity-hub/services.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/identity-hub/services.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/identity-hub/variables.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/identity-hub/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/postgres/main.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/postgres/main.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": false,
+    "infrastructureAsCodeIssues": [
+      {
+        "id": "SNYK-CC-K8S-9",
+        "title": "Container is running without privilege escalation control",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Pod",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-9",
+        "isGeneratedByCustomRule": false,
+        "issue": "`allowPrivilegeEscalation` attribute is not set to `false`",
+        "impact": "Processes could elevate current privileges via known vectors, for example SUID binaries",
+        "resolve": "Set `spec.container.security_context.allow_privilege_escalation` to `false`",
+        "remediation": {
+          "kubernetes": "Set `spec.{containers, initContainers}.securityContext.allowPrivilegeEscalation` to `false`",
+          "terraform": "Set `spec.container.security_context.allow_privilege_escalation` to `false`"
+        },
+        "lineNumber": 36,
+        "iacDescription": {
+          "issue": "`allowPrivilegeEscalation` attribute is not set to `false`",
+          "impact": "Processes could elevate current privileges via known vectors, for example SUID binaries",
+          "resolve": "Set `spec.container.security_context.allow_privilege_escalation` to `false`"
+        },
+        "publicId": "SNYK-CC-K8S-9",
+        "msg": "resource.kubernetes_deployment[postgres].spec.template.spec.container[0].security_context.allow_privilege_escalation",
+        "references": [
+          "https://www.kernel.org/doc/html/latest/userspace-api/no_new_privs.html"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[postgres]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "security_context",
+          "allow_privilege_escalation"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-6",
+        "title": "Container does not drop all default capabilities",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-6",
+        "isGeneratedByCustomRule": false,
+        "issue": "All default capabilities are not explicitly dropped",
+        "impact": "Containers are running with potentially unnecessary privileges",
+        "resolve": "Add `ALL` to `spec.container.security_context.capabilities.drop` list, and add only required capabilities to `spec.container.security_context.capabilities.add`, ensuring it also does not contain `ALL`",
+        "remediation": {
+          "kubernetes": "Add `ALL` to `securityContext.capabilities.drop` list, and add only required capabilities in `securityContext.capabilities.add`",
+          "terraform": "Add `ALL` to `spec.container.security_context.capabilities.drop` list, and add only required capabilities to `spec.container.security_context.capabilities.add`, ensuring it also does not contain `ALL`"
+        },
+        "lineNumber": 23,
+        "iacDescription": {
+          "issue": "All default capabilities are not explicitly dropped",
+          "impact": "Containers are running with potentially unnecessary privileges",
+          "resolve": "Add `ALL` to `spec.container.security_context.capabilities.drop` list, and add only required capabilities to `spec.container.security_context.capabilities.add`, ensuring it also does not contain `ALL`"
+        },
+        "publicId": "SNYK-CC-K8S-6",
+        "msg": "resource.kubernetes_deployment[postgres].spec.spec.template.container[0].security_context.capabilities",
+        "references": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/",
+          "https://linux-audit.com/linux-capabilities-hardening-linux-binaries-by-removing-setuid/"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[postgres]",
+          "spec",
+          "spec",
+          "template",
+          "container[0]",
+          "security_context",
+          "capabilities"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-10",
+        "title": "Container or Pod is running without root user control",
+        "severity": "medium",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-10",
+        "isGeneratedByCustomRule": false,
+        "issue": "Container or Pod is running without root user control",
+        "impact": "Container or Pod could be running with full administrative privileges",
+        "resolve": "Set `security_context.run_as_non_root` to `true`",
+        "remediation": {
+          "kubernetes": "Set `securityContext.runAsNonRoot` to `true`",
+          "terraform": "Set `security_context.run_as_non_root` to `true`"
+        },
+        "lineNumber": 36,
+        "iacDescription": {
+          "issue": "Container or Pod is running without root user control",
+          "impact": "Container or Pod could be running with full administrative privileges",
+          "resolve": "Set `security_context.run_as_non_root` to `true`"
+        },
+        "publicId": "SNYK-CC-K8S-10",
+        "msg": "resource.kubernetes_deployment[postgres].spec.template.spec.container[0].security_context.capabilities",
+        "description": "",
+        "references": [
+          "https://kubernetes.io/blog/2016/08/security-best-practices-kubernetes-deployment/"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[postgres]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "security_context",
+          "capabilities"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-4",
+        "title": "Container is running without memory limit",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-4",
+        "isGeneratedByCustomRule": false,
+        "issue": "Memory limit is not defined",
+        "impact": "Containers without memory limits are more likely to be terminated when the node runs out of memory",
+        "resolve": "Set `resources.limits.memory` value",
+        "remediation": {
+          "kubernetes": "Set `resources.limits.memory` value",
+          "terraform": "Set `resources.limits.memory` value"
+        },
+        "lineNumber": 36,
+        "iacDescription": {
+          "issue": "Memory limit is not defined",
+          "impact": "Containers without memory limits are more likely to be terminated when the node runs out of memory",
+          "resolve": "Set `resources.limits.memory` value"
+        },
+        "publicId": "SNYK-CC-K8S-4",
+        "msg": "resource.kubernetes_deployment[postgres].spec.template.spec.container[0].resources.limits.memory",
+        "references": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[postgres]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "resources",
+          "limits",
+          "memory"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-42",
+        "title": "Container could be running with outdated image",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-42",
+        "isGeneratedByCustomRule": false,
+        "issue": "The image policy does not prevent image reuse",
+        "impact": "The container may run with outdated or unauthorized image",
+        "resolve": "Set `image_pull_policy` attribute to `Always",
+        "remediation": {
+          "kubernetes": "Set `imagePullPolicy` attribute to `Always`",
+          "terraform": "Set `image_pull_policy` attribute to `Always"
+        },
+        "lineNumber": 36,
+        "iacDescription": {
+          "issue": "The image policy does not prevent image reuse",
+          "impact": "The container may run with outdated or unauthorized image",
+          "resolve": "Set `image_pull_policy` attribute to `Always"
+        },
+        "publicId": "SNYK-CC-K8S-42",
+        "msg": "resource.kubernetes_deployment[postgres].spec.template.spec.container[0].image_pull_policy",
+        "references": [
+          "https://kubernetes.io/docs/concepts/containers/images/",
+          "https://kubernetes.io/docs/concepts/configuration/overview/#container-images"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[postgres]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "image_pull_policy"
+        ],
+        "compliance": []
+      },
+      {
+        "id": "SNYK-CC-K8S-5",
+        "title": "Container has no CPU limit",
+        "severity": "low",
+        "isIgnored": false,
+        "subType": "Deployment",
+        "documentation": "https://security.snyk.io/rules/cloud/SNYK-CC-K8S-5",
+        "isGeneratedByCustomRule": false,
+        "issue": "Container has no CPU limit",
+        "impact": "CPU limits can prevent containers from consuming valuable compute time for no benefit (e.g. inefficient code) that might lead to unnecessary costs. It is advisable to also configure CPU requests to ensure application stability.",
+        "resolve": "Add `spec.container.resources.limits.cpu` field with required CPU limit value",
+        "remediation": {
+          "kubernetes": "Add `resources.limits.cpu` field with required CPU limit value",
+          "terraform": "Add `spec.container.resources.limits.cpu` field with required CPU limit value"
+        },
+        "lineNumber": 36,
+        "iacDescription": {
+          "issue": "Container has no CPU limit",
+          "impact": "CPU limits can prevent containers from consuming valuable compute time for no benefit (e.g. inefficient code) that might lead to unnecessary costs. It is advisable to also configure CPU requests to ensure application stability.",
+          "resolve": "Add `spec.container.resources.limits.cpu` field with required CPU limit value"
+        },
+        "publicId": "SNYK-CC-K8S-5",
+        "msg": "resource.kubernetes_deployment[postgres].spec.template.spec.container[0].resources.limits.cpu",
+        "references": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/",
+          "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/",
+          "https://github.com/kubernetes/design-proposals-archive/blob/8da1442ea29adccea40693357d04727127e045ed/node/resource-qos.md#compressible-resource-guaranteess"
+        ],
+        "path": [
+          "resource",
+          "kubernetes_deployment[postgres]",
+          "spec",
+          "template",
+          "spec",
+          "container[0]",
+          "resources",
+          "limits",
+          "cpu"
+        ],
+        "compliance": []
+      }
+    ]
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/postgres/outputs.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/postgres/outputs.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/postgres/variables.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/postgres/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/vault/variables.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/vault/variables.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  },
+  {
+    "meta": {
+      "isPrivate": true,
+      "isLicensesEnabled": false,
+      "ignoreSettings": {
+        "adminOnly": false,
+        "reasonRequired": false,
+        "disregardFilesystemIgnores": false,
+        "autoApproveIgnores": false
+      },
+      "org": "mbisss2025",
+      "orgPublicId": "32dffbe1-779c-4e43-91cc-5faf2c10977a",
+      "policy": ""
+    },
+    "filesystemPolicy": false,
+    "vulnerabilities": [],
+    "dependencyCount": 0,
+    "licensesPolicy": null,
+    "ignoreSettings": null,
+    "targetFile": "deployment/modules/vault/vault.tf",
+    "projectName": "ruqad-testbed",
+    "org": "mbisss2025",
+    "policy": "",
+    "isPrivate": true,
+    "targetFilePath": "/home/mbissine/gitclone_terraform/ruqad-testbed/deployment/modules/vault/vault.tf",
+    "packageManager": "terraformconfig",
+    "path": "/home/mbissine/gitclone_terraform/ruqad-testbed",
+    "projectType": "terraformconfig",
+    "ok": true,
+    "infrastructureAsCodeIssues": []
+  }
+]

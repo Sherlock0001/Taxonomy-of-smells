@@ -1,0 +1,6 @@
+{
+  "ok": false,
+  "code": 1021,
+  "error": "Failed to parse JSON file",
+  "path": "/home/mbissine/gitclone_pulumi/hightable/node/tsconfig.json"
+}

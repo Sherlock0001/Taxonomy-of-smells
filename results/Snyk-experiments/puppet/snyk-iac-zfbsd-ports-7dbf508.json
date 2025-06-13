@@ -1,0 +1,416 @@
+[
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/databases/cassandra3/files/patch-conf_cassandra.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/databases/cassandra3/files/patch-test_conf_cassandra.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/databases/cassandra4/files/patch-conf_cassandra.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/databases/cassandra4/files/patch-test_conf_cassandra.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/devel/arduino-core/files/patch-hardware_package__index__bundled.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/devel/containers/files/patch-dub.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/devel/d-scanner/files/patch-dub.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/devel/dcd-server/files/patch-dub.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/devel/electron17/files/patch-chrome_browser_resources_plugin__metadata_plugins__linux.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/devel/electron17/files/patch-components_policy_resources_policy__templates.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/devel/electron17/files/patch-extensions_common_api___permission__features.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/devel/electron18/files/patch-chrome_browser_resources_plugin__metadata_plugins__linux.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/devel/electron18/files/patch-components_policy_resources_policy__templates.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/devel/electron18/files/patch-extensions_common_api___permission__features.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/devel/electron19/files/patch-chrome_browser_resources_plugin__metadata_plugins__linux.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/devel/electron19/files/patch-components_policy_resources_policy__templates.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/devel/electron19/files/patch-extensions_common_api___permission__features.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/devel/hs-cabal-install/files/patch-bootstrap_linux-8.10.7.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/devel/icontheme/files/patch-dub.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/devel/xdgpaths/files/patch-dub.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/editors/vscode/files/patch-product.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/graphics/qt5-3d/files/extrapatch-src_core_configure.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/graphics/qt5-imageformats/files/patch-src_imageformats_configure.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/lang/spidermonkey78/files/patch-third__party_rust_cc_.cargo-checksum.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/multimedia/qt5-multimedia/files/patch-src_multimedia_configure.json"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/net/traefik/files/patch-traefik.sample.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/net-im/gotosocial/files/patch-example_config.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/net-im/signal-desktop/files/patch-package.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/net-mgmt/chronograf/files/patch-ui_package.json"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/net-mgmt/netbox/files/patch-mkdocs.yml"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/net-mgmt/semaphore/files/patch-config.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/science/orthanc/files/patch-OrthancServer_Resources_Configuration.json"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/security/crowdsec/files/patch-config_acquis.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/security/teleport/files/patch-build.assets_pkg_etc_teleport.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/beats6/files/patch-filebeat_filebeat.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/beats6/files/patch-heartbeat_heartbeat.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/beats6/files/patch-metricbeat_metricbeat.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/beats6/files/patch-packetbeat_packetbeat.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/beats7/files/patch-auditbeat_auditbeat.reference.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/beats7/files/patch-auditbeat_auditbeat.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/beats7/files/patch-filebeat_filebeat.reference.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/beats7/files/patch-filebeat_filebeat.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/beats7/files/patch-heartbeat_heartbeat.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/beats7/files/patch-metricbeat_metricbeat.reference.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/beats7/files/patch-metricbeat_metricbeat.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/beats7/files/patch-packetbeat_packetbeat.reference.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/beats7/files/patch-packetbeat_packetbeat.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/chezmoi/files/patch-assets_chezmoi.io_mkdocs.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/logstash6/files/patch-config_logstash.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/logstash7/files/patch-config_logstash.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/sysutils/loki/files/patch-cmd-loki-loki-local-config.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/textproc/elasticsearch6/files/patch-config_elasticsearch.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/textproc/elasticsearch7/files/patch-config_elasticsearch.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/textproc/kibana7/files/patch-config_kibana.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/textproc/opensearch/files/patch-config_opensearch.yml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/www/carbonapi/files/patch-cmd_carbonapi_carbonapi.example.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/www/chromium/files/patch-chrome_browser_resources_plugin__metadata_plugins__linux.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/www/chromium/files/patch-components_policy_resources_policy__templates.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/www/chromium/files/patch-extensions_common_api___permission__features.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/www/iridium/files/patch-chrome_browser_resources_plugin__metadata_plugins__linux.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/www/iridium/files/patch-components_policy_resources_policy__templates.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/www/iridium/files/patch-extensions_common_api___permission__features.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/www/onlyoffice-documentserver/files/patch-server_package.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/www/onlyoffice-documentserver/files/patch-web-apps_build_package.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/www/qt5-webengine/files/patch-src_buildtools_configure.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/www/qt5-webengine/files/patch-src_core_configure.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/x11/nwg-bar/files/patch-config_bar.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/x11/nwg-launchers/files/patch-bar_bar.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/zfbsd-ports/x11-toolkits/qt5-gui/files/patch-src_gui_configure.json"
+  }
+]

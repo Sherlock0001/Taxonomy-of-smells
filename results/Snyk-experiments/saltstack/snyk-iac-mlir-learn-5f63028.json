@@ -1,0 +1,104 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/saltstack/mlir-learn/clang/test/Index/compile_commands.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/saltstack/mlir-learn/clang/test/Index/skip-parsed-bodies/compile_commands.json"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/saltstack/mlir-learn/clang/test/VFS/Inputs/invalid-yaml.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/saltstack/mlir-learn/lld/test/MachO/dylib-stub.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/saltstack/mlir-learn/lld/test/MachO/lc-dyld-exports-trie.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/saltstack/mlir-learn/llvm/test/DebugInfo/PDB/Inputs/every-type.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/saltstack/mlir-learn/llvm/test/ObjectYAML/MachO/build_version_command.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/saltstack/mlir-learn/llvm/test/tools/llvm-cov/Inputs/binary-formats.canonical.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/saltstack/mlir-learn/llvm/test/tools/llvm-cov/Inputs/showExpansions.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/saltstack/mlir-learn/llvm/test/tools/llvm-original-di-preservation/Inputs/corrupted.json"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/saltstack/mlir-learn/llvm/test/tools/obj2yaml/ELF/loongarch-eflags.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/saltstack/mlir-learn/llvm/test/tools/yaml2obj/invalid-yaml.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1022,
+    "error": "Failed to parse YAML file",
+    "path": "/home/mbissine/saltstack/mlir-learn/llvm/test/tools/yaml2obj/ELF/DWARF/debug-line.yaml"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/saltstack/mlir-learn/llvm/utils/vscode/llvm/language-configuration-tablegen.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/saltstack/mlir-learn/llvm/utils/vscode/llvm/language-configuration.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/saltstack/mlir-learn/llvm/utils/vscode/llvm/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/saltstack/mlir-learn/mlir/utils/vscode/.vscode/launch.json"
+  }
+]

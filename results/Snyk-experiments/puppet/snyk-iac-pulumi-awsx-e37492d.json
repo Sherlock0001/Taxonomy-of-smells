@@ -1,0 +1,80 @@
+[
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-awsx/awsx-classic/tsconfig.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-awsx/provider/testdata/recorded/TestProviderUpgrade/custom-provider/1.0.6/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-awsx/provider/testdata/recorded/TestProviderUpgrade/default-args/1.0.6/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-awsx/provider/testdata/recorded/TestProviderUpgrade/nodejs/1.0.6/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-awsx/provider/testdata/recorded/TestProviderUpgrade/specific-vpc-layout/1.0.6/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-awsx/provider/testdata/recorded/TestProviderUpgrade/ts-ecr-repo/1.0.6/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-awsx/provider/testdata/recorded/TestProviderUpgrade/ts-lb-attach-ec2/1.0.6/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-awsx/provider/testdata/recorded/TestProviderUpgrade/ts-lb-simple/1.0.6/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-awsx/provider/testdata/recorded/TestProviderUpgrade/ts-lb-with-subnets/1.0.6/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-awsx/provider/testdata/recorded/TestProviderUpgrade/ts-nlb-simple/1.0.6/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-awsx/provider/testdata/recorded/TestProviderUpgrade/vpc-multiple-similar-subnet-types/1.0.6/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-awsx/provider/testdata/recorded/TestProviderUpgrade/vpc-subnets-with-tags/1.0.6/grpc.json"
+  },
+  {
+    "ok": false,
+    "code": 1021,
+    "error": "Failed to parse JSON file",
+    "path": "/home/mbissine/gitclone_puppet/pulumi-awsx/provider/testdata/recorded/TestProviderUpgrade/vpc-with-service-endpoint/1.0.6/grpc.json"
+  }
+]

@@ -1,0 +1,7 @@
+Error: socket hang up
+    at connResetException (node:internal/errors:704:14)
+    at TLSSocket.socketOnEnd (node:_http_client:489:23)
+    at TLSSocket.emit (node:events:549:35)
+    at TLSSocket.emit (node:domain:482:12)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
