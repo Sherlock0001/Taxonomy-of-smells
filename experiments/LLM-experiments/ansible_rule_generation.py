@@ -194,7 +194,7 @@ def clean_generated_code(content: str) -> str:
 
 def get_api_key() -> str:
     """Retrieves the OpenAI API key from the environment."""
-    api_key = "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"
+    api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
         sys.exit("‼️  Environment variable OPENAI_API_KEY is missing.")
     return api_key
