@@ -61,7 +61,7 @@ def generate_rubocop_rule(row):
 
     ### output format :
 
-    Provides a **complete Ruby class** that defines the custom cop, ready to be included in a RuboCop plugin.
+    Provide a **complete Ruby class** that defines the custom cop, ready to be included in a RuboCop plugin.
 
     ### Input:
 
