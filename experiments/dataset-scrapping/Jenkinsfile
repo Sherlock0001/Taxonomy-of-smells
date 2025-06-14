@@ -1,0 +1,129 @@
+def KEYWORDS=['fix+security+vulnerability', 'security+patch', 'fix+CVE', 'fix+CWE','CVE','CWE','vulnerability','threat','malware','weakness','flaw','breach','leak','malicious','exploit','attack','security+issue', 'security+flaw']
+def MANIFESTS=['cookbook','puppet+manifest','vagrantfile','pulumi+program+files','saltstack+*.sls']
+def TOKEN_ID="GITHUB_TOKEN"
+def lines=[]
+def ID=[]
+def TOTAL = 0
+def JSON, CommitData
+def DATA=[], DATA2=[]
+def TECHNO
+def JSONFILE = "/Users/aicha.warOld.war/.jenkins/workspace/scrapingiacscripts/list.json"
+def DATASET = "/Users/aicha.warOld.war/.jenkins/workspace/scrapingiacscripts/dataset3.txt"
+def PYTHONSCRIPT = "/Users/aicha.warOld.war/.jenkins/workspace/scrapingiacscripts/dataset.py"
+def LIST=[]
+def commitMessage='', commitInfoUrl='', fileName='', vulnerableLine='', PatchedLine='', additionLineNumber= 0, removalLineNumber= 0
+def patch='', removalStartLine= 0, additionStartLine= 0, currentRemovalLine= 0, currentAdditionLine =0
+def lineRemoved='', lineAdded='' , excelLine=''
+
+  
+import groovy.json.JsonSlurperClassic
+
+
+pipeline{
+
+   agent any
+   
+   stages{
+       
+       
+      stage ('Scraping of commits flagged with security vulnerability message'){
+      
+        steps {
+            script{
+                    //sh "rm -rf *"
+                    //sh "chmod a+x /Users/aicha.war/.jenkins/workspace/scraping/list.json"
+                    for (manifest in MANIFESTS) {
+                         for (keyword in KEYWORDS) {
+                           try{
+                            sh "curl -H 'Authorization: Bearer ${TOKEN_ID}' -H 'Accept: application/vnd.github.v3.text-match+json' 'https://api.github.com/search/commits?q=${keyword}+${manifest}&sort=updated&order=desc&per_page=500' > ${JSONFILE}"
+                           }catch(err4){
+                               echo 'getting IaC scripts + keyword data failed'
+                           }
+                            JSON = readFile(file:"${JSONFILE}")
+                            
+                            
+                            DATA = new JsonSlurperClassic().parseText(JSON)
+                            //echo "Nous avons ${DATA.total_count} commits pour ${manifest} et ${keyword}"
+                            TOTAL = TOTAL + DATA.total_count
+                            sleep(8)
+                            if(TOTAL>0){
+                                for(item in DATA.items){
+                                   try{
+                                   sh "curl -H 'Authorization: Bearer ${TOKEN_ID}' -H 'Accept: application/vnd.github.v3.text-match+json' '${item.url}' > ${JSONFILE}"
+                                   }catch(err5){
+                                       echo 'getting before and after security fix failed'
+                                   }
+                                   JSON = readFile(file:"${JSONFILE}")
+                                   
+                                   if(JSON != null && !JSON.isEmpty()){
+                                   DATA2 = new JsonSlurperClassic().parseText(JSON)
+                                   commitMessage = item.commit.message
+                                   commitInfoUrl = item.url
+                                   
+                                   for(file in DATA2.files){
+                                       fileName = file.filename
+                                       patch = file.patch
+                                       
+                                       if(patch != null){
+                                            // Initialize counters based on the starting line numbers in the patch info
+                                            removalStartLine = patch.find(/@@ -(\d+),/) { it[1] as int }
+                                            additionStartLine = patch.find(/@@ .+ \+(\d+),/) { it[1] as int }
+                                            
+                                            currentRemovalLine = removalStartLine
+                                            currentAdditionLine = additionStartLine
+                                   lines = patch.split('\n')
+                                  for (line in lines){
+                                       if(line != null){
+                                       if (line.startsWith('-')) {
+                                                    if(line.substring(1) != null) {
+                                                        lineRemoved  = line.substring(1)
+                                                        removalLineNumber = currentRemovalLine
+                                                        if(currentRemovalLine!=null) currentRemovalLine++
+                                                    }
+                                                    
+                                                } else if (line.startsWith('+')) {
+                                                    if(line.substring(1) != null) {
+                                                        lineAdded  = line.substring(1)
+                                                        additionLineNumber = currentAdditionLine
+                                                        if(currentAdditionLine!=null) currentAdditionLine++
+                                                    }
+                                                } else if (!line.startsWith("@@")) {
+                                                    // Adjust line counters for context lines
+                                                    if(currentRemovalLine!=null) currentRemovalLine++
+                                                    if(currentAdditionLine!=null) currentAdditionLine++
+                                                }
+                                       }
+                                                if(lineRemoved!=null || lineAdded!=null)
+                                                    excelLine = "${manifest} fff ${keyword} fff ${commitInfoUrl} fff ${fileName} fff ${removalLineNumber} fff ${additionLineNumber} fff ${lineRemoved} fff ${lineAdded}\n"
+                                               // excelLine = "${tool} fff ${keyword} fff ${commitInfoUrl} fff ${fileName} fff ${removalLineNumber} fff ${additionLineNumber} fff ${lineRemoved} fff ${lineAdded} fff ${commitMessage}\n"
+                                              
+                                   }
+                                        
+                                           
+                                            try{
+                                                 sh  "echo '${excelLine}'  >> ${DATASET}"
+                                            }catch(err){
+                                                echo "Something failed"
+                                                try{
+                                                    new File(DATASET).append(excelLine)
+                                                }catch(err2){
+                                                    echo "another failure"
+                                                }
+                                            }
+                                       }
+
+                                   }
+                            sleep(8)
+                                }
+                                }
+                            }
+                         }
+                }
+                 //   echo "TOTAL = ${TOTAL}"
+            }
+        } 
+
+      }
+      
+   }
+}   
