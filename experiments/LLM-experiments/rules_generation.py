@@ -54,7 +54,6 @@ def generate_rubocop_rule(row):
     - Outdated Software Version
     - Sensitive Information Exposure
     - Inadequate Naming Convention
-    - Insecure Data Transmission
     
     5. **Implementation**:
     - Implement `on_send(node)` or other appropriate node handler.
