@@ -20,7 +20,6 @@ smell_categories = [
     "Sensitive Information Exposure",
     "Outdated Dependencies",
     "Insecure Dependency Management",
-    "Insecure Input Handling",
     "Outdated Software Version"
 ]
 
