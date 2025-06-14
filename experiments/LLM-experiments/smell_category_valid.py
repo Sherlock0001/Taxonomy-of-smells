@@ -29,18 +29,18 @@ df = pd.read_excel(input_file)
 
 # Function to generate prompt and call API
 def detect_smell(row):
-    prompt = f"""You're an expert in the security of infrastructure as code scripts such as Ansible, Chef, Terraform, Puppet, Pulumi, Vagrant and Saltstack.
-    Here is an extract of code linked to a commit:
+    prompt = f"""You're an expert in the security of infrastructure as code scripts such as Ansible, Chef, Terraform, Puppet, Pulumi, Vagrant, and Saltstack scripts.
+    Here is an extract of IaC script that contains a security smell from a commit:
     
-    Vulnerability : {row['vulnerability']}
+    Security Smell : {row['vulnerability']}
     File path : {row['filepath']}
     Line : {row['line']}
     Code : {row['code_snippet']}
 
-    Here are the categories of security smells I'm aware of :
+    Here are the categories of security smells in our dataset of smelly IaC code snippets :
     {", ".join(smell_categories)}
 
-    Assign a single category that best corresponds to the safety problem represented above. Gives only the exact name of the category without explanation.
+    Assign a single category of smell that corresponds better to the associated script extracted. Give only the exact name of the category without explanation.
     """
 
     try:
