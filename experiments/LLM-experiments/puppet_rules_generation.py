@@ -3,14 +3,16 @@ import openai
 from tqdm import tqdm
 import time
 
+#The Rubocop linter only accepts files with the following extensions: .rb , .rake , .gemspec and .ru
+
 # Initialize the OpenAI API
 client = openai.OpenAI(
-    api_key="sk-proj-*************************", 
+    api_key="sk-proj-*************************",  
     base_url="https://api.openai.com/v1"
 )
 
 # Loading Excel file
-input_file = "ruby\puppet_dataset_30-ruby_smells.xlsx" 
+input_file = "puppet/puppet_snyk_code_analysis-ruby.xlsx" 
 df = pd.read_excel(input_file)
 
 # Function to generate prompt and call API
@@ -93,6 +95,6 @@ tqdm.pandas()
 df['rule'] = df.progress_apply(generate_rubocop_rule, axis=1)
 
 # Save the file with the generated rules
-output_file = "ruby\puppet_dataset_30-ruby_smells-with_rules.xlsx"
+output_file = "puppet/puppet_snyk_code_analysis-ruby-with_rules.xlsx"
 df.to_excel(output_file, index=False)
 print(f"\n Enhanced file saved as : {output_file}")
