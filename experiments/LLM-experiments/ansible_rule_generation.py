@@ -1,8 +1,15 @@
-# ── generate_ansible_lint_rules.py ──
+# ── ansible_rule_generation.py ──
 """
 Generates Ansible-Lint rules in PYTHON format from an Excel file (vulnerability,
 smell_category, code_snippet, filepath) via the OpenAI API. Writes the generated
 rule in the 'generated_rule' column with validation logic.
+
+By default, ansible-lint only scans files with .yaml or .yml extensions.
+
+The `.ansible-lint` configuration file has been updated to extend the list of
+supported file extensions to include `.py` files, so that Python-based test cases 
+can be analyzed as part of the linting process.
+
 
 Prerequisites:
     pip install openai pandas openpyxl tqdm backoff
