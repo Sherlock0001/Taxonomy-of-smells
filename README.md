@@ -36,6 +36,7 @@ experiments/
 
 ## 🚀 Features
 
+- **LLM-based Taxonomy of Security Smells**: Use of LLM to derive security smell categories from IaC smelly code snippets.
 - **Rule Generation Automation**: Generate rules for tools like Ansible, Puppet, Salt, and Terraform using Python + LLMs.
 - **Snyk Scanning**: Automate scanning of cloned repositories using Snyk CLI.
 - **Data Pipeline**: Use Jenkins to manage and schedule scraping tasks.
