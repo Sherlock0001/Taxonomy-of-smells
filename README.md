@@ -30,3 +30,9 @@ This repository provides a structured framework for experimenting with:
 
 ---
 
+## 📦 Link to manually validated entries + ratings
+
+- https://drive.google.com/drive/folders/1RFodbaN8PohIsTfS6Y3XAGfAz07VZ6sZ
+  
+---
+
