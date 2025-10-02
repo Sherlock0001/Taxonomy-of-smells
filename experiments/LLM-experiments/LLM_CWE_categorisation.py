@@ -117,7 +117,7 @@ def generate_response(thought):
             model="gpt-3.5-turbo",  # Use the appropriate model for code-related prompts
             messages=[{"role": "system", "content": thought}],
             max_tokens=1500,  # Adjust as needed
-            temperature=0.5
+            temperature=0.1
         )
         print(response.choices[0].message.content)
         return response.choices[0].message.content.strip()
