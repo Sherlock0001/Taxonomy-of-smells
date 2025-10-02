@@ -29,8 +29,8 @@ def get_security_smell_summary(tool, previous_code, new_code, commit_message):
         smell_response = openai.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "system", "content": smell_prompt}],
-            max_tokens=4000,  
-            temperature=0.5
+            max_tokens=1000,  
+            temperature=0.1
         )
         smell_summary = smell_response.choices[0].message.content.strip()
     except Exception as e:
