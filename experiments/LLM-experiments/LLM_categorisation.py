@@ -33,8 +33,8 @@ def categorize_smell(df):
             response = openai.chat.completions.create(
                 model="gpt-3.5-turbo",  # Use the appropriate model for code-related prompts
                 messages=[{"role": "system", "content": prompt}],
-                max_tokens=4000,  # Limit tokens to avoid exceeding the model's capacity
-                temperature=0.7
+                max_tokens=1500,  # Limit tokens to avoid exceeding the model's capacity
+                temperature=0.1
             )
             smell_category = response.choices[0].message.content.strip()
             smell_details[smell] = smell_category
