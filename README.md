@@ -11,7 +11,7 @@ This repository provides a structured framework for experimenting with:
 ## 🚀 Features
 
 - **LLM-based Taxonomy of Security Smells**: Use of LLM to derive security smell categories from IaC smelly code snippets.
-- **Rule Generation Automation**: Generate rules for tools like Ansible, Puppet, Salt, and Terraform using Python + LLMs.
+- **Rule Generation Automation**: Generate rules for tools like Ansible, Puppet, Saltstack, Chef, Vagrant, Pulumi, and Terraform using Python + LLMs.
 - **Snyk Scanning**: Automate scanning of cloned repositories using Snyk CLI.
 - **Data Pipeline**: Use Jenkins to manage and schedule scraping tasks.
 - **Results Tracking**: Keep experiment outputs cleanly organized under `results/`.
