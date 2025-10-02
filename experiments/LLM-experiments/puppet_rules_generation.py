@@ -79,10 +79,13 @@ def generate_rubocop_rule(row):
 
     try:
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo", 
+            model="gpt-4o", 
             messages=[{"role": "user", "content": prompt}],
-            temperature=0,
-            max_tokens=850
+            temperature=0.1,     # sortie déterministe
+            max_tokens=950,     # limite de tokens en sortie
+            top_p= 1.0,
+            frequency_penalty= 0,
+            presence_penalty= 0,
         )
         smell = response.choices[0].message.content.strip()
         return smell
