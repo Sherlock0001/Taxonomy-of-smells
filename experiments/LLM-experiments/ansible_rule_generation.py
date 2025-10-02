@@ -33,9 +33,13 @@ import pandas as pd
 from tqdm import tqdm
 
 # --- CONFIGURATION ---
-MODEL = sys.argv[3] if len(sys.argv) > 3 else "gpt-3.5-turbo-0125"
-TEMPERATURE = 0.0
-MAX_TOKENS_RESPONSE = 1200
+#MODEL = sys.argv[3] if len(sys.argv) > 3 else "gpt-4o"
+#TEMPERATURE = 0.1,     # sortie déterministe
+#MAX_TOKENS=950,     # limite de tokens en sortie
+#TOP_P= 1.0,
+#FREQUENCE_PENALTY= 0,
+#PRESENCE_PENALTY= 0,
+#MAX_TOKENS_RESPONSE = 1000
 REQUEST_PAUSE = 0.7
 MAX_RETRIES = 3
 
@@ -217,13 +221,16 @@ def call_chatgpt(prompt: str) -> str:
     """Calls the OpenAI API with an automatic backoff strategy."""
     try:
         response = client.chat.completions.create(
-            model=MODEL,
+            model="gpt-4o",
             messages=[
                 {"role": "system", "content": "You are an Ansible-Lint expert generating security rules in Python format."},
                 {"role": "user", "content": prompt},
             ],
-            temperature=TEMPERATURE,
-            max_tokens=MAX_TOKENS_RESPONSE,
+            temperature=0.1,     # sortie déterministe
+            max_tokens=950,     # limite de tokens en sortie
+            top_p= 1.0,
+            frequency_penalty= 0,
+            presence_penalty= 0,
         )
         content = response.choices[0].message.content
         if not content: 
@@ -356,3 +363,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
