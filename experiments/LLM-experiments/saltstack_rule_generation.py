@@ -33,9 +33,9 @@ import pandas as pd
 from tqdm import tqdm
 
 # --- CONFIGURATION ---
-MODEL = sys.argv[3] if len(sys.argv) > 3 else "gpt-3.5-turbo-0125"
-TEMPERATURE = 0.0
-MAX_TOKENS_RESPONSE = 900
+#MODEL = sys.argv[3] if len(sys.argv) > 3 else "gpt-3.5-turbo-0125"
+#TEMPERATURE = 0.0
+#MAX_TOKENS_RESPONSE = 900
 REQUEST_PAUSE = 0.7
 MAX_RETRIES = 3
 
@@ -159,13 +159,16 @@ def call_chatgpt(prompt: str) -> str:
     """Calls the OpenAI API with an automatic backoff strategy."""
     try:
         response = client.chat.completions.create(
-            model=MODEL,
+            model="gpt-4o",
             messages=[
                 {"role": "system", "content": "You are a Salt-Lint expert generating rules in Python format."},
                 {"role": "user", "content": prompt},
             ],
-            temperature=TEMPERATURE,
-            max_tokens=MAX_TOKENS_RESPONSE,
+            temperature=0.1,     # sortie déterministe
+            max_tokens=1000,     # limite de tokens en sortie
+            top_p= 1.0,
+            frequency_penalty= 0,
+            presence_penalty= 0,
         )
         content = response.choices[0].message.content
         if not content: raise ValueError("Empty response from OpenAI API")
